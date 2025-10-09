@@ -130,7 +130,7 @@ const Reference7177 = () => {
                   className="relative overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl rounded-lg"
                   onClick={() =>
                     setFullScreenImage({
-                      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Group-1.jpg",
+                      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Group-1.jpg",
                       alt: "Reference 7177 Military Variants Group Photo",
                       title: "Reference 7177",
                       subtitle: "7177 Military Variants",
@@ -138,7 +138,7 @@ const Reference7177 = () => {
                   }
                 >
                   <ImageWithLoader
-                    src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Group-1.jpg"
+                    src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Group-1.jpg"
                     alt="Reference 7177 Military Variants Group Photo"
                     className="w-full h-auto object-contain rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
                     skeletonClassName="w-full h-80 sm:h-96 lg:h-[500px] rounded-lg"
@@ -174,25 +174,25 @@ const Reference7177 = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <ExploreDetailsCard
                 title="Case & Finishes"
-                imageSrc="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-ColorGroup-1.jpg"
+                imageSrc="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-ColorGroup-1.jpg"
                 imageAlt="Case & Finishes"
                 linkTo="/references/7177/case-finishes"
               />
               <ExploreDetailsCard
                 title="Caseback"
-                imageSrc="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Black-Casebackcrop.jpg"
+                imageSrc="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Black-Casebackcrop.jpg"
                 imageAlt="Caseback"
                 linkTo="/references/7177/caseback"
               />
               <ExploreDetailsCard
                 title="Rehaut Variations"
-                imageSrc="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Crooked%20Seven%20Rehaut-Close-Up-.jpg"
+                imageSrc="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Crooked%20Seven%20Rehaut-Close-Up-.jpg"
                 imageAlt="Rehaut Variations"
                 linkTo="/references/7177/rehaut"
               />
               <ExploreDetailsCard
                 title="Dial Variations"
-                imageSrc="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-MilitaryGroup-2crop.jpg"
+                imageSrc="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-MilitaryGroup-2crop.jpg"
                 imageAlt="Dial Variations"
                 linkTo="/references/7177/dial"
               />

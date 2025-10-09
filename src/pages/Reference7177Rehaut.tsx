@@ -29,12 +29,12 @@ const Reference7177Rehaut = () => {
 
   const crookedSevenImages = [
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-4Logocrop.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-4Logocrop.jpg",
       alt: "7177 Crooked Seven Rehaut",
       caption: "7177 Crooked Seven Rehaut",
     },
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Crooked%20Seven%20Rehaut-Close-Up-.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Crooked%20Seven%20Rehaut-Close-Up-.jpg",
       alt: "7177 Crooked Seven Rehaut - Close-Up",
       caption: "7177 Crooked Seven Rehaut - Close-Up",
     },
@@ -42,7 +42,7 @@ const Reference7177Rehaut = () => {
 
   const standardImages = [
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Silvercrop.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Silvercrop.jpg",
       alt: "7177 Standard Rehaut",
       caption: "7177 Standard Rehaut",
     },

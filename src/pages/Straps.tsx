@@ -128,12 +128,12 @@ const Straps = () => {
                       className="w-full aspect-video bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
                       onClick={() =>
                         handleImageClick(
-                          "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Bund-Groupcrop.jpg"
+                          "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Bund-Groupcrop.jpg"
                         )
                       }
                     >
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Bund-Groupcrop.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Bund-Groupcrop.jpg"
                         alt="Group BUND Straps"
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -152,19 +152,19 @@ const Straps = () => {
                 <ImageSlider
                   images={[
                     {
-                      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Green-Bundcrop.jpg",
+                      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Green-Bundcrop.jpg",
                       alt: "Green BUND Strap",
                       title: "Green BUND Strap",
                       subtitle: "Type 1 (OG) Green BUND",
                     },
                     {
-                      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Bund-Green-Loosecrop.jpg",
+                      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Bund-Green-Loosecrop.jpg",
                       alt: "Green BUND Strap",
                       title: "Green BUND Strap",
                       subtitle: "Type 1 (OG) Green BUND",
                     },
                     {
-                      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Bund-Green-BackLoosecrop.jpg",
+                      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Bund-Green-BackLoosecrop.jpg",
                       alt: "Green BUND Strap",
                       title: "Green BUND Strap",
                       subtitle: "Type 1 (OG) Green BUND",
@@ -177,13 +177,13 @@ const Straps = () => {
                 <ImageSlider
                   images={[
                     {
-                      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Black-BUNDcrop.jpg",
+                      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Black-BUNDcrop.jpg",
                       alt: "Black BUND Strap",
                       title: "Black BUND Strap",
                       subtitle: "Type 1 (OG) Black BUND",
                     },
                     {
-                      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Bund-Black-Loosecrop.jpg",
+                      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Bund-Black-Loosecrop.jpg",
                       alt: "Black BUND Strap",
                       title: "Black BUND Strap",
                       subtitle: "Type 1 (OG) Black BUND",
@@ -196,13 +196,13 @@ const Straps = () => {
                 <ImageSlider
                   images={[
                     {
-                      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Nato-Proper-BUNDcrop.jpg",
+                      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Nato-Proper-BUNDcrop.jpg",
                       alt: "Grey BUND Strap",
                       title: "Grey BUND Strap",
                       subtitle: "Type 1 (OG) Grey BUND",
                     },
                     {
-                      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Bund-Grey-Loosecrop.jpg",
+                      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Bund-Grey-Loosecrop.jpg",
                       alt: "Grey BUND Strap",
                       title: "Grey BUND Strap",
                       subtitle: "Type 1 (OG) Grey BUND",
@@ -252,13 +252,13 @@ const Straps = () => {
                   <ImageSlider
                     images={[
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-BUNDcrop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-BUNDcrop.jpg",
                         alt: "Type 2",
                         title: "Type 2",
                         subtitle: "Type 2",
                       },
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Bund-Staple-2crop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Bund-Staple-2crop.jpg",
                         alt: "Type 2",
                         title: "Type 2",
                         subtitle: "Type 2",
@@ -287,13 +287,13 @@ const Straps = () => {
                   <ImageSlider
                     images={[
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Natocrop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Natocrop.jpg",
                         alt: "Type 3",
                         title: "Type 3",
                         subtitle: "Type 3",
                       },
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/BUND/7177-Bund-Stitchedcrop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/BUND/7177-Bund-Stitchedcrop.jpg",
                         alt: "Type 3",
                         title: "Type 3",
                         subtitle: "Type 3",

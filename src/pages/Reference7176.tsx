@@ -44,7 +44,7 @@ const Reference7176 = () => {
       rehaut: "Yellow Triangle",
       dial: "Civilian Dial, and Civilian Dial - \"Short Lume\"",
       image:
-        "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/Alan-7176-1crop.jpg",
+        "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/Alan-7176-1crop.jpg",
     },
     {
       id: 2,
@@ -55,7 +55,7 @@ const Reference7176 = () => {
       rehaut: "Yellow Triangle",
       dial: "Military Dial",
       image:
-        "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/Alan-7176-Militarycrop.jpg",
+        "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/Alan-7176-Militarycrop.jpg",
     },
     {
       id: 3,
@@ -66,7 +66,7 @@ const Reference7176 = () => {
       rehaut: "Tachymetre",
       dial: "Civilian Dial, and Blue by Orfina Dial",
       image:
-        "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/7176D%20Front%20(wes)crop.jpg",
+        "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176D%20Front%20(wes)crop.jpg",
     },
     {
       id: 4,
@@ -77,7 +77,7 @@ const Reference7176 = () => {
       rehaut: "Tachymetre, 1km, 1Mile",
       dial: "Civilian Dial, and Blue by Orfina Dial",
       image:
-        "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/7176Scrop.jpg",
+        "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176Scrop.jpg",
     },
   ];
 
@@ -201,28 +201,28 @@ const Reference7176 = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <ExploreDetailsCard
                 title="Case & Finishes"
-                imageSrc="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/7176s-PVD.jpg"
+                imageSrc="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176s-PVD.jpg"
                 imageAlt="Case & Finishes"
                 linkTo="/references/7176/case-finishes"
               />
 
               <ExploreDetailsCard
                 title="Caseback"
-                imageSrc="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/7176Button-Caseback.jpg"
+                imageSrc="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176Button-Caseback.jpg"
                 imageAlt="Caseback"
                 linkTo="/references/7176/caseback"
               />
 
               <ExploreDetailsCard
                 title="Rehaut Variations"
-                imageSrc="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/TACHYMETRE%20Rehaut%20-%20Close-Up.jpg"
+                imageSrc="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/TACHYMETRE%20Rehaut%20-%20Close-Up.jpg"
                 imageAlt="Rehaut Variations"
                 linkTo="/references/7176/rehaut"
               />
 
               <ExploreDetailsCard
                 title="Dial Variations"
-                imageSrc="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/7176Button-Dial.jpg"
+                imageSrc="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176Button-Dial.jpg"
                 imageAlt="Dial Variations"
                 linkTo="/references/7176/dial"
               />

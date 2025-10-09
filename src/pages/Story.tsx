@@ -9,61 +9,61 @@ const Story = () => {
   // Gallery images with R2 URLs
   const galleryImages = [
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/The%20Story/Ferdinand%20Alexander%20Porsche.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The%20Story/Ferdinand%20Alexander%20Porsche.jpg",
       alt: "Ferdinand Alexander Porsche",
       title: "Ferdinand Alexander Porsche",
       caption: "Ferdinand Alexander Porsche"
     },
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/The%20Story/Gianni%20Agnelli,%20was%20a%20wealthy%20Italian%20industrialist%20who%20had%20a%20penchant%20for%20wearing%20his%20watch%20on%20the%20outside%20of%20his%20shirt.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The%20Story/Gianni%20Agnelli,%20was%20a%20wealthy%20Italian%20industrialist%20who%20had%20a%20penchant%20for%20wearing%20his%20watch%20on%20the%20outside%20of%20his%20shirt.jpg",
       alt: "Gianni Agnelli wearing watch",
       title: "Gianni Agnelli",
       caption: "Gianni Agnelli — as usual, wearing his Chronograph One outside of his shirt cuff."
     },
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/The%20Story/Gjis%20van%20Lennep%20-%201975%20German%20Grand%20Prix.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The%20Story/Gjis%20van%20Lennep%20-%201975%20German%20Grand%20Prix.jpg",
       alt: "Gjis van Lennep - 1975 German Grand Prix",
       title: "Gjis van Lennep",
       caption: "Gjis van Lennep - 1975 German Grand Prix"
     },
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/The%20Story/Jack%20Douglas%20(who%20worked%20with%20Patti%20Smith,%20Mile%20Davis,%20Cheap%20Trick,%20and%20was%20wearing%20it%20the%20day%20John%20Lennon%20was%20photographed%20at%20The%20Hit%20Factory%20wearing%20his%20Patek%20Philippe%202499.).jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The%20Story/Jack%20Douglas%20(who%20worked%20with%20Patti%20Smith,%20Mile%20Davis,%20Cheap%20Trick,%20and%20was%20wearing%20it%20the%20day%20John%20Lennon%20was%20photographed%20at%20The%20Hit%20Factory%20wearing%20his%20Patek%20Philippe%202499.).jpg",
       alt: "Jack Douglas",
       title: "Jack Douglas",
       caption: "Music Producer Jack Douglas, Jay Messina, and Steven Tyler"
     },
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/The%20Story/June%201977%20a%20Martini%20Porsche%20won%20the%2024%20hours%20of%20Le%20Mans.%20Jurgen%20Barth%20centre%20can%20be%20seen%20sporting%20the%20chronograph.%20copycrop.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The%20Story/June%201977%20a%20Martini%20Porsche%20won%20the%2024%20hours%20of%20Le%20Mans.%20Jurgen%20Barth%20centre%20can%20be%20seen%20sporting%20the%20chronograph.%20copycrop.jpg",
       alt: "Jurgen Barth at Le Mans 1977",
       title: "Jurgen Barth",
       caption: "Jurgen Barth - 1977 Martini Porsche Wins 24 Hours of Le Mans"
     },
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/The%20Story/Mario%20Andretti%20-%201975%20Monza%20GP.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The%20Story/Mario%20Andretti%20-%201975%20Monza%20GP.jpg",
       alt: "Mario Andretti - 1975 Monza GP",
       title: "Mario Andretti",
       caption: "Mario Andretti - 1975 Monza GP"
     },
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/The%20Story/Mario%20Andretti%20and%20Niki%20Lauda%20-%201975%20Monaco%20GP.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The%20Story/Mario%20Andretti%20and%20Niki%20Lauda%20-%201975%20Monaco%20GP.jpg",
       alt: "Mario Andretti and Niki Lauda - 1975 Monaco GP",
       title: "Mario Andretti and Niki Lauda",
       caption: "Mario Andretti and Niki Lauda - 1975 Monaco GP"
     },
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/The%20Story/Peter%20Gregg%20(left)%20and%20Hurley%20Haywood%20who%20drove%20their%20Porsche%20Carrera%20for%20Bromos%20Porsche%20in%201975.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The%20Story/Peter%20Gregg%20(left)%20and%20Hurley%20Haywood%20who%20drove%20their%20Porsche%20Carrera%20for%20Bromos%20Porsche%20in%201975.jpg",
       alt: "Peter Gregg and Hurley Haywood - 1975",
       title: "Peter Gregg and Hurley Haywood",
       caption: "Peter Gregg (left) and Hurley Haywood - Racing a Porsche Carrera for Bromos Porsche in 1975"
     },
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/The%20Story/Thierry%20Sabine%20the%20founder%20and%20organizer%20of%20the%20Paris%20to%20Dakar%20Rally%20-%202%20copy.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The%20Story/Thierry%20Sabine%20the%20founder%20and%20organizer%20of%20the%20Paris%20to%20Dakar%20Rally%20-%202%20copy.jpg",
       alt: "Thierry Sabine - Paris to Dakar Rally founder",
       title: "Thierry Sabine",
       caption: "Thierry Sabine - Founder and Organizer of the Paris to Dakar Rally"
     },
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/The%20Story/Top%20Gun%20-%202.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The%20Story/Top%20Gun%20-%202.jpg",
       alt: "Top Gun",
       title: "Top Gun",
       caption: "Top Gun - Naval Aviator Lieutenant Pete “Maverick” Mitchell"

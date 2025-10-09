@@ -30,7 +30,7 @@ const Reference7176Rehaut = () => {
 
   const yellowTriangleImages = [
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176-photos/7176%20Military.png",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176-photos/7176%20Military.png",
       alt: "Yellow Triangle Rehaut",
       caption: "Yellow Triangle Rehaut",
     },
@@ -44,12 +44,12 @@ const Reference7176Rehaut = () => {
 
   const tachymetreImages = [
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176-photos/7176Scrop.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176-photos/7176Scrop.jpg",
       alt: "TACHYMETRE Rehaut",
       caption: "TACHYMETRE Rehaut",
     },
     {
-      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176-photos/TACHYMETRE%20Rehaut%20-%20Close-Up.jpg",
+      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176-photos/TACHYMETRE%20Rehaut%20-%20Close-Up.jpg",
       alt: "TACHYMETRE Rehaut Close-Up",
       caption: "TACHYMETRE Rehaut Close-Up",
     },

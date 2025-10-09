@@ -12,7 +12,7 @@ const Index = () => {
       <section className="relative min-h-screen flex flex-col items-center justify-center bg-gray-50">
         <div className="w-full mb-8 sm:mb-12 lg:mb-16">
           <ImageWithLoader
-            src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/main-page-photos/Hero-Shot-2.jpg"
+            src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/main-page-photos/Hero-Shot-2.jpg"
             alt="OPD Logo"
             className="w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh] object-cover"
             skeletonClassName="w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh]"
@@ -47,7 +47,7 @@ const Index = () => {
               <div className="bg-white border border-gray-200 overflow-hidden transition-all duration-300 group-hover:shadow-xl group-hover:shadow-gray-200/50 group-hover:border-gray-300 rounded-lg transform group-hover:-translate-y-1">
                 <div className="h-64 sm:h-72 lg:h-80 bg-gray-50 relative overflow-hidden">
                   <ImageWithLoader
-                    src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/main-page-photos/Ref-7750.jpg"
+                    src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/main-page-photos/Ref-7750.jpg"
                     alt="Reference 7750"
                     className="w-full h-full object-cover object-center"
                     skeletonClassName="w-full h-full"
@@ -86,7 +86,7 @@ const Index = () => {
               <div className="bg-white border border-gray-200 overflow-hidden transition-all duration-300 group-hover:shadow-xl group-hover:shadow-gray-200/50 group-hover:border-gray-300 rounded-lg transform group-hover:-translate-y-1">
                 <div className="h-64 sm:h-72 lg:h-80 bg-gray-50 relative overflow-hidden">
                   <ImageWithLoader
-                    src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/main-page-photos/Ref-7176.jpg"
+                    src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/main-page-photos/Ref-7176.jpg"
                     alt="Reference 7176"
                     className="w-full h-full object-cover object-center"
                     skeletonClassName="w-full h-full"
@@ -128,7 +128,7 @@ const Index = () => {
               <div className="bg-white border border-gray-200 overflow-hidden transition-all duration-300 group-hover:shadow-xl group-hover:shadow-gray-200/50 group-hover:border-gray-300 rounded-lg transform group-hover:-translate-y-1">
                 <div className="h-64 sm:h-72 lg:h-80 bg-gray-50 relative overflow-hidden">
                   <ImageWithLoader
-                    src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/main-page-photos/Ref-7177.jpg"
+                    src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/main-page-photos/Ref-7177.jpg"
                     alt="Reference 7177"
                     className="w-full h-full object-cover object-center"
                     skeletonClassName="w-full h-full"

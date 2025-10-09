@@ -123,12 +123,12 @@ const Crowns = () => {
                       className="w-full h-64 bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105 overflow-hidden"
                       onClick={() =>
                         handleImageClick(
-                          "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Crown/7750-OrfinaCrown.jpg"
+                          "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Crown/7750-OrfinaCrown.jpg"
                         )
                       }
                     >
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Crown/7750-OrfinaCrown.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Crown/7750-OrfinaCrown.jpg"
                         alt="Orfina Crown"
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -146,12 +146,12 @@ const Crowns = () => {
                       className="w-full aspect-video bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
                       onClick={() =>
                         handleImageClick(
-                          "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Crown/7750%20Crown.jpg"
+                          "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Crown/7750%20Crown.jpg"
                         )
                       }
                     >
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Crown/7750%20Crown.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Crown/7750%20Crown.jpg"
                         alt="PD Crown"
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -169,12 +169,12 @@ const Crowns = () => {
                       className="w-full aspect-video bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
                       onClick={() =>
                         handleImageClick(
-                          "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Crown/7750-Mk.3-Case-2crop.jpg"
+                          "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Crown/7750-Mk.3-Case-2crop.jpg"
                         )
                       }
                     >
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Crown/7750-Mk.3-Case-2crop.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Crown/7750-Mk.3-Case-2crop.jpg"
                         alt="Orfina 7750 [FLAT-FACE - Service]"
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -309,12 +309,12 @@ const Crowns = () => {
                     className="w-full aspect-video bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
                     onClick={() =>
                       handleImageClick(
-                        "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Crown/7177-SilverCase-2crop.jpg"
+                        "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Crown/7177-SilverCase-2crop.jpg"
                       )
                     }
                   >
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Crown/7177-SilverCase-2crop.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Crown/7177-SilverCase-2crop.jpg"
                       alt="Group BUND Straps"
                       className="w-full h-full object-cover rounded-lg"
                     />

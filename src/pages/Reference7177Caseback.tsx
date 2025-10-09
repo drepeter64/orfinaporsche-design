@@ -155,13 +155,13 @@ const Reference7177Caseback = () => {
                     <ImageSlider
                       images={[
                         {
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7176s-caseback.jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7176s-caseback.jpg",
                           alt: "Ref. 7176S Caseback",
                           title: "Ref. 7176S Caseback",
                           subtitle: "Reference 7177",
                         },
                         {
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7176s-caseback%20Frame%20(1).jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7176s-caseback%20Frame%20(1).jpg",
                           alt: "Ref. 7176S Caseback - View 2",
                           title: "Ref. 7176S Caseback - View 2",
                           subtitle: "Reference 7177",
@@ -179,13 +179,13 @@ const Reference7177Caseback = () => {
                       <ImageSlider
                         images={[
                           {
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-SilverCase-3crop.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-SilverCase-3crop.jpg",
                             alt: "Ref. 7177 Caseback",
                             title: "Ref. 7177 Caseback",
                             subtitle: "Reference 7177",
                           },
                           {
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-SilverCase-3crop%20Frame.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-SilverCase-3crop%20Frame.jpg",
                             alt: "Ref. 7177 Caseback - View 2",
                             title: "Ref. 7177 Caseback - View 2",
                             subtitle: "Reference 7177",

@@ -155,7 +155,7 @@ const Reference7177DialRoyalNavy = () => {
                   <ImageSlider
                     images={[
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-RoyalNavy-NTScrop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-RoyalNavy-NTScrop.jpg",
                         alt: "Royal Navy Dial",
                         title: "7177 Royal Navy Dial",
                         subtitle: "Inscription below PORSCHE DESIGN text"
@@ -206,19 +206,19 @@ const Reference7177DialRoyalNavy = () => {
                   <ImageSlider
                     images={[
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Royal%20Navy%20Bracelet%20-1.png",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Royal%20Navy%20Bracelet%20-1.png",
                         alt: "Royal Navy Bracelet View 1",
                         title: "7177 Royal Navy Bracelet",
                         subtitle: "Royal Navy Bracelet"
                       },
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Royal%20Navy%20Bracelet%20- 2.png",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Royal%20Navy%20Bracelet%20- 2.png",
                         alt: "Royal Navy Bracelet View 2", 
                         title: "7177 Royal Navy Bracelet",
                         subtitle: "Royal Navy Bracelet"
                       },
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Royal Navy Bracelet - 3.png",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Royal Navy Bracelet - 3.png",
                         alt: "Royal Navy Bracelet View 3", 
                         title: "7177 Royal Navy Bracelet",
                         subtitle: "Complete Set"

@@ -169,7 +169,7 @@ const Reference7177DialNato = () => {
                         className="relative group cursor-pointer"
                         onClick={() =>
                           setFullScreenImage({
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Nato-Proper-BUNDcrop.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Nato-Proper-BUNDcrop.jpg",
                             alt: "7177 NATO Dial",
                             title: "7177 NATO Dial",
                             subtitle: "Baseline with NATO at 4 O'Clock",
@@ -178,7 +178,7 @@ const Reference7177DialNato = () => {
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                         <ImageWithLoader
-                          src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Nato-Proper-BUNDcrop.jpg"
+                          src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Nato-Proper-BUNDcrop.jpg"
                           alt="7177 NATO Dial"
                           className="relative w-full h-80 sm:h-96 lg:h-[400px] object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                           skeletonClassName="w-full h-80 sm:h-96 lg:h-[400px] rounded-lg"
@@ -201,7 +201,7 @@ const Reference7177DialNato = () => {
                         className="relative group cursor-pointer"
                         onClick={() =>
                           setFullScreenImage({
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Nato-Magazinecrop.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Nato-Magazinecrop.jpg",
                             alt: "7177 NATO Magazine Feature",
                             title: "7177 NATO Magazine Feature",
                             subtitle: "NATO Headquarters Brussels",
@@ -210,7 +210,7 @@ const Reference7177DialNato = () => {
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                         <ImageWithLoader
-                          src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Nato-Magazinecrop.jpg"
+                          src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Nato-Magazinecrop.jpg"
                           alt="7177 NATO Magazine Feature"
                           className="relative w-full h-80 sm:h-96 lg:h-[400px] object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                           skeletonClassName="w-full h-80 sm:h-96 lg:h-[400px] rounded-lg"

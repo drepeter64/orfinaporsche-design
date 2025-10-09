@@ -155,7 +155,7 @@ const Hands = () => {
                     className="relative group cursor-pointer"
                     onClick={() =>
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Hands/7750 Handset.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Hands/7750 Handset.jpg",
                         alt: "7750 Handset",
                         title: "7750 Handset",
                         subtitle: "Original 7750 Hand Configuration",
@@ -164,7 +164,7 @@ const Hands = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Hands/7750 Handset.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Hands/7750 Handset.jpg"
                       alt="7750 Handset"
                       className="relative w-full max-w-sm h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                       skeletonClassName="w-full max-w-sm h-80 rounded-lg"
@@ -191,7 +191,7 @@ const Hands = () => {
                     className="relative group cursor-pointer"
                     onClick={() =>
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Hands/7176-Civilian-Handset.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Hands/7176-Civilian-Handset.jpg",
                         alt: "7176 Civilian Handset",
                         title: "7176 Civilian Handset",
                         subtitle: "Evolution to Pointed Minute Hands",
@@ -200,7 +200,7 @@ const Hands = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Hands/7176-Civilian-Handset.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Hands/7176-Civilian-Handset.jpg"
                       alt="7176 Civilian Handset"
                       className="relative w-full max-w-sm h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                       skeletonClassName="w-full max-w-sm h-80 rounded-lg"
@@ -317,7 +317,7 @@ const Hands = () => {
                     className="relative group cursor-pointer"
                     onClick={() =>
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Hands/Militaryhandset.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Hands/Militaryhandset.jpg",
                         alt: "7176/7177 Military Handset",
                         title: "7176/7177 Military Handset",
                         subtitle: "Military Variant with Airplane Hand",
@@ -326,7 +326,7 @@ const Hands = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Hands/Militaryhandset.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Hands/Militaryhandset.jpg"
                       alt="7176/7177 Military Handset"
                       className="relative w-full max-w-sm h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                       skeletonClassName="w-full max-w-sm h-80 rounded-lg"
@@ -377,7 +377,7 @@ const Hands = () => {
                       className="relative group cursor-pointer"
                       onClick={() =>
                         setFullScreenImage({
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Hands/Militaryhandset.jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Hands/Militaryhandset.jpg",
                           alt: "Faded Handset",
                           title: "Faded Handset",
                           subtitle: "Faded Handset",
@@ -386,7 +386,7 @@ const Hands = () => {
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Hands/Militaryhandset.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Hands/Militaryhandset.jpg"
                         alt="Faded Handset"
                         className="relative w-full max-w-sm h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                         skeletonClassName="w-full max-w-sm h-80 rounded-lg"
@@ -406,7 +406,7 @@ const Hands = () => {
                     className="relative group cursor-pointer"
                     onClick={() =>
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Hands/7177-Non-Faded.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Hands/7177-Non-Faded.jpg",
                         alt: "Non-Faded Handset",
                         title: "Non-Faded Handset",
                         subtitle: "Non-Faded Handset",
@@ -415,7 +415,7 @@ const Hands = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Hands/7177-Non-Faded.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Hands/7177-Non-Faded.jpg"
                       alt="Non-Faded Handset"
                       className="relative w-full max-w-sm h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                       skeletonClassName="w-full max-w-sm h-80 rounded-lg"

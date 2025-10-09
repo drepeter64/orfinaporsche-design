@@ -169,13 +169,13 @@ const Reference7177DialUAE = () => {
                   <ImageSlider
                     images={[
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-UAE-Midcaseserial.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-UAE-Midcaseserial.jpg",
                         alt: "UAE Mid-Caseback Serial - 1",
                         title: "UAE Mid-Caseback Serial - 1",
                         subtitle: "Mid-Caseback Serial Number",
                       },
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-UAE-Midcaseserial-frame.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-UAE-Midcaseserial-frame.jpg",
                         alt: "UAE Mid-Caseback Serial - 2",
                         title: "UAE Mid-Caseback Serial - 2",
                         subtitle: "Low 3000 Serial Range",
@@ -235,7 +235,7 @@ const Reference7177DialUAE = () => {
                         className="relative group cursor-pointer"
                         onClick={() =>
                           setFullScreenImage({
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177%20UAE%20Mk.%201%20Dial.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177%20UAE%20Mk.%201%20Dial.jpg",
                             alt: "UAE Mk. 1 Dial",
                             title: "UAE Mk. 1 Dial",
                             subtitle: "Unique Serial Number Placement",
@@ -244,7 +244,7 @@ const Reference7177DialUAE = () => {
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                         <ImageWithLoader
-                          src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177%20UAE%20Mk.%201%20Dial.jpg"
+                          src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177%20UAE%20Mk.%201%20Dial.jpg"
                           alt="UAE Mk. 1 Dial"
                           className="relative w-full h-80 sm:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                           skeletonClassName="w-full h-80 sm:h-96 rounded-lg"
@@ -266,7 +266,7 @@ const Reference7177DialUAE = () => {
                         className="relative group cursor-pointer"
                         onClick={() =>
                           setFullScreenImage({
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-UAE-Gold-Coloredcrop.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-UAE-Gold-Coloredcrop.jpg",
                             alt: "UAE Mk. 2 Dial and Gold Colored Case",
                             title: "UAE Mk. 2 Dial and Gold Colored Case",
                             subtitle: "Believed to be Owner Customized",
@@ -275,7 +275,7 @@ const Reference7177DialUAE = () => {
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                         <ImageWithLoader
-                          src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-UAE-Gold-Coloredcrop.jpg"
+                          src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-UAE-Gold-Coloredcrop.jpg"
                           alt="UAE Mk. 2 Dial and Gold Colored Case"
                           className="relative w-full h-80 sm:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                           skeletonClassName="w-full h-80 sm:h-96 rounded-lg"

@@ -44,7 +44,7 @@ const Reference7750 = () => {
       rehaut: "1Mile, 1KM, Advertisement",
       dial: "Orfina Dial",
       image:
-        "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Orfina.jpg",
+        "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Orfina.jpg",
       description:
         "The inaugural generation that established the legendary 7750 lineage.",
     },
@@ -59,7 +59,7 @@ const Reference7750 = () => {
       rehaut: "1Mile, 1KM, Advertisement",
       dial: "PD Dial",
       image:
-        "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Flat-PD.jpg",
+        "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Flat-PD.jpg",
       description:
         "A refined iteration with enhanced dial configuration and improved mechanics.",
     },
@@ -74,7 +74,7 @@ const Reference7750 = () => {
       rehaut: "1Mile, 1KM, Advertisement",
       dial: "PD Dial",
       image:
-        "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-PD-Thin.jpg",
+        "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-PD-Thin.jpg",
       description:
         "The pinnacle of 7750 engineering with advanced PVD coating technology.",
     },
@@ -340,7 +340,7 @@ const Reference7750 = () => {
                       e.preventDefault();
                       e.stopPropagation();
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Flat-PD.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Flat-PD.jpg",
                         alt: "Case & Finishes",
                         title: "Case & Finishes",
                         subtitle: "Reference 7750",
@@ -348,7 +348,7 @@ const Reference7750 = () => {
                     }}
                   >
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Flat-PD.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Flat-PD.jpg"
                       alt="Case & Finishes"
                       className="w-full h-full object-cover object-center"
                       skeletonClassName="w-full h-full"
@@ -380,7 +380,7 @@ const Reference7750 = () => {
                       e.preventDefault();
                       e.stopPropagation();
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Mk.2-Caseback-1.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Mk.2-Caseback-1.jpg",
                         alt: "Caseback",
                         title: "Caseback",
                         subtitle: "Reference 7750",
@@ -388,7 +388,7 @@ const Reference7750 = () => {
                     }}
                   >
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Mk.2-Caseback-1.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Mk.2-Caseback-1.jpg"
                       alt="Caseback"
                       className="w-full h-full object-cover object-center"
                       skeletonClassName="w-full h-full"
@@ -420,7 +420,7 @@ const Reference7750 = () => {
                       e.preventDefault();
                       e.stopPropagation();
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Rehaut-1mile.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Rehaut-1mile.jpg",
                         alt: "Rehaut Variations",
                         title: "Rehaut Variations",
                         subtitle: "Reference 7750",
@@ -428,7 +428,7 @@ const Reference7750 = () => {
                     }}
                   >
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Rehaut-1mile.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Rehaut-1mile.jpg"
                       alt="Rehaut Variations"
                       className="w-full h-full object-cover object-center"
                       skeletonClassName="w-full h-full"
@@ -460,7 +460,7 @@ const Reference7750 = () => {
                       e.preventDefault();
                       e.stopPropagation();
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Orfina.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Orfina.jpg",
                         alt: "Dial Variations",
                         title: "Dial Variations",
                         subtitle: "Reference 7750",
@@ -468,7 +468,7 @@ const Reference7750 = () => {
                     }}
                   >
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Orfina.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Orfina.jpg"
                       alt="Dial Variations"
                       className="w-full h-full object-cover object-center"
                       skeletonClassName="w-full h-full"

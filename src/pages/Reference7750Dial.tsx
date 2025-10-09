@@ -112,7 +112,7 @@ const Reference7750Dial = () => {
                     className="relative group cursor-pointer"
                     onClick={() =>
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Orfina.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Orfina.jpg",
                         alt: "7750 Orfina Dial",
                         title: "Orfina Dial",
                         subtitle: "Reference 7750",
@@ -121,7 +121,7 @@ const Reference7750Dial = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                     <img
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-Orfina.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Orfina.jpg"
                       alt="7750 Orfina Dial"
                       className="relative w-full max-w-sm h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                     />
@@ -148,7 +148,7 @@ const Reference7750Dial = () => {
                     className="relative group cursor-pointer"
                     onClick={() =>
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-PD-Thin.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-PD-Thin.jpg",
                         alt: "7750 PD Dial",
                         title: "PD Dial",
                         subtitle: "Reference 7750",
@@ -157,7 +157,7 @@ const Reference7750Dial = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
                     <img
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7750-photos/7750-PD-Thin.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-PD-Thin.jpg"
                       alt="7750 PD Dial"
                       className="relative w-full max-w-sm h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                     />

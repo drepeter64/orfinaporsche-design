@@ -177,13 +177,13 @@ const Reference7177DialVenezuelanMOD = () => {
                         <ImageSlider
                           images={[
                             {
-                              src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-VMOD-Casebackcrop.jpg",
+                              src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-VMOD-Casebackcrop.jpg",
                               alt: "EJERCITO DE VENEZUELA Caseback",
                               title: "EJERCITO DE VENEZUELA Caseback",
                               subtitle: "First Batch - Army Issue",
                             },
                             {
-                              src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-VMOD-Casebackcrop Frame.jpg",
+                              src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-VMOD-Casebackcrop Frame.jpg",
                               alt: "EJERCITO DE VENEZUELA Caseback - Closeup",
                               title: "EJERCITO DE VENEZUELA Caseback - Closeup",
                               subtitle: "First Batch - Army Issue",
@@ -200,7 +200,7 @@ const Reference7177DialVenezuelanMOD = () => {
                           className="relative group cursor-pointer"
                           onClick={() =>
                             setFullScreenImage({
-                              src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/MINISTERIO VMOD Caseback-1.jpg",
+                              src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/MINISTERIO VMOD Caseback-1.jpg",
                               alt: "REPUBLICA DE VENEZUELA MINISTERIO DE LA DEFENSA Caseback",
                               title: "REPUBLICA DE VENEZUELA MINISTERIO DE LA DEFENSA Caseback",
                               subtitle: "Second Batch - Ministry Issue",
@@ -209,7 +209,7 @@ const Reference7177DialVenezuelanMOD = () => {
                         >
                           <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                           <ImageWithLoader
-                            src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/MINISTERIO VMOD Caseback-1.jpg"
+                            src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/MINISTERIO VMOD Caseback-1.jpg"
                             alt="REPUBLICA DE VENEZUELA MINISTERIO DE LA DEFENSA Caseback"
                             className="relative w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                             skeletonClassName="w-full h-64 sm:h-80 lg:h-96 rounded-lg"
@@ -273,7 +273,7 @@ const Reference7177DialVenezuelanMOD = () => {
                         className="relative group cursor-pointer"
                         onClick={() =>
                           setFullScreenImage({
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-VMODcrop.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-VMODcrop.jpg",
                             alt: "Baseline Mk. 2 Dial",
                             title: "Baseline Mk. 2 Dial",
                             subtitle: "VZMOD Dial Variation",
@@ -282,7 +282,7 @@ const Reference7177DialVenezuelanMOD = () => {
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                         <ImageWithLoader
-                          src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-VMODcrop.jpg"
+                          src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-VMODcrop.jpg"
                           alt="Baseline Mk. 2 Dial"
                           className="relative w-full h-80 sm:h-96 lg:h-[400px] object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                           skeletonClassName="w-full h-80 sm:h-96 lg:h-[400px] rounded-lg"
@@ -328,7 +328,7 @@ const Reference7177DialVenezuelanMOD = () => {
                       className="relative group cursor-pointer"
                       onClick={() =>
                         setFullScreenImage({
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/VMOD%20Boxcrop.jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/VMOD%20Boxcrop.jpg",
                           alt: "Venezuelan Ministry of Defense Box",
                           title: "Venezuelan Ministry of Defense Box",
                           subtitle: "Unique Printed Packaging",
@@ -337,7 +337,7 @@ const Reference7177DialVenezuelanMOD = () => {
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/VMOD%20Boxcrop.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/VMOD%20Boxcrop.jpg"
                         alt="Venezuelan Ministry of Defense Box"
                         className="relative w-full h-80 sm:h-96 lg:h-[400px] object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                         skeletonClassName="w-full h-80 sm:h-96 lg:h-[400px] rounded-lg"

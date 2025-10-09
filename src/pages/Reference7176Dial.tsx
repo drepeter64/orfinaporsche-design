@@ -169,7 +169,7 @@ const Reference7176Dial = () => {
                       className="relative group cursor-pointer"
                       onClick={() =>
                         setFullScreenImage({
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/7176s-PVD-Dial.jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176s-PVD-Dial.jpg",
                           alt: "7176 S with Civilian Dial",
                           title: "7176 S with Civilian Dial",
                           subtitle: "Reference 7176",
@@ -178,7 +178,7 @@ const Reference7176Dial = () => {
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/7176s-PVD.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176s-PVD.jpg"
                         alt="7176 S with Civilian Dial"
                         className="relative w-full h-64 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                         skeletonClassName="relative w-full h-64 rounded-lg"
@@ -200,7 +200,7 @@ const Reference7176Dial = () => {
                       className="relative group cursor-pointer"
                       onClick={() =>
                         setFullScreenImage({
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176-photos/7176D%20Front%20%28wes%29crop.jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176-photos/7176D%20Front%20%28wes%29crop.jpg",
                           alt: "7176 D with Civilian Dial",
                           title: "7176 D with Civilian Dial",
                           subtitle: "Reference 7176",
@@ -209,7 +209,7 @@ const Reference7176Dial = () => {
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176-photos/7176D%20Front%20%28wes%29crop.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176-photos/7176D%20Front%20%28wes%29crop.jpg"
                         alt="7176 D with Civilian Dial"
                         className="relative w-full h-64 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                         skeletonClassName="relative w-full h-64 rounded-lg"
@@ -271,7 +271,7 @@ const Reference7176Dial = () => {
                       className="relative group cursor-pointer"
                       onClick={() =>
                         setFullScreenImage({
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/7176%20-%20Polished%20-3crop.jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176%20-%20Polished%20-3crop.jpg",
                           alt: "7176 D with Civilian Dial",
                           title: "7176 D with Civilian Dial",
                           subtitle: "Reference 7176",
@@ -280,7 +280,7 @@ const Reference7176Dial = () => {
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/7176%20-%20Polished%20-3crop.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176%20-%20Polished%20-3crop.jpg"
                         alt="7176 D with Civilian Dial"
                         className="relative w-full h-64 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                         skeletonClassName="relative w-full h-64 rounded-lg"
@@ -418,7 +418,7 @@ const Reference7176Dial = () => {
                     className="relative group cursor-pointer"
                     onClick={() =>
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176-photos/7176%20Military.png",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176-photos/7176%20Military.png",
                         alt: "7176 Military with Military Dial",
                         title: "7176 Military with Military Dial",
                         subtitle: "Reference 7176",
@@ -427,7 +427,7 @@ const Reference7176Dial = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176-photos/7176%20Military.png"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176-photos/7176%20Military.png"
                       alt="7176 Military with Military Dial"
                       className="relative w-full max-w-sm h-80 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                       skeletonClassName="relative w-full max-w-sm h-80 rounded-lg"
@@ -455,7 +455,7 @@ const Reference7176Dial = () => {
                     className="relative group cursor-pointer"
                     onClick={() =>
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176-photos/7176D-Bluecrop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176-photos/7176D-Bluecrop.jpg",
                         alt: "7176 D with Blue by Orfina Dial",
                         title: "7176 D with Blue by Orfina Dial",
                         subtitle: "Reference 7176",
@@ -464,7 +464,7 @@ const Reference7176Dial = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176-photos/7176D-Bluecrop.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176-photos/7176D-Bluecrop.jpg"
                       alt="7176 D with Blue by Orfina Dial"
                       className="relative w-full max-w-sm h-80 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                       skeletonClassName="relative w-full max-w-sm h-80 rounded-lg"
@@ -549,7 +549,7 @@ const Reference7176Dial = () => {
                       className="relative group cursor-pointer"
                       onClick={() =>
                         setFullScreenImage({
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/7176-byOrfina-Black-Dial Frame.jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176-byOrfina-Black-Dial Frame.jpg",
                           alt: "Black by Orfina Dial",
                           title: "Black by Orfina Dial",
                           subtitle: "Reference 7176",
@@ -558,7 +558,7 @@ const Reference7176Dial = () => {
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7176%20Photos/7176-byOrfina-Black-Dial Frame.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176-byOrfina-Black-Dial Frame.jpg"
                         alt="Black by Orfina Dial"
                         className="relative w-full max-w-sm h-80 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                         skeletonClassName="relative w-full max-w-sm h-80 rounded-lg"

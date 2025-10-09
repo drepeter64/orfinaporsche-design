@@ -171,19 +171,19 @@ const Bracelets = () => {
                       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                         {[
                           {
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK1-Orfina-Backcrop.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK1-Orfina-Backcrop.jpg",
                             title: "MK1 Orfina Back",
                           },
                           {
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK1-Orfina-Extended-1crop.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK1-Orfina-Extended-1crop.jpg",
                             title: "MK1 Orfina Extended 1",
                           },
                           {
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK1-Orfina-Extended-2crop.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK1-Orfina-Extended-2crop.jpg",
                             title: "MK1 Orfina Extended 2",
                           },
                           {
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK1-Orfina-Frontcrop.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK1-Orfina-Frontcrop.jpg",
                             title: "MK1 Orfina Front",
                           },
                         ].map((image, index) => (
@@ -218,7 +218,7 @@ const Bracelets = () => {
                         {/* Placeholder for two bump variants - using similar images for now */}
                         {[
                           {
-                            src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Mk 1 Orfina Pincrop.jpg",
+                            src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Mk 1 Orfina Pincrop.jpg",
                             title: "MK1 Two Bump Pin",
                           },
                         ].map((image, index) => (
@@ -264,19 +264,19 @@ const Bracelets = () => {
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                       {[
                         {
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK1-PVD-Pin-Backcrop.jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK1-PVD-Pin-Backcrop.jpg",
                           title: "MK1 PVD Pin Back",
                         },
                         {
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK1-PVD-Pin-Extended-1crop.jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK1-PVD-Pin-Extended-1crop.jpg",
                           title: "MK1 PVD Pin Extended 1",
                         },
                         {
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK1-PVD-Pin-Extended-2crop.jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK1-PVD-Pin-Extended-2crop.jpg",
                           title: "MK1 PVD Pin Extended 2",
                         },
                         {
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK1-PVD-Pin-Frontcrop.jpg",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK1-PVD-Pin-Frontcrop.jpg",
                           title: "MK1 PVD Pin Front",
                         },
                       ].map((image, index) => (
@@ -383,19 +383,19 @@ const Bracelets = () => {
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
                     {[
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK2-Backcrop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK2-Backcrop.jpg",
                         title: "MK2 Back",
                       },
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK2-Front-(2nd Example)crop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK2-Front-(2nd Example)crop.jpg",
                         title: "MK2 Front",
                       },
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK2-PVD-Backcrop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK2-PVD-Backcrop.jpg",
                         title: "MK2 PVD Back",
                       },
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK2-PVD-Front-(2nd Example)crop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK2-PVD-Front-(2nd Example)crop.jpg",
                         title: "MK2 PVD Front",
                       },
                     ].map((image, index) => (
@@ -476,19 +476,19 @@ const Bracelets = () => {
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                     {[
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK3-PVD-Backcrop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK3-PVD-Backcrop.jpg",
                         title: "MK3 PVD Back",
                       },
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK3-PVD-Extended-1crop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK3-PVD-Extended-1crop.jpg",
                         title: "MK3 PVD Extended 1",
                       },
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK3-PVD-Extended-2crop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK3-PVD-Extended-2crop.jpg",
                         title: "MK3 PVD Extended 2",
                       },
                       {
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Bracelets/Bracelet-MK3-PVD-Frontcrop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Bracelets/Bracelet-MK3-PVD-Frontcrop.jpg",
                         title: "MK3 PVD Front",
                       },
                     ].map((image, index) => (

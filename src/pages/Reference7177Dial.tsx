@@ -7,66 +7,66 @@ const dialVariations = [
   {
     name: "Four-Logo",
     path: "/references/7177/dial/four-logo",
-    img1: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-4Logocrop.jpg",
-    img2: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/IMG_3298.jpg"
+    img1: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-4Logocrop.jpg",
+    img2: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/IMG_3298.jpg"
   },
   {
     name: "Baseline",
     path: "/references/7177/dial/baseline",
-    img1: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Silvercrop.jpg",
-    img2: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Blackcrop.jpg",
+    img1: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Silvercrop.jpg",
+    img2: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Blackcrop.jpg",
   },
   {
     name: "Nato",
     path: "/references/7177/dial/nato",
-    img1: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Nato-Proper-BUNDcrop.jpg",
-    img2: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Natocrop.jpg",
+    img1: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Nato-Proper-BUNDcrop.jpg",
+    img2: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Natocrop.jpg",
   },
   {
     name: "Swiss Shield",
     path: "/references/7177/dial/swiss-shield",
-    img1: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177%20Swiss%20Shieldcrop.jpg",
-    img2: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177 Swiss Shield Setcrop.jpg",
+    img1: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177%20Swiss%20Shieldcrop.jpg",
+    img2: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177 Swiss Shield Setcrop.jpg",
   },
   {
     name: "BUND",
     path: "/references/7177/dial/bund",
-    img1: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-BUNDcrop.jpg",
-    img2: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/IMG_3256crop.jpg",
+    img1: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-BUNDcrop.jpg",
+    img2: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/IMG_3256crop.jpg",
   },
 
   {
     name: "Venezuelan MOD",
     path: "/references/7177/dial/venezuelan-mod",
-    img1: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-VMODcrop.jpg",
-    img2: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-VMOD-Casebackcrop.jpg",
+    img1: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-VMODcrop.jpg",
+    img2: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-VMOD-Casebackcrop.jpg",
   },
 
   {
     name: "Flying Tiger",
     path: "/references/7177/dial/flying-tiger",
-    img1: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Tiger-Silvercrop.jpg",
-    img2: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Tiger-Patchcrop.jpg",
+    img1: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Tiger-Silvercrop.jpg",
+    img2: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-Tiger-Patchcrop.jpg",
   },
   {
     name: "Royal Navy",
     path: "/references/7177/dial/royal-navy",
-    img1: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-RoyalNavy-NTScrop.jpg",
-    img2: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/Royal Navy Bracelet -1.png",
+    img1: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-RoyalNavy-NTScrop.jpg",
+    img2: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/Royal Navy Bracelet -1.png",
   },
 
   {
     name: "UAE",
     path: "/references/7177/dial/uae",
-    img1: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/Pasted Graphic 17crop.jpg",
-    img2: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-UAE-Gold-Coloredcrop.jpg",
+    img1: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/Pasted Graphic 17crop.jpg",
+    img2: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-UAE-Gold-Coloredcrop.jpg",
   },
 
   {
     name: "By Orfina",
     path: "/references/7177/dial/by-orfina",
-    img1: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-ByOrfinacrop.jpg",
-    img2: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-ByOrfinacrop.jpg",
+    img1: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-ByOrfinacrop.jpg",
+    img2: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Dial%20Cover%20Photos/7177-ByOrfinacrop.jpg",
   },
 ];
 

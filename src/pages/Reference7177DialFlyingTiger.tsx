@@ -122,7 +122,7 @@ const Reference7177DialFlyingTiger = () => {
                   className="relative group cursor-pointer"
                   onClick={() =>
                     setFullScreenImage({
-                      src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Tiger-Group-2crop.jpg",
+                      src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Tiger-Group-2crop.jpg",
                       alt: "Flying Tiger Group Photo",
                       title: "Flying Tiger Group Photo",
                       subtitle: "Multiple Flying Tiger Variants",
@@ -131,7 +131,7 @@ const Reference7177DialFlyingTiger = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                   <ImageWithLoader
-                    src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Tiger-Group-2crop.jpg"
+                    src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Tiger-Group-2crop.jpg"
                     alt="Flying Tiger Group Photo"
                     className="relative w-full h-96 sm:h-[450px] lg:h-[500px] object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                     skeletonClassName="w-full h-96 sm:h-[450px] lg:h-[500px] rounded-lg"
@@ -196,7 +196,7 @@ const Reference7177DialFlyingTiger = () => {
                       className="relative group cursor-pointer"
                       onClick={() =>
                         setFullScreenImage({
-                          src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Flying%20Tiger%20Crest.gif",
+                          src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Flying%20Tiger%20Crest.gif",
                           alt: "Flying Tiger Crest",
                           title: "Flying Tiger Crest",
                           subtitle: "23rd Tactical Fighter Group",
@@ -205,7 +205,7 @@ const Reference7177DialFlyingTiger = () => {
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/Flying%20Tiger%20Crest.gif"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/Flying%20Tiger%20Crest.gif"
                         alt="Flying Tiger Crest"
                         className="relative w-full max-w-sm h-80 sm:h-96 lg:h-[400px] object-contain rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                         skeletonClassName="w-full max-w-sm h-80 sm:h-96 lg:h-[400px] rounded-lg"
@@ -274,7 +274,7 @@ const Reference7177DialFlyingTiger = () => {
                     className="relative group cursor-pointer"
                     onClick={() =>
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Tiger-Mk.%202crop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Tiger-Mk.%202crop.jpg",
                         alt: "Flying Tiger Mk. 1 Dial",
                         title: "Flying Tiger Mk. 1 Dial",
                         subtitle: "Batch 1 - With U.S. Airforce Printing",
@@ -283,7 +283,7 @@ const Reference7177DialFlyingTiger = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Tiger-Mk. 2crop.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Tiger-Mk. 2crop.jpg"
                       alt="Flying Tiger Mk. 1 Dial"
                       className="relative w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                       skeletonClassName="w-full h-64 sm:h-80 lg:h-96 rounded-lg"
@@ -304,7 +304,7 @@ const Reference7177DialFlyingTiger = () => {
                     className="relative group cursor-pointer"
                     onClick={() =>
                       setFullScreenImage({
-                        src: "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Tiger-Silvercrop.jpg",
+                        src: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Tiger-Silvercrop.jpg",
                         alt: "Flying Tiger Mk. 2 Dial",
                         title: "Flying Tiger Mk. 2 Dial",
                         subtitle: "Batch 2 - Without U.S. Airforce Printing",
@@ -313,7 +313,7 @@ const Reference7177DialFlyingTiger = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
                     <ImageWithLoader
-                      src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/7177%20Photos/7177-Tiger-Silvercrop.jpg"
+                      src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Tiger-Silvercrop.jpg"
                       alt="Flying Tiger Mk. 2 Dial"
                       className="relative w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                       skeletonClassName="w-full h-64 sm:h-80 lg:h-96 rounded-lg"

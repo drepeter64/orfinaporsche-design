@@ -161,12 +161,12 @@ const Movements = () => {
                       className="w-full aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
                       onClick={() =>
                         handleImageClick(
-                          "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/Movement-7750-Mk.1.jpg"
+                          "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/Movement-7750-Mk.1.jpg"
                         )
                       }
                     >
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/Movement-7750-Mk.1.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/Movement-7750-Mk.1.jpg"
                         alt="Valjoux 7750 Rotor Mk. 1"
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -184,12 +184,12 @@ const Movements = () => {
                       className="w-full aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
                       onClick={() =>
                         handleImageClick(
-                          "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/Movement-7750-Mk.%201-1.jpg"
+                          "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/Movement-7750-Mk.%201-1.jpg"
                         )
                       }
                     >
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/Movement-7750-Mk.%201-1.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/Movement-7750-Mk.%201-1.jpg"
                         alt="Valjoux 7750 Rotor Mk. 2"
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -332,12 +332,12 @@ const Movements = () => {
                       className="w-full aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
                       onClick={() =>
                         handleImageClick(
-                          "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/L5100-Serial-Mk.1.jpg"
+                          "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/L5100-Serial-Mk.1.jpg"
                         )
                       }
                     >
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/L5100-Serial-Mk.1.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/L5100-Serial-Mk.1.jpg"
                         alt="Serial Type 1"
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -355,12 +355,12 @@ const Movements = () => {
                       className="w-full aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
                       onClick={() =>
                         handleImageClick(
-                          "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/L5100-Serial-Mk.2.jpg"
+                          "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/L5100-Serial-Mk.2.jpg"
                         )
                       }
                     >
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/L5100-Serial-Mk.2.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/L5100-Serial-Mk.2.jpg"
                         alt="Serial Type 2"
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -453,12 +453,12 @@ const Movements = () => {
                       className="w-full aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
                       onClick={() =>
                         handleImageClick(
-                          "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/Mk.1Lemania%205100Rotor.jpg"
+                          "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/Mk.1Lemania%205100Rotor.jpg"
                         )
                       }
                     >
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/Mk.1Lemania%205100Rotor.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/Mk.1Lemania%205100Rotor.jpg"
                         alt="Mk. 1 Lemania 5100 Rotor"
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -476,12 +476,12 @@ const Movements = () => {
                       className="w-full aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
                       onClick={() =>
                         handleImageClick(
-                          "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/Mk.2Lemania%205100Rotor.jpg"
+                          "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/Mk.2Lemania%205100Rotor.jpg"
                         )
                       }
                     >
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/Mk.2Lemania%205100Rotor.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/Mk.2Lemania%205100Rotor.jpg"
                         alt="Mk. 2 Lemania 5100 Rotor"
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -499,12 +499,12 @@ const Movements = () => {
                       className="w-full aspect-square bg-gray-100 rounded-lg flex items-center justify-center cursor-zoom-in shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
                       onClick={() =>
                         handleImageClick(
-                          "https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/Mk.3Lemania%205100Rotor.jpg"
+                          "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/Mk.3Lemania%205100Rotor.jpg"
                         )
                       }
                     >
                       <ImageWithLoader
-                        src="https://pub-393db0e6c92e43b780b2b552918d6106.r2.dev/images/Movements/Mk.3Lemania%205100Rotor.jpg"
+                        src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/Movements/Mk.3Lemania%205100Rotor.jpg"
                         alt="Mk. 3 Lemania 5100 Rotor"
                         className="w-full h-full object-cover rounded-lg"
                       />
