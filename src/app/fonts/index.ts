@@ -1,0 +1,1 @@
+export { openSansFont } from "./google"

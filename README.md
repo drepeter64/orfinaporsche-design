@@ -1,73 +1,94 @@
-# Welcome to your Lovable project
+# Next.js Galaxy IT template
 
-## Project info
+In the template uses:
 
-**URL**: https://lovable.dev/projects/8f29961c-6211-4ce7-9a28-51b965b4a72d
+- [Featured design](https://feature-sliced.design/docs/guides/tech/with-nextjs) - as design pattern
+- [Next intl](https://next-intl-docs.vercel.app/) - as localization controller
 
-## How can I edit this code?
+## Set up
 
-There are several ways of editing your application.
+Install dependencies
 
-**Use Lovable**
+```bash
+npm istall
+```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8f29961c-6211-4ce7-9a28-51b965b4a72d) and start prompting.
+To run development mode
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+To build project
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+```
 
-**Use GitHub Codespaces**
+To run production mode. To run production server project has to be built.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm start
+```
 
-## What technologies are used for this project?
+To stop process on this port
 
-This project is built with:
+```bash
+npm run stop
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Linting
 
-## How can I deploy this project?
+To run **JS/TS** code style lint & fix
 
-Simply open [Lovable](https://lovable.dev/projects/8f29961c-6211-4ce7-9a28-51b965b4a72d) and click on Share -> Publish.
+```bash
+npm run eslint
+```
 
-## Can I connect a custom domain to my Lovable project?
+To run **CSS/SCSS** code style lint & fix
 
-Yes, you can!
+```bash
+npm run stylelint
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+To run **JS/TS/CSS/SCSS** code style fix
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```bash
+npm run prettier
+```
+
+### Bash scripts
+
+Set up the project easier
+
+```bash
+gt-create-next-app()
+{
+  GREEN='\033[0;32m'
+  ORANGE='\033[0;33m'
+  PURPLE='\033[0;35m'
+  CYAN='\033[0;36m'
+  NO_COLOR='\033[0m'
+
+  printf "${PURPLE}Hey Bro, thanks for using this :D${NO_COLOR}\n"
+  printf "${PURPLE}Enter project name:${NO_COLOR}\n"
+  read project_name
+  printf "${CYAN}Start cloning into ./$project_name${NO_COLOR}\n"
+
+  git clone git@github.com:Galaxy-IT/galaxy_react.git "$project_name"
+  clone_status=$?
+
+  if [ $clone_status -eq 0 ]; then
+    printf "${GREEN}Cloned successfully ${NO_COLOR}\n\n"
+    printf "${CYAN}Installing dependencies ${NO_COLOR}\n"
+    (cd "$project_name" && npm install)
+    printf "${GREEN}Dependencies installed successfully ${NO_COLOR}\n"
+    printf "\n${GREEN}Project set up is ready ${NO_COLOR}\n\n"
+    printf "${CYAN}Run project: ${NO_COLOR}\n"
+    printf "cd $project_name\n"
+    printf "npm run dev\n\n"
+  else
+    printf "${ORANGE}Cloning failed. Please check your internet connection and try again.${NO_COLOR}\n"
+  fi
+}
+```

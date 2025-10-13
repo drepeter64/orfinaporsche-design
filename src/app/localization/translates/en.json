@@ -1,0 +1,12 @@
+{
+  "Home": {
+    "title": "Home page",
+    "switch-to": "Switch to {target}"
+  },
+  "NotFoundPage": {
+    "title": "Page not found with localization"
+  },
+  "Todos": {
+    "title": "Todos"
+  }
+}

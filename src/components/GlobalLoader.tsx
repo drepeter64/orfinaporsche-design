@@ -1,9 +1,18 @@
-import React from "react";
-import LoadingSpinner from "./LoadingSpinner";
+"use client"
+
+import React from "react"
+import { useLoading } from "@/contexts/LoadingContext"
+import LoadingSpinner from "./LoadingSpinner"
 
 const GlobalLoader: React.FC = () => {
+  const { isInitialLoad, isLoading } = useLoading()
+
+  if (!isInitialLoad && !isLoading) {
+    return null
+  }
+
   return (
-    <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-white z-[100] flex items-center justify-center">
       <div className="text-center">
         <div className="mb-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-light text-black mb-2 tracking-wider uppercase">
@@ -14,12 +23,10 @@ const GlobalLoader: React.FC = () => {
           </p>
         </div>
         <LoadingSpinner size="lg" />
-        <p className="mt-4 text-sm text-gray-500 tracking-wider uppercase">
-          Loading...
-        </p>
+        <p className="mt-4 text-sm text-gray-500 tracking-wider uppercase">Loading...</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default GlobalLoader;
+export default GlobalLoader

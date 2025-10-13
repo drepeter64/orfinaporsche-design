@@ -1,0 +1,29 @@
+{
+  "referenceId": "7750",
+  "referenceTitle": "7750",
+  "pageTitle": "Case & Finishes",
+  "descriptions": [
+    "The 7750 case features distinctive design elements that set it apart from later references.",
+    "Available in multiple finishes throughout its production run."
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "title": "Powder Coat Black",
+      "foundOn": "Generation 1 & 2",
+      "isPlaceholder": true
+    },
+    {
+      "id": 2,
+      "title": "Silver/Sablé",
+      "foundOn": "Generation 1 & 2",
+      "isPlaceholder": true
+    },
+    {
+      "id": 3,
+      "title": "Black PVD",
+      "foundOn": "Generation 3",
+      "isPlaceholder": true
+    }
+  ]
+}

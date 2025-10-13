@@ -1,0 +1,1 @@
+export { ShowRes } from "./ui"

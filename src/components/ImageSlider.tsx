@@ -1,46 +1,33 @@
-import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import ImageWithLoader from "./ImageWithLoader";
+import React, { useState } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import ImageWithLoader from "./ImageWithLoader"
 
 interface ImageSliderProps {
   images: Array<{
-    src: string;
-    alt: string;
-    title: string;
-    subtitle?: string;
-  }>;
-  onImageClick: (imageData: {
-    src: string;
-    alt: string;
-    title: string;
-    subtitle: string;
-  }) => void;
-  className?: string;
+    src: string
+    alt: string
+    title: string
+    subtitle?: string
+  }>
+  onImageClick: (imageData: { src: string; alt: string; title: string; subtitle: string }) => void
+  className?: string
 }
 
-const ImageSlider = ({
-  images,
-  onImageClick,
-  className = "",
-}: ImageSliderProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const ImageSlider = ({ images, onImageClick, className = "" }: ImageSliderProps) => {
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1))
+  }
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1))
+  }
 
-  const currentImage = images[currentIndex];
+  const currentImage = images[currentIndex]
 
   if (!images || images.length === 0) {
-    return null;
+    return null
   }
 
   return (
@@ -76,8 +63,8 @@ const ImageSlider = ({
           <>
             <button
               onClick={(e) => {
-                e.stopPropagation();
-                goToPrevious();
+                e.stopPropagation()
+                goToPrevious()
               }}
               className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-2 rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100"
             >
@@ -85,8 +72,8 @@ const ImageSlider = ({
             </button>
             <button
               onClick={(e) => {
-                e.stopPropagation();
-                goToNext();
+                e.stopPropagation()
+                goToNext()
               }}
               className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-2 rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100"
             >
@@ -102,13 +89,11 @@ const ImageSlider = ({
               <button
                 key={index}
                 onClick={(e) => {
-                  e.stopPropagation();
-                  setCurrentIndex(index);
+                  e.stopPropagation()
+                  setCurrentIndex(index)
                 }}
                 className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                  index === currentIndex
-                    ? "bg-white"
-                    : "bg-white bg-opacity-50 hover:bg-opacity-75"
+                  index === currentIndex ? "bg-white" : "bg-white bg-opacity-50 hover:bg-opacity-75"
                 }`}
               />
             ))}
@@ -130,7 +115,7 @@ const ImageSlider = ({
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default ImageSlider;
+export default ImageSlider

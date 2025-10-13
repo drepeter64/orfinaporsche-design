@@ -1,0 +1,35 @@
+{
+  "referenceId": "7177",
+  "referenceTitle": "7177",
+  "pageTitle": "Case & Finishes",
+  "descriptions": [
+    "The 7177 Military variants feature the same case as the 7176 civilian models but with different finishes.",
+    "Military-specific finishes were produced for various armed forces contracts."
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "title": "Black PVD",
+      "foundOn": "7177 Baseline, BUND, Royal Navy, Flying Tiger",
+      "isPlaceholder": true
+    },
+    {
+      "id": 2,
+      "title": "Silver/Sablé",
+      "foundOn": "7177 Four Logo, By Orfina",
+      "isPlaceholder": true
+    },
+    {
+      "id": 3,
+      "title": "Cadet Grey PVD",
+      "foundOn": "7177 NATO",
+      "isPlaceholder": true
+    },
+    {
+      "id": 4,
+      "title": "Olive Green PVD",
+      "foundOn": "7177 Swiss Shield",
+      "isPlaceholder": true
+    }
+  ]
+}

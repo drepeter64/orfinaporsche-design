@@ -1,0 +1,1 @@
+export { StrapsPage } from "./ui"

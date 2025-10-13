@@ -1,0 +1,114 @@
+.button {
+  --btn-color: inherit;
+  --btn-bg: transparent;
+  position: relative;
+
+  overflow: hidden;
+
+  font-weight: 500;
+  color: var(--btn-color);
+
+  cursor: pointer;
+
+  border: 1px solid var(--btn-color);
+  border-radius: 0.75rem;
+
+  transition: all 0.4s ease;
+}
+
+.button._sm {
+  padding: 0.5rem 1.5rem;
+}
+
+.button._md {
+  padding: 0.75rem 2.25rem;
+}
+
+.button._lg {
+  padding: 1rem 3rem;
+}
+
+.button._dark {
+  --btn-color: var(--text-color-primary);
+  --btn-bg: var(--bg-secondary);
+
+  &:active,
+  &:hover {
+    --btn-color: var(--text-color-secondary);
+    border-color: var(--btn-bg);
+  }
+}
+
+.button._dark._filled {
+  --btn-color: var(--text-color-secondary);
+  --btn-bg: var(--bg-primary);
+  color: var(--btn-color);
+
+  background-color: var(--bg-secondary);
+  border-color: var(--bg-secondary);
+
+  &:active,
+  &:hover {
+    --btn-color: var(--text-color-primary);
+  }
+}
+
+.button._light {
+  --btn-color: var(--text-color-secondary);
+  --btn-bg: var(--bg-primary);
+
+  &:active,
+  &:hover {
+    --btn-color: var(--text-color-primary);
+    border-color: var(--btn-bg);
+  }
+}
+
+.button._light._filled {
+  --btn-color: var(--text-color-primary);
+  --btn-bg: var(--bg-secondary);
+  color: var(--btn-color);
+
+  background-color: var(--bg-primary);
+  border-color: var(--bg-primary);
+
+  &:active,
+  &:hover {
+    --btn-color: var(--text-color-secondary);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  display: block;
+
+  width: 0;
+  height: auto;
+  aspect-ratio: 1/1;
+
+  pointer-events: none;
+
+  background-color: var(--btn-bg);
+  border-radius: 50%;
+
+  transition-timing-function: ease;
+  transition-duration: 500ms;
+  transition-property: width, border-radius, color, background-color;
+  transform: translate(-50%, -50%);
+}
+
+.button:active .bg,
+.button:hover .bg {
+  width: 250%;
+
+  transition-duration: 750ms;
+}

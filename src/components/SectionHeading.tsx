@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react"
 
 interface SectionHeadingProps {
-  title: string;
-  variant?: "numbered" | "solid" | "elegant" | "elegant-dark";
-  number?: number;
-  className?: string;
-  subtitle?: string;
+  title: string
+  variant?: "numbered" | "solid" | "elegant" | "elegant-dark"
+  number?: number
+  className?: string
+  subtitle?: string
 }
 
 const SectionHeading = ({
@@ -19,12 +19,10 @@ const SectionHeading = ({
     return (
       <div className={`flex items-center mb-8 sm:mb-12 ${className}`}>
         <div className="bg-black text-white px-6 py-3 rounded-lg">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wide">
-            {title}
-          </h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wide">{title}</h2>
         </div>
       </div>
-    );
+    )
   }
 
   if (variant === "elegant") {
@@ -41,7 +39,7 @@ const SectionHeading = ({
           </div>
         </div>
       </div>
-    );
+    )
   }
 
   if (variant === "elegant-dark") {
@@ -49,9 +47,7 @@ const SectionHeading = ({
       <div className={`mb-8 sm:mb-12 ${className}`}>
         <div className="inline-block">
           <div className="bg-black text-white px-6 py-4 rounded-lg">
-            <h2 className="text-xl sm:text-2xl font-semibold uppercase tracking-wide">
-              {title}
-            </h2>
+            <h2 className="text-xl sm:text-2xl font-semibold uppercase tracking-wide">{title}</h2>
           </div>
           {/* <div className="flex items-center space-x-3 mt-3">
             <div className="w-16 h-0.5 bg-black"></div>
@@ -60,7 +56,7 @@ const SectionHeading = ({
           </div> */}
         </div>
       </div>
-    );
+    )
   }
 
   // numbered variant (default)
@@ -70,15 +66,11 @@ const SectionHeading = ({
         {number}
       </div>
       <div>
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-black">
-          {title}
-        </h2>
-        {subtitle && (
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
-        )}
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-black">{title}</h2>
+        {subtitle && <p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionHeading;
+export default SectionHeading

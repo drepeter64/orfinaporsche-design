@@ -1,0 +1,21 @@
+html {
+  font-family: var(--ff-primary);
+  font-size: var(--font-size);
+  font-weight: 400;
+}
+
+body {
+  padding-right: var(--scrollbar-width);
+
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgb(128 128 128 / 45%);
+}

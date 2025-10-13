@@ -1,28 +1,22 @@
-import React from "react";
-import { Clock, Calendar, Settings, Layers } from "lucide-react";
-import ImageWithLoader from "./ImageWithLoader";
-import SectionHeading from "./SectionHeading";
+import React from "react"
+import ImageWithLoader from "./ImageWithLoader"
+import SectionHeading from "./SectionHeading"
 
 interface SpecificationRow {
-  label: string;
-  value: string;
-  icon: React.ComponentType<{ className?: string }>;
+  label: string
+  value: string
+  icon: React.ComponentType<{ className?: string }>
 }
 
 interface ReferenceVariantCardProps {
-  index: number;
-  title: string;
-  imageSrc: string;
-  imageAlt: string;
-  specifications: SpecificationRow[];
-  onImageClick: (imageData: {
-    src: string;
-    alt: string;
-    title: string;
-    subtitle: string;
-  }) => void;
-  subtitle?: string;
-  imageCaption?: string;
+  index: number
+  title: string
+  imageSrc: string
+  imageAlt: string
+  specifications: SpecificationRow[]
+  onImageClick: (imageData: { src: string; alt: string; title: string; subtitle: string }) => void
+  subtitle?: string
+  imageCaption?: string
 }
 
 const ReferenceVariantCard = ({
@@ -90,7 +84,7 @@ const ReferenceVariantCard = ({
             <table className="w-full">
               <tbody className="divide-y divide-gray-200">
                 {specifications.map((spec, idx) => {
-                  const IconComponent = spec.icon;
+                  const IconComponent = spec.icon
                   return (
                     <tr
                       key={idx}
@@ -99,16 +93,12 @@ const ReferenceVariantCard = ({
                       <td className="px-6 py-4">
                         <div className="flex items-center">
                           <IconComponent className="w-5 h-5 text-gray-600 mr-3" />
-                          <span className="font-medium text-gray-900">
-                            {spec.label}
-                          </span>
+                          <span className="font-medium text-gray-900">{spec.label}</span>
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-gray-700 text-right">
-                        {spec.value}
-                      </td>
+                      <td className="px-6 py-4 text-gray-700 text-right">{spec.value}</td>
                     </tr>
-                  );
+                  )
                 })}
               </tbody>
             </table>
@@ -116,7 +106,7 @@ const ReferenceVariantCard = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ReferenceVariantCard;
+export default ReferenceVariantCard

@@ -1,15 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { Skeleton } from "./ui/skeleton";
-import { cn } from "@/lib/utils";
+"use client"
 
-interface ImageWithLoaderProps
-  extends React.ImgHTMLAttributes<HTMLImageElement> {
-  src: string;
-  alt: string;
-  className?: string;
-  skeletonClassName?: string;
-  fallbackSrc?: string;
-  priority?: boolean;
+import React, { useState, useEffect } from "react"
+import Image from "next/image"
+import { Skeleton } from "@/components/ui/skeleton"
+import { cn } from "@/shared/lib/utils"
+
+interface ImageWithLoaderProps {
+  src: string
+  alt: string
+  className?: string
+  skeletonClassName?: string
+  fallbackSrc?: string
+  priority?: boolean
+  fill?: boolean
+  width?: number
+  height?: number
+  sizes?: string
 }
 
 const ImageWithLoader: React.FC<ImageWithLoaderProps> = ({
@@ -19,59 +25,56 @@ const ImageWithLoader: React.FC<ImageWithLoaderProps> = ({
   skeletonClassName = "",
   fallbackSrc = "/placeholder.svg",
   priority = false,
-  ...props
+  fill = false,
+  width = 800,
+  height = 600,
+  sizes,
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(false);
-  const [imageSrc, setImageSrc] = useState<string>("");
+  const [isLoading, setIsLoading] = useState(true)
+  const [imageSrc, setImageSrc] = useState<string>(src)
 
   useEffect(() => {
-    const img = new Image();
+    setIsLoading(true)
+    setImageSrc(src)
+  }, [src])
 
-    img.onload = () => {
-      setImageSrc(src);
-      setIsLoading(false);
-      setError(false);
-    };
+  const handleLoadingComplete = () => {
+    setIsLoading(false)
+  }
 
-    img.onerror = () => {
-      setImageSrc(fallbackSrc);
-      setIsLoading(false);
-      setError(true);
-    };
-
-    // Start loading the image
-    img.src = src;
-
-    // Cleanup
-    return () => {
-      img.onload = null;
-      img.onerror = null;
-    };
-  }, [src, fallbackSrc]);
-
-  if (isLoading) {
-    return (
-      <Skeleton
-        className={cn(
-          "w-full h-full bg-gray-200 animate-pulse",
-          skeletonClassName
-        )}
-      />
-    );
+  const handleError = () => {
+    setImageSrc(fallbackSrc)
+    setIsLoading(false)
   }
 
   return (
-    <img
-      src={imageSrc}
-      alt={alt}
-      className={cn(
-        "w-full h-full object-cover transition-opacity duration-300 ease-in-out",
-        className
+    <>
+      {isLoading && !priority && (
+        <Skeleton
+          className={cn(
+            "absolute inset-0 w-full h-full bg-gray-200 animate-pulse",
+            skeletonClassName,
+          )}
+        />
       )}
-      {...props}
-    />
-  );
-};
+      <Image
+        src={imageSrc}
+        alt={alt}
+        fill={fill}
+        width={!fill ? width : undefined}
+        height={!fill ? height : undefined}
+        sizes={sizes}
+        priority={priority}
+        onLoad={handleLoadingComplete}
+        onError={handleError}
+        className={cn(
+          "transition-opacity duration-300 ease-in-out",
+          isLoading ? "opacity-0" : "opacity-100",
+          className,
+        )}
+      />
+    </>
+  )
+}
 
-export default ImageWithLoader;
+export default ImageWithLoader

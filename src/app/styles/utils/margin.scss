@@ -1,0 +1,70 @@
+$iterate: 8;
+$start: 0;
+
+.ms-auto {
+  margin-left: auto;
+}
+
+.me-auto {
+  margin-right: auto;
+}
+
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.my-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.me-0 {
+  margin-right: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.ms-0 {
+  margin-left: 0;
+}
+
+@for $i from $start through $iterate {
+  .m-#{$i} {
+    margin: #{$i / 4}rem;
+  }
+}
+
+@for $i from $start through $iterate {
+  .mt-#{$i} {
+    margin-top: #{$i / 4}rem;
+  }
+}
+
+@for $i from $start through $iterate {
+  .me-#{$i} {
+    margin-right: #{$i / 4}rem;
+  }
+}
+
+@for $i from $start through $iterate {
+  .mb-#{$i} {
+    margin-bottom: #{$i / 4}rem;
+  }
+}
+
+@for $i from $start through $iterate {
+  .ms-#{$i} {
+    margin-left: #{$i / 4}rem;
+  }
+}

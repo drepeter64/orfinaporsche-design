@@ -1,0 +1,80 @@
+$iterate: 8;
+$start: 0;
+
+.pt-header-offset {
+  padding-top: var(--header-height);
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.px-0 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pe-0 {
+  padding-right: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.ps-0 {
+  padding-left: 0;
+}
+
+@for $i from $start through $iterate {
+  .p-#{$i} {
+    padding: #{$i / 4}rem;
+  }
+}
+
+@for $i from $start through $iterate {
+  .pt-#{$i} {
+    padding-top: #{$i / 4}rem;
+  }
+}
+
+@for $i from $start through $iterate {
+  .pe-#{$i} {
+    padding-right: #{$i / 4}rem;
+  }
+}
+
+@for $i from $start through $iterate {
+  .pb-#{$i} {
+    padding-bottom: #{$i / 4}rem;
+  }
+}
+
+@for $i from $start through $iterate {
+  .ps-#{$i} {
+    padding-left: #{$i / 4}rem;
+  }
+}
+
+@for $i from $start through $iterate {
+  .py-#{$i} {
+    padding-top: #{$i / 4}rem;
+    padding-bottom: #{$i / 4}rem;
+  }
+}
+
+@for $i from $start through $iterate {
+  .px-#{$i} {
+    padding-right: #{$i / 4}rem;
+    padding-left: #{$i / 4}rem;
+  }
+}

@@ -1,8 +1,10 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+"use client"
+
+import { useEffect } from "react"
+import { usePathname } from "next/navigation"
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const pathname = usePathname()
 
   useEffect(() => {
     // Scroll to top when route changes
@@ -10,10 +12,10 @@ const ScrollToTop = () => {
       top: 0,
       left: 0,
       behavior: "instant", // Use 'instant' for immediate scroll, 'smooth' for smooth scroll
-    });
-  }, [pathname]);
+    })
+  }, [pathname])
 
-  return null; // This component doesn't render anything
-};
+  return null // This component doesn't render anything
+}
 
-export default ScrollToTop;
+export default ScrollToTop

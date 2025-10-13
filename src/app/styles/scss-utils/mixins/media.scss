@@ -1,0 +1,54 @@
+@use "sass:math";
+
+$point-diff: 0.1;
+
+@mixin media-up($point) {
+  @if map-has-key($breakpoints, $point) {
+    @each $breakpoint, $value in $breakpoints {
+      @if $breakpoint == $point {
+        @media (min-width: $value) {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @media (min-width: ($point + px)) {
+      @content;
+    }
+  }
+}
+
+@mixin media-down($point) {
+  @if map-has-key($breakpoints, $point) {
+    @each $breakpoint, $value in $breakpoints {
+      @if $breakpoint == $point {
+        @media (max-width: ($value - $point-diff)) {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @media (max-width: (($point - $point-diff) + px)) {
+      @content;
+    }
+  }
+}
+
+@mixin media-between($point_1, $point_2) {
+  $min: $point_1 + px;
+  $max: $point_2 + px;
+
+  @each $breakpoint, $value in $breakpoints {
+    @if $breakpoint == $point_1 {
+      $min: $value;
+    }
+
+    @if $breakpoint == $point_2 {
+      $max: $value;
+    }
+  }
+
+  @media (min-width: $min) and (max-width: ($max - $point-diff)) {
+    @content;
+  }
+}

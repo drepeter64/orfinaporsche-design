@@ -1,10 +1,10 @@
-import React from "react";
-import { Skeleton } from "./ui/skeleton";
+import React from "react"
+import { Skeleton } from "./ui/skeleton"
 
 interface PageLoaderProps {
-  showHero?: boolean;
-  showGrid?: boolean;
-  className?: string;
+  showHero?: boolean
+  showGrid?: boolean
+  className?: string
 }
 
 const PageLoader: React.FC<PageLoaderProps> = ({
@@ -20,7 +20,10 @@ const PageLoader: React.FC<PageLoaderProps> = ({
           <Skeleton className="h-8 w-32" />
           <div className="hidden md:flex space-x-8">
             {[...Array(4)].map((_, i) => (
-              <Skeleton key={i} className="h-6 w-20" />
+              <Skeleton
+                key={i}
+                className="h-6 w-20"
+              />
             ))}
           </div>
         </div>
@@ -66,7 +69,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
         </section>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default PageLoader;
+export default PageLoader

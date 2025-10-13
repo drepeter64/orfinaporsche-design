@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+
+  background-color: initial;
+  border: none;
+
+  &[disabled] {
+    pointer-events: none;
+
+    opacity: 0.5;
+  }
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+section {
+  position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+input,
+select,
+button,
+textarea {
+  cursor: pointer;
+
+  outline: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
