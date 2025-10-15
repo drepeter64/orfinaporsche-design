@@ -1,23 +1,28 @@
+import React from "react"
+
 export interface ReferenceVariant {
-  id: number
   title: string
-  years: string
-  case?: string
-  finishes: string
-  caseback: string
-  rehaut: string
-  dial: string
+  specifications?: ReferenceSpecificationRow[]
   image: string
+  original: string
   subtitle?: string
   description?: string
+  note?: string
   imageCaption?: string
+}
+
+export interface ReferenceSpecificationRow {
+  label: string
+  value: string
+  icon: React.ComponentType<{ className?: string }>
 }
 
 export interface ReferenceExploreCard {
   title: string
   imageSrc: string
   imageAlt: string
-  linkTo: string
+  route: string
+  referenceId: string
 }
 
 export interface TechnicalSpecification {
@@ -27,10 +32,7 @@ export interface TechnicalSpecification {
 
 export interface ReferenceTechnicalSpecs {
   title: string
-  specifications: {
-    left: TechnicalSpecification[]
-    right: TechnicalSpecification[]
-  }
+  specifications: TechnicalSpecification[]
 }
 
 export interface ReferenceIntroduction {
@@ -38,6 +40,7 @@ export interface ReferenceIntroduction {
   differences?: string[]
   image?: {
     src: string
+    original: string
     alt: string
     title: string
     subtitle: string
@@ -49,15 +52,10 @@ export interface ReferenceData {
   title: string
   referenceNumber: string
   heroTitle: string
-  introduction: ReferenceIntroduction
-  variants?: ReferenceVariant[]
+  introduction?: ReferenceIntroduction
   generations?: ReferenceVariant[]
   variantsTitle?: string
   variantsSubtitle?: string
-  variantsNote?: {
-    title: string
-    content: string
-  }
   exploreCards: ReferenceExploreCard[]
   technicalSpecs: ReferenceTechnicalSpecs
 }

@@ -1,0 +1,1 @@
+export { PlaceholderImageSection } from "./ui"

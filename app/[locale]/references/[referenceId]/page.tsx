@@ -1,12 +1,5 @@
-import { getReferenceData, getAllReferenceIds, ReferencePage } from "@/_pages/reference"
+import { getReferenceData, ReferencePage } from "@/_pages/reference"
 import { notFound } from "next/navigation"
-
-export async function generateStaticParams() {
-  const ids = getAllReferenceIds()
-  return ids.map((referenceId) => ({
-    referenceId,
-  }))
-}
 
 interface ReferencePageProps {
   params: {

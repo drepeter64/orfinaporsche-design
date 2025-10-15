@@ -1,0 +1,106 @@
+{
+  "pc_logo": "/lovable-uploads/opd-watch.png",
+  "mobile_logo": "/lovable-uploads/opd-watch.png",
+  "logo_alt": "OPD Watch Logo",
+  "components": [
+    {
+      "title": "Bracelets",
+      "route": "bracelets"
+    },
+    {
+      "title": "Bund Straps",
+      "route": "straps"
+    },
+    {
+      "title": "Hands",
+      "route": "hands"
+    },
+    {
+      "title": "Crowns",
+      "route": "crowns"
+    },
+    {
+      "title": "Movements",
+      "route": "movements"
+    },
+    {
+      "title": "Date Wheels",
+      "route": "dateWheels"
+    },
+    {
+      "title": "Boxes",
+      "route": "boxes"
+    }
+  ],
+  "references": [
+    {
+      "title": "Reference 7750",
+      "route": 7750,
+      "dropdown": [
+        {
+          "title": "Case & Finishes",
+          "type": "case"
+        },
+        {
+          "title": "Caseback",
+          "type": "caseback"
+        },
+        {
+          "title": "Rehaut Variations",
+          "type": "rehaut"
+        },
+        {
+          "title": "Dial Variations",
+          "type": "dial"
+        }
+      ]
+    },
+    {
+      "title": "Reference 7176",
+      "route": 7176,
+      "dropdown": [
+        {
+          "title": "Case & Finishes",
+          "type": "case"
+        },
+        {
+          "title": "Caseback",
+          "type": "caseback"
+        },
+        {
+          "title": "Rehaut Variations",
+          "type": "rehaut"
+        },
+        {
+          "title": "Dial Variations",
+          "type": "dial"
+        }
+      ]
+    },
+    {
+      "title": "Reference 7177",
+      "route": 7177,
+      "dropdown": [
+        {
+          "title": "Case & Finishes",
+          "type": "case"
+        },
+        {
+          "title": "Caseback",
+          "type": "caseback"
+        },
+        {
+          "title": "Rehaut Variations",
+          "type": "rehaut"
+        },
+        {
+          "title": "Dial Variations",
+          "type": "dial"
+        }
+      ]
+    }
+  ]
+}
+
+
+

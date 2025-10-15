@@ -1,13 +1,8 @@
 import React from "react"
-import { createSharedPathnamesNavigation } from "next-intl/navigation"
-import { localeConfig } from "./config"
+import { createNavigation } from "next-intl/navigation"
+import { routing } from "./routing"
 
-const { locales, localePrefix } = localeConfig
-
-const { Link, redirect, usePathname, useRouter } = createSharedPathnamesNavigation({
-  locales,
-  localePrefix,
-})
+const { Link, redirect, usePathname, useRouter } = createNavigation(routing)
 
 type LinkProps = typeof Link extends React.FC<infer P> ? P : never
 

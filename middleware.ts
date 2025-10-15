@@ -1,14 +1,23 @@
 import createMiddleware from "next-intl/middleware"
-import { localeConfig } from "@/app/localization"
+import { routing } from "@/app/localization/routing"
+import { NextRequest, NextResponse } from "next/server"
 
-const { localePrefix, locales, defaultLocale, localeDetection } = localeConfig
+const intlMiddleware = createMiddleware(routing)
 
-export default createMiddleware({
-  locales,
-  localePrefix,
-  defaultLocale,
-  localeDetection,
-})
+export default function middleware(request: NextRequest) {
+  const response = intlMiddleware(request)
+
+  // When next-intl wants to redirect, response.status is 307
+  if (response.status === 307 && response.headers.has("location")) {
+    // Re-issue the redirect with 301
+    return NextResponse.redirect(<string>response.headers.get("location"), {
+      status: 301,
+    })
+  }
+
+  // Otherwise, return the original response
+  return response
+}
 
 export const config = {
   matcher: [

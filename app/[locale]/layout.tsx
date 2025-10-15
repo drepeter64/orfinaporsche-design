@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   title: "Orfina Porsche Design",
   description:
     "Comprehensive guide to Orfina Porsche Design watches - References, Components, and History",
+  icons: "/favicon.png",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_DOMAIN!),
 }
 
 export function generateStaticParams() {

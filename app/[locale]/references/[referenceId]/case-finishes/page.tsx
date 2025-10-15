@@ -1,12 +1,6 @@
 import { CaseFinishesPage } from "@/_pages/reference-detail"
-import { getAllReferenceIds } from "@/_pages/reference"
 import { getCaseFinishesData } from "@/_pages/reference-detail/api/get-detail-data"
 import { notFound } from "next/navigation"
-
-export async function generateStaticParams() {
-  const ids = getAllReferenceIds()
-  return ids.map((referenceId) => ({ referenceId }))
-}
 
 interface PageProps {
   params: {

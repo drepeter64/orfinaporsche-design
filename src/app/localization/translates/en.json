@@ -1,12 +1,38 @@
 {
-  "Home": {
-    "title": "Home page",
-    "switch-to": "Switch to {target}"
-  },
-  "NotFoundPage": {
-    "title": "Page not found with localization"
-  },
-  "Todos": {
-    "title": "Todos"
+  "Common": {
+    "store_name": "ORFINA PORSCHE DESIGN",
+    "short_store_name": "OPD",
+    "website-email": "contact@porschewatchcollection.com",
+    "website-instagram": "https://www.instagram.com/BFMOTORCLUB",
+    "website-twitter": "#",
+    "website-facebook": "#",
+
+    "components": "Components",
+    "measurements": "Measurements",
+    "watch-components": "Watch Components",
+    "about": "About",
+    "explore-details": "Explore Details",
+    "tech-specification": "Technical Specifications",
+    "contact-us": "Contact Us",
+    "photo-coming-soon": "Photo Coming Soon",
+    "story": "Story",
+    "note": "Note:",
+    "click-zoom": "Click to zoom",
+    "production-year": "Production Years:",
+
+    "generation-year": "Production Years",
+    "generation-case": "Case",
+    "generation-finishes": "Finishes",
+    "generation-caseback": "Caseback",
+    "generation-rehaut": "Rehaut",
+    "generation-dial": "Dial",
+
+    "home": "Home",
+    "reference": "Reference",
+    "references": "References",
+    "case-finishes": "Case & Finishes",
+    "back_to_refs": "Back to References",
+    "back_to_home": "Back to Home Page",
+    "esc": "Press ESC or click outside to close"
   }
 }

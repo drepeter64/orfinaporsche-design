@@ -3,102 +3,168 @@
   "title": "Reference 7750",
   "referenceNumber": "7750",
   "heroTitle": "7750",
-  "introduction": {
-    "paragraphs": [
-      "Discover the legendary chronograph that defined an era. Three distinct generations of horological excellence, each representing a milestone in precision timekeeping."
-    ]
-  },
-  "variantsTitle": "Three Generations",
-  "variantsSubtitle": "There are three \"hero\" generations of the Reference 7750. We will outline a brief overview below, before going into deeper variations across all generations",
-  "variantsNote": {
-    "title": "Note:",
-    "content": "This case and dial are the exact Top Gun watch. While it's unclear whether the movie prop used a 1Mile or 1KM Rehaut, we suspect it was a 1Mile version given the filming's geographic setting."
-  },
+  "variantsTitle": "",
+  "variantsSubtitle": "There are three “hero” generations of the Reference 7750. We will outline a brief\noverview below, before going into deeper variations across all generations",
   "generations": [
     {
-      "id": 1,
       "title": "Generation 1",
-      "subtitle": "The Original Pioneer",
-      "years": "1973-1974",
-      "case": "Mk. 1",
-      "finishes": "Powder Coat Black, Silver/Sablé",
-      "caseback": "Mk. 1",
-      "rehaut": "1Mile, 1KM, Advertisement",
-      "dial": "Orfina Dial",
-      "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Orfina.jpg",
-      "description": "The inaugural generation that established the legendary 7750 lineage.",
-      "imageCaption": "7750 Generation 1 \"Orfina\""
+      "subtitle": "The inaugural generation that established the legendary 7750 lineage.",
+      "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/preview-780x-7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut.jpg",
+      "imageCaption": "7750 Generation 1 “Orfina”",
+
+      "specifications": [
+        {
+          "label": "year",
+          "value": "1973-1974",
+          "icon": "calendar"
+        },
+        {
+          "label": "case",
+          "value": "Mk. 1",
+          "icon": "settings"
+        },
+        {
+          "label": "finishes",
+          "value": "Powder Coat Black, Silver/Sablé",
+          "icon": "layers"
+        },
+        {
+          "label": "caseback",
+          "value": "Mk. 1",
+          "icon": "settings"
+        },
+        {
+          "label": "rehaut",
+          "value": "1Mile, 1KM, Advertisement",
+          "icon": "settings"
+        },
+        {
+          "label": "dial",
+          "value": "Orfina Dial",
+          "icon": "clock"
+        }
+      ]
     },
     {
-      "id": 2,
       "title": "Generation 2",
-      "subtitle": "The First Evolution",
-      "years": "1974-1974",
-      "case": "Mk. 1",
-      "finishes": "Powder Coat Black, Silver/Sablé",
-      "caseback": "Mk. 2",
-      "rehaut": "1Mile, 1KM",
-      "dial": "PD Dial",
-      "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Flat-PD.jpg",
-      "description": "The first evolution of the 7750 generation and the first emergence of the PD dial.",
-      "imageCaption": "7750 Generation 2 \"Flat PD Dial\""
+      "subtitle": "The first evolution of the 7750 generation and the first emergence of the PD dial.",
+      "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/preview-780x-7750-series-v4-black-flat-top-case-pd-dial-1mile-rehaut.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/7750-series-v4-black-flat-top-case-pd-dial-1mile-rehaut.jpg",
+      "imageCaption": "7750 Generation 2 “Flat PD Dial”",
+
+      "specifications": [
+        {
+          "label": "year",
+          "value": "1974-1974",
+          "icon": "calendar"
+        },
+        {
+          "label": "case",
+          "value": "Mk. 1",
+          "icon": "settings"
+        },
+        {
+          "label": "finishes",
+          "value": "Powder Coat Black, Silver/Sablé",
+          "icon": "layers"
+        },
+        {
+          "label": "caseback",
+          "value": "Mk. 2",
+          "icon": "settings"
+        },
+        {
+          "label": "rehaut",
+          "value": "1Mile, 1KM",
+          "icon": "settings"
+        },
+        {
+          "label": "dial",
+          "value": "PD Dial",
+          "icon": "clock"
+        }
+      ]
     },
     {
-      "id": 3,
       "title": "Generation 3",
-      "subtitle": "The Top Gun Watch",
-      "years": "1975-1976",
-      "case": "Mk. 2",
-      "finishes": "Black PVD, Silver/Sablé",
-      "caseback": "Mk. 2",
-      "rehaut": "1Mile, 1KM",
-      "dial": "PD Dial",
-      "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-PD-Thin.jpg",
-      "description": "The Top Gun Watch.",
-      "imageCaption": "7750 Generation 3 \"Round PD Dial\""
+      "subtitle": "The Top Gun Watch.",
+      "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/preview-780x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg",
+      "imageCaption": "7750 Generation 3 “Round PD Dial”",
+      "note": "This case and dial are the exact Top Gun watch. While it’s unclear whether the movie prop used a 1Mile or 1KM Rehaut, we suspect it was a 1Mile version given the filming’s geographic setting.",
+
+      "specifications": [
+        {
+          "label": "year",
+          "value": "1975-1976",
+          "icon": "calendar"
+        },
+        {
+          "label": "case",
+          "value": "Mk. 2",
+          "icon": "settings"
+        },
+        {
+          "label": "finishes",
+          "value": "Black PVD, Silver/Sablé",
+          "icon": "layers"
+        },
+        {
+          "label": "caseback",
+          "value": "Mk. 2",
+          "icon": "settings"
+        },
+        {
+          "label": "rehaut",
+          "value": "1Mile, 1KM",
+          "icon": "settings"
+        },
+        {
+          "label": "dial",
+          "value": "PD Dial",
+          "icon": "clock"
+        }
+      ]
     }
   ],
   "exploreCards": [
     {
       "title": "Case & Finishes",
-      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Flat-PD.jpg",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/button-photos/preview-800x-7750-series-v4-black-flat-top-case-pd-dial-1mile-rehaut.jpg",
       "imageAlt": "Case & Finishes",
-      "linkTo": "/references/7750/case-finishes"
+      "route": "case"
     },
     {
       "title": "Caseback",
-      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Mk.2-Caseback-1.jpg",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/button-photos/preview-800x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut-caseback-option-1.jpg",
       "imageAlt": "Caseback",
-      "linkTo": "/references/7750/caseback"
+      "route": "caseback"
     },
     {
       "title": "Rehaut Variations",
-      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Rehaut-1mile.jpg",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/button-photos/preview-800x-7750-rehaut-1km.jpg",
       "imageAlt": "Rehaut Variations",
-      "linkTo": "/references/7750/rehaut"
+      "route": "rehaut"
     },
     {
       "title": "Dial Variations",
-      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Orfina.jpg",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/button-photos/preview-800x-7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut.jpg",
       "imageAlt": "Dial Variations",
-      "linkTo": "/references/7750/dial"
+      "route": "dial"
     }
   ],
   "technicalSpecs": {
     "title": "Reference 7750 Specifications",
-    "specifications": {
-      "left": [
-        { "label": "Reference Number", "value": "7750" },
-        { "label": "Production Years", "value": "1973-1976" },
-        { "label": "Case Material", "value": "Stainless Steel" },
-        { "label": "Water Resistance", "value": "50m" }
-      ],
-      "right": [
-        { "label": "Movement", "value": "Valjoux 7750" },
-        { "label": "Jewels", "value": "17" },
-        { "label": "Functions", "value": "Hours, Minutes, Seconds, Chronograph, Day, Date" },
-        { "label": "Serial Range", "value": "X-X (approx.)" }
-      ]
-    }
+    "specifications": [
+      { "label": "Reference Number", "value": "7750" },
+      { "label": "Movement", "value": "Valjoux 7750" },
+      { "label": "Production Years", "value": "1973-1976" },
+      { "label": "Jewels", "value": "17" },
+      { "label": "Case Material", "value": "Stainless Steel" },
+      { "label": "Functions", "value": "Hours, Minutes, Seconds, Chronograph, Day, Date" },
+      { "label": "Water Resistance", "value": "100m" },
+      { "label": "Serial Range", "value": "X-X (approx.)" }
+    ]
   }
 }

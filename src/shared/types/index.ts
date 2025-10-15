@@ -13,3 +13,5 @@ export {
   type DialData,
   type ReferenceImage,
 } from "./reference-detail.interface"
+
+export type { IComponents, IComponent, typeComponent } from "./componenst.interface"

@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/hero-shot-2.jpg",
+    "image_alt": "OPD Logo",
+    "title": "Orfina Porsche <br /> Design",
+    "description": "A documentation across the Orfina Porsche Design production, celebrating the storied collaboration between these two brands."
+  },
+  "featured" : {
+    "title": "Featured References",
+    "items": [
+      {
+        "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/ref-7750.jpg",
+        "image_alt": "Reference 7750",
+        "title": "Reference 7750",
+        "description": "The quintessential chronograph inspired by Porsche's racing heritage.",
+        "link": "7750"
+      },
+      {
+        "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/ref-7176.jpg",
+        "image_alt": "Reference 7176",
+        "title": "Reference 7176",
+        "description": "Classic elegance meets automotive precision in this timeless piece.",
+        "link": "7176"
+      },
+      {
+        "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/ref-7177.jpg",
+        "image_alt": "Reference 7177",
+        "title": "Reference 7177",
+        "description": "Contemporary design language inspired by modern Porsche aesthetics.",
+        "link": "7177"
+      }
+    ]
+  }
+}

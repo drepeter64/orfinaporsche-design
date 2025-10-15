@@ -6,9 +6,9 @@ import {
 } from "@/shared/types/reference-detail.interface"
 
 // Import case finishes data
-import ref7176CaseFinishes from "@/shared/data/references/details/7176-case-finishes.json"
-import ref7750CaseFinishes from "@/shared/data/references/details/7750-case-finishes.json"
-import ref7177CaseFinishes from "@/shared/data/references/details/7177-case-finishes.json"
+import ref7176CaseFinishes from "@/shared/data/references/case-finishes/7176.json"
+import ref7750CaseFinishes from "@/shared/data/references/case-finishes/7750.json"
+import ref7177CaseFinishes from "@/shared/data/references/case-finishes/7177.json"
 
 const caseFinishesMap: Record<string, CaseFinishesData> = {
   "7176": ref7176CaseFinishes as CaseFinishesData,

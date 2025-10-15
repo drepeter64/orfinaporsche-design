@@ -5,10 +5,10 @@
   "heroTitle": "7177",
   "introduction": {
     "paragraphs": [
-      "The 7177 Military Chronograph was introduced in 1977 and was likely produced until 1991, when Porsche Design ended its partnership with Orfina. Subsequently, the \"Prestige Watch International\" signed pieces emerged.",
+      "The 7177 Military Chronograph was introduced in 1977 and was likely produced until 1991, when Porsche Design ended its partnership with Orfina. Subsequently, the “Prestige Watch International” signed pieces emerged.",
       "The 7177 was available for retail purchase over the counter as well as issued directly through military organizations, as evidenced by the multiple military variants. However, these watches are often considered quasi-issued as the Baseline military dial was made available to the public to capitalize on the potential military affiliation.",
-      "There are ten main 7177 or military variants. These variants each feature the three dial elements noted on the Baseline dial (having \"MILITARY\", \"PORSCHE DESIGN\", and the \"circle-3H logo\" printed on the dial) but have additional dial printing, and/or caseback engravings unique to each.",
-      "The 7177 military variants were identical to the civilian 7176s variant, including the case, except in five main ways:"
+      "There are ten main 7177 or military variants. These variants each feature the dial elements noted on the Baseline dial (having \"MILITARY\" , and the “circle-3H logo” printed on the dial) but have additional dial printing, and/or caseback engravings unique to each.",
+      "The 7177 military variants were identical to the civilian 7176 variant, including the case, except in five main ways:"
     ],
     "differences": [
       "Available Finishes",
@@ -18,7 +18,8 @@
       "Dial"
     ],
     "image": {
-      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Group-1.jpg",
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-main-page/preview-1200x-7177-mix-color.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-main-page/7177-mix-color.jpg",
       "alt": "Reference 7177 Military Variants Group Photo",
       "title": "Reference 7177",
       "subtitle": "7177 Military Variants"
@@ -27,47 +28,40 @@
   "exploreCards": [
     {
       "title": "Case & Finishes",
-      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-ColorGroup-1.jpg",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-main-page/7177-button/preview-780x-7177-colorgroup-1.jpg",
       "imageAlt": "Case & Finishes",
-      "linkTo": "/references/7177/case-finishes"
+      "route": "case"
     },
     {
       "title": "Caseback",
-      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Black-Casebackcrop.jpg",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-main-page/7177-button/preview-780x-7177-series-sable-case-w-bracelet-3h-mil-pd-dial-caseback.jpg",
       "imageAlt": "Caseback",
-      "linkTo": "/references/7177/caseback"
+      "route": "caseback"
     },
     {
       "title": "Rehaut Variations",
-      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-Crooked%20Seven%20Rehaut-Close-Up-.jpg",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-main-page/7177-button/preview-780x-7177-crooked-seven-rehaut-close-up.jpg",
       "imageAlt": "Rehaut Variations",
-      "linkTo": "/references/7177/rehaut"
+      "route": "rehaut"
     },
     {
       "title": "Dial Variations",
-      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7177%20Photos/7177-MilitaryGroup-2crop.jpg",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-main-page/7177-button/preview-780x-7177-militarygroup-2crop.jpg",
       "imageAlt": "Dial Variations",
-      "linkTo": "/references/7177/dial"
+      "route": "dial"
     }
   ],
   "technicalSpecs": {
     "title": "Reference 7177 Specifications",
-    "specifications": {
-      "left": [
-        { "label": "Reference Number", "value": "7177" },
-        { "label": "Production Years", "value": "1977-1991" },
-        { "label": "Case Material", "value": "Stainless Steel" },
-        { "label": "Water Resistance", "value": "100m" }
-      ],
-      "right": [
-        { "label": "Movement", "value": "Lemania 5100" },
-        { "label": "Jewels", "value": "17" },
-        {
-          "label": "Functions",
-          "value": "Hours, Minutes, Seconds, Chronograph, 24H Totalizer, Day, Date"
-        },
-        { "label": "Serial Range", "value": "X-X (approx.)" }
-      ]
-    }
+    "specifications": [
+      { "label": "Reference Number", "value": "7177" },
+      { "label": "Movement", "value": "Lemania 5100" },
+      { "label": "Production Years", "value": "1977-1991" },
+      { "label": "Jewels", "value": "17" },
+      { "label": "Case Material", "value": "Stainless Steel" },
+      { "label": "Functions", "value": "Hours, Minutes, Seconds, Chronograph, 24H Totalizer, Day, Date"},
+      { "label": "Water Resistance", "value": "100m" },
+      { "label": "Serial Range", "value": "X-X (approx.)" }
+    ]
   }
 }

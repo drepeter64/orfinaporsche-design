@@ -1,1 +1,1 @@
-export { ClientRoutes } from "./client"
+export { ClientRoutes, getRoute } from "./client"

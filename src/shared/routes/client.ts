@@ -2,35 +2,11 @@
  * Centralized client-side routes configuration for Next.js App Router
  */
 export const ClientRoutes = {
+  // Static routes
   home: "/",
   story: "/story",
   about: "/about",
-
-  // References routes
-  references: {
-    ref7750: {
-      main: "/references/7750",
-      caseFinishes: "/references/7750/case-finishes",
-      caseback: "/references/7750/caseback",
-      rehaut: "/references/7750/rehaut",
-      dial: "/references/7750/dial",
-    },
-    ref7176: {
-      main: "/references/7176",
-      caseFinishes: "/references/7176/case-finishes",
-      caseback: "/references/7176/caseback",
-      rehaut: "/references/7176/rehaut",
-      dial: "/references/7176/dial",
-    },
-    ref7177: {
-      main: "/references/7177",
-      caseFinishes: "/references/7177/case-finishes",
-      caseback: "/references/7177/caseback",
-      rehaut: "/references/7177/rehaut",
-      dial: "/references/7177/dial",
-    },
-  },
-
+  not_found: "/404",
   // Components routes
   components: {
     bracelets: "/components/bracelets",
@@ -41,4 +17,39 @@ export const ClientRoutes = {
     dateWheels: "/components/date-wheels",
     boxes: "/components/boxes",
   },
+
+  reference: (id: string) => {
+    return `/references/${id}`
+  },
+  reference_case: (id: string) => {
+    return `/references/${id}/case-finishes`
+  },
+  reference_caseback: (id: string) => {
+    return `/references/${id}/caseback`
+  },
+  reference_rehaut: (id: string) => {
+    return `/references/${id}/rehaut`
+  },
+  reference_dial: (id: string) => {
+    return `/references/${id}/dial`
+  },
+}
+
+export const getRoute = (name: string) => {
+  return ClientRoutes.components[name as keyof typeof ClientRoutes.components]
+}
+
+export const getReferenceRoute = (name: string, id: string) => {
+  switch (name) {
+    case "case":
+      return ClientRoutes.reference_case(id)
+    case "caseback":
+      return ClientRoutes.reference_caseback(id)
+    case "rehaut":
+      return ClientRoutes.reference_rehaut(id)
+    case "dial":
+      return ClientRoutes.reference_dial(id)
+    default:
+      return ClientRoutes.not_found
+  }
 }

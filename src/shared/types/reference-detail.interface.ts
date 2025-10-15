@@ -1,5 +1,6 @@
 export interface ReferenceImage {
   src: string
+  original: string
   alt: string
   title: string
   caption?: string
@@ -54,8 +55,26 @@ export interface CaseFinishesData {
   pageTitle: string
   overview?: string
   measurements?: Measurement[]
+  variations?: VariationData[]
+  variation_type?: "numbered" | "solid" | "elegant" | "elegant-dark"
   descriptions?: string[]
   sections: FinishSection[]
+}
+export interface FinishItem {
+  title: string
+  description: string
+  color: string
+  year: string
+  image?: ReferenceImage
+}
+
+interface VariationData {
+  title: string
+  description: string
+  full_description: string
+  finishes_title?: string
+  measurements?: Measurement[]
+  finishes?: FinishItem[]
 }
 
 export interface CasebackData {

@@ -1,21 +1,20 @@
 "use client"
 
-import { useRouter } from "next/navigation"
 import ImageWithLoader from "./ImageWithLoader"
+import { Link } from "@/app/localization"
+import { getReferenceRoute } from "@/shared/routes/client"
+import { ReferenceExploreCard } from "@/shared/types"
 
-interface ExploreDetailsCardProps {
-  title: string
-  imageSrc: string
-  imageAlt: string
-  linkTo: string
-}
-
-const ExploreDetailsCard = ({ title, imageSrc, imageAlt, linkTo }: ExploreDetailsCardProps) => {
-  const router = useRouter()
-
+const ExploreDetailsCard = ({
+  title,
+  imageSrc,
+  imageAlt,
+  route,
+  referenceId,
+}: ReferenceExploreCard) => {
   return (
-    <div
-      onClick={() => router.push(linkTo)}
+    <Link
+      href={getReferenceRoute(route, referenceId)}
       className="group h-full cursor-pointer"
     >
       <div className="bg-white border-2 border-gray-200 overflow-hidden transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gray-200/60 group-hover:border-gray-400 rounded-xl transform group-hover:-translate-y-2 h-full flex flex-col">
@@ -37,7 +36,7 @@ const ExploreDetailsCard = ({ title, imageSrc, imageAlt, linkTo }: ExploreDetail
           <div className="w-16 h-0.5 bg-gray-300 mx-auto transition-all duration-300 group-hover:w-24 group-hover:bg-gray-600"></div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
