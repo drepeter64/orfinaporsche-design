@@ -4,6 +4,8 @@ const withNextIntl = createNextIntlPlugin("./src/app/localization/i18n.ts")
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
+  output: "export",
+  distDir: "dist",
   images: {
     remotePatterns: [
       {
