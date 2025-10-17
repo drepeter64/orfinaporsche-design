@@ -1,3 +1,5 @@
+import { ImageInfo } from "@/_pages/reference/ui"
+
 export interface ReferenceImage {
   src: string
   original: string
@@ -17,7 +19,7 @@ export interface FinishSection {
   title: string
   foundOn: string
   note?: string
-  image?: ReferenceImage
+  images?: ImageInfo[]
   isPlaceholder?: boolean
 }
 
@@ -58,20 +60,27 @@ export interface CaseFinishesData {
   variations?: VariationData[]
   variation_type?: "numbered" | "solid" | "elegant" | "elegant-dark"
   descriptions?: string[]
-  sections: FinishSection[]
+  info?: string
+  sections?: FinishSection[]
+  mergedSection?: MergedSection
+}
+interface MergedSection {
+  title: string
+  image: ImageInfo
+  variations: VariationData[]
 }
 export interface FinishItem {
   title: string
   description: string
   color: string
   year: string
-  image?: ReferenceImage
+  images?: ImageInfo[]
 }
 
 interface VariationData {
   title: string
   description: string
-  full_description: string
+  full_description?: string
   finishes_title?: string
   measurements?: Measurement[]
   finishes?: FinishItem[]

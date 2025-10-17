@@ -153,4 +153,6 @@ export interface ImageInfo {
   alt: string
   title: string
   subtitle: string
+  caption?: string
+  isPlaceholder?: boolean
 }

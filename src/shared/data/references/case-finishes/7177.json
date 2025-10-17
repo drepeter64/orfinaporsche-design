@@ -2,34 +2,52 @@
   "referenceId": "7177",
   "referenceTitle": "7177",
   "pageTitle": "Case & Finishes",
-  "descriptions": [
-    "The 7177 Military variants feature the same case as the 7176 civilian models but with different finishes.",
-    "Military-specific finishes were produced for various armed forces contracts."
-  ],
-  "sections": [
+  "info": "The 7177's case is identical to that of the 7176's case, but differed in the available finishes with five distinct variations.",
+  "measurements": [
     {
-      "id": 1,
-      "title": "Black PVD",
-      "foundOn": "7177 Baseline, BUND, Royal Navy, Flying Tiger",
-      "isPlaceholder": true
+      "value": "40.6mm",
+      "label": "Diameter"
     },
     {
-      "id": 2,
-      "title": "Silver/Sablé",
-      "foundOn": "7177 Four Logo, By Orfina",
-      "isPlaceholder": true
+      "value": "44.2mm",
+      "label": "Lug-To-Lug"
     },
     {
-      "id": 3,
-      "title": "Cadet Grey PVD",
-      "foundOn": "7177 NATO",
-      "isPlaceholder": true
-    },
-    {
-      "id": 4,
-      "title": "Olive Green PVD",
-      "foundOn": "7177 Swiss Shield",
-      "isPlaceholder": true
+      "value": "15.3mm",
+      "label": "Height"
     }
-  ]
+  ],
+    "mergedSection": {
+    "title": "Five Produced Finishes",
+    "image": {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-case-and-finishes-photos/preview-1200x-7177-colorgroup.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-case-and-finishes-photos/1200x-7177-colorgroup.jpg",
+      "alt": "All 7177 Finishes",
+      "title": "All 7177 Finishes",
+      "caption": "Left To Right: Black PVD, Non-PVD Silver/Sablé, Cadet Grey PVD, Olive Green PVD, NTS PVD",
+      "subtitle": "Left To Right: Black PVD, Non-PVD Silver/Sablé, Cadet Grey PVD, Olive Green PVD, NTS PVD"
+    },
+    "variations": [
+      {
+        "title": "Black PVD",
+        "description": "Identical to the 7176 Finish"
+      },
+      {
+        "title": "Non-PVD Silver/Sablé",
+        "description": "Identical to the 7176 Finish"
+      },
+      {
+        "title": "Cadet Grey PVD",
+        "description": "Only Available on the 7177"
+      },
+      {
+        "title": "Olive Green PVD",
+        "description": "Identical to the 7176 Military Finish"
+      },
+      {
+        "title": "NTS PVD",
+        "description": "Only Available on the 7177"
+      }
+    ]
+  }
 }

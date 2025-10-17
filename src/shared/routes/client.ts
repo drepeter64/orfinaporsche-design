@@ -41,6 +41,8 @@ export const getRoute = (name: string) => {
 
 export const getReferenceRoute = (name: string, id: string) => {
   switch (name) {
+    case "main":
+      return ClientRoutes.reference(id)
     case "case":
       return ClientRoutes.reference_case(id)
     case "caseback":

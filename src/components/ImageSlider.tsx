@@ -1,20 +1,18 @@
 import React, { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import ImageWithLoader from "./ImageWithLoader"
+import { ImageInfo } from "@/_pages/reference/ui"
+import { useTranslations } from "next-intl"
 
 interface ImageSliderProps {
-  images: Array<{
-    src: string
-    alt: string
-    title: string
-    subtitle?: string
-  }>
-  onImageClick: (imageData: { src: string; alt: string; title: string; subtitle: string }) => void
+  images: Array<ImageInfo>
+  setFullScreenImage: (imageData: ImageInfo | null) => void
   className?: string
 }
 
-const ImageSlider = ({ images, onImageClick, className = "" }: ImageSliderProps) => {
+const ImageSlider = ({ images, setFullScreenImage, className = "" }: ImageSliderProps) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const tCommon = useTranslations("Common")
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1))
@@ -35,8 +33,9 @@ const ImageSlider = ({ images, onImageClick, className = "" }: ImageSliderProps)
       <div
         className="relative group cursor-pointer"
         onClick={() =>
-          onImageClick({
+          setFullScreenImage({
             src: currentImage.src,
+            original: currentImage.original,
             alt: currentImage.alt,
             title: currentImage.title,
             subtitle: currentImage.subtitle || "",
@@ -54,7 +53,7 @@ const ImageSlider = ({ images, onImageClick, className = "" }: ImageSliderProps)
         {/* Click indicator */}
         <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
           <div className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
-            Click to zoom
+            {tCommon("click-zoom")}
           </div>
         </div>
 

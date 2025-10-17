@@ -38,6 +38,10 @@
       "route": 7750,
       "dropdown": [
         {
+          "title": "7750 Reference Main Page",
+          "type": "main"
+        },
+        {
           "title": "Case & Finishes",
           "type": "case"
         },
@@ -60,6 +64,10 @@
       "route": 7176,
       "dropdown": [
         {
+          "title": "7176 Reference Main Page",
+          "type": "main"
+        },
+        {
           "title": "Case & Finishes",
           "type": "case"
         },
@@ -81,6 +89,10 @@
       "title": "Reference 7177",
       "route": 7177,
       "dropdown": [
+        {
+          "title": "7177 Reference Main Page",
+          "type": "main"
+        },
         {
           "title": "Case & Finishes",
           "type": "case"

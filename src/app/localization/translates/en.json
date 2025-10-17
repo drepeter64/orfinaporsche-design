@@ -19,6 +19,7 @@
     "note": "Note:",
     "click-zoom": "Click to zoom",
     "production-year": "Production Years:",
+    "found-on": "Found On: ",
 
     "generation-year": "Production Years",
     "generation-case": "Case",
@@ -33,6 +34,7 @@
     "case-finishes": "Case & Finishes",
     "back_to_refs": "Back to References",
     "back_to_home": "Back to Home Page",
-    "esc": "Press ESC or click outside to close"
+    "esc": "Press ESC or click outside to close",
+    "no-photo": "orfinaporsche-design - photo coming soon"
   }
 }

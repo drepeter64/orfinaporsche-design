@@ -11,7 +11,7 @@ done
 
 
 find . -type f \( -iname \*.jpg -o -iname \*.png -o -iname \*.heic -o -iname \*.tiff -o -iname \*.gif \) -size +1M -print0 | while IFS= read -r -d $'\0' file; do
-    magick "$file" -resize x670 "$(dirname "$file")/""preview-670y-$(basename "$file")"
+    magick "$file" -resize 780x "$(dirname "$file")/""preview-780x-$(basename "$file")"
 done
 
 find . -type f \( -iname \*.jpg -o -iname \*.png -o -iname \*.heic -o -iname \*.tiff -o -iname \*.gif \) -size +1M -print0 | while IFS= read -r -d $'\0' file; do

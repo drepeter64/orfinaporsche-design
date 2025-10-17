@@ -3,93 +3,123 @@
   "referenceTitle": "7176",
   "pageTitle": "Case & Finishes",
   "measurements": [
-    { "value": "40.6mm", "label": "Diameter" },
-    { "value": "44.2mm", "label": "Lug-To-Lug" },
-    { "value": "15.3mm", "label": "Height" }
+    {
+      "value": "40.6mm",
+      "label": "Diameter"
+    },
+    {
+      "value": "44.2mm",
+      "label": "Lug-To-Lug"
+    },
+    {
+      "value": "15.3mm",
+      "label": "Height"
+    }
   ],
+  "overview": "There are a variety of finishes found across all 7176 variants",
   "descriptions": [
-    "All 7176 variants feature a \"Round Top\" / \"Round Face\" outfitted to fit the, at the time, new Lemania 5100 movement. The round nature of this case is seen as a direct evolution of the 7750 Mk. 2 case, but it is thicker to accommodate the taller new movement.",
-    "In particular, the case has a longer extension of the hidden lugs than the Transitional case. ____mm Lug-to-lug.",
-    "There are a variety of finishes found across all 7176 variants."
+    "All 7176 variants feature a “Round Top” / “Round Face” outfitted to fit the, at the time, new Lemania 5100 movement. The round nature of this case is seen as a direct evolution of the 7750 Mk. 2 case, but it is thicker to accommodate the taller new movement.",
+    "In particular, the case has a longer extension of the hidden lugs than the Transitional case. ____ mm Lug-to-lug."
   ],
   "sections": [
     {
       "id": 1,
       "title": "Black PVD",
       "foundOn": "7176, 7176 Military, 7176 D, 7176 S",
-      "image": {
-        "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176S-PVDcrop.jpg",
-        "alt": "7176 S Black PVD",
-        "title": "Black PVD",
-        "caption": "7176 S - Black PVD"
-      }
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/preview-780x-7176-series-v4-black-case-pd-dial-tachymetre-rehaut.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/7176-series-v4-black-case-pd-dial-tachymetre-rehaut.jpg",
+          "alt": "7176 S Black PVD",
+          "title": "Black PVD",
+          "caption": "7176 S - Black PVD"
+        }
+      ]
     },
     {
       "id": 2,
       "title": "Silver/Sablé",
       "foundOn": "7176, 7176 Military, 7176 D, 7176 S",
-      "image": {
-        "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176-photos/7176Scrop.jpg",
-        "alt": "7176 S Silver/Sablé",
-        "title": "Silver/Sablé",
-        "caption": "7176 S - Silver/Sablé"
-      }
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/preview-780x-7176-series-v4-sable-case-pd-dial-tachymetre-rehaut.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/7176-series-v4-sable-case-pd-dial-tachymetre-rehaut.jpg",
+          "alt": "7176 S Silver/Sablé",
+          "title": "Silver/Sablé",
+          "caption": "7176 S - Silver/Sablé"
+        }
+      ]
     },
     {
       "id": 3,
       "title": "Polished",
       "foundOn": "7176 (Exclusive)",
       "note": "Throughout the 7176 production, a variation was offered in the Silver finish production. This was offered as \"Polished,\" and examples retain a higher, mirror-like, polished finish.",
-      "image": {
-        "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176%20-%20Polished%20-3crop.jpg",
-        "alt": "7176 S Polished",
-        "title": "Polished",
-        "caption": "7176 - Polished"
-      }
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/preview-780x-7176-series-v4-polished-ss-case-small-squares-pd-dial-yellow-triangle-rehaut.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/7176-series-v4-polished-ss-case-small-squares-pd-dial-yellow-triangle-rehaut.jpg",
+          "alt": "7176 S Polished",
+          "title": "Polished",
+          "caption": "7176 - Polished"
+        }
+      ]
     },
     {
       "id": 4,
       "title": "Grey PVD",
       "foundOn": "7176 Military (Exclusive)",
-      "image": {
-        "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/Alan-7176-Militarycrop.jpg",
-        "alt": "7176 Military Grey PVD",
-        "title": "Grey PVD",
-        "caption": "7176 - Grey PVD"
-      }
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/preview-780x-7176-series-v1-grey-case-3h-mil-pd-dial.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/7176-series-v1-grey-case-3h-mil-pd-dial.jpg",
+          "alt": "7176 Military Grey PVD",
+          "title": "Grey PVD",
+          "caption": "7176 - Grey PVD"
+        }
+      ]
     },
     {
       "id": 5,
       "title": "Green PVD",
       "foundOn": "7176 Military (Exclusive)",
-      "image": {
-        "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176%20Military.png",
-        "alt": "7176 Military Green PVD",
-        "title": "Green PVD",
-        "caption": "7176 Military - Green PVD"
-      }
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/preview-780x-7176-series-v4.5-green-pvd-case-3h-mil-pd-dial-yellow-triangle-rehaut.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/7176-series-v4.5-green-pvd-case-3h-mil-pd-dial-yellow-triangle-rehaut.jpg",
+          "alt": "7176 Military Green PVD",
+          "title": "Green PVD",
+          "caption": "7176 Military - Green PVD"
+        }
+      ]
     },
     {
       "id": 6,
       "title": "Cadet Grey PVD",
       "foundOn": "7176 D and 7176 S",
-      "image": {
-        "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176D-Bluecrop.jpg",
-        "alt": "7176 D Cadet Grey PVD",
-        "title": "Cadet Grey PVD",
-        "caption": "7176 D - Cadet Grey PVD"
-      }
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/preview-780x-7176-series-v4-cadet-grey-case-blue-pd-by-orfina-dial-blue-tachymetre-rehaut.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/7176-series-v4-cadet-grey-case-blue-pd-by-orfina-dial-blue-tachymetre-rehaut.jpg",
+          "alt": "7176 D Cadet Grey PVD",
+          "title": "Cadet Grey PVD",
+          "caption": "7176 D - Cadet Grey PVD"
+        }
+      ]
     },
     {
       "id": 7,
       "title": "NTS PVD",
       "foundOn": "7176 S (Exclusive)",
-      "image": {
-        "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7176%20Photos/7176S-NTS.jpg",
-        "alt": "7176 S NTS PVD",
-        "title": "NTS PVD",
-        "caption": "7176 S - NTS PVD"
-      }
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/preview-780x-7176-black-byorfina-2crop.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/7176-black-byorfina-2crop.jpg",
+          "alt": "7176 S NTS PVD",
+          "title": "NTS PVD",
+          "caption": "7176 S - NTS PVD"
+        }
+      ]
     }
   ]
 }

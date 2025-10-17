@@ -18,7 +18,7 @@ const ExploreDetailsCard = ({
       className="group h-full cursor-pointer"
     >
       <div className="bg-white border-2 border-gray-200 overflow-hidden transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gray-200/60 group-hover:border-gray-400 rounded-xl transform group-hover:-translate-y-2 h-full flex flex-col">
-        <div className="h-48 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden flex-shrink-0">
+        <div className="h-56 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden flex-shrink-0">
           <ImageWithLoader
             src={imageSrc}
             alt={imageAlt}
