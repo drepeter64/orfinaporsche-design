@@ -1,4 +1,4 @@
-import { CasebackPage } from "@/_pages/reference-detail"
+import { CasebackPage, getCasebackData } from "@/_pages/reference-detail"
 import { getAllReferenceIds } from "@/_pages/reference"
 import { notFound } from "next/navigation"
 
@@ -21,10 +21,11 @@ export default function Caseback({ params }: PageProps) {
     notFound()
   }
 
-  return (
-    <CasebackPage
-      referenceId={params.referenceId}
-      referenceTitle={params.referenceId}
-    />
-  )
+  const data = getCasebackData(params.referenceId)
+
+  if (!data) {
+    notFound()
+  }
+
+  return <CasebackPage data={data} />
 }

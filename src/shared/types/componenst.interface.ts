@@ -9,3 +9,13 @@ export interface IComponent {
   route: keyof typeComponent
   title: string
 }
+
+export interface ImageInfo {
+  src: string
+  original: string
+  alt: string
+  title: string
+  subtitle: string
+  caption?: string
+  isPlaceholder?: boolean
+}

@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react"
 
 import { useTranslations } from "next-intl"
-import { ImageInfo } from "@/_pages/reference/ui"
+import { ImageInfo } from "@/shared/types"
 
 export const RightImageSection: React.FC<RightImageSectionProps> = ({
   image,

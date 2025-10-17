@@ -1,7 +1,6 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react"
 import ReferenceVariantCard from "@/components/ReferenceVariantCard"
-import { ReferenceData } from "@/shared/types"
-import { ImageInfo } from "@/_pages/reference/ui"
+import { ImageInfo, ReferenceData } from "@/shared/types"
 
 export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullScreenImage }) => {
   const { generations, variantsTitle, variantsSubtitle } = data

@@ -1,13 +1,4 @@
-import { ImageInfo } from "@/_pages/reference/ui"
-
-export interface ReferenceImage {
-  src: string
-  original: string
-  alt: string
-  title: string
-  caption?: string
-  isPlaceholder?: boolean
-}
+import { ImageInfo } from "@/shared/types/componenst.interface"
 
 export interface Measurement {
   value: string
@@ -29,7 +20,7 @@ export interface CasebackSection {
   description?: string
   foundOn?: string
   markings?: string[]
-  images?: ReferenceImage[]
+  images?: ImageInfo[]
   isSlider?: boolean
 }
 
@@ -38,7 +29,7 @@ export interface RehautSection {
   title: string
   description?: string
   foundOn?: string
-  images: ReferenceImage[]
+  images: ImageInfo[]
 }
 
 export interface DialSection {
@@ -47,7 +38,7 @@ export interface DialSection {
   description?: string
   foundOn?: string
   note?: string
-  images: ReferenceImage[]
+  images: ImageInfo[]
   isSlider?: boolean
 }
 
@@ -89,9 +80,24 @@ interface VariationData {
 export interface CasebackData {
   referenceId: string
   referenceTitle: string
-  pageTitle: string
   overview?: string
-  sections: CasebackSection[]
+  variations: CaseBackVariations[]
+  pageTitle?: string
+  sections?: CasebackSection[]
+}
+
+interface CaseBackVariations {
+  title: string
+  blueNote?: string
+  note?: string
+  bulletSection: CasebackBullet
+  images: ImageInfo[]
+}
+
+interface CasebackBullet {
+  title: string
+  text?: string
+  list?: CasebackBullet[]
 }
 
 export interface RehautData {

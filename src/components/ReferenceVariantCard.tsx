@@ -3,8 +3,8 @@ import ImageWithLoader from "./ImageWithLoader"
 import SectionHeading from "./SectionHeading"
 import { useTranslations } from "next-intl"
 import { Calendar, Clock, Layers, Settings } from "lucide-react"
-import { ImageInfo } from "@/_pages/reference/ui"
 import { ReferenceSpecificationRow } from "@/shared/types/reference.interface"
+import { ImageInfo } from "@/shared/types"
 
 interface ReferenceVariantCardProps {
   index: number

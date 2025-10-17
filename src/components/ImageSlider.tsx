@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import ImageWithLoader from "./ImageWithLoader"
-import { ImageInfo } from "@/_pages/reference/ui"
 import { useTranslations } from "next-intl"
+import { ImageInfo } from "@/shared/types"
 
 interface ImageSliderProps {
   images: Array<ImageInfo>

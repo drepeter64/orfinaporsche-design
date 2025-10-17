@@ -3,11 +3,12 @@ import { DetailedHTMLProps, HTMLAttributes } from "react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/app/localization"
 import { ClientRoutes } from "@/shared/routes"
-import { CaseFinishesData } from "@/shared/types"
 
-export const BreadcrumbFinishesSection: React.FC<BreadcrumbFinishesSectionProps> = ({ data }) => {
+export const BreadcrumbReferenceDetailSection: React.FC<BreadcrumbReferenceDetailSectionProps> = ({
+  referenceId,
+  lastText,
+}) => {
   const tCommon = useTranslations("Common")
-  const { referenceId } = data
 
   return (
     <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-4 sm:py-6">
@@ -27,14 +28,15 @@ export const BreadcrumbFinishesSection: React.FC<BreadcrumbFinishesSectionProps>
             {tCommon("reference")} {referenceId}
           </Link>
           <span className="mx-2 text-gray-400">/</span>
-          <span className="text-black font-medium">{tCommon("case-finishes")}</span>
+          <span className="text-black font-medium">{lastText}</span>
         </nav>
       </div>
     </div>
   )
 }
 
-interface BreadcrumbFinishesSectionProps
+interface BreadcrumbReferenceDetailSectionProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  data: CaseFinishesData
+  lastText: string
+  referenceId: string
 }

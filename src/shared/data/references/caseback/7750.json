@@ -1,0 +1,76 @@
+{
+  "referenceId": "7750",
+  "referenceTitle":"7750",
+  "overview": "There are two caseback variations found throughout the entire production of the Orfina 7750.",
+  "variations": [
+    {
+      "title": "Caseback Mk. 1",
+      "note": "<b>Found On:</b> 7750 Mk. 1 Case with Orfina Dial (Generation 1)",
+      "bulletSection": {
+          "title": "Caseback Markings:",
+          "text": "",
+          "list": [
+            {
+              "title": "Top Text:",
+              "text": "“ * CHRONOGRAPH PORSCHE DESIGN 7750 * ” in the top surrounding text. Followed by another line under it marked “WATERRESISTANT TESTED 10 ATM”"
+            },
+            {
+              "title": "Center Text:",
+              "text": "Orfina “Flame” logo over the ORFINA brand name. Above the logo the words “PORSCHE DESIGN” are curved around it."
+            },
+            {
+              "title": "Bottom Text:",
+              "text": "“INCABLOC AUTOMATIC ALL STAINLESS STEEL SWISS-MADE”"
+            },
+            {
+              "title": "Serial Numbers:",
+              "text": "Not present on these models."
+            }
+          ]
+        },
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-caseback/preview-780x-7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut-caseback.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-caseback/7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut-caseback.jpg",
+          "alt": "7750 Caseback Mk. 1",
+          "title": "7750 Caseback Mk. 1",
+          "subtitle": "7750 Caseback Mk. 1",
+          "caption": "7750 Caseback Mk. 1"
+        }
+      ]
+    },
+    {
+      "title": "Caseback Mk. 2",
+      "note": "<b>Found On:</b> all 7750 Cases, but only those with a PD Dial",
+      "blueNote": "The design language change of the caseback is significant and sets the tone for the caseback design language that would go on to be used in 7176, 7176 Military, 7176 D, and 7176 S.",
+      "bulletSection": {
+        "title": "Caseback Markings:",
+        "text": "",
+        "list": [
+          {
+            "title": "Perimeter Text:",
+            "text": "“7750 CHRONOGRAPH AUTOMATIC WATERRESISTANT TESTED 10 ATM INCABLOC ALL STAINLESS STEEL SWISS MADE” in the top surrounding text."
+          },
+          {
+            "title": "Center Text:",
+            "text": "The PD logo is accompanied by the words “PORSCHE DESIGN” curved around it above."
+          },
+          {
+            "title": "Serial Numbers:",
+            "text": "Present on these models."
+          }
+        ]
+      },
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-caseback/preview-780x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut-caseback.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-caseback/7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut-caseback.jpg",
+          "alt": "7750 Caseback Mk. 2",
+          "title": "7750 Caseback Mk. 2",
+          "subtitle": "7750 Caseback Mk. 2",
+          "caption": "7750 Caseback Mk. 2"
+        }
+      ]
+    }
+  ]
+}

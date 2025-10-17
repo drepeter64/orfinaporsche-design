@@ -1,9 +1,8 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react"
 
 import { useTranslations } from "next-intl"
-import { ReferenceData } from "@/shared/types"
+import { ImageInfo, ReferenceData } from "@/shared/types"
 import ImageWithLoader from "@/components/ImageWithLoader"
-import { ImageInfo } from "@/_pages/reference/ui"
 
 export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
   data,

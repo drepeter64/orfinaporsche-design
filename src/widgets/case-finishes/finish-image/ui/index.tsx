@@ -1,9 +1,8 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react"
 
 import { useTranslations } from "next-intl"
-import { ReferenceImage } from "@/shared/types"
+import { ImageInfo } from "@/shared/types"
 import ImageWithLoader from "@/components/ImageWithLoader"
-import { ImageInfo } from "@/_pages/reference/ui"
 
 export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
   image,
@@ -45,7 +44,7 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
 
 interface FinishImageSectionProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  image: ReferenceImage
+  image: ImageInfo
   sectionTitle: string
   setFullScreenImage: (imageData: ImageInfo | null) => void
 }

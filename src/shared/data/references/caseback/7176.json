@@ -1,0 +1,157 @@
+{
+  "referenceId": "7176",
+  "referenceTitle":"7176",
+  "overview": "The 7176 series features several caseback variations, each representing different models and prototypes within the reference line.",
+  "variations": [
+    {
+      "title": "7176 Mk. 1 Caseback",
+      "note": "The 7176 and 7176 Military casebacks follow the design language change of the caseback first seen on the 7750 Mk. 2 caseback.",
+      "bulletSection": {
+        "title": "Caseback Markings:",
+        "text": "",
+        "list": [
+          {
+            "title": "Perimeter Text:",
+            "text": "“7176 CHRONOGRAPH AUTOMATIC WATERRESISTANT TESTED 10 ATM SHOCKPROTECTED STAINLESS STEEL SWISS MADE” in one continuous circle at the perimeter of the back."
+          },
+          {
+            "title": "Center Text:",
+            "text": "The PD logo is accompanied by the words\n“PORSCHE DESIGN” curved around it above."
+          },
+          {
+            "title": "Serial Numbers:",
+            "text": "Present on these models.",
+            "list": [
+              {
+                "title": "7176 Civilian:",
+                "text": "Serial range is 8 digits and starts with\n00xxxxxx and rises sequentially."
+              },
+              {
+                "title": "7176 Military:",
+                "text": "Serial range is 8 digits and starts with\n00xxxxxx and rises sequentially."
+              }
+            ]
+          }
+        ]
+      },
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseback/preview-780x-7176-series-v4.5-green-pvd-case-3h-mil-pd-dial-yellow-triangle-rehaut-caseback-serial-covered.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseback/7176-series-v4.5-green-pvd-case-3h-mil-pd-dial-yellow-triangle-rehaut-caseback-serial-covered.jpg",
+          "alt": "7176 Mk. 1 Caseback",
+          "title": "7176 Mk. 1 Caseback",
+          "subtitle": "7176 Mk. 1 Caseback",
+          "caption": "7176 Mk. 1 Caseback"
+        }
+      ]
+    },
+    {
+      "title": "7176 D Caseback",
+      "note": "The 7176 and 7176 Military casebacks follow the design language change of the caseback first seen on the 7750 Mk. 2 caseback.",
+      "bulletSection": {
+        "title": "Caseback Markings:",
+        "text": "",
+        "list": [
+          {
+            "title": "Design:",
+            "text": "Identical to 7176 Mk. 1 Caseback"
+          },
+          {
+            "title": "Distinction:",
+            "text": "Additional \"D\" designation next to 7176"
+          },
+          {
+            "title": "Serial Numbers:",
+            "text": "Present on these models.",
+            "list": [
+              {
+                "title": "7176 D:",
+                "text": "Serial range is 8 digits and starts with 2031xxxx\nand rises sequentially."
+              }
+            ]
+          }
+        ]
+      },
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseback/preview-780x-7176-series-v4-cadet-grey-case-blue-pd-by-orfina-dial-blue-tachymetre-rehaut-caseback.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseback/7176-series-v4-cadet-grey-case-blue-pd-by-orfina-dial-blue-tachymetre-rehaut-caseback.jpg",
+          "alt": "7176 D Caseback",
+          "title": "7176 D Caseback",
+          "subtitle": "7176 D Caseback",
+          "caption": "7176 D Caseback"
+        }
+      ]
+    },
+    {
+      "title": "7176 S Caseback",
+      "note": "The 7176 and 7176 Military casebacks follow the design language change of the caseback first seen on the 7750 Mk. 2 caseback.",
+      "bulletSection": {
+        "title": "Caseback Markings:",
+        "text": "",
+        "list": [
+          {
+            "title": "Design:",
+            "text": "Identical to 7176 Mk. 1 caseback"
+          },
+          {
+            "title": "Distinction:",
+            "text": "Additional \"S\" designation next to 7176"
+          },
+          {
+            "title": "Serial Numbers:",
+            "text": "Present on these models.",
+            "list": [
+              {
+                "title": "7176 S:",
+                "text": "Serial range is 5 or 6 digits with no leading\nnumbers and rises sequentially."
+              }
+            ]
+          }
+        ]
+      },
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseback/preview-780x-7176-series-v4.5-sable-case-pd-dial-tachymetre-rehaut-caseback-serial-covered.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseback/7176-series-v4.5-sable-case-pd-dial-tachymetre-rehaut-caseback-serial-covered.jpg",
+          "alt": "7176 S Caseback",
+          "title": "7176 S Caseback",
+          "subtitle": "7176 S Caseback",
+          "caption": "7176 S Caseback"
+        }
+      ]
+    },
+    {
+      "title": "Prototype Caseback",
+      "note": "On select 7176 variants, usually those identified as prototypes, a\ndifferent caseback has been identified. It features a black acrylic\ndisk that is embedded into the steel caseback.",
+      "bulletSection": {
+        "title": "Caseback Markings:",
+        "text": "",
+        "list": [
+          {
+            "title": "Perimeter Text:",
+            "text": "“7176 S CHRONOGRAPH AUTOMATIC\nWATERRESISTANT TESTED 10 ATM\nSHOCKPROTECTED STAINLESS STEEL SWISS MADE”\nin one continuous circle at the perimeter of the back."
+          },
+          {
+            "title": "Center Text:",
+            "text": "A sizeable PD logo is accompanied by the\nwords “PORSCHE DESIGN” curved around it above"
+          },
+          {
+            "title": "Serial Numbers:",
+            "text": "Not present on these models"
+          }
+        ]
+      },
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseback/preview-780x-7176-series-v4-cadet-grey-case-blue-pd-dial-blue-tachymetre-rehaut-caseback.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseback/7176-series-v4-cadet-grey-case-blue-pd-dial-blue-tachymetre-rehaut-caseback.jpg",
+          "alt": "7176 Prototype Caseback",
+          "title": "7176 Prototype Caseback",
+          "subtitle": "7176 Prototype Caseback",
+          "caption": "7176 Prototype Caseback"
+        }
+      ]
+    }
+  ]
+}
