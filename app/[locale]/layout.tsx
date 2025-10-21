@@ -5,6 +5,8 @@ import { localeConfig } from "@/app/localization"
 import { Layout } from "@/widgets/layout"
 import { openSansFont } from "@/app/fonts"
 
+export const dynamic = "force-dynamic"
+
 export const metadata: Metadata = {
   title: "Orfina Porsche Design",
   description:

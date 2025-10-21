@@ -17,8 +17,12 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
         className="relative group cursor-pointer max-w-xs"
         onClick={() =>
           setFullScreenImage({
-            src: image.src,
-            original: image.original,
+            src:
+              image.src ||
+              "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/placeholder.png",
+            original:
+              image.original ||
+              "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/placeholder.png",
             alt: image.alt,
             title: image.title,
             subtitle: sectionTitle || image.subtitle,
@@ -27,7 +31,9 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
       >
         <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
         <ImageWithLoader
-          src={image.src}
+          src={
+            image.src || "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/placeholder.png"
+          }
           alt={image.alt}
           className="relative w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
           skeletonClassName="relative w-full h-64 sm:h-80 lg:h-96 rounded-lg"

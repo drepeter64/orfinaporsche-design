@@ -50,11 +50,18 @@ export function DialPage({ data }: DialPageProps) {
           </div>
 
           {/* Content */}
-          {data.overview && (
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <p className="text-lg text-gray-700 leading-relaxed">{data.overview}</p>
-            </div>
-          )}
+          <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
+            {data.overview && (
+              <div className="max-w-4xl mx-auto text-center mb-16">
+                <p className="text-lg text-gray-700 leading-relaxed">{data.overview}</p>
+              </div>
+            )}
+            {data.note && (
+              <div className="mt-8 bg-gray-50 p-6 sm:p-8 rounded-lg border-l-4 border-black">
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">{data.note}</p>
+              </div>
+            )}
+          </div>
 
           {data.listing && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
@@ -171,7 +178,7 @@ export function DialPage({ data }: DialPageProps) {
       {/* Back Navigation */}
       <BackNavigationSection
         route={ClientRoutes.reference(referenceId)}
-        title={`${tCommon("back_to_refs")}&nbsp;${referenceTitle}`}
+        title={`${tCommon("back_to_refs")} ${referenceTitle}`}
       />
 
       <FullScreenModal

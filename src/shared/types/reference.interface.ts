@@ -48,6 +48,10 @@ export interface ReferenceIntroduction {
 }
 
 export interface ReferenceData {
+  meta_title?: string
+  meta_description?: string
+  meta_keywords?: string
+
   id: string
   title: string
   referenceNumber: string

@@ -1,1 +1,61 @@
-{}
+{
+  "meta_title": "Reference 7177 - Orfina Porsche Design Military Chronograph Ref. 7177 – Rehaut and Dial Details",
+  "meta_description": "xplore the Orfina Porsche Design Military Chronograph Ref. 7177 — a rare 1970s automatic chronograph known for its black PVD case, red 3H dial marking and robust Lemania 5100 movement. Learn about its Rehaut and military heritage in the Porsche Design timeline.",
+  "meta_keywords": "Orfina Porsche Design 7177, Porsche Design Military Chronograph, 3H tritium dial, Lemania 5100, black PVD chronograph, UAE Air Force watch, Porsche Design Ref 7177, Chronograph 1, Top Gun military, Orfina 7177 rehaut, Porsche Design by Orfina vintage",
+
+  "referenceId": "7177",
+  "referenceTitle":"7177",
+  "overview": "All 7177 or \"military\" variants have a 12-hr rehaut ring, while the non-military\ncivilian variants have a tachymetric rehaut ring. There are two known variations\nof the 12-hr rehaut ring.",
+  "note": "",
+  "variations": [
+    {
+      "title": "Crooked-Seven 12-hr Rehaut",
+      "note": "<b>Found On:</b> First circa ~500 7177's ever produced",
+      "bulletSection": {
+        "title": "",
+        "text": [
+          "A slightly larger font rehaut found on the first circa ~500 7177’s ever\nproduced. This reheat’s seven features a crooked corner, hence the\nname."
+        ]
+      },
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-rehaut-page/preview-560x-7177-series-v4-sable-case-w-bracelet-4-logo-dial.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-rehaut-page/7177-series-v4-sable-case-w-bracelet-4-logo-dial.jpg",
+          "alt": "7177 Crooked Seven Rehaut",
+          "title": "7177 Crooked Seven Rehaut",
+          "subtitle": "7177 Crooked Seven Rehaut",
+          "caption": "7177 Crooked Seven Rehaut"
+        },
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-rehaut-page/preview-560x-7177-crooked-seven-rehaut-close-up.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-rehaut-page/7177-crooked-seven-rehaut-close-up.jpg",
+          "alt": "7177 Crooked Seven Rehaut - Close-Up",
+          "title": "7177 Crooked Seven Rehaut - Close-Up",
+          "subtitle": "7177 Crooked Seven Rehaut - Close-Up",
+          "caption": "7177 Crooked Seven Rehaut - Close-Up"
+        }
+      ]
+    },
+    {
+      "title": "Standard 12-hr Rehaut",
+      "note": "<b>Found On:</b> All other 7177 variants",
+      "blueNote": "There are a variety of prototype rehauts that have been seen on examples\nover the years, but these were not configured on any \"production\"\nwatches and\nthus will not be discussed here.",
+      "bulletSection": {
+        "title": "",
+        "text": [
+          "A slightly smaller font rehaut is found on all other 7177 variants."
+        ]
+      },
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-rehaut-page/preview-560x-7177-series-v4-sable-case-w-bracelet-3h-mil-pd-dial.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-rehaut-page/7177-series-v4-sable-case-w-bracelet-3h-mil-pd-dial.jpg",
+          "alt": "7177 Standard Rehaut",
+          "title": "7177 Standard Rehaut",
+          "subtitle": "7177 Standard Rehaut",
+          "caption": "7177 Standard Rehaut"
+        }
+      ]
+    }
+  ]
+}

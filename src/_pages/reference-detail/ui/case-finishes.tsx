@@ -299,7 +299,7 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
       {/* Back Navigation */}
       <BackNavigationSection
         route={ClientRoutes.reference(data.referenceId)}
-        title={`${tCommon("back_to_refs")}&nbsp;${data.referenceTitle}`}
+        title={`${tCommon("back_to_refs")} ${data.referenceTitle}`}
       />
 
       {/* Full Screen Image Modal */}

@@ -24,14 +24,6 @@ export interface CasebackSection {
   isSlider?: boolean
 }
 
-export interface RehautSection {
-  id: number
-  title: string
-  description?: string
-  foundOn?: string
-  images: ImageInfo[]
-}
-
 export interface DialSection {
   id: number
   title: string
@@ -43,6 +35,9 @@ export interface DialSection {
 }
 
 export interface CaseFinishesData {
+  meta_title?: string
+  meta_description?: string
+  meta_keywords?: string
   referenceId: string
   referenceTitle: string
   pageTitle: string
@@ -78,6 +73,9 @@ interface VariationData {
 }
 
 export interface CasebackData {
+  meta_title?: string
+  meta_description?: string
+  meta_keywords?: string
   referenceId: string
   referenceTitle: string
   overview?: string
@@ -106,10 +104,14 @@ interface BulletListItem {
 }
 
 export interface DialData {
+  meta_title?: string
+  meta_description?: string
+  meta_keywords?: string
   referenceId: string
   referenceTitle: string
   listing?: DialDataListing[]
   overview?: string
+  note?: string
   variations: CaseBackVariations[]
   pageTitle?: string
   sections?: DialSection[]
@@ -121,6 +123,9 @@ export interface DialDataListing {
 }
 
 export interface DialTypeData {
+  meta_title?: string
+  meta_description?: string
+  meta_keywords?: string
   referenceId: string
   referenceTitle: string
   dialTitle: string
@@ -141,9 +146,15 @@ interface DialVariations {
 }
 
 export interface RehautData {
+  meta_title?: string
+  meta_description?: string
+  meta_keywords?: string
   referenceId: string
   referenceTitle: string
-  pageTitle: string
+  listing?: DialDataListing[]
   overview?: string
-  sections: RehautSection[]
+  note?: string
+  variations: CaseBackVariations[]
+  pageTitle?: string
+  sections?: DialSection[]
 }

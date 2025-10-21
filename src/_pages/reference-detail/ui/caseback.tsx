@@ -226,7 +226,7 @@ export function CasebackPage({ data }: CasebackPageProps) {
       {/* Back Navigation */}
       <BackNavigationSection
         route={ClientRoutes.reference(referenceId)}
-        title={`${tCommon("back_to_refs")}&nbsp;${referenceTitle}`}
+        title={`${tCommon("back_to_refs")} ${referenceTitle}`}
       />
 
       <FullScreenModal
