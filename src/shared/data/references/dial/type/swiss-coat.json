@@ -1,0 +1,52 @@
+{
+  "referenceId": "7177",
+  "referenceTitle":"7177",
+  "dialTitle": "Swiss Coat of Arms Dial",
+  "overview": "",
+  "variations": [
+    {
+      "title": "Distinguishing Characteristics:",
+      "bulletSection": {
+        "title": "",
+        "text": [],
+        "list": [
+          {
+            "title": "Issued:",
+            "text": "The Swiss Military variant was supposedly issued to Switzerland's\nmilitary."
+          },
+          {
+            "title": "Swiss Coat of Arms Dial:",
+            "text": "Bears a “Swiss Coat of Arms” as well as an\nadditional line of text “by ORFINA”\n."
+          },
+          {
+            "title": "Finish:",
+            "text": "Produced only in Olive Green PVD."
+          },
+          {
+            "title": "Day/Date Wheel:",
+            "text": "Produced with German Day Disk."
+          }
+        ]
+      },
+      "image_type": "row",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/swiss-coat-of-arms/7177-swiss-shield.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/swiss-coat-of-arms/7177-swiss-shield.jpg",
+          "alt": "7177 Swiss Coat of Arms Dial",
+          "title": "7177 Swiss Coat of Arms Dial",
+          "subtitle": "7177 Swiss Coat of Arms Dial",
+          "caption": "7177 Swiss Coat of Arms Dial"
+        },
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/swiss-coat-of-arms/7177-swiss-shield-set.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/swiss-coat-of-arms/7177-swiss-shield-set.jpg",
+          "alt": "7177 Swiss Coat of Arms Set",
+          "title": "7177 Swiss Coat of Arms Set",
+          "subtitle": "7177 Swiss Coat of Arms Set",
+          "caption": "7177 Swiss Coat of Arms Set"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "referenceId": "7177",
+  "referenceTitle":"7177",
+  "dialTitle": "UAE Dial",
+  "overview": "",
+  "variations": [
+    {
+      "title": "General Notes:",
+      "bulletSection": {
+        "title": "",
+        "text": [
+          "Both of the UAE dial variants came in a variety of the 7177 finishes.\nInterestingly, a small batch of circa ~25 watches featuring gold-colored\ncases were produced."
+        ]
+      },
+      "image_type": "none",
+      "images": []
+    },
+    {
+      "title": "Caseback:",
+      "bulletSection": {
+        "title": "",
+        "text": [
+          "There is a very small batch of casebacks in which the serial number's\nlocation shifted to the middle of the caseback. This is found on UAE\nissued examples, in the low ~3000 serial range."
+        ]
+      },
+      "image_type": "right",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/uae-dial/7177-uae-midcaseserial-frame.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/uae-dial/7177-uae-midcaseserial-frame.jpg",
+          "alt": "7177 Mid-Caseback Serial",
+          "title": "7177 Mid-Caseback Serial",
+          "subtitle": "7177 Mid-Caseback Serial",
+          "caption": "7177 Mid-Caseback Serial"
+        }
+      ]
+    },
+    {
+      "title": "Dial Variations:",
+      "bulletSection": {
+        "title": "",
+        "text": [
+          "The 7177 UAE variant was ordered by the UAE’s Air Force and came in\ntwo dial variations:"
+        ],
+        "list": [
+          {
+            "title": "Mk. 1 Dial: ",
+            "text": "Stamped with “UAE AIR FORCE” at four o'clock and a tricolor\nmotif at the six o’clock subdial."
+          },
+          {
+            "title": "Mk. 2 Dial: ",
+            "text": "Stamped with “UAE AIR FORCE” at four o'clock as well, but\n“CENTRAL AIR BASE\" stamped at the six o’clock subdial instead of a\nmotif."
+          }
+        ]
+      },
+      "image_type": "row",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/uae-dial/preview-560x-7177-series-v4-sable-case-w-bracelet-3h-mil-pd-uae-air-force-dial.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/uae-dial/7177-series-v4-sable-case-w-bracelet-3h-mil-pd-uae-air-force-dial.jpg",
+          "alt": "7177 UAE Mk. 1 Dial",
+          "title": "7177 UAE Mk. 1 Dial",
+          "subtitle": "7177 UAE Mk. 1 Dial <br></br>",
+          "caption": "7177 UAE Mk. 1 Dial"
+        },
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/uae-dial/7177-uae-gold-colored.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/uae-dial/7177-uae-gold-colored.jpg",
+          "alt": "7177 UAE Mk. 2 Dial and Gold Colored Case",
+          "title": "7177 UAE Mk. 2 Dial and Gold Colored Case",
+          "subtitle": "7177 UAE Mk. 2 Dial and Gold Colored Case",
+          "caption": "7177 UAE Mk. 2 Dial and Gold Colored Case"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "referenceId": "7177",
+  "referenceTitle":"7177",
+  "dialTitle": "By Orfina Dial",
+  "overview": "",
+  "variations": [
+    {
+      "title": "General Notes:",
+      "bulletSection": {
+        "title": "",
+        "text": [],
+        "list": [
+          {
+            "title": "",
+            "text": "The “by Orfina” stamped military dials are identical to those of the\nbaseline configuration but bear an additional line of text “by Orfina” at 4\no’clock."
+          },
+          {
+            "title": "",
+            "text": "These dials are the last iteration of any Orfina Porsche Design dial, with\nOrfina branding."
+          }
+        ]
+      },
+      "image_type": "row",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/by-orfina-dial/orfina-7177-by-orfina-dial.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/by-orfina-dial/orfina-7177-by-orfina-dial.jpg",
+          "alt": "7177 By Orfina Dia",
+          "title": "7177 By Orfina Dia",
+          "subtitle": "7177 By Orfina Dia",
+          "caption": "7177 By Orfina Dia"
+        }
+      ]
+    }
+  ]
+}

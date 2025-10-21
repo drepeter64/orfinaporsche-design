@@ -90,14 +90,54 @@ interface CaseBackVariations {
   title: string
   blueNote?: string
   note?: string
-  bulletSection: CasebackBullet
+  bulletSection: Bullet
   images: ImageInfo[]
 }
 
-interface CasebackBullet {
+interface Bullet {
+  title: string
+  text?: []
+  list?: BulletListItem[]
+}
+interface BulletListItem {
   title: string
   text?: string
-  list?: CasebackBullet[]
+  list?: BulletListItem[]
+}
+
+export interface DialData {
+  referenceId: string
+  referenceTitle: string
+  listing?: DialDataListing[]
+  overview?: string
+  variations: CaseBackVariations[]
+  pageTitle?: string
+  sections?: DialSection[]
+}
+export interface DialDataListing {
+  route: string
+  title: string
+  images: ImageInfo[]
+}
+
+export interface DialTypeData {
+  referenceId: string
+  referenceTitle: string
+  dialTitle: string
+  variations?: DialVariations[]
+  poster?: ImageInfo[]
+  overview?: string
+  pageTitle?: string
+  sections?: DialSection[]
+}
+
+interface DialVariations {
+  title: string
+  blueNote?: string
+  note?: string
+  bulletSection?: Bullet
+  images: ImageInfo[]
+  image_type: "row" | "carousel" | "right" | "finish" | "three-row" | "two-row" | "none"
 }
 
 export interface RehautData {
@@ -106,13 +146,4 @@ export interface RehautData {
   pageTitle: string
   overview?: string
   sections: RehautSection[]
-}
-
-export interface DialData {
-  referenceId: string
-  referenceTitle: string
-  pageTitle: string
-  overview?: string
-  description?: string
-  sections: DialSection[]
 }

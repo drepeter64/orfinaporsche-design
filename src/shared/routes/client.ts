@@ -33,6 +33,9 @@ export const ClientRoutes = {
   reference_dial: (id: string) => {
     return `/references/${id}/dial`
   },
+  dial_type: (id: string, type: string) => {
+    return `/references/${id}/dial/${type}`
+  },
 }
 
 export const getRoute = (name: string) => {

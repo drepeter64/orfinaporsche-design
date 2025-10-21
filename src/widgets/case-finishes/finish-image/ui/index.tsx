@@ -6,13 +6,13 @@ import ImageWithLoader from "@/components/ImageWithLoader"
 
 export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
   image,
-  sectionTitle,
+  sectionTitle = "",
   setFullScreenImage,
 }) => {
   const tCommon = useTranslations("Common")
 
   return (
-    <div className="flex justify-center">
+    <div className="flex flex-col items-center justify-center">
       <div
         className="relative group cursor-pointer max-w-xs"
         onClick={() =>
@@ -21,7 +21,7 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
             original: image.original,
             alt: image.alt,
             title: image.title,
-            subtitle: sectionTitle,
+            subtitle: sectionTitle || image.subtitle,
           })
         }
       >
@@ -32,12 +32,20 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
           className="relative w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
           skeletonClassName="relative w-full h-64 sm:h-80 lg:h-96 rounded-lg"
         />
+
+        {/* Click indicator */}
         <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
           <div className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
             {tCommon("click-zoom")}
           </div>
         </div>
       </div>
+      {image.subtitle && (
+        <span
+          dangerouslySetInnerHTML={{ __html: image.subtitle }}
+          className="block text-base sm:text-lg text-gray-600 text-center mt-4 font-medium"
+        ></span>
+      )}
     </div>
   )
 }
@@ -45,6 +53,6 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
 interface FinishImageSectionProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   image: ImageInfo
-  sectionTitle: string
+  sectionTitle?: string
   setFullScreenImage: (imageData: ImageInfo | null) => void
 }

@@ -1,1 +1,49 @@
-{}
+{
+  "referenceId": "7750",
+  "referenceTitle":"7750",
+  "overview": "There are two dial variations found on the Reference 7750.",
+  "variations": [
+    {
+      "title": "Orfina Dial",
+      "note": "<b>Found On:</b> Mk. 1 Case with Mk. 1 caseback",
+      "bulletSection": {
+          "title": "Description:",
+          "text": [
+            "The First is the Orfina Dial, the dial that started it all. “ORFINA” is printed above the Day/Date windows, and “PORSCHE DESIGN” is printed below the windows.",
+            "It is solely found on the Mk. 1 Case with a Mk. 1 Caseback and either rehaut."
+          ]
+        },
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-dial-variations/preview-780x-7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-dial-variations/7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut.jpg",
+          "alt": "7750 Orfina Dial",
+          "title": "7750 Orfina Dial",
+          "subtitle": "7750 Orfina Dial",
+          "caption": "7750 Orfina Dial"
+        }
+      ]
+    },
+    {
+      "title": "PD Dial",
+      "note": "<b>Found On:</b> All case marks and Mk. 2 caseback",
+      "bulletSection": {
+        "title": "Description:",
+        "text": [
+          "“PD” is printed above the Day/Date windows and “PORSCHE DESIGN” is printed below the windows.",
+          "This dial can be found on any 7750 case, caseback or rehaut variation except for the original Mk. 1 Caseback found exclusively paired with an Orfina dial."
+        ]
+      },
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-dial-variations/preview-780x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-dial-variations/7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg",
+          "alt": "7750 PD Dial",
+          "title": "7750 PD Dial",
+          "subtitle": "7750 PD Dial",
+          "caption": "7750 PD Dial"
+        }
+      ]
+    }
+  ]
+}

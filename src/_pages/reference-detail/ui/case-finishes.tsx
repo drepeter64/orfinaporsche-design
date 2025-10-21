@@ -10,10 +10,11 @@ import ImageSlider from "@/components/ImageSlider"
 import { PlaceholderImageSection } from "@/widgets/case-finishes/placeholder-image"
 import { RightImageSection } from "@/widgets/case-finishes/right-image"
 import { BackNavigationSection } from "@/widgets/reference-detail/back-navigation"
-import { BreadcrumbReferenceDetailSection } from "@/widgets/reference-detail/breadcrumbs"
 import { FinishImageSection } from "@/widgets/case-finishes/finish-image"
 import { ImageInfo } from "@/shared/types"
 import { FullScreenModal } from "@/widgets/full-screen-modal"
+import { Breadcrumbs } from "@/widgets/breadcrumbs"
+import { ClientRoutes } from "@/shared/routes"
 
 interface CaseFinishesPageProps {
   data: CaseFinishesData
@@ -22,14 +23,20 @@ interface CaseFinishesPageProps {
 export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
   const [fullScreenImage, setFullScreenImage] = useState<ImageInfo | null>(null)
   const tCommon = useTranslations("Common")
+  const breadcrumb = [
+    {
+      text: `${tCommon("reference")} ${data.referenceId}`,
+      link: ClientRoutes.reference(data.referenceId as string),
+    },
+    {
+      text: tCommon("case-finishes"),
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
-      <BreadcrumbReferenceDetailSection
-        referenceId={data.referenceId as string}
-        lastText={tCommon("case-finishes")}
-      />
+      <Breadcrumbs links={breadcrumb} />
 
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -291,8 +298,8 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
 
       {/* Back Navigation */}
       <BackNavigationSection
-        referenceId={data.referenceId}
-        referenceTitle={data.referenceTitle}
+        route={ClientRoutes.reference(data.referenceId)}
+        title={`${tCommon("back_to_refs")}&nbsp;${data.referenceTitle}`}
       />
 
       {/* Full Screen Image Modal */}

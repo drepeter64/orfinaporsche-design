@@ -1,0 +1,151 @@
+{
+  "referenceId": "7177",
+  "referenceTitle":"7177",
+  "dialTitle": "BUND Dial",
+  "overview": "",
+  "variations": [
+    {
+      "title": "General Notes:",
+      "bulletSection": {
+        "title": "",
+        "text": [],
+        "list": [
+          {
+            "title": "",
+            "text": "The BUND variant is short for \"Bundeswehr\"\n, the German Federal\nDefense Force to whom they were issued."
+          },
+          {
+            "title": "",
+            "text": "BUND examples are seen in a variety of finishes and were always issued\non a BUND-style strap."
+          }
+        ]
+      },
+      "image_type": "none",
+      "images": []
+    },
+    {
+      "title": "Caseback Markings:",
+      "bulletSection": {
+        "title": "",
+        "text": [],
+        "list": [
+          {
+            "title": "",
+            "text": "On these examples, the caseback does have \"BUND\" and an appropriate\nNSN engraving."
+          },
+          {
+            "title": "",
+            "text": "Two known NSNs are found on the BUND variant: the initial NSN is\n6645-12-182-1763, and the second is 6645-12-194-8642."
+          },
+          {
+            "title": "",
+            "text": "Some BUND examples are \"double-struck,\n\" meaning the initial NSN is\ncrossed out, and the second NSN is added. This was presumably done at\nsome maintenance event during the watch’s lifetime. BUND variants also\ndo not have the \"7177\" ref# engraving on the caseback."
+          }
+        ]
+      },
+      "image_type": "row",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/preview-560x-7177-series-v4-sable-case-w-bund-strap-3h-mil-pd-dial-caseback-pro-s-shot.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/7177-series-v4-sable-case-w-bund-strap-3h-mil-pd-dial-caseback-pro-s-shot.jpg",
+          "alt": "7177 BUND Singe-Struck Caseback",
+          "title": "7177 BUND Singe-Struck Caseback",
+          "subtitle": "7177 BUND Singe-Struck Caseback",
+          "caption": "7177 BUND Singe-Struck Caseback"
+        },
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/double-strike-bundcrop.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/double-strike-bundcrop.jpg",
+          "alt": "7177 BUND Double-Struck Caseback",
+          "title": "7177 BUND Double-Struck Caseback",
+          "subtitle": "7177 BUND Double-Struck Caseback",
+          "caption": "7177 BUND Double-Struck Caseback"
+        }
+      ]
+    },
+    {
+      "title": "Dial Variations:",
+      "bulletSection": {
+        "title": "",
+        "text": [],
+        "list": [
+          {
+            "title": "",
+            "text": "BUND examples have been found to be produced with both the Baseline\nDial and the Military Chronograph Dial."
+          },
+          {
+            "title": "Military Chronograph Dial:",
+            "text": "Lacked the baseline dial’s “Porsche Design”\ntext, which was replaced with “CHRONOGRAPH” text."
+          },
+          {
+            "title": "Service Dial:",
+            "text": "Some BUND examples sent in for service, had their dials\nreplaced with Service Dials. These used early Luminova and lacked\n“Porsche Design” text, again replaced by “CHRONOGRAPH” text, but\nalso lacked the “3H” marking because the dials did not use tritium.\nLuminova dial examples will also bear double-struck casebacks."
+          }
+        ]
+      },
+      "image_type": "three-row",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/preview-560x-7177-series-v4-sable-case-w-bund-strap-3h-mil-pd-dial-includes-day-date-replacement.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/7177-series-v4-sable-case-w-bund-strap-3h-mil-pd-dial-includes-day-date-replacement.jpg",
+          "alt": "7177 BUND - Baseline Dial",
+          "title": "7177 BUND - Baseline Dial",
+          "subtitle": "7177 BUND - Baseline Dial",
+          "caption": "7177 BUND - Baseline Dial"
+        },
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/preview-560x-7177-series-v4-green-vz-ejercito-de-venezuela-case-w-bracelet-3h-mil-chrono-dial.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/7177-series-v4-green-vz-ejercito-de-venezuela-case-w-bracelet-3h-mil-chrono-dial.jpg",
+          "alt": "7177 BUND - Military Chronograph Dial",
+          "title": "7177 BUND - Military Chronograph Dial",
+          "subtitle": "7177 BUND - Military Chronograph Dial",
+          "caption": "7177 BUND - Military Chronograph Dial"
+        },
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/7177-mk2-servicedialcrop.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/7177-mk2-servicedialcrop.jpg",
+          "alt": "7177 BUND - Service Dial",
+          "title": "7177 BUND - Service Dial",
+          "subtitle": "7177 BUND - Service Dial",
+          "caption": "7177 BUND - Service Dial"
+        }
+      ]
+    },
+    {
+      "title": "Accessories:",
+      "bulletSection": {
+        "title": "",
+        "text": [],
+        "list": [
+          {
+            "title": "",
+            "text": "The BUND examples were also issued in a box that bore the initial NSN\n6645-12-182-1763."
+          },
+          {
+            "title": "",
+            "text": "There are also a variety of BUND straps found across examples. Please\nrefer to the Components - BUND page for more information on these\nstraps."
+          }
+        ]
+      },
+      "image_type": "two-row",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/preview-560x-7177-bund-strap-backs-and-bund-boxes-v4.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/7177-bund-strap-backs-and-bund-boxes-v4.jpg",
+          "alt": "7177 BUND Box 1",
+          "title": "7177 BUND Box 1",
+          "subtitle": "7177 BUND Box 1",
+          "caption": "7177 BUND Box 1"
+        },
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/preview-560x-7177-bund-boxes-and-bund-strap-backs-v5.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/7177-bund-boxes-and-bund-strap-backs-v5.jpg",
+          "alt": "7177 BUND Box 2",
+          "title": "7177 BUND Box 2",
+          "subtitle": "7177 BUND Box 2",
+          "caption": "7177 BUND Box 2"
+        }
+      ]
+    }
+  ]
+}

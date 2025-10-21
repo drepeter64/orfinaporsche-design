@@ -30,11 +30,15 @@
 
     "home": "Home",
     "caseback": "Caseback",
+    "dial": "Dial",
+    "dial-variations": "Dial Variations",
+    "rehaut": "Rehaut",
     "reference": "Reference",
     "references": "References",
     "case-finishes": "Case & Finishes",
     "back_to_refs": "Back to References",
     "back_to_home": "Back to Home Page",
+    "back_to_dial_variations": "Back to Dial Variations",
     "esc": "Press ESC or click outside to close",
     "no-photo": "orfinaporsche-design - photo coming soon"
   }

@@ -1,0 +1,99 @@
+{
+  "referenceId": "7177",
+  "referenceTitle":"7177",
+  "dialTitle": "Flying Tiger Dial",
+  "overview": "",
+  "poster": [
+    {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/preview-780x-7177-tiger-group.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/7177-tiger-group.jpg",
+      "alt": "7177 Flying Tiger Group Photo",
+      "title": "7177 Flying Tiger Group Photo",
+      "subtitle": "7177 Flying Tiger Group Photo",
+      "caption": "7177 Flying Tiger Group Photo"
+    },
+    {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/preview-780x-7177-tiger-patchcrop.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/7177-tiger-patchcrop.jpg",
+      "alt": "7177 Flying Tiger Group Photo",
+      "title": "7177 Flying Tiger Group Photo",
+      "subtitle": "7177 Flying Tiger Group Photo",
+      "caption": "7177 Flying Tiger Group Photo"
+    }
+  ],
+  "variations": [
+    {
+      "title": "History",
+      "bulletSection": {
+        "title": "",
+        "text": [
+          "The Flying Tiger Watches were Issued for the U.S. Air Force’s 23rd\nTactical Fighter Group.",
+          "The 23rd Fighter Group is the home of the Air Force's legendary Flying\nTigers and is stationed at Moody Air Force Base. The 23rd Fighter\nGroup's primary mission is forward air control, close-air support,\ninterdiction, and combat search and rescue operations.",
+          "The 23rd Fighter Group traces its roots back to the 23rd Pursuit Group,\nwhich was formed on December 17, 1941, just 10 days after the\nJapanese attack on Pearl Harbor. The group had three squadrons\nassigned to carry out their mission: the 74th, 75th, and 76th Fighter\nSquadrons.",
+          "A particularly interesting note is that the aircraft assigned to the group has\nthe unique \"Shark Teeth\" nose art. The Flying Tigers are the only Air\nForce unit authorized to carry this distinctive and historical aircraft\nmarking."
+        ]
+      },
+      "image_type": "row",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/flying-tiger-crest.gif",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/flying-tiger-crest.gif",
+          "alt": "Flying Tiger Crest",
+          "title": "Flying Tiger Crest",
+          "subtitle": "Flying Tiger Crest",
+          "caption": "Flying Tiger Crest"
+        }
+      ]
+    },
+    {
+      "title": "Dial Variations",
+      "bulletSection": {
+        "title": "",
+        "text": [
+          "The Flying Tiger watches were produced in two batches:"
+        ],
+        "list": [
+          {
+            "title": "Mk. 1 Flying Tiger Dial: ",
+            "text": "Featuring both the “U.S. Air Force”\ninscription and the Flying Tiger logo."
+          },
+          {
+            "title": "Mk. 2 Flying Tiger Dial: ",
+            "text": "Retaining the Flying Tiger logo but omitting\nthe “U.S. Air Force” inscription."
+          },
+          {
+            "title": "",
+            "text": "The casebacks of both variants were identical to those of the baseline\n7177. Most examples were finished in Silver/Sablé, Black PVD, or NTS\nPVD."
+          }
+        ]
+      },
+      "image_type": "three-row",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/preview-560x-7177-series-v4-sable-case-w-bracelet-3h-mil-pd-us-air-force-tiger-dial.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/7177-series-v4-sable-case-w-bracelet-3h-mil-pd-us-air-force-tiger-dial.jpg",
+          "alt": "7177 Flying Tiger Mk. 1 Dial - silver",
+          "title": "7177 Flying Tiger Mk. 1 Dial - silver",
+          "subtitle": "7177 Flying Tiger Mk. 1 Dial - silver",
+          "caption": "7177 Flying Tiger Mk. 1 Dial - silver"
+        },
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/preview-560x-7177-series-v4-black-case-w-bracelet-3h-mil-pd-us-air-force-tiger-dial-includes-day-date-repl.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/7177-series-v4-black-case-w-bracelet-3h-mil-pd-us-air-force-tiger-dial-includes-day-date-repl.jpg",
+          "alt": "7177 Flying Tiger Mk. 1 Dial - dark",
+          "title": "7177 Flying Tiger Mk. 1 Dial - dark",
+          "subtitle": "7177 Flying Tiger Mk. 1 Dial - dark",
+          "caption": "7177 Flying Tiger Mk. 1 Dial - dark"
+        },
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/7177-tiger-mk.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/flying-tiger-dial/7177-tiger-mk.jpg",
+          "alt": "7177 Flying Tiger Mk. 2 Dial",
+          "title": "7177 Flying Tiger Mk. 2 Dial",
+          "subtitle": "7177 Flying Tiger Mk. 2 Dial",
+          "caption": "7177 Flying Tiger Mk. 2 Dial"
+        }
+      ]
+    }
+  ]
+}

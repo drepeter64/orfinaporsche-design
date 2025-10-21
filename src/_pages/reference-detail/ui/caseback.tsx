@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { BackNavigationSection } from "@/widgets/reference-detail/back-navigation"
-import { BreadcrumbReferenceDetailSection } from "@/widgets/reference-detail/breadcrumbs"
 import { useTranslations } from "next-intl"
 import SectionHeading from "@/components/SectionHeading"
 import { CasebackData, ImageInfo } from "@/shared/types"
@@ -10,6 +9,8 @@ import { FullScreenModal } from "@/widgets/full-screen-modal"
 import ImageSlider from "@/components/ImageSlider"
 import { FinishImageSection } from "@/widgets/case-finishes/finish-image"
 import { PlaceholderImageSection } from "@/widgets/case-finishes/placeholder-image"
+import { Breadcrumbs } from "@/widgets/breadcrumbs"
+import { ClientRoutes } from "@/shared/routes"
 
 interface CasebackPageProps {
   data: CasebackData
@@ -20,20 +21,27 @@ export function CasebackPage({ data }: CasebackPageProps) {
   const tCommon = useTranslations("Common")
   const { referenceTitle, referenceId } = data
 
+  const breadcrumb = [
+    {
+      text: `${tCommon("reference")} ${referenceId}`,
+      link: ClientRoutes.reference(referenceId as string),
+    },
+    {
+      text: tCommon("caseback"),
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
-      <BreadcrumbReferenceDetailSection
-        referenceId={data.referenceId as string}
-        lastText={tCommon("caseback")}
-      />
+      <Breadcrumbs links={breadcrumb} />
 
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-black mb-4 sm:mb-6 uppercase tracking-wider animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
-              {tCommon("reference")}&nbsp;{data.referenceTitle}
+              {tCommon("reference")}&nbsp;{referenceTitle}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-200">
               {tCommon("caseback")}
@@ -217,8 +225,8 @@ export function CasebackPage({ data }: CasebackPageProps) {
 
       {/* Back Navigation */}
       <BackNavigationSection
-        referenceId={referenceId}
-        referenceTitle={referenceTitle}
+        route={ClientRoutes.reference(referenceId)}
+        title={`${tCommon("back_to_refs")}&nbsp;${referenceTitle}`}
       />
 
       <FullScreenModal

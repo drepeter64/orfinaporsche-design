@@ -2,7 +2,7 @@ import { DetailedHTMLProps, HTMLAttributes } from "react"
 import { useTranslations } from "next-intl"
 import ImageWithLoader from "@/components/ImageWithLoader"
 
-export const PlaceholderImageSection: React.FC<BreadcrumbFinishesSectionProps> = ({ title }) => {
+export const PlaceholderImageSection: React.FC<PlaceholderImageSectionProps> = ({ title }) => {
   const tCommon = useTranslations("Common")
 
   return (
@@ -29,7 +29,7 @@ export const PlaceholderImageSection: React.FC<BreadcrumbFinishesSectionProps> =
   )
 }
 
-interface BreadcrumbFinishesSectionProps
+interface PlaceholderImageSectionProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   title?: string
 }

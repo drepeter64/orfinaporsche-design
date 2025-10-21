@@ -11,6 +11,7 @@ export {
   type CasebackData,
   type RehautData,
   type DialData,
+  type DialTypeData,
 } from "./reference-detail.interface"
 
 export type { IComponents, IComponent, typeComponent, ImageInfo } from "./componenst.interface"

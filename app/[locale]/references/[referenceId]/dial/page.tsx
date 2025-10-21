@@ -1,4 +1,4 @@
-import { DialPage } from "@/_pages/reference-detail"
+import { DialPage, getDialData } from "@/_pages/reference-detail"
 import { getAllReferenceIds } from "@/_pages/reference"
 import { notFound } from "next/navigation"
 
@@ -21,10 +21,11 @@ export default function Dial({ params }: PageProps) {
     notFound()
   }
 
-  return (
-    <DialPage
-      referenceId={params.referenceId}
-      referenceTitle={params.referenceId}
-    />
-  )
+  const data = getDialData(params.referenceId)
+
+  if (!data) {
+    notFound()
+  }
+
+  return <DialPage data={data} />
 }

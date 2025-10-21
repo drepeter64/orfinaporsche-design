@@ -1,111 +1,183 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
+import { useState } from "react"
+import { DialData, ImageInfo } from "@/shared/types"
+import { FullScreenModal } from "@/widgets/full-screen-modal"
+import { useTranslations } from "next-intl"
+import SectionHeading from "@/components/SectionHeading"
+import ImageSlider from "@/components/ImageSlider"
+import { FinishImageSection } from "@/widgets/case-finishes/finish-image"
+import { PlaceholderImageSection } from "@/widgets/case-finishes/placeholder-image"
+import { DialItemListSection } from "@/widgets/reference-detail/dial-list-item/ui"
+import { ClientRoutes } from "@/shared/routes"
+import { Breadcrumbs } from "@/widgets/breadcrumbs"
+import { BackNavigationSection } from "@/widgets/reference-detail/back-navigation"
 
 interface DialPageProps {
-  referenceId: string
-  referenceTitle: string
+  data: DialData
 }
 
-export function DialPage({ referenceId, referenceTitle }: DialPageProps) {
-  const [fullScreenImage, setFullScreenImage] = useState<{
-    src: string
-    alt: string
-    title: string
-    subtitle: string
-  } | null>(null)
+export function DialPage({ data }: DialPageProps) {
+  const [fullScreenImage, setFullScreenImage] = useState<ImageInfo | null>(null)
+  const tCommon = useTranslations("Common")
+  const { referenceId, referenceTitle } = data
 
-  useEffect(() => {
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setFullScreenImage(null)
-      }
-    }
-
-    if (fullScreenImage) {
-      document.addEventListener("keydown", handleEscape)
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "unset"
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleEscape)
-      document.body.style.overflow = "unset"
-    }
-  }, [fullScreenImage])
+  const breadcrumb = [
+    {
+      text: `${tCommon("reference")} ${referenceId}`,
+      link: ClientRoutes.reference(referenceId as string),
+    },
+    {
+      text: tCommon("dial"),
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
-      <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-4 sm:py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-sm">
-            <Link
-              href="/"
-              className="text-gray-600 hover:text-black transition-colors"
-            >
-              Home
-            </Link>
-            <span className="mx-2 text-gray-400">/</span>
-            <Link
-              href={`/references/${referenceId}`}
-              className="text-gray-600 hover:text-black transition-colors"
-            >
-              Reference {referenceTitle}
-            </Link>
-            <span className="mx-2 text-gray-400">/</span>
-            <span className="text-black font-medium">Dial</span>
-          </nav>
-        </div>
-      </div>
+      <Breadcrumbs links={breadcrumb} />
 
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-black mb-4 sm:mb-6 uppercase tracking-wider">
-              Reference {referenceTitle}
+              {tCommon("reference")}&nbsp;{referenceTitle}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light">
-              Dial Variations
+              {tCommon("dial-variations")}
             </p>
           </div>
 
           {/* Content */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Dial variations for Reference {referenceTitle}
-            </p>
+          {data.overview && (
+            <div className="max-w-4xl mx-auto text-center mb-16">
+              <p className="text-lg text-gray-700 leading-relaxed">{data.overview}</p>
+            </div>
+          )}
+
+          {data.listing && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+              {data.listing.map((variation, index) => (
+                <DialItemListSection
+                  key={index}
+                  referenceId={referenceId}
+                  variation={variation}
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Dial Variations */}
+          <div className="space-y-20 sm:space-y-24 lg:space-y-32">
+            {data.variations &&
+              data.variations.map((variation, index) => (
+                <div
+                  key={index}
+                  className={`animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-${index * 100 + 400}`}
+                >
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div className={`space-y-6${index % 2 !== 0 ? " order-2" : ""}`}>
+                      <SectionHeading
+                        title={variation.title}
+                        variant="numbered"
+                        number={index + 1}
+                      />
+
+                      <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border-l-4 border-black">
+                        <p
+                          className="text-base sm:text-lg text-gray-700 leading-relaxed"
+                          dangerouslySetInnerHTML={{ __html: variation.note || "" }}
+                        ></p>
+                      </div>
+
+                      <div className="space-y-4">
+                        <h3 className="text-lg sm:text-xl font-semibold text-black">
+                          {variation.bulletSection.title}
+                        </h3>
+                        {variation.bulletSection.text &&
+                          variation.bulletSection.text.map((item, index) => (
+                            <p
+                              key={index}
+                              className="text-base sm:text-lg text-gray-700 leading-relaxed"
+                              dangerouslySetInnerHTML={{ __html: item }}
+                            ></p>
+                          ))}
+                        <ul className="space-y-3 text-gray-700">
+                          {variation.bulletSection.list &&
+                            variation.bulletSection.list.map((item, index) => (
+                              <>
+                                <li
+                                  key={index}
+                                  className="flex items-start space-x-3"
+                                >
+                                  <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                  <span className="text-sm sm:text-base leading-relaxed">
+                                    <strong>{item.title}</strong> {item.text}
+                                  </span>
+                                </li>
+                                {item.list &&
+                                  item.list.map((subitem, index) => (
+                                    <li
+                                      key={index}
+                                      className="flex items-start space-x-3 ml-6"
+                                    >
+                                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2.5 flex-shrink-0"></div>
+                                      <span className="text-sm sm:text-base leading-relaxed text-gray-600">
+                                        <strong>{subitem.title}</strong> {subitem.text}
+                                      </span>
+                                    </li>
+                                  ))}
+                              </>
+                            ))}
+                        </ul>
+
+                        {variation.blueNote && (
+                          <div className="mt-6 bg-blue-50 p-4 sm:p-6 rounded-lg border-l-4 border-blue-500">
+                            <p className="text-sm sm:text-base text-blue-800 leading-relaxed">
+                              <strong>{tCommon("note")}</strong> {variation.blueNote}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center justify-center">
+                      {variation.images && variation.images.length ? (
+                        variation.images.length > 1 ? (
+                          <div className="flex justify-center">
+                            <ImageSlider
+                              images={variation.images}
+                              setFullScreenImage={setFullScreenImage}
+                            />
+                          </div>
+                        ) : (
+                          <FinishImageSection
+                            image={variation.images[0]}
+                            setFullScreenImage={setFullScreenImage}
+                          />
+                        )
+                      ) : (
+                        <PlaceholderImageSection title={variation.title} />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </section>
 
       {/* Back Navigation */}
-      <div className="py-8 bg-white border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
-            href={`/references/${referenceId}`}
-            className="inline-flex items-center text-gray-600 hover:text-black transition-colors group"
-          >
-            <svg
-              className="w-5 h-5 mr-2 transition-transform group-hover:-translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            Back to Reference {referenceTitle}
-          </Link>
-        </div>
-      </div>
+      <BackNavigationSection
+        route={ClientRoutes.reference(referenceId)}
+        title={`${tCommon("back_to_refs")}&nbsp;${referenceTitle}`}
+      />
+
+      <FullScreenModal
+        setFullScreenImage={setFullScreenImage}
+        fullScreenImage={fullScreenImage}
+      />
     </div>
   )
 }

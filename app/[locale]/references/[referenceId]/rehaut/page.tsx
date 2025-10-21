@@ -1,4 +1,4 @@
-import { RehautPage } from "@/_pages/reference-detail"
+import { getRehautData, RehautPage } from "@/_pages/reference-detail"
 import { getAllReferenceIds } from "@/_pages/reference"
 import { notFound } from "next/navigation"
 
@@ -21,10 +21,11 @@ export default function Rehaut({ params }: PageProps) {
     notFound()
   }
 
-  return (
-    <RehautPage
-      referenceId={params.referenceId}
-      referenceTitle={params.referenceId}
-    />
-  )
+  const data = getRehautData(params.referenceId)
+
+  if (!data) {
+    notFound()
+  }
+
+  return <RehautPage data={data} />
 }
