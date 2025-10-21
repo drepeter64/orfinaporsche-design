@@ -6,6 +6,7 @@ import { ClientRoutes } from "@/shared/routes"
 
 export const BreadcrumbReferenceDetailSection: React.FC<BreadcrumbReferenceDetailSectionProps> = ({
   referenceId,
+  dialId,
   lastText,
 }) => {
   const tCommon = useTranslations("Common")
@@ -28,6 +29,13 @@ export const BreadcrumbReferenceDetailSection: React.FC<BreadcrumbReferenceDetai
             {tCommon("reference")} {referenceId}
           </Link>
           <span className="mx-2 text-gray-400">/</span>
+          <Link
+            href={ClientRoutes.reference_dial(dialId)}
+            className="text-gray-600 hover:text-black transition-colors"
+          >
+            {tCommon("dial-variations")}
+          </Link>
+          <span className="mx-2 text-gray-400">/</span>
           <span className="text-black font-medium">{lastText}</span>
         </nav>
       </div>
@@ -38,5 +46,6 @@ export const BreadcrumbReferenceDetailSection: React.FC<BreadcrumbReferenceDetai
 interface BreadcrumbReferenceDetailSectionProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   lastText: string
+  dialId: string
   referenceId: string
 }
