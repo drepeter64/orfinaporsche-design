@@ -11,7 +11,7 @@ export async function generateMetadata(
   const jsonFilePath = path.join(
     process.cwd(),
     "/src/shared/data/references/dial/type/",
-    `${params.referenceId}.json`,
+    `${params.type}.json`,
   )
   const data = await getJsonByPath(jsonFilePath)
   const parentData = await parentMeta
