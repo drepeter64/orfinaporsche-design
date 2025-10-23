@@ -16,16 +16,16 @@
         "text": [],
         "list": [
           {
-            "title": "For the outer engraving, the text differed as well:",
+            "title": "For the outer engraving, the text differed as well: ",
             "text": "",
             "list": [
               {
-                "title": "7176 S Perimeter Text:",
-                "text": "“7176 S CHRONOGRAPH AUTOMATIC\nWATERRESISTANT TESTED 10 ATM SHOCKPROTECTED STAINLESS\nSTEEL SWISS MADE”"
+                "title": "7176 S Perimeter Text: ",
+                "text": "<span class='font-mono'>“7176 S CHRONOGRAPH AUTOMATIC WATERRESISTANT TESTED 10 ATM SHOCKPROTECTED STAINLESS STEEL SWISS MADE”</span>"
               },
               {
-                "title": "7177 Perimeter Text:",
-                "text": "\"WATERRESISTANT TESTED 10 ATM\nAUTOMATIC SHOCKPROTECTED STAINLESS STEEL SWISS MADE”"
+                "title": "7177 Perimeter Text: ",
+                "text": "<span class='font-mono'>“WATERRESISTANT TESTED 10 ATM AUTOMATIC SHOCKPROTECTED STAINLESS STEEL SWISS MADE”</span>"
               }
             ]
           },
@@ -49,11 +49,11 @@
             "list": [
               {
                 "title": "All 7177 variants",
-                "text": "include a stamped serial number, which is found in\ngroupings for particular dial configurations."
+                "text": "include a stamped serial number, which is found in groupings for particular dial configurations."
               },
               {
                 "title": "All serial numbers",
-                "text": "across all 7177 variants are sequential. However, there\nare three sets of serial counts, possibly four that we have identified."
+                "text": "across all 7177 variants are sequential. However, there are three sets of serial counts, possibly four that we have identified."
               }
             ]
           }

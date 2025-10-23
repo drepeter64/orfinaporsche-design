@@ -10,6 +10,7 @@ import { ClientRoutes } from "@/shared/routes"
 import SectionHeading from "@/components/SectionHeading"
 import ImageWithLoader from "@/components/ImageWithLoader"
 import { FinishImageSection } from "@/widgets/case-finishes/finish-image"
+import ImageSlider from "@/components/ImageSlider"
 
 interface DialTypePageProps {
   data: DialTypeData
@@ -339,7 +340,9 @@ export function DialTypePage({ data }: DialTypePageProps) {
                           </ul>
                         )}
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div
+                          className={`grid grid-cols-1 md:grid-cols-${variation.images.length} gap-8`}
+                        >
                           {variation.images.map((image, index) => (
                             <div
                               key={index}
@@ -380,6 +383,42 @@ export function DialTypePage({ data }: DialTypePageProps) {
                     </>
                   )}
 
+                  {variation.image_type === "carousel-row" && variation.images.length > 0 && (
+                    <>
+                      <div className="space-y-8">
+                        <SectionHeading
+                          title={variation.title}
+                          variant="elegant-dark"
+                        />
+                        {variation.bulletSection && variation.bulletSection.list && (
+                          <ul className="space-y-3">
+                            {variation.bulletSection.list.map((item, index) => (
+                              <li
+                                key={index}
+                                className="flex items-start space-x-3"
+                              >
+                                <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="text-sm sm:text-lg leading-relaxed">
+                                  {item.title && <strong>{item.title}</strong>}
+                                  {item.text}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+
+                        <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+                          <div className="flex flex-col items-center">
+                            <ImageSlider
+                              images={variation.images}
+                              setFullScreenImage={setFullScreenImage}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
                   {variation.image_type === "finish" && variation.images.length > 0 && (
                     <>
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
@@ -408,7 +447,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                           </div>
                         </div>
                       </div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2">
                         {variation.images.map((image, index) => (
                           <FinishImageSection
                             key={index}

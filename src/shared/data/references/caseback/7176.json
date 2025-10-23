@@ -11,28 +11,28 @@
       "title": "7176 Mk. 1 Caseback",
       "note": "The 7176 and 7176 Military casebacks follow the design language change of the caseback first seen on the 7750 Mk. 2 caseback.",
       "bulletSection": {
-        "title": "Caseback Markings:",
+        "title": "Caseback Markings: ",
         "text": [],
         "list": [
           {
-            "title": "Perimeter Text:",
-            "text": "“7176 CHRONOGRAPH AUTOMATIC WATERRESISTANT TESTED 10 ATM SHOCKPROTECTED STAINLESS STEEL SWISS MADE” in one continuous circle at the perimeter of the back."
+            "title": "Perimeter Text: ",
+            "text": "<span class='font-mono'>“7176 CHRONOGRAPH AUTOMATIC WATERRESISTANT TESTED 10 ATM SHOCKPROTECTED STAINLESS STEEL SWISS MADE”</span> in one continuous circle at the perimeter of the back."
           },
           {
-            "title": "Center Text:",
-            "text": "The PD logo is accompanied by the words\n“PORSCHE DESIGN” curved around it above."
+            "title": "Center Text: ",
+            "text": "The PD logo is accompanied by the words <span class='font-mono'>“PORSCHE DESIGN”</span> curved around it above."
           },
           {
-            "title": "Serial Numbers:",
+            "title": "Serial Numbers: ",
             "text": "Present on these models.",
             "list": [
               {
-                "title": "7176 Civilian:",
-                "text": "Serial range is 8 digits and starts with\n00xxxxxx and rises sequentially."
+                "title": "7176 Civilian: ",
+                "text": "Serial range is 8 digits and starts with 00xxxxxx and rises sequentially."
               },
               {
-                "title": "7176 Military:",
-                "text": "Serial range is 8 digits and starts with\n00xxxxxx and rises sequentially."
+                "title": "7176 Military: ",
+                "text": "Serial range is 8 digits and starts with 00xxxxxx and rises sequentially."
               }
             ]
           }
@@ -53,24 +53,24 @@
       "title": "7176 D Caseback",
       "note": "The 7176 and 7176 Military casebacks follow the design language change of the caseback first seen on the 7750 Mk. 2 caseback.",
       "bulletSection": {
-        "title": "Caseback Markings:",
+        "title": "Caseback Markings: ",
         "text": [],
         "list": [
           {
-            "title": "Design:",
+            "title": "Design: ",
             "text": "Identical to 7176 Mk. 1 Caseback"
           },
           {
-            "title": "Distinction:",
+            "title": "Distinction: ",
             "text": "Additional \"D\" designation next to 7176"
           },
           {
-            "title": "Serial Numbers:",
+            "title": "Serial Numbers: ",
             "text": "Present on these models.",
             "list": [
               {
-                "title": "7176 D:",
-                "text": "Serial range is 8 digits and starts with 2031xxxx\nand rises sequentially."
+                "title": "7176 D: ",
+                "text": "Serial range is 8 digits and starts with 2031xxxx and rises sequentially."
               }
             ]
           }
@@ -91,24 +91,24 @@
       "title": "7176 S Caseback",
       "note": "The 7176 and 7176 Military casebacks follow the design language change of the caseback first seen on the 7750 Mk. 2 caseback.",
       "bulletSection": {
-        "title": "Caseback Markings:",
+        "title": "Caseback Markings: ",
         "text": [],
         "list": [
           {
-            "title": "Design:",
+            "title": "Design: ",
             "text": "Identical to 7176 Mk. 1 caseback"
           },
           {
-            "title": "Distinction:",
+            "title": "Distinction: ",
             "text": "Additional \"S\" designation next to 7176"
           },
           {
-            "title": "Serial Numbers:",
+            "title": "Serial Numbers: ",
             "text": "Present on these models.",
             "list": [
               {
-                "title": "7176 S:",
-                "text": "Serial range is 5 or 6 digits with no leading\nnumbers and rises sequentially."
+                "title": "7176 S: ",
+                "text": "Serial range is 5 or 6 digits with no leading numbers and rises sequentially."
               }
             ]
           }
@@ -127,21 +127,21 @@
     },
     {
       "title": "Prototype Caseback",
-      "note": "On select 7176 variants, usually those identified as prototypes, a\ndifferent caseback has been identified. It features a black acrylic\ndisk that is embedded into the steel caseback.",
+      "note": "On select 7176 variants, usually those identified as prototypes, a different caseback has been identified. It features a black acrylic disk that is embedded into the steel caseback.",
       "bulletSection": {
-        "title": "Caseback Markings:",
+        "title": "Caseback Markings: ",
         "text": [],
         "list": [
           {
-            "title": "Perimeter Text:",
-            "text": "“7176 S CHRONOGRAPH AUTOMATIC\nWATERRESISTANT TESTED 10 ATM\nSHOCKPROTECTED STAINLESS STEEL SWISS MADE”\nin one continuous circle at the perimeter of the back."
+            "title": "Perimeter Text: ",
+            "text": "<span class='font-mono'>“7176 S CHRONOGRAPH AUTOMATIC WATERRESISTANT TESTED 10 ATM SHOCKPROTECTED STAINLESS STEEL SWISS MADE”</span> in one continuous circle at the perimeter of the back."
           },
           {
-            "title": "Center Text:",
-            "text": "A sizeable PD logo is accompanied by the\nwords “PORSCHE DESIGN” curved around it above"
+            "title": "Center Text: ",
+            "text": "A sizeable PD logo is accompanied by the words <span class='font-mono'>“PORSCHE DESIGN”</span> curved around it above"
           },
           {
-            "title": "Serial Numbers:",
+            "title": "Serial Numbers: ",
             "text": "Not present on these models"
           }
         ]

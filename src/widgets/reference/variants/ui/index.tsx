@@ -6,12 +6,12 @@ export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullS
   const { generations, variantsTitle, variantsSubtitle } = data
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {(variantsTitle || variantsSubtitle) && (
           <div className="text-center mb-16">
             {variantsTitle && (
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-black mb-4 uppercase tracking-wider">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-black mb-4 uppercase tracking-wider">
                 {variantsTitle}
               </h2>
             )}
@@ -21,7 +21,7 @@ export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullS
           </div>
         )}
 
-        <div className="space-y-24 sm:space-y-32 lg:space-y-40">
+        <div className="space-y-20 sm:space-y-24 lg:space-y-32">
           {generations &&
             generations.map((generation, index) => (
               <ReferenceVariantCard

@@ -17,8 +17,8 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ links }) => {
           >
             {tCommon("home")}
           </Link>
-          {links.map((item) => (
-            <>
+          {links.map((item, index) => (
+            <span key={index}>
               <span className="mx-2 text-gray-400">/</span>
               {item.link ? (
                 <Link
@@ -30,7 +30,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ links }) => {
               ) : (
                 <span className="text-black font-medium">{item.text}</span>
               )}
-            </>
+            </span>
           ))}
         </nav>
       </div>

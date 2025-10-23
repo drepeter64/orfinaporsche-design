@@ -2,7 +2,6 @@
   "meta_title": "Ref. 7177 - Orfina Porsche Design – Case Finishes & Materials",
   "meta_description": "Explore the case finishes of the Orfina Porsche Design Military Chronograph Ref. 7177, featuring black Cadet PVD-coated stainless steel and original matte steel cases. Known for its rugged design, Lemania 5100 movement, and military heritage.",
   "meta_keywords": "Orfina Porsche Design 7177, Military Chronograph case finishes, Black Cadet PVD, stainless steel watch case, Lemania 5100 chronograph, Porsche Design by Orfina, 3H marking, Military issued watch, vintage Porsche design, 1980s chronograph case",
-
   "referenceId": "7177",
   "referenceTitle": "7177",
   "pageTitle": "Case & Finishes",
@@ -21,13 +20,14 @@
       "label": "Height"
     }
   ],
-    "mergedSection": {
+  "mergedSection": {
     "title": "Five Produced Finishes",
     "image": {
       "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-case-and-finishes-photos/preview-1200x-7177-colorgroup.jpg",
-      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-case-and-finishes-photos/1200x-7177-colorgroup.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-case-and-finishes-photos/7177-colorgroup.jpg",
       "alt": "All 7177 Finishes",
       "title": "All 7177 Finishes",
+      "imgClassName": "w-full h-full object-contain",
       "caption": "Left To Right: Black PVD, Non-PVD Silver/Sablé, Cadet Grey PVD, Olive Green PVD, NTS PVD",
       "subtitle": "Left To Right: Black PVD, Non-PVD Silver/Sablé, Cadet Grey PVD, Olive Green PVD, NTS PVD"
     },
@@ -53,5 +53,47 @@
         "description": "Only Available on the 7177"
       }
     ]
-  }
+  },
+  "finishes": [
+    {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/baseline-dial/preview-560x-7177-series-v4-black-case-w-bracelet-3h-mil-pd-dial.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/baseline-dial/7177-series-v4-black-case-w-bracelet-3h-mil-pd-dial.jpg",
+      "alt": "7177 Baseline Black",
+      "title": "7177 Baseline Black",
+      "subtitle": "7177 Baseline Black",
+      "caption": "7177 Baseline Black"
+    },
+    {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/baseline-dial/preview-560x-7177-series-v4-sable-case-w-bracelet-3h-mil-pd-dial.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/baseline-dial/7177-series-v4-sable-case-w-bracelet-3h-mil-pd-dial.jpg",
+      "alt": "7177 Baseline Silver/Sablé",
+      "title": "7177 Baseline Silver/Sablé",
+      "subtitle": "7177 Baseline Silver/Sablé",
+      "caption": "7177 Baseline Silver/Sablé"
+    },
+    {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/baseline-dial/preview-560x-7177-series-v4-green-pvd-case-w-bracelet-3h-mil-pd-dial.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/baseline-dial/7177-series-v4-green-pvd-case-w-bracelet-3h-mil-pd-dial.jpg",
+      "alt": "7177 Baseline Green",
+      "title": "7177 Baseline Green",
+      "subtitle": "7177 Baseline Green",
+      "caption": "7177 Baseline Green"
+    },
+    {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/baseline-dial/preview-560x-7177-series-v4-nato-grey-case-w-bracelet-3h-mil-pd-dial.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/baseline-dial/7177-series-v4-nato-grey-case-w-bracelet-3h-mil-pd-dial.jpg",
+      "alt": "7177 Baseline Cadet Grey",
+      "title": "7177 Baseline Cadet Grey",
+      "subtitle": "7177 Baseline Cadet Grey",
+      "caption": "7177 Baseline Cadet Grey"
+    },
+    {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/baseline-dial/preview-560x-7177-series-v4-gunmetal-grey-case-w-bracelet-3h-mil-pd-dial.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/baseline-dial/7177-series-v4-gunmetal-grey-case-w-bracelet-3h-mil-pd-dial.jpg",
+      "alt": "7177 Baseline NTS",
+      "title": "7177 Baseline NTS",
+      "subtitle": "7177 Baseline NTS",
+      "caption": "7177 Baseline NTS"
+    }
+  ]
 }

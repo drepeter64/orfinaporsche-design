@@ -43,7 +43,7 @@
         },
         {
           "title": "Silver/Sablé",
-          "description": "In a Sandblasted Silver similar to that seen on the 7176 and 7177. NOTE: we don’t have an example of these. It’s possible\nthat Silver/Sablé only became available with the PD dials.\nThus, we are unsure of the exact timeline of the 7750 Mk.\n1 Silver/Sablé, but one can assume they were made in a\nsimilar timeline to that of the 7750 Mk. 1 Powder Coat\nBlack cases.",
+          "description": "NOTE: we don’t have an example of these. It’s possible\nthat Silver/Sablé only became available with the PD dials.\nThus, we are unsure of the exact timeline of the 7750 Mk.\n1 Silver/Sablé, but one can assume they were made in a\nsimilar timeline to that of the 7750 Mk. 1 Powder Coat\nBlack cases.",
           "color": "bg-gray-400",
           "year": "1973-1975 (Not Confirmed)"
         }
@@ -125,7 +125,8 @@
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-mk.3-case.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-mk.3-case.jpg",
               "alt": "7750 Mk. 3 Silver/Sablé",
-              "title": "Silver/Sablé"
+              "title": "Silver/Sablé",
+              "imgClassName": "h-80 w-full"
             }
           ]
         },
@@ -139,7 +140,8 @@
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-gen3-3.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-gen3-3.jpg",
               "alt": "7750 Mk. 3 Black Replacement Crown",
-              "title": "Replacement Crown"
+              "title": "Replacement Crown",
+              "imgClassName": "h-48 w-full"
             }
           ]
         }

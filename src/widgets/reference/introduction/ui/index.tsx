@@ -14,7 +14,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
   return (
     <>
       {introduction && (
-        <section className="py-16 bg-white">
+        <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Conditionally render grid or centered layout */}
             {introduction.image ? (
@@ -78,7 +78,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
               </div>
             ) : (
               /* Centered text without image (for 7176 style) */
-              <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-700 leading-relaxed text-center mb-10">
+              <div className="max-w-4xl mx-auto space-y-6 text-xl text-gray-700 leading-relaxed text-center mb-10">
                 {introduction.paragraphs.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}

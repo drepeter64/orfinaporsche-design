@@ -49,6 +49,7 @@ export interface CaseFinishesData {
   info?: string
   sections?: FinishSection[]
   mergedSection?: MergedSection
+  finishes?: ImageInfo[]
 }
 interface MergedSection {
   title: string
@@ -142,7 +143,15 @@ interface DialVariations {
   note?: string
   bulletSection?: Bullet
   images: ImageInfo[]
-  image_type: "row" | "carousel" | "right" | "finish" | "three-row" | "two-row" | "none"
+  image_type:
+    | "row"
+    | "carousel"
+    | "right"
+    | "finish"
+    | "three-row"
+    | "two-row"
+    | "carousel-row"
+    | "none"
 }
 
 export interface RehautData {

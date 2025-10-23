@@ -9,7 +9,7 @@
   "overview": "",
   "variations": [
     {
-      "title": "General Notes:",
+      "title": "General Notes: ",
       "bulletSection": {
         "title": "",
         "text": [],
@@ -28,7 +28,7 @@
       "images": []
     },
     {
-      "title": "Caseback Markings:",
+      "title": "Caseback Markings: ",
       "bulletSection": {
         "title": "",
         "text": [],
@@ -68,7 +68,7 @@
       ]
     },
     {
-      "title": "Dial Variations:",
+      "title": "Dial Variations: ",
       "bulletSection": {
         "title": "",
         "text": [],
@@ -78,11 +78,11 @@
             "text": "BUND examples have been found to be produced with both the Baseline\nDial and the Military Chronograph Dial."
           },
           {
-            "title": "Military Chronograph Dial:",
+            "title": "Military Chronograph Dial: ",
             "text": "Lacked the baseline dial’s “Porsche Design”\ntext, which was replaced with “CHRONOGRAPH” text."
           },
           {
-            "title": "Service Dial:",
+            "title": "Service Dial: ",
             "text": "Some BUND examples sent in for service, had their dials\nreplaced with Service Dials. These used early Luminova and lacked\n“Porsche Design” text, again replaced by “CHRONOGRAPH” text, but\nalso lacked the “3H” marking because the dials did not use tritium.\nLuminova dial examples will also bear double-struck casebacks."
           }
         ]
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "title": "Accessories:",
+      "title": "Accessories: ",
       "bulletSection": {
         "title": "",
         "text": [],
@@ -131,23 +131,25 @@
           }
         ]
       },
-      "image_type": "two-row",
+      "image_type": "carousel-row",
       "images": [
-        {
-          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/preview-560x-7177-bund-strap-backs-and-bund-boxes-v4.jpg",
-          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/7177-bund-strap-backs-and-bund-boxes-v4.jpg",
-          "alt": "7177 BUND Box 1",
-          "title": "7177 BUND Box 1",
-          "subtitle": "7177 BUND Box 1",
-          "caption": "7177 BUND Box 1"
-        },
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/preview-560x-7177-bund-boxes-and-bund-strap-backs-v5.jpg",
           "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/7177-bund-boxes-and-bund-strap-backs-v5.jpg",
+          "alt": "7177 BUND Box 1",
+          "title": "7177 BUND Box 1",
+          "subtitle": "7177 BUND Box 1",
+          "caption": "7177 BUND Box 1",
+          "imgClassName": "w-full h-96 object-cover"
+        },
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/preview-560x-7177-bund-strap-backs-and-bund-boxes-v4.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/7177-bund-strap-backs-and-bund-boxes-v4.jpg",
           "alt": "7177 BUND Box 2",
           "title": "7177 BUND Box 2",
           "subtitle": "7177 BUND Box 2",
-          "caption": "7177 BUND Box 2"
+          "caption": "7177 BUND Box 2",
+          "imgClassName": "w-full h-96 object-cover"
         }
       ]
     }

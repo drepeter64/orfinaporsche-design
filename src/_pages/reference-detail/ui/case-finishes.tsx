@@ -49,35 +49,6 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
             </p>
           </div>
 
-          {/* Main Info */}
-          {data.info && (
-            <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300 mb-8">
-                {data.info}
-              </p>
-            </div>
-          )}
-
-          {/* Measurements */}
-          {data.measurements && (
-            <div className="mb-8 sm:mb-12">
-              <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border-l-4 border-black">
-                <h3 className="text-lg sm:text-xl font-semibold text-black mb-4">Measurements</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm sm:text-base max-w-2xl">
-                  {data.measurements.map((measurement, index) => (
-                    <div
-                      key={index}
-                      className="text-center"
-                    >
-                      <div className="font-bold text-black">{measurement.value}</div>
-                      <div className="text-gray-600">{measurement.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-
           {/* Main Description */}
           {data.descriptions && (
             <div className="mb-12 sm:mb-16">
@@ -115,6 +86,15 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
               </div>
             )}
           </div>
+
+          {/* Main Info */}
+          {data.info && (
+            <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
+              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300 mb-8">
+                {data.info}
+              </p>
+            </div>
+          )}
 
           {/* Case Variations */}
           {data.variations && (
@@ -191,7 +171,7 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
 
           {/* Sections */}
           {data.sections && (
-            <div className="space-y-24 sm:space-y-32 lg:space-y-40">
+            <div className="space-y-12 sm:space-y-12 lg:space-y-12">
               {data.sections.map((section) => (
                 <div key={section.id}>
                   <div className="mb-8">
@@ -291,6 +271,38 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
                   image={data.mergedSection.image}
                 />
               </div>
+            </div>
+          )}
+
+          {/* Measurements */}
+          {data.measurements && (
+            <div className="mt-16">
+              <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border-l-4 border-black">
+                <h3 className="text-lg sm:text-xl font-semibold text-black mb-4">Measurements</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm sm:text-base max-w-2xl">
+                  {data.measurements.map((measurement, index) => (
+                    <div
+                      key={index}
+                      className="text-center"
+                    >
+                      <div className="font-bold text-black">{measurement.value}</div>
+                      <div className="text-gray-600">{measurement.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {data.finishes && data.finishes.length > 0 && (
+            <div className="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2">
+              {data.finishes.map((image, index) => (
+                <FinishImageSection
+                  key={index}
+                  image={image}
+                  setFullScreenImage={setFullScreenImage}
+                />
+              ))}
             </div>
           )}
         </div>

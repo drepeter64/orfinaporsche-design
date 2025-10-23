@@ -9,7 +9,7 @@
   "overview": "",
   "variations": [
     {
-      "title": "General Notes:",
+      "title": "General Notes: ",
       "bulletSection": {
         "title": "",
         "text": [
@@ -17,12 +17,12 @@
         ],
         "list": [
           {
-            "title": "Theory 1:",
-            "text": "Quasi-Issued - the first is that these are quasi-issued\nand were not issued to NATO stock, as they lack the traditional\ncaseback broad arrow marking and any typical MOD markings."
+            "title": "Theory 1: Quasi-Issued - ",
+            "text": "the first is that these are quasi-issued\nand were not issued to NATO stock, as they lack the traditional\ncaseback broad arrow marking and any typical MOD markings."
           },
           {
-            "title": "Theory 2:",
-            "text": "Issued - the other theory is that they were, in fact,\nissued to NATO stock but only a small number for evaluation by\nthe Royal Navy - all of which were marked and issued with a\nNATO stock code on their caseback."
+            "title": "Theory 2: Issued - ",
+            "text": "the other theory is that they were, in fact,\nissued to NATO stock but only a small number for evaluation by\nthe Royal Navy - all of which were marked and issued with a\nNATO stock code on their caseback."
           }
         ]
       },
@@ -35,46 +35,48 @@
           "title": "7177 Royal Navy Dial",
           "subtitle": "7177 Royal Navy Dial",
           "caption": "7177 Royal Navy Dial"
-        },
+        }
+      ]
+    },
+    {
+      "title": "Distinguishing Characteristics: ",
+      "bulletSection": {
+        "title": "",
+        "text": [],
+        "list": [
+          {
+            "title": "Royal Navy Dial: ",
+            "text": "The dial of this variant bears the inscription “Royal Navy”\nbelow the PORSCHE DESIGN text at 3 o'clock."
+          },
+          {
+            "title": "Finishes: ",
+            "text": "It is believed that most, if not all, were produced in Silver/Sablé,\nbut examples have been seen in an NTS PVD case."
+          },
+          {
+            "title": "Bracelet: ",
+            "text": "Royal Navy examples are commonly found, with an Orfina\nsigned “lobster” bracelet instead of the standard NSA bracelet."
+          }
+        ]
+      },
+      "image_type": "carousel-row",
+      "images": [
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/royal-navy-dial/royal-navy-bracelet-1.png",
           "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/royal-navy-dial/royal-navy-bracelet-1.png",
           "alt": "7177 Royal Navy Bracelet",
           "title": "7177 Royal Navy Bracelet",
           "subtitle": "7177 Royal Navy Bracelet",
-          "caption": "7177 Royal Navy Bracelet"
-        }
-      ]
-    },
-    {
-      "title": "Distinguishing Characteristics:",
-      "bulletSection": {
-        "title": "",
-        "text": [],
-        "list": [
-          {
-            "title": "Royal Navy Dial:",
-            "text": "The dial of this variant bears the inscription “Royal Navy”\nbelow the PORSCHE DESIGN text at 3 o'clock."
-          },
-          {
-            "title": "Finishes:",
-            "text": "It is believed that most, if not all, were produced in Silver/Sablé,\nbut examples have been seen in an NTS PVD case."
-          },
-          {
-            "title": "Bracelet:",
-            "text": "Royal Navy examples are commonly found, with an Orfina\nsigned “lobster” bracelet instead of the standard NSA bracelet."
-          }
-        ]
-      },
-      "image_type": "two-row",
-      "images": [
+          "caption": "7177 Royal Navy Bracelet",
+          "imgClassName": "w-full h-96 object-cover"
+        },
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/royal-navy-dial/royal-navy-bracelet-2.jpg",
           "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/royal-navy-dial/royal-navy-bracelet-2.jpg",
           "alt": "7177 Royal Navy Bracelet - photo 1",
           "title": "7177 Royal Navy Bracelet - photo 1",
           "subtitle": "7177 Royal Navy Bracelet - photo 1",
-          "caption": "7177 Royal Navy Bracelet - photo 1"
+          "caption": "7177 Royal Navy Bracelet - photo 1",
+          "imgClassName": "w-full h-96 object-cover"
         },
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/royal-navy-dial/preview-560x-7177-royal-navy-bracelet.jpg",
@@ -82,7 +84,8 @@
           "alt": "7177 Royal Navy Bracelet - photo 2",
           "title": "7177 Royal Navy Bracelet - photo 2",
           "subtitle": "7177 Royal Navy Bracelet - photo 2",
-          "caption": "7177 Royal Navy Bracelet - photo 2"
+          "caption": "7177 Royal Navy Bracelet - photo 2",
+          "imgClassName": "w-full h-96 object-cover"
         }
       ]
     }

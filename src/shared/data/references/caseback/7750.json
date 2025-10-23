@@ -11,23 +11,23 @@
       "title": "Caseback Mk. 1",
       "note": "<b>Found On:</b> 7750 Mk. 1 Case with Orfina Dial (Generation 1)",
       "bulletSection": {
-          "title": "Caseback Markings:",
+          "title": "Caseback Markings: ",
           "text": [],
           "list": [
             {
-              "title": "Top Text:",
-              "text": "“ * CHRONOGRAPH PORSCHE DESIGN 7750 * ” in the top surrounding text. Followed by another line under it marked “WATERRESISTANT TESTED 10 ATM”"
+              "title": "Top Text: ",
+              "text": "<span class='font-mono'>“ * CHRONOGRAPH PORSCHE DESIGN 7750 * ”</span> in the top surrounding text. Followed by another line under it marked <span class='font-mono'>“WATERRESISTANT TESTED 10 ATM”</span>"
             },
             {
-              "title": "Center Text:",
-              "text": "Orfina “Flame” logo over the ORFINA brand name. Above the logo the words “PORSCHE DESIGN” are curved around it."
+              "title": "Center Text: ",
+              "text": "Orfina “Flame” logo over the ORFINA brand name. Above the logo the words <span class='font-mono'>“PORSCHE DESIGN”</span> are curved around it."
             },
             {
-              "title": "Bottom Text:",
+              "title": "Bottom Text: ",
               "text": "“INCABLOC AUTOMATIC ALL STAINLESS STEEL SWISS-MADE”"
             },
             {
-              "title": "Serial Numbers:",
+              "title": "Serial Numbers: ",
               "text": "Not present on these models."
             }
           ]
@@ -48,19 +48,19 @@
       "note": "<b>Found On:</b> all 7750 Cases, but only those with a PD Dial",
       "blueNote": "The design language change of the caseback is significant and sets the tone for the caseback design language that would go on to be used in 7176, 7176 Military, 7176 D, and 7176 S.",
       "bulletSection": {
-        "title": "Caseback Markings:",
+        "title": "Caseback Markings: ",
         "text": [],
         "list": [
           {
-            "title": "Perimeter Text:",
-            "text": "“7750 CHRONOGRAPH AUTOMATIC WATERRESISTANT TESTED 10 ATM INCABLOC ALL STAINLESS STEEL SWISS MADE” in the top surrounding text."
+            "title": "Perimeter Text: ",
+            "text": "<span class='font-mono'>“7750 CHRONOGRAPH AUTOMATIC WATERRESISTANT TESTED 10 ATM INCABLOC ALL STAINLESS STEEL SWISS MADE”</span> in the top surrounding text."
           },
           {
-            "title": "Center Text:",
-            "text": "The PD logo is accompanied by the words “PORSCHE DESIGN” curved around it above."
+            "title": "Center Text: ",
+            "text": "The PD logo is accompanied by the words <span class='font-mono'>“PORSCHE DESIGN”</span> curved around it above."
           },
           {
-            "title": "Serial Numbers:",
+            "title": "Serial Numbers: ",
             "text": "Present on these models."
           }
         ]

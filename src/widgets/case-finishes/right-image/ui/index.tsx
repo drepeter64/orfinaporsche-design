@@ -19,7 +19,7 @@ export const RightImageSection: React.FC<RightImageSectionProps> = ({
         <img
           src={image.src}
           alt={image.alt}
-          className="relative w-full max-w-lg h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+          className={`relative rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 ${image.imgClassName ?? "w-full max-w-lg h-96 object-cover"}`}
         />
         {/* Click indicator */}
         <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100">

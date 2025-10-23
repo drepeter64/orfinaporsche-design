@@ -14,7 +14,7 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
   return (
     <div className="flex flex-col items-center justify-center">
       <div
-        className="relative group cursor-pointer max-w-xs"
+        className={`relative group cursor-pointer ${image.wrapClassName ?? "max-w-lg"}`}
         onClick={() =>
           setFullScreenImage({
             src:
@@ -35,7 +35,7 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
             image.src || "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/placeholder.png"
           }
           alt={image.alt}
-          className="relative w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+          className={`relative object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 ${image.imgClassName ?? "w-full h-64 sm:h-80 lg:h-96"}`}
           skeletonClassName="relative w-full h-64 sm:h-80 lg:h-96 rounded-lg"
         />
 
@@ -60,5 +60,7 @@ interface FinishImageSectionProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   image: ImageInfo
   sectionTitle?: string
+  wrapClassName?: string
+  imgClassName?: string
   setFullScreenImage: (imageData: ImageInfo | null) => void
 }

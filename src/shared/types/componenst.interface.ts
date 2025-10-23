@@ -17,5 +17,7 @@ export interface ImageInfo {
   title: string
   subtitle: string
   caption?: string
+  wrapClassName?: string
+  imgClassName?: string
   isPlaceholder?: boolean
 }

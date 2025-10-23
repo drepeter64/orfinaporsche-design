@@ -46,7 +46,7 @@ const ImageSlider = ({ images, setFullScreenImage, className = "" }: ImageSlider
         <ImageWithLoader
           src={currentImage.src}
           alt={currentImage.alt}
-          className="relative w-full max-w-sm h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+          className={`relative rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 ${currentImage.imgClassName ?? "w-full max-w-sm h-96 object-cover"}`}
           skeletonClassName="relative w-full max-w-sm h-96 rounded-lg"
         />
 
