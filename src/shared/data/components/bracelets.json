@@ -1,0 +1,12 @@
+{
+  "type": "bracelets",
+  "pageTitle": "Bracelets",
+  "pageSubTitle": "Multiple Production Runs and Variations",
+  "overview": "There are multiple known production runs of bracelets for all Orfina Porsche Design watches. The bracelets were produced by Novavit S.A. (known as N.S.A.) as printed on the folding portion of the clasp.",
+  "bracelets": [
+    {
+      "title": "Mk. 1 Bracelets",
+      "info": "The first run of bracelets was Powder Coat Black and Silver/Sablé bracelets produced for the Valjoux 7750 Porsche Design watches. These were found on the Orfina 7750 Orfina Dial – a.k.a Gen 1. They came in 2 types and these bracelets first featured Orfina signed spring-loaded clasps."
+    }
+  ]
+}

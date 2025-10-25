@@ -14,4 +14,6 @@ export {
   type DialTypeData,
 } from "./reference-detail.interface"
 
+export { type ComponentsTypeData } from "./watch-component.interface"
+
 export type { IComponents, IComponent, typeComponent, ImageInfo } from "./componenst.interface"

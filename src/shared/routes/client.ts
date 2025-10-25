@@ -8,16 +8,19 @@ export const ClientRoutes = {
   about: "/about",
   not_found: "/404",
   // Components routes
-  components: {
-    bracelets: "/components/bracelets",
-    straps: "/components/straps",
-    hands: "/components/hands",
-    crowns: "/components/crowns",
-    movements: "/components/movements",
-    dateWheels: "/components/date-wheels",
-    boxes: "/components/boxes",
-  },
+  // components__: {
+  //   bracelets: "/components/bracelets",
+  //   straps: "/components/straps",
+  //   hands: "/components/hands",
+  //   crowns: "/components/crowns",
+  //   movements: "/components/movements",
+  //   dateWheels: "/components/date-wheels",
+  //   boxes: "/components/boxes",
+  // },
 
+  components: (type: string) => {
+    return `/components/${type}`
+  },
   reference: (id: string) => {
     return `/references/${id}`
   },
@@ -38,9 +41,9 @@ export const ClientRoutes = {
   },
 }
 
-export const getRoute = (name: string) => {
-  return ClientRoutes.components[name as keyof typeof ClientRoutes.components]
-}
+// export const getRoute = (name: string) => {
+//   return ClientRoutes.components__[name as keyof typeof ClientRoutes.components__]
+// }
 
 export const getReferenceRoute = (name: string, id: string) => {
   switch (name) {

@@ -278,7 +278,9 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
           {data.measurements && (
             <div className="mt-16">
               <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border-l-4 border-black">
-                <h3 className="text-lg sm:text-xl font-semibold text-black mb-4">Measurements</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-black mb-4">
+                  {data.measurementsTitle ? data.measurementsTitle : tCommon("measurements")}
+                </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm sm:text-base max-w-2xl">
                   {data.measurements.map((measurement, index) => (
                     <div
@@ -295,7 +297,7 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
           )}
 
           {data.finishes && data.finishes.length > 0 && (
-            <div className="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2">
+            <div className="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-2">
               {data.finishes.map((image, index) => (
                 <FinishImageSection
                   key={index}

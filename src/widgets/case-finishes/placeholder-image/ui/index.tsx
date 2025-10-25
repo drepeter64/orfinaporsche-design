@@ -20,7 +20,7 @@ export const PlaceholderImageSection: React.FC<PlaceholderImageSectionProps> = (
             <ImageWithLoader
               src="https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/placeholder.png"
               alt={`${tCommon("no-photo")} ${title}`}
-              className="absolute w-full h-full object-cover rounded-lg shadow-lg opacity-50"
+              className="relative w-full h-full object-cover rounded-lg shadow-lg opacity-50"
             />
           </div>
         </div>

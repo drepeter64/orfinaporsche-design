@@ -1,0 +1,228 @@
+{
+  "meta_title": "",
+  "meta_description": "",
+  "meta_keywords": "",
+
+  "type": "straps",
+  "pageTitle": "BUND Straps",
+  "pageSubTitle": "There are three known versions of BUND straps.",
+
+  "overview": "",
+  "straps": [
+    {
+      "title": "Type 1 (OG)",
+      "info": "",
+      "list": [
+        {
+          "title": "",
+          "list": [
+            {
+              "title": "These bund straps were initially delivered with 7177s."
+            },
+            {
+              "title": "They were produced in three colors: Black, Cadet Grey, and\nGreen."
+            },
+            {
+              "title": "They have a straight middle shape, no NSN, and a curved end."
+            },
+            {
+              "title": "These were unique to Porsche Design."
+            }
+          ]
+        }
+      ],
+      "poster": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-780x-7177-bund-groupcrop.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-bund-groupcrop.jpg",
+          "alt": "Group BUND",
+          "title": "Group BUND",
+          "subtitle": "Group BUND",
+          "caption": "Group BUND"
+        }
+      ],
+      "colors": [
+        {
+          "title": "Green BUND",
+          "image_type": "carousel-row",
+          "images": [
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-series-v4-green-pvd-case-w-bund-strap-3h-mil-pd-dial.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-series-v4-green-pvd-case-w-bund-strap-3h-mil-pd-dial.jpg",
+              "alt": "Green BUND",
+              "title": "",
+              "subtitle": "",
+              "caption": ""
+            },
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-bund-green-loosecrop.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-bund-green-loosecrop.jpg",
+              "alt": "Green BUND",
+              "title": "",
+              "subtitle": "",
+              "caption": "",
+              "imgClassName": "w-full h-96"
+            },
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-bund-green-backloosecrop.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-bund-green-backloosecrop.jpg",
+              "alt": "Green BUND",
+              "title": "",
+              "subtitle": "",
+              "caption": "",
+              "imgClassName": "w-full h-96"
+            }
+          ]
+        },
+        {
+          "title": "Black BUND",
+          "image_type": "carousel-row",
+          "images": [
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-series-black-case-w-bund-strap-3h-mil-pd-dial.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-series-black-case-w-bund-strap-3h-mil-pd-dial.jpg",
+              "alt": "Black BUND",
+              "title": "",
+              "subtitle": "",
+              "caption": ""
+            },
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-bund-black-loosecrop.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-bund-black-loosecrop.jpg",
+              "alt": "Black BUND",
+              "title": "",
+              "subtitle": "",
+              "caption": "",
+              "imgClassName": "w-full h-96"
+            }
+          ]
+        },
+        {
+          "title": "Cadet Grey BUND",
+          "image_type": "carousel-row",
+          "images": [
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-series-v4-nato-grey-case-w-bund-strap-3h-mil-pd-nato-dial.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-series-v4-nato-grey-case-w-bund-strap-3h-mil-pd-nato-dial.jpg",
+              "alt": "Grey BUND",
+              "title": "",
+              "subtitle": "",
+              "caption": ""
+            },
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-bund-grey-loosecrop.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-bund-grey-loosecrop.jpg",
+              "alt": "Grey BUND",
+              "title": "",
+              "subtitle": "",
+              "caption": "",
+              "imgClassName": "w-full h-96"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Generic BUNDs",
+      "info": "",
+      "list": [
+        {
+          "title": "",
+          "list": [
+            {
+              "title": "The Type 2 and Type 3 are generic BUND straps and were sold in\na base’s PX/BX. The NSN on these straps is the part code for\nwhen they were sold in exchange. These BUND straps were only\nproduced in black."
+            }
+          ]
+        }
+      ],
+      "colors": [
+        {
+          "title": "Type 2 (BUND with Staple)",
+          "image_type": "carousel-row",
+          "images": [
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-series-v4-sable-case-w-bund-strap-3h-mil-pd-dial.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-series-v4-sable-case-w-bund-strap-3h-mil-pd-dial.jpg",
+              "alt": "Type 2 (BUND with Staple)",
+              "title": "",
+              "subtitle": "",
+              "caption": ""
+            },
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-780x-7177-bund-strap-backs-and-bund-boxes-black-typ2.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-780x-7177-bund-strap-backs-and-bund-boxes-black-typ2.jpg",
+              "alt": "Type 2 (BUND with Staple)",
+              "title": "",
+              "subtitle": "",
+              "caption": "",
+              "imgClassName": "w-full h-96"
+            }
+          ],
+          "list": [
+            {
+              "title": "",
+              "list": [
+                {
+                  "title": "The Type 2 and Type 3 are generic BUND straps and were sold in\na base’s PX/BX. The NSN on these straps is the part code for\nwhen they were sold in exchange. These BUND straps were only\nproduced in black."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Type 3 (Bund Stitched)",
+          "image_type": "carousel-row",
+          "images": [
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-series-v4-nato-grey-case-w-bund-typ2-strap-3h-mil-pd-nato-dial.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-series-v4-nato-grey-case-w-bund-typ2-strap-3h-mil-pd-nato-dial.jpg",
+              "alt": "Black BUND",
+              "title": "",
+              "subtitle": "",
+              "caption": ""
+            },
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-780x-7177-bund-strap-backs-and-bund-boxes-black.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-bund-strap-backs-and-bund-boxes-black.jpg",
+              "alt": "Black BUND",
+              "title": "",
+              "subtitle": "",
+              "caption": "",
+              "imgClassName": "w-full h-96"
+            }
+          ],
+          "list": [
+            {
+              "title": "",
+              "list": [
+                {
+                  "title": "The Type 3 has the NSN: 6645-12-145-6415 and a curved\nend strap. It features stitching securing the ends of its two\nstraps."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Buckles",
+      "info": "There are three types of buckles found across all BUND straps.",
+      "list": [
+        {
+          "title": "",
+          "list": [
+            {
+              "title": "Standard polished angular pin buckles"
+            },
+            {
+              "title": "Black or grey-coated round pin buckles, often seen on\nNATO-issued and UAE Porsche Design BUND straps"
+            },
+            {
+              "title": "Orfina-signed pin buckles featuring the Orfina logo that\nis typically coated in either Sablé or black finishes"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

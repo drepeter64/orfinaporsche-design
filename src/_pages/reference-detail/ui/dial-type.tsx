@@ -82,7 +82,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                       <ImageWithLoader
                         src={image.src}
                         alt={image.alt}
-                        className="relative w-full h-96 sm:h-[450px] lg:h-[500px] object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                        className={`relative object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 ${image.imgClassName ?? "w-full h-96 sm:h-[450px] lg:h-[500px] "}`}
                         skeletonClassName="w-full h-96 sm:h-[450px] lg:h-[500px] rounded-lg"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100">
@@ -364,7 +364,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                 <ImageWithLoader
                                   src={image.src}
                                   alt={image.alt}
-                                  className="relative w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                                  className={`relative object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 ${image.imgClassName ?? "w-full h-64 sm:h-80 lg:h-96"}`}
                                   skeletonClassName="w-full h-64 sm:h-80 lg:h-96 rounded-lg"
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100">

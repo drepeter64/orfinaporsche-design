@@ -42,6 +42,7 @@ export interface CaseFinishesData {
   referenceTitle: string
   pageTitle: string
   overview?: string
+  measurementsTitle?: string
   measurements?: Measurement[]
   variations?: VariationData[]
   variation_type?: "numbered" | "solid" | "elegant" | "elegant-dark"

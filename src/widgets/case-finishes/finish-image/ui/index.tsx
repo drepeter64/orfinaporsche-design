@@ -12,7 +12,7 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
   const tCommon = useTranslations("Common")
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-start">
       <div
         className={`relative group cursor-pointer ${image.wrapClassName ?? "max-w-lg"}`}
         onClick={() =>

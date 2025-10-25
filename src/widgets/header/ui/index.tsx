@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react"
-import { ClientRoutes, getRoute } from "@/shared/routes"
+import { ClientRoutes } from "@/shared/routes"
 import { useTranslations } from "next-intl"
 import { header } from "@/shared/data"
 import { Link } from "@/app/localization"
@@ -230,7 +230,7 @@ export const Header = () => {
                         <Link
                           key={index}
                           className="group flex items-center px-3 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-black rounded-md transition-all duration-200 cursor-pointer"
-                          href={getRoute(route)}
+                          href={ClientRoutes.components(route)}
                         >
                           <div className="w-2 h-2 bg-gray-400 rounded-full mr-3 group-hover:bg-gray-900 transition-colors"></div>
                           <span className="font-medium">{title}</span>
@@ -358,7 +358,7 @@ export const Header = () => {
                       <Link
                         key={index}
                         className="block py-3 px-3 text-sm text-gray-700 hover:text-black hover:bg-gray-100 rounded-md transition-colors touch-manipulation cursor-pointer"
-                        href={getRoute(route)}
+                        href={ClientRoutes.components(route)}
                       >
                         {title}
                       </Link>
