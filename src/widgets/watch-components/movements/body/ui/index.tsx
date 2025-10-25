@@ -14,7 +14,7 @@ export const MovemensBodySection: React.FC<MovemensBodySectionProps> = ({
         data.movements.map((item, index) => (
           <div key={index}>
             <div
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${item.image_type && item.image_type === "three-row" ? "lg:grid-cols-1" : "lg:grid-cols-2"}`}
+              className={`grid grid-cols-1 gap-8 lg:gap-12 items-center ${item.image_type && item.image_type === "three-row" ? "lg:grid-cols-1" : "lg:grid-cols-2"}`}
             >
               <div className={`space-y-6${index % 2 !== 0 ? " order-2" : ""}`}>
                 <SectionHeading
