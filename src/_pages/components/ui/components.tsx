@@ -8,6 +8,8 @@ import { StrapsBodySection } from "@/widgets/watch-components/straps/body"
 import { HandsBodySection } from "@/widgets/watch-components/hands/body"
 import { CrownsBodySection } from "@/widgets/watch-components/crowns/body"
 import { MovemensBodySection } from "@/widgets/watch-components/movements/body"
+import { WheelsBodySection } from "@/widgets/watch-components/date-wheels/body"
+import { BoxesBodySection } from "@/widgets/watch-components/boxes/body"
 
 interface ComponentsPage {
   data: ComponentsTypeData
@@ -78,6 +80,15 @@ export function ComponentsPage({ data }: ComponentsPage) {
                 data={data}
               />
             )}
+
+            {data.type === "wheels" && (
+              <WheelsBodySection
+                setFullScreenImage={setFullScreenImage}
+                data={data}
+              />
+            )}
+
+            {data.type === "boxes" && <BoxesBodySection data={data} />}
           </div>
         </div>
       </section>

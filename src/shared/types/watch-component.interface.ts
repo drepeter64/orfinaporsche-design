@@ -14,6 +14,9 @@ export interface ComponentsTypeData {
   hands?: HandsData[]
   crowns?: CrownsData[]
   movements?: MovementsData[]
+  wheels?: WheelsData[]
+  wheelsLanguages?: WheelsLanguagesData[]
+  wheelsLangData?: WheelsLanguage
 }
 
 interface QuotaData {
@@ -60,6 +63,50 @@ interface MovementsData {
   list?: Bullet[]
   image_type: string
   images: ImageInfo[]
+}
+
+interface WheelsData {
+  title: string
+  info?: string
+  found?: string
+  list?: Bullet[]
+  images: ImageInfo[]
+}
+
+interface WheelsLanguage {
+  title: string
+  subtitle?: string
+  text?: string
+  info?: string
+}
+
+interface WheelsLanguagesData {
+  title: string
+  subtitle?: string
+  info?: string
+  found?: string
+  list?: WheelsLanguagesList[]
+  specialNotes: WheelsSpecialNotesItems[]
+}
+
+interface WheelsLanguagesList {
+  heading: WheelsLanguagesListHeading
+  items?: WheelsLanguagesListItems[]
+}
+
+interface WheelsLanguagesListHeading {
+  title: string
+  tip?: string
+}
+
+interface WheelsLanguagesListItems {
+  title: string
+}
+
+interface WheelsSpecialNotesItems {
+  title: string
+  text?: string
+  images?: ImageInfo[]
 }
 
 interface Bullet {

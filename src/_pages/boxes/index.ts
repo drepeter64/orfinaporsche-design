@@ -1,1 +1,0 @@
-export { BoxesPage } from "./ui"

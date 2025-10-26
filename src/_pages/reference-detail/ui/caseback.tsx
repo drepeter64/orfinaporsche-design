@@ -145,7 +145,7 @@ export function CasebackPage({ data }: CasebackPageProps) {
                   className={`animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-${index * 100 + 400}`}
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                    <div className={`space-y-6${index % 2 !== 0 ? " order-2" : ""}`}>
+                    <div className={`space-y-6${index % 2 !== 0 ? " lg:order-2" : ""}`}>
                       <SectionHeading
                         title={variation.title}
                         variant="numbered"

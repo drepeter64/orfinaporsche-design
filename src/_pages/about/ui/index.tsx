@@ -1,19 +1,94 @@
+import ImageWithLoader from "@/components/ImageWithLoader"
+import { about_page } from "@/shared/data"
+
 export function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-sans text-4xl md:text-5xl font-light text-black mb-8 uppercase tracking-wider">
-            About Our Mission
-          </h1>
-          <p className="font-sans text-xl text-gray-700 leading-relaxed">
-            Preserving the legacy of Porsche-inspired horology for future generations
-          </p>
+      <section className="relative min-h-screen flex flex-col items-center justify-center bg-gray-50">
+        <div className="w-full mb-8 sm:mb-12 lg:mb-16 relative h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh]">
+          <ImageWithLoader
+            src={about_page.hero.original}
+            alt={about_page.hero.alt}
+            fill
+            className="object-cover"
+            skeletonClassName="w-full h-full"
+            priority
+            sizes="100vw"
+          />
+        </div>
+
+        <div className="text-center px-4 sm:px-6 lg:px-8">
+          <h1
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-black mb-6 sm:mb-8 tracking-wider uppercase leading-tight"
+            dangerouslySetInnerHTML={{ __html: about_page.hero.title }}
+          ></h1>
+          <p
+            className="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-gray-600 mb-8 sm:mb-12 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: about_page.hero.subtitle }}
+          ></p>
         </div>
       </section>
 
-      {/* Mission Statement */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16">
+            <p className="font-sans text-lg text-gray-700 leading-relaxed mb-8">
+              This website was created by <b>Drew Peterson</b>, with the invaluable expertise and
+              contributions of long-time Orfina Porsche Design collectors — Alan Fronshtein, David
+              [Redacted], and Paul Hyde.
+            </p>
+          </div>
+          <div className="mb-16">
+            <p className="font-sans text-lg text-gray-700 leading-relaxed">
+              We welcome fellow enthusiasts, researchers, and collectors to connect with us -
+              whether to share discoveries, clarify references, or, importantly, share
+              original-owner watches. Every verified example helps us refine production timelines
+              and better understand the evolution of these references and dial variations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="font-sans text-xl text-gray-700 mb-12 leading-relaxed">
+            For a deeper look into Drew’s collecting journey and his perspective on the Orfina
+            Porsche Design legacy, watch his video with Hodinkee below:
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href="https://www.youtube.com/watch?v=A3MZGCOAWmc"
+              target={"_blank"}
+              className="bg-black text-white px-8 py-4 font-sans font-normal text-sm uppercase tracking-wider hover:bg-gray-700 transition-colors"
+            >
+              Porsche Design With Drew Peterson | Hodinkee Radio
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-sans text-3xl font-light text-white mb-8 uppercase tracking-wider">
+            Get In Touch
+          </h2>
+          <p className="font-sans text-xl text-gray-300 mb-12 leading-relaxed">
+            You can reach out via the contact form below or message Drew directly on Instagram at
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href="https://www.instagram.com/BFMOTORCLUB"
+              target={"_blank"}
+              className="bg-white text-black px-8 py-4 font-sans font-normal text-sm uppercase tracking-wider hover:bg-gray-200 transition-colors"
+            >
+              @BFMOTORCLUB
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/*
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
@@ -35,7 +110,6 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-sans text-3xl font-light text-black text-center mb-20 uppercase tracking-wider">
@@ -91,7 +165,6 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Collaboration */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-sans text-2xl font-normal text-black mb-8 uppercase tracking-wide">
@@ -129,7 +202,6 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Contact */}
       <section className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-sans text-3xl font-light text-white mb-8 uppercase tracking-wider">
@@ -154,6 +226,7 @@ export function AboutPage() {
           </div>
         </div>
       </section>
+      */}
     </div>
   )
 }

@@ -5,5 +5,380 @@
 
   "type": "wheels",
   "pageTitle": "Date Wheels",
-  "pageSubTitle": ""
+  "pageSubTitle": "There are three known sets of Date Wheels across all 7750, 7176, and 7177s",
+  "overview": "",
+
+  "wheels": [
+    {
+      "title": "Type 1 - Straight Down Leg Hooked 7",
+      "found": "<strong>Found On:</strong> All 7750s",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/preview-560x-7750-7.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/7750-7.jpg",
+          "alt": "Type 1 - Straight Down Leg Hooked 7",
+          "title": "Type 1 - Straight Down Leg Hooked 7",
+          "subtitle": "Type 1 - Straight Down Leg Hooked 7",
+          "caption": "Type 1 - Straight Down Leg Hooked 7",
+          "imgClassName": "w-full min-h-80"
+        }
+      ]
+    },
+    {
+      "title": "Type 2 - Curve Hooked 7",
+      "found": "<strong>Found On:</strong> Across 7176 References, 7177",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/preview-560x-7177-7-type2.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/7177-7-type2.jpg",
+          "alt": "Type 2 - Curve Hooked 7",
+          "title": "Type 2 - Curve Hooked 7",
+          "subtitle": "Type 2 - Curve Hooked 7",
+          "caption": "Type 2 - Curve Hooked 7",
+          "imgClassName": "w-full min-h-80"
+        }
+      ]
+    },
+    {
+      "title": "Type 3 - Curve Non-hooked 7",
+      "found": "<strong>Found On:</strong> Across 7176 References, 7177",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/preview-560x-7177-7-type3.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/7177-7-type3.jpg",
+          "alt": "Type 3 - Curve Non-hooked 7",
+          "title": "Type 3 - Curve Non-hooked 7",
+          "subtitle": "Type 3 - Curve Non-hooked 7",
+          "caption": "Type 3 - Curve Non-hooked 7",
+          "imgClassName": "w-full min-h-80"
+        }
+      ]
+    }
+  ],
+  "wheelsLangData" : {
+    "title": "Day/Date Wheels",
+    "subtitle": "Across the entire Orfina Porsche Design Chronograph 1 production, various languages are found on the Day/Date wheels.",
+    "text": "",
+    "info": ""
+  },
+  "wheelsLanguages" : [
+    {
+      "title": "Monday-Sunday",
+      "subtitle": "",
+      "info": "The days of the week for the respective languages are below:",
+      "list": [
+        {
+          "heading": {
+            "title": "English",
+            "tip": ""
+          },
+          "items": [
+            {
+              "title": "MON"
+            },
+            {
+              "title": "TUE"
+            },
+            {
+              "title": "WED"
+            },
+            {
+              "title": "THU"
+            },
+            {
+              "title": "FRI"
+            },
+            {
+              "title": "SAT"
+            },
+            {
+              "title": "SUN"
+            }
+          ]
+        },
+        {
+          "heading": {
+            "title": "German",
+            "tip": ""
+          },
+          "items": [
+            {
+              "title": "MON"
+            },
+            {
+              "title": "DIE"
+            },
+            {
+              "title": "MIT"
+            },
+            {
+              "title": "DON"
+            },
+            {
+              "title": "FRE"
+            },
+            {
+              "title": "SAM"
+            },
+            {
+              "title": "SON"
+            }
+          ]
+        },
+        {
+          "heading": {
+            "title": "Spanish",
+            "tip": ""
+          },
+          "items": [
+            {
+              "title": "LUN"
+            },
+            {
+              "title": "MAR"
+            },
+            {
+              "title": "MIE"
+            },
+            {
+              "title": "JUE"
+            },
+            {
+              "title": "VIE"
+            },
+            {
+              "title": "SAB"
+            },
+            {
+              "title": "DOM"
+            }
+          ]
+        },
+        {
+          "heading": {
+            "title": "Italian",
+            "tip": ""
+          },
+          "items": [
+            {
+              "title": "LUN"
+            },
+            {
+              "title": "MAR"
+            },
+            {
+              "title": "MER"
+            },
+            {
+              "title": "GIO"
+            },
+            {
+              "title": "VEN"
+            },
+            {
+              "title": "SAB"
+            },
+            {
+              "title": "DOM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7750 Gen. 1",
+      "subtitle": "Day/Date Wheel Languages",
+      "info": "",
+      "list": [
+        {
+          "heading": {
+            "title": "English",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "German",
+            "tip": ""
+          }
+        }
+      ]
+    },
+    {
+      "title": "7750 Gen. 2 & 3",
+      "subtitle": "Day/Date Wheel Languages",
+      "info": "",
+      "list": [
+        {
+          "heading": {
+            "title": "English",
+            "tip": "Most Transitional models (aka Gen. 3) are 1Mile\nwith English day wheels"
+          }
+        },
+        {
+          "heading": {
+            "title": "German",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "Spanish (possibly)",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "Italian (possibly)",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "French (possibly)",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "Dutch (possibly)",
+            "tip": ""
+          }
+        }
+      ]
+    },
+    {
+      "title": "7176, 7176 Military, 7176 S",
+      "subtitle": "Day/Date Wheel Languages",
+      "info": "",
+      "list": [
+        {
+          "heading": {
+            "title": "English",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "German",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "Spanish (possibly)",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "Italian (possibly)",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "French (possibly)",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "Dutch (possibly)",
+            "tip": ""
+          }
+        }
+      ]
+    },
+    {
+      "title": "7176 D",
+      "subtitle": "Day/Date Wheel Languages",
+      "info": "",
+      "list": [
+        {
+          "heading": {
+            "title": "German",
+            "tip": ""
+          }
+        }
+      ]
+    },
+    {
+      "title": "7177",
+      "subtitle": "Day/Date Wheel Languages",
+      "info": "",
+      "list": [
+        {
+          "heading": {
+            "title": "English",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "German",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "Spanish",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "Italian",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "French (possibly)",
+            "tip": ""
+          }
+        },
+        {
+          "heading": {
+            "title": "Dutch (possibly)",
+            "tip": ""
+          }
+        }
+      ],
+      "specialNotes": [
+        {
+          "title": "7177 Olive Green PVD",
+          "text": "This variant should always bear an Italian Day Disk (Easily identifiable by the word GIO - which stands for Thursday in Italian)",
+          "images": [
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/preview-560x-7177-gio.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/7177-gio.jpg",
+              "alt": "7177 Italian Day Disk",
+              "title": "7177 Italian Day Disk",
+              "subtitle": "7177 Italian Day Disk",
+              "caption": "7177 Italian Day Disk",
+              "imgClassName": "w-full h-80",
+              "wrapClassName": "w-full"
+            }
+          ]
+        },
+        {
+          "title": "The 7177 NATO Dial",
+          "text": "Is believed to be the only variant of the 7177 reference to feature a white Day/Date wheel - a characteristic observed on select examples of this model.",
+          "images": [
+            {
+              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/preview-560x-7177-series-v4-0028-7177-nato-grey-case-w-bund-strap-3h-mil.jpg",
+              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/7177-series-v4-0028-7177-nato-grey-case-w-bund-strap-3h-mil.jpg",
+              "alt": "7177 Nato White Day Date Wheel",
+              "title": "7177 Nato White Day Date Wheel",
+              "subtitle": "7177 Nato White Day Date Wheel",
+              "caption": "7177 Nato White Day Date Wheel",
+              "imgClassName": "w-full h-80",
+              "wrapClassName": "w-full"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

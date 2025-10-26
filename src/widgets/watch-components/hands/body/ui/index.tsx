@@ -11,7 +11,7 @@ export const HandsBodySection: React.FC<HandsBodySectionProps> = ({ data, setFul
         data.hands.map((item, index) => (
           <div key={index}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className={`space-y-6${index % 2 !== 0 ? " order-2" : ""}`}>
+              <div className={`space-y-6${index % 2 !== 0 ? " lg:order-2" : ""}`}>
                 <SectionHeading
                   title={item.title}
                   variant="numbered"
