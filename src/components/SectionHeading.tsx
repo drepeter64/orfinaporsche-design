@@ -5,6 +5,7 @@ interface SectionHeadingProps {
   variant?: "numbered" | "solid" | "elegant" | "elegant-dark"
   number?: number
   className?: string
+  textClassName?: string
   subtitle?: string
 }
 
@@ -13,13 +14,18 @@ const SectionHeading = ({
   variant = "numbered",
   number,
   className = "",
+  textClassName = "",
   subtitle,
 }: SectionHeadingProps) => {
   if (variant === "solid") {
     return (
       <div className={`flex items-center mb-8 sm:mb-12 ${className}`}>
         <div className="bg-black text-white px-6 py-3 rounded-lg">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wide">{title}</h2>
+          <h2
+            className={`font-light tracking-wide ${textClassName || "text-2xl sm:text-3xl lg:text-4xl"}`}
+          >
+            {title}
+          </h2>
         </div>
       </div>
     )

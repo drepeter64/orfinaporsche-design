@@ -3,7 +3,8 @@ import { ComponentsTypeData, ImageInfo } from "@/shared/types"
 import SectionHeading from "@/components/SectionHeading"
 import ImageWithLoader from "@/components/ImageWithLoader"
 import { useTranslations } from "next-intl"
-import ImageSlider from "@/components/ImageSlider"
+import { FinishImageSection } from "@/widgets/case-finishes/finish-image"
+import { PlaceholderImageSection } from "@/widgets/case-finishes/placeholder-image"
 
 export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
   data,
@@ -100,58 +101,68 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
             {/* Color Variants */}
             {item.colors && item.colors.length > 0 && (
               <div className="space-y-4">
-                <SectionHeading
-                  title={tCommon("color-variants")}
-                  variant="elegant"
-                />
-
                 <div className="space-y-16">
                   {item.colors.map((color, index) => (
                     <div key={index}>
-                      {color.image_type === "carousel-row" && color.images.length > 0 && (
-                        <>
+                      <div className="space-y-8">
+                        <div className="grid grid-cols-2 md:grid-cols-1 gap-8">
                           <div className="space-y-8">
-                            <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
-                              <div className="space-y-8">
-                                <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-black">
-                                  <p className="font-semibold text-gray-900 mb-2">{color.title}</p>
-                                </div>
-                                <div>
-                                  {color.list &&
-                                    color.list.map((list_item, index) => (
-                                      <div
-                                        className="bg-gray-50 p-6 rounded-lg border-l-4 border-black"
-                                        key={index}
-                                      >
-                                        {list_item.list && (
-                                          <ul className="space-y-3 text-gray-700">
-                                            {list_item.list.map((sub_list_item, index) => (
-                                              <li
-                                                className="flex items-start space-x-3"
-                                                key={index}
-                                              >
-                                                <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
-                                                <span className="text-sm sm:text-base leading-relaxed">
-                                                  {sub_list_item.title}
-                                                </span>
-                                              </li>
-                                            ))}
-                                          </ul>
-                                        )}
-                                      </div>
-                                    ))}
-                                </div>
-                              </div>
-                              <div className="flex flex-col items-center">
-                                <ImageSlider
-                                  images={color.images}
-                                  setFullScreenImage={setFullScreenImage}
-                                />
-                              </div>
+                            <SectionHeading
+                              title={color.title}
+                              textClassName="text-1xl sm:text-2xl"
+                              variant="solid"
+                            />
+                            <div>
+                              {color.list &&
+                                color.list.map((list_item, index) => (
+                                  <div
+                                    className="bg-gray-50 p-6 rounded-lg border-l-4 border-black"
+                                    key={index}
+                                  >
+                                    {list_item.list && (
+                                      <ul className="space-y-3 text-gray-700">
+                                        {list_item.list.map((sub_list_item, index) => (
+                                          <li
+                                            className="flex items-start space-x-3"
+                                            key={index}
+                                          >
+                                            <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                            <span className="text-sm sm:text-base leading-relaxed">
+                                              {sub_list_item.title}
+                                            </span>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    )}
+                                  </div>
+                                ))}
                             </div>
                           </div>
-                        </>
-                      )}
+                          {color.images && color.images.length ? (
+                            color.images.length > 1 ? (
+                              <div
+                                className={`grid grid-cols-1 gap-8 lg:gap-12 items-start ${color.image_type && color.image_type === "three-row" ? "lg:grid-cols-3" : "lg:grid-cols-2"}`}
+                              >
+                                {color.images.map((item, index) => (
+                                  <FinishImageSection
+                                    key={index}
+                                    image={item}
+                                    setFullScreenImage={setFullScreenImage}
+                                  />
+                                ))}
+                              </div>
+                            ) : (
+                              <FinishImageSection
+                                image={color.images[0]}
+                                setFullScreenImage={setFullScreenImage}
+                                sectionTitle={item.title}
+                              />
+                            )
+                          ) : (
+                            <PlaceholderImageSection title={item.title} />
+                          )}
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>

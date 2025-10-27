@@ -66,7 +66,10 @@ export function CasebackPage({ data }: CasebackPageProps) {
                 <div className="space-y-6">
                   {variation.title && (
                     <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-black">
-                      <p className="text-lg text-gray-700 leading-relaxed">{variation.title}</p>
+                      <p
+                        dangerouslySetInnerHTML={{ __html: variation.title }}
+                        className="text-lg text-gray-700 leading-relaxed"
+                      ></p>
                     </div>
                   )}
 

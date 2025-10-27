@@ -104,7 +104,7 @@ export const Header = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo */}
           {isActive(ClientRoutes.home) ? (
@@ -122,7 +122,7 @@ export const Header = () => {
           )}
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex flex-1 justify-center items-center space-x-8 xl:space-x-12">
+          <div className="hidden lg:flex flex-1 justify-center items-center space-x-8 xl:space-x-12 transform translate-x-[-10%] translate-y-0">
             <Link
               href={ClientRoutes.story}
               className={`font-normal text-sm xl:text-base uppercase tracking-wider transition-colors hover:text-gray-600 cursor-pointer ${

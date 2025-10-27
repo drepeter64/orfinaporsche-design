@@ -32,6 +32,7 @@ export default function LocaleLayout({
     >
       <body className={openSansFont.className}>
         <Layout locale={locale}>{children}</Layout>
+        <div className="hidden min-h-80 h-[8.5rem] h-[22rem] sm:h-[30rem] lg:h-[36rem] h-52"></div>
       </body>
     </html>
   )

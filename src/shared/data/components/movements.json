@@ -93,13 +93,7 @@
               "title": "The earlier movement serial is a circle that is embedded in\nthe watch movement, where a sticker displays the\nmovement’s serial."
             },
             {
-              "title": "Provided Serial: 4049628"
-            },
-            {
               "title": "The later version features a curved metal piece on top of\nthe movement, but underneath the rotor, which has the\nmovement’s serial number engraved into it."
-            },
-            {
-              "title": "Provided Serial: 4436289"
             }
           ]
         }
@@ -111,7 +105,7 @@
           "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/movements/l5100-serial-mk.1.jpg",
           "alt": "Orfina Crown (Found on Gen. 1 7750s)",
           "title": "Orfina Crown (Found on Gen. 1 7750s)",
-          "subtitle": "Orfina Crown (Found on Gen. 1 7750s)",
+          "subtitle": "Orfina Crown (Found on Gen. 1 7750s) <br><small>Provided Serial: 4049628</small>",
           "caption": "Orfina Crown (Found on Gen. 1 7750s)",
           "imgClassName": "w-full h-80"
         },
@@ -120,7 +114,7 @@
           "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/movements/l5100-serial-mk.2.jpg",
           "alt": "PD Crown (Found on Gen. 2 & 3 7750s)",
           "title": "PD Crown (Found on Gen. 2 & 3 7750s)",
-          "subtitle": "PD Crown (Found on Gen. 2 & 3 7750s)",
+          "subtitle": "PD Crown (Found on Gen. 2 & 3 7750s) <br><small>Provided Serial: 4436289</small>",
           "caption": "PD Crown (Found on Gen. 2 & 3 7750s)",
           "imgClassName": "w-full h-80"
         }

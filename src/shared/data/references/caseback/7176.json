@@ -62,7 +62,7 @@
           },
           {
             "title": "Distinction: ",
-            "text": "Additional \"D\" designation next to 7176"
+            "text": "Additional <span class='font-mono'>\"D\"</span> designation next to 7176"
           },
           {
             "title": "Serial Numbers: ",
@@ -100,7 +100,7 @@
           },
           {
             "title": "Distinction: ",
-            "text": "Additional \"S\" designation next to 7176"
+            "text": "Additional <span class='font-mono'>\"S\"</span> designation next to 7176"
           },
           {
             "title": "Serial Numbers: ",

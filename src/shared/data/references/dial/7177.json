@@ -97,28 +97,6 @@
       ]
     },
     {
-      "route": "vzmod",
-      "title": "VZMOD Dial",
-      "images": [
-        {
-          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/venezuelan-ministry-of-defense-dial/preview-560x-7177-series-v4-green-ejercito-venezuela-3h-mil-chrono-dial.jpg",
-          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/venezuelan-ministry-of-defense-dial/preview-560x-7177-series-v4-green-ejercito-venezuela-3h-mil-chrono-dial.jpg",
-          "alt": "Reference 7177 - VZMOD Dial",
-          "title": "Reference 7177 - VZMOD Dial",
-          "subtitle": "Reference 7177 - VZMOD Dial",
-          "caption": "Reference 7177 - VZMOD Dial"
-        },
-        {
-          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/venezuelan-ministry-of-defense-dial/preview-560x-7177-series-v4-green-ejercito-venezuela.jpg",
-          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/venezuelan-ministry-of-defense-dial/preview-560x-7177-series-v4-green-ejercito-venezuela.jpg",
-          "alt": "Reference 7177 - VZMOD Dial",
-          "title": "Reference 7177 - VZMOD Dial",
-          "subtitle": "Reference 7177 - VZMOD Dial",
-          "caption": "Reference 7177 - VZMOD Dial"
-        }
-      ]
-    },
-    {
       "route": "bund",
       "title": "BUND Dial",
       "images": [
@@ -137,6 +115,28 @@
           "title": "Reference 7177 - BUND Dial",
           "subtitle": "Reference 7177 - BUND Dial",
           "caption": "Reference 7177 - BUND Dial"
+        }
+      ]
+    },
+    {
+      "route": "vzmod",
+      "title": "VZMOD Dial",
+      "images": [
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/venezuelan-ministry-of-defense-dial/preview-560x-7177-series-v4-green-ejercito-venezuela-3h-mil-chrono-dial.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/venezuelan-ministry-of-defense-dial/preview-560x-7177-series-v4-green-ejercito-venezuela-3h-mil-chrono-dial.jpg",
+          "alt": "Reference 7177 - VZMOD Dial",
+          "title": "Reference 7177 - VZMOD Dial",
+          "subtitle": "Reference 7177 - VZMOD Dial",
+          "caption": "Reference 7177 - VZMOD Dial"
+        },
+        {
+          "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/venezuelan-ministry-of-defense-dial/preview-560x-7177-series-v4-green-ejercito-venezuela.jpg",
+          "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/venezuelan-ministry-of-defense-dial/preview-560x-7177-series-v4-green-ejercito-venezuela.jpg",
+          "alt": "Reference 7177 - VZMOD Dial",
+          "title": "Reference 7177 - VZMOD Dial",
+          "subtitle": "Reference 7177 - VZMOD Dial",
+          "caption": "Reference 7177 - VZMOD Dial"
         }
       ]
     },

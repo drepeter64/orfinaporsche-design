@@ -38,7 +38,7 @@
       "route": 7750,
       "dropdown": [
         {
-          "title": "7750 Reference Main Page",
+          "title": "7750 Reference",
           "type": "main"
         },
         {
@@ -64,7 +64,7 @@
       "route": 7176,
       "dropdown": [
         {
-          "title": "7176 Reference Main Page",
+          "title": "7176 Reference",
           "type": "main"
         },
         {
@@ -90,7 +90,7 @@
       "route": 7177,
       "dropdown": [
         {
-          "title": "7177 Reference Main Page",
+          "title": "7177 Reference",
           "type": "main"
         },
         {

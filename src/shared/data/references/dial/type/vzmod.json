@@ -102,7 +102,7 @@
           "alt": "Venezuelan Ministry of Defense Box",
           "title": "Venezuelan Ministry of Defense Box",
           "subtitle": "Venezuelan Ministry of Defense Box",
-          "imgClassName": "w-full h-[18rem] sm:h-[22rem] lg:h-[26rem]",
+          "imgClassName": "w-full h-96 object-cover",
           "caption": "Venezuelan Ministry of Defense Box"
         }
       ]

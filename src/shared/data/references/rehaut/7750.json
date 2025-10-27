@@ -72,19 +72,11 @@
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-rehaut/7750-advertisement-rehaut.jpg",
           "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-rehaut/7750-advertisement-rehaut.jpg",
           "wrapClassName": "max-w-full",
-          "imgClassName": "h-full",
+          "imgClassName": "h-full max-w-lg",
           "alt": "7750 Advertisement Rehaut<br></br>",
           "title": "7750 Advertisement Rehaut<br></br>",
           "subtitle": "7750 Advertisement Rehaut<br></br>",
           "caption": "7750 Advertisement Rehaut<br></br>"
-        },
-        {
-          "src": "",
-          "original": "",
-          "alt": "7750 Advertisement Rehaut - Close-Up",
-          "title": "7750 Advertisement Rehaut - Close-Up",
-          "subtitle": "7750 Advertisement Rehaut - Close-Up",
-          "caption": "7750 Advertisement Rehaut - Close-Up"
         }
       ]
     }

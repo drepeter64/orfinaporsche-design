@@ -57,13 +57,17 @@ export function AboutPage() {
             Porsche Design legacy, watch his video with Hodinkee below:
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a
-              href="https://www.youtube.com/watch?v=A3MZGCOAWmc"
-              target={"_blank"}
-              className="bg-black text-white px-8 py-4 font-sans font-normal text-sm uppercase tracking-wider hover:bg-gray-700 transition-colors"
-            >
-              Porsche Design With Drew Peterson | Hodinkee Radio
-            </a>
+            <iframe
+              className="w-full"
+              width="560"
+              height="480"
+              src="https://www.youtube.com/embed/A3MZGCOAWmc?si=8p1_tg4e9YqH8ix_"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </section>
