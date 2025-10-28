@@ -5,6 +5,7 @@ import ImageWithLoader from "@/components/ImageWithLoader"
 import { useTranslations } from "next-intl"
 import { FinishImageSection } from "@/widgets/case-finishes/finish-image"
 import { PlaceholderImageSection } from "@/widgets/case-finishes/placeholder-image"
+import ImageSlider from "@/components/ImageSlider"
 
 export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
   data,
@@ -140,17 +141,26 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
                           </div>
                           {color.images && color.images.length ? (
                             color.images.length > 1 ? (
-                              <div
-                                className={`grid grid-cols-1 gap-8 lg:gap-12 items-start ${color.image_type && color.image_type === "three-row" ? "lg:grid-cols-3" : "lg:grid-cols-2"}`}
-                              >
-                                {color.images.map((item, index) => (
-                                  <FinishImageSection
-                                    key={index}
-                                    image={item}
+                              color.image_type === "carousel" ? (
+                                <div className="flex flex-col items-center">
+                                  <ImageSlider
+                                    images={color.images}
                                     setFullScreenImage={setFullScreenImage}
                                   />
-                                ))}
-                              </div>
+                                </div>
+                              ) : (
+                                <div
+                                  className={`grid grid-cols-1 gap-8 lg:gap-12 items-start ${color.image_type && color.image_type === "three-row" ? "lg:grid-cols-3" : "lg:grid-cols-2"}`}
+                                >
+                                  {color.images.map((item, index) => (
+                                    <FinishImageSection
+                                      key={index}
+                                      image={item}
+                                      setFullScreenImage={setFullScreenImage}
+                                    />
+                                  ))}
+                                </div>
+                              )
                             ) : (
                               <FinishImageSection
                                 image={color.images[0]}

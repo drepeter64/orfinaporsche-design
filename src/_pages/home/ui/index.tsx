@@ -22,6 +22,8 @@ export const HomePage = () => {
             fill
             className="object-cover"
             skeletonClassName="w-full h-full"
+            width={3840}
+            height={2160}
             priority
             sizes="100vw"
           />

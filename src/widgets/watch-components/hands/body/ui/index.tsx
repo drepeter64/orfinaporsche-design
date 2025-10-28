@@ -10,7 +10,9 @@ export const HandsBodySection: React.FC<HandsBodySectionProps> = ({ data, setFul
       {data.hands &&
         data.hands.map((item, index) => (
           <div key={index}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div
+              className={`grid grid-cols-1 gap-8 lg:gap-12 items-center ${item.images.length > 1 ? "lg:grid-cols-1" : "lg:grid-cols-2"}`}
+            >
               <div className={`space-y-6${index % 2 !== 0 ? " lg:order-2" : ""}`}>
                 <SectionHeading
                   title={item.title}
@@ -50,29 +52,27 @@ export const HandsBodySection: React.FC<HandsBodySectionProps> = ({ data, setFul
                     </div>
                   ))}
               </div>
-              <div className="flex flex-col items-center justify-center">
-                {item.images && item.images.length ? (
-                  item.images.length > 1 ? (
-                    <div className="space-y-12">
-                      {item.images.map((item, index) => (
-                        <FinishImageSection
-                          key={index}
-                          image={item}
-                          setFullScreenImage={setFullScreenImage}
-                        />
-                      ))}
-                    </div>
-                  ) : (
-                    <FinishImageSection
-                      image={item.images[0]}
-                      setFullScreenImage={setFullScreenImage}
-                      sectionTitle={item.title}
-                    />
-                  )
+              {item.images && item.images.length ? (
+                item.images.length > 1 ? (
+                  <div className="flex flex-row items-start justify-around">
+                    {item.images.map((item, index) => (
+                      <FinishImageSection
+                        key={index}
+                        image={item}
+                        setFullScreenImage={setFullScreenImage}
+                      />
+                    ))}
+                  </div>
                 ) : (
-                  <PlaceholderImageSection title={item.title} />
-                )}
-              </div>
+                  <FinishImageSection
+                    image={item.images[0]}
+                    setFullScreenImage={setFullScreenImage}
+                    sectionTitle={item.title}
+                  />
+                )
+              ) : (
+                <PlaceholderImageSection title={item.title} />
+              )}
             </div>
           </div>
         ))}
