@@ -78,7 +78,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
               </div>
             ) : (
               /* Centered text without image (for 7176 style) */
-              <div className="max-w-4xl mx-auto space-y-6 text-xl text-gray-700 leading-relaxed text-center mb-10">
+              <div className="max-w-4xl mx-auto space-y-6 text-xl text-gray-700 leading-relaxed text-center mb-10 mt-8 bg-blue-50 p-6 sm:p-8 rounded-lg border-l-4 border-blue-500">
                 {introduction.paragraphs.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}

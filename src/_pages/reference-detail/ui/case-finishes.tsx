@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl"
 import { MeasurementsSection } from "@/widgets/case-finishes/measurements"
 import { FinishItemSection } from "@/widgets/case-finishes/finish-item"
 import ImageSlider from "@/components/ImageSlider"
-import { PlaceholderImageSection } from "@/widgets/case-finishes/placeholder-image"
+// import { PlaceholderImageSection } from "@/widgets/case-finishes/placeholder-image"
 import { RightImageSection } from "@/widgets/case-finishes/right-image"
 import { BackNavigationSection } from "@/widgets/reference-detail/back-navigation"
 import { FinishImageSection } from "@/widgets/case-finishes/finish-image"
@@ -52,14 +52,13 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
           {/* Main Description */}
           {data.descriptions && (
             <div className="mb-12 sm:mb-16">
-              <div className="prose prose-gray max-w-none">
+              <div className="prose prose-gray max-w-none mt-8 bg-blue-50 p-6 sm:p-8 rounded-lg border-l-4 border-blue-500">
                 {data.descriptions.map((desc, index) => (
                   <p
                     key={index}
                     className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6"
-                  >
-                    {desc}
-                  </p>
+                    dangerouslySetInnerHTML={{ __html: desc }}
+                  ></p>
                 ))}
               </div>
             </div>
@@ -67,9 +66,11 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
 
           {/* Overview */}
           <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300 mb-8">
-              {data.overview}
-            </p>
+            <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
+              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300">
+                {data.overview}
+              </p>
+            </div>
             {data.variations && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                 {data.variations.map((variantion, index) => (
@@ -155,7 +156,8 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
                               />
                             )
                           ) : (
-                            <PlaceholderImageSection title={finish.title} />
+                            <></>
+                            // <PlaceholderImageSection title={finish.title} />
                           )}
                         </div>
                       ))}
@@ -221,7 +223,8 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
                             </>
                           )
                         ) : (
-                          <PlaceholderImageSection title={section.title} />
+                          <></>
+                          // <PlaceholderImageSection title={section.title} />
                         )}
                       </div>
                     </div>
@@ -299,6 +302,7 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
           {data.finishes && data.finishes.length > 0 && (
             <div className="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-2">
               {data.finishes.map((image, index) => (
+                //TODO
                 <FinishImageSection
                   key={index}
                   image={image}

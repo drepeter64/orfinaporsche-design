@@ -16,7 +16,10 @@ export const FinishItemSection: React.FC<FinishItemSectionProps> = ({ data }) =>
         <h3 className="text-lg sm:text-xl font-semibold text-black">{title}</h3>
       </div>
       <div className="bg-gray-50 p-6 rounded-lg">
-        <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">{description}</p>
+        <p
+          className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4"
+          dangerouslySetInnerHTML={{ __html: description }}
+        ></p>
         {year && (
           <p className="text-sm text-gray-600">
             <strong>{tCommon("production-year")}</strong> {year}

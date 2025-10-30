@@ -12,7 +12,7 @@
   "variations": [
     {
       "title": "Mk. 1",
-      "description": "7750 Flat Top – a.k.a Mk. 1",
+      "description": "7750 Flat Top",
       "full_description": "The “Flat Top” / “Flat Face” is the case that started it all. The timeless design of the Porsche Design Chronograph starts its story here. Dr. Ferdinand Alexander “Butzi” Porsche’s initial design, which as legend has it took inspiration from the gauges of the original 911 that he had designed in 1963. Dr. Porsche’s credo was “Design must be functional and functionality has to be translated visually into aesthetics, without gags that have to be explained first. ” This is often stated as “form follows function” . With this visual translation from a 911’s gauges to a watch face with a simple bezel surrounding it we see the rest of the case design continue to follow this design principle. The height of the “flat” face (which mimics the simple bezels of VDO gauges of the day) rises from the base of the case just enough to fit the handset and rehaut. The overall body of the case then extends out to provide a proper presence on the wrist and include integrated hidden lugs. Because of the use of hidden lugs it could be machined from a single block, adding rigidity and a very masculine and sporty sensibility. The case geometry and dimensions are clean and minimalist, lacking unnecessary flourishes or embellishments. This is the birthplace of 50+ years of Porsche Design DNA.",
       "measurements": [
         { "value": "40.3mm", "label": "Diameter" },
@@ -25,13 +25,13 @@
           "title": "Powder Coat Black",
           "description": "The original units produced between 1973 – 1975 are often mistakenly believed to be the first black PVD chronograph, they were in fact powder coated with black paint. This coating is thicker and more easily \"flaked\" than PVD.",
           "color": "bg-black",
-          "year": "1973-1975",
+          "year": "1973-1975 (Tentative)",
           "images": [
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut.jpg",
-              "alt": "7750 Flat Top – a.k.a Mk. 1",
-              "title": "7750 Flat Top – a.k.a Mk. 1"
+              "alt": "7750 Flat Top",
+              "title": "7750 Flat Top"
             },
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-powder-coat-blackcrop.jpg",
@@ -43,7 +43,7 @@
         },
         {
           "title": "Silver/Sablé",
-          "description": "NOTE: we don’t have an example of these. It’s possible\nthat Silver/Sablé only became available with the PD dials.\nThus, we are unsure of the exact timeline of the 7750 Mk.\n1 Silver/Sablé, but one can assume they were made in a\nsimilar timeline to that of the 7750 Mk. 1 Powder Coat\nBlack cases.",
+          "description": "<strong>Note:</strong> we don’t have an example of these. It’s possible\nthat Silver/Sablé only became available with the PD dials.\nThus, we are unsure of the exact timeline of the 7750 Mk.\n1 Silver/Sablé, but one can assume they were made in a\nsimilar timeline to that of the 7750 Mk. 1 Powder Coat\nBlack cases.",
           "color": "bg-gray-400",
           "year": "1973-1975 (Not Confirmed)"
         }
@@ -51,7 +51,7 @@
     },
     {
       "title": "Mk. 2",
-      "description": "7750 Transitional Round Top – a.k.a Mk. 2",
+      "description": "7750 Transitional Round Top",
       "full_description": "In the mid-1970s, as a reaction to the Quartz Crisis, Valjoux halted production and availability of the 7750 to most manufacturers, including Orfina. Porsche Design & Orfina faced a dilemma about which movement to transition to in order to continue producing their watches. Dr. Porsche wanted to retain an automatic chronograph movement in his watch. This led them to switch to the Lemania 5100. They designed a new case in order to fit the dimensions of the new movement as it would not fit in the existing 7750 cases. The new case would be used with the 7176 and 7177 models. Some cases were produced (whether the same case vendor was used or not is unknown) with the new design, but thinned to fit a Valjoux 7750, which Orfina still had some inventory of. Given the design similarities, it is believed that these cases would date to later in 1975 - 1976.",
       "measurements": [
         { "value": "To Be Updated", "label": "Diameter" },
@@ -64,7 +64,7 @@
           "title": "Black PVD",
           "description": "These represent the first PVD cases.",
           "color": "bg-black",
-          "year": "1975-1976",
+          "year": "1975-1976 (Tentative)",
           "images": [
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg",
@@ -76,9 +76,9 @@
         },
         {
           "title": "Silver/Sablé",
-          "description": "Matte finished stainless steel",
+          "description": "Matte finished stainless steel.",
           "color": "bg-gray-400",
-          "year": "1975-1975",
+          "year": "1975-1975 (Tentative)",
           "images": [
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-series-v4.5-sable-round-top-case-pd-dial-1mile-rehaut.jpg",
@@ -92,8 +92,8 @@
     },
     {
       "title": "Mk. 3",
-      "description": "Orfina 7750 [FLAT-FACE - Service] - a.k.a Mk. 3, a.k.a Revised by Orfina Swiss S.A",
-      "full_description": "Similar in design and aesthetic to the Mk. 1 “Flat Top” / “Flat Face” , it has a flat face. Orfina Swiss SA offers it as a replacement for original damaged, or otherwise unusable cases as a modern replacement. These cases feature a larger crown as the replacement crown produced for Orfina Swiss SA is larger than the originals and restores the water-resistance of the watch. This case also features larger pushers and mortices milled to fit the larger crown and pushers.",
+      "description": "Orfina 7750 [FLAT-FACE - Service] - a.k.a Revised by Orfina Swiss S.A",
+      "full_description": "Similar in design and aesthetic to the Mk. 1 “Flat Top” / “Flat Face”, it has a flat face. Orfina Swiss SA offers it as a replacement for original damaged, or otherwise unusable cases as a modern replacement. These cases feature a larger crown as the replacement crown produced for Orfina Swiss SA is larger than the originals and restores the water-resistance of the watch. This case also features larger pushers and mortices milled to fit the larger crown and pushers.",
       "measurements": [
         { "value": "To Be Updated", "label": "Diameter" },
         { "value": "To Be Updated", "label": "Lug-To-Lug" },
@@ -105,7 +105,7 @@
           "title": "Black PVD",
           "description": "These represent the first PVD cases.",
           "color": "bg-black",
-          "year": "2000+",
+          "year": "2000+ (Tentative)",
           "images": [
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-gen3-2.jpg",
@@ -117,9 +117,9 @@
         },
         {
           "title": "Silver/Sablé",
-          "description": "Matte finished stainless steel",
+          "description": "Matte finished stainless steel.",
           "color": "bg-gray-400",
-          "year": "2000+",
+          "year": "2000+ (Tentative)",
           "images": [
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-mk.3-case.jpg",
@@ -132,7 +132,7 @@
         },
         {
           "title": "Replacement Crown",
-          "description": "Note: Service Replacement Crown.",
+          "description": "<strong>Note:</strong> Service Replacement Crown.",
           "color": "bg-black",
           "year": "",
           "images": [

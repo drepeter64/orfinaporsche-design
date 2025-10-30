@@ -122,14 +122,10 @@ const ReferenceVariantCard = ({
           </div>
           {/* Note Section */}
           {note && (
-            <div className="mt-16 max-w-4xl mx-auto">
-              <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border-l-4 border-black">
-                <h3 className="text-lg font-semibold text-black mb-4">{tCommon("note")}</h3>
-                <p
-                  dangerouslySetInnerHTML={{ __html: note }}
-                  className="text-sm sm:text-base text-gray-700 leading-relaxed"
-                ></p>
-              </div>
+            <div className="mt-6 bg-blue-50 p-4 sm:p-6 rounded-lg border-l-4 border-blue-500">
+              <p className="text-sm sm:text-base text-blue-800 leading-relaxed">
+                <strong>{tCommon("note")}</strong> {note}
+              </p>
             </div>
           )}
         </div>

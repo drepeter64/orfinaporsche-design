@@ -28,7 +28,7 @@ export function ComponentsPage({ data }: ComponentsPage) {
               {data.pageTitle}
             </h1>
             {data.pageSubTitle && (
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light">
+              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300">
                 {data.pageSubTitle}
               </p>
             )}

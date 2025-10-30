@@ -47,14 +47,6 @@
           "image_type": "carousel",
           "images": [
             {
-              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-series-v4-green-pvd-case-w-bund-strap-3h-mil-pd-dial.jpg",
-              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-series-v4-green-pvd-case-w-bund-strap-3h-mil-pd-dial.jpg",
-              "alt": "Green BUND",
-              "title": "",
-              "subtitle": "",
-              "caption": ""
-            },
-            {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-bund-green-loosecrop.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-bund-green-loosecrop.jpg",
               "alt": "Green BUND",
@@ -72,7 +64,15 @@
               "caption": "",
               "imgClassName": "w-full h-96"
             }
-          ]
+          ],
+          "poster": {
+            "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-series-v4-green-pvd-case-w-bund-strap-3h-mil-pd-dial.jpg",
+            "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/7177-series-v4-green-pvd-case-w-bund-strap-3h-mil-pd-dial.jpg",
+            "alt": "Green BUND",
+            "title": "Green BUND",
+            "subtitle": "",
+            "caption": ""
+          }
         },
         {
           "title": "Black BUND",

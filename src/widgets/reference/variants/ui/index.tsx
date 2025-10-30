@@ -16,7 +16,10 @@ export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullS
               </h2>
             )}
             {variantsSubtitle && (
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">{variantsSubtitle}</p>
+              <p
+                className="text-lg text-gray-600 max-w-2xl mx-auto"
+                dangerouslySetInnerHTML={{ __html: variantsSubtitle }}
+              ></p>
             )}
           </div>
         )}

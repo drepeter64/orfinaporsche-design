@@ -52,12 +52,14 @@ export function DialPage({ data }: DialPageProps) {
           {/* Content */}
           <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
             {data.overview && (
-              <div className="max-w-4xl mx-auto text-center mb-16">
-                <p className="text-lg text-gray-700 leading-relaxed">{data.overview}</p>
+              <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
+                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300">
+                  {data.overview}
+                </p>
               </div>
             )}
             {data.note && (
-              <div className="mt-8 bg-gray-50 p-6 sm:p-8 rounded-lg border-l-4 border-black">
+              <div className="prose prose-gray max-w-none mt-8 bg-blue-50 p-6 sm:p-8 rounded-lg border-l-4 border-blue-500">
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed">{data.note}</p>
               </div>
             )}

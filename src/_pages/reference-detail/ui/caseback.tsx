@@ -86,23 +86,29 @@ export function CasebackPage({ data }: CasebackPageProps) {
                           item.list.map((subitem, index) => (
                             <div key={index}>
                               <div className="flex items-start space-x-3">
-                                <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
-                                <p className="text-sm font-semibold text-gray-900 mb-2">
-                                  {subitem.title}
-                                </p>
+                                <div className="w-2 h-2 bg-black rounded-full mt-2 min-w-2 min-h-2"></div>
+                                <div>
+                                  <span
+                                    className="text-sm font-semibold text-gray-900 mb-2"
+                                    dangerouslySetInnerHTML={{ __html: subitem.title }}
+                                  ></span>
+                                  <span
+                                    dangerouslySetInnerHTML={{ __html: subitem.text || "" }}
+                                    className="text-sm text-gray-700"
+                                  ></span>
+                                </div>
                               </div>
-                              <p
-                                dangerouslySetInnerHTML={{ __html: subitem.text || "" }}
-                                className="text-sm text-gray-700"
-                              ></p>
                             </div>
                           ))}
                       </div>
                     ))}
 
                   {variation.note && (
-                    <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-black">
-                      <p className="text-lg text-gray-700 leading-relaxed">{variation.note}</p>
+                    <div className="mt-8 bg-blue-50 p-6 sm:p-8 rounded-lg border-l-4 border-blue-500">
+                      <p
+                        dangerouslySetInnerHTML={{ __html: variation.note }}
+                        className="text-lg text-gray-700 leading-relaxed"
+                      ></p>
                     </div>
                   )}
                 </div>
@@ -155,12 +161,14 @@ export function CasebackPage({ data }: CasebackPageProps) {
                         number={index + 1}
                       />
 
-                      <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border-l-4 border-black">
-                        <p
-                          className="text-base sm:text-lg text-gray-700 leading-relaxed"
-                          dangerouslySetInnerHTML={{ __html: variation.note || "" }}
-                        ></p>
-                      </div>
+                      {variation.note && (
+                        <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border-l-4 border-black">
+                          <p
+                            className="text-base sm:text-lg text-gray-700 leading-relaxed"
+                            dangerouslySetInnerHTML={{ __html: variation.note || "" }}
+                          ></p>
+                        </div>
+                      )}
 
                       <div className="space-y-4">
                         <h3 className="text-lg sm:text-xl font-semibold text-black">
@@ -176,7 +184,9 @@ export function CasebackPage({ data }: CasebackPageProps) {
                                 >
                                   <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
                                   <span className="text-sm sm:text-base leading-relaxed">
-                                    <strong>{item.title}</strong>
+                                    <strong
+                                      dangerouslySetInnerHTML={{ __html: item.title }}
+                                    ></strong>
                                     <span
                                       dangerouslySetInnerHTML={{ __html: item.text || "" }}
                                     ></span>
@@ -190,7 +200,9 @@ export function CasebackPage({ data }: CasebackPageProps) {
                                     >
                                       <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2.5 flex-shrink-0"></div>
                                       <span className="text-sm sm:text-base leading-relaxed text-gray-600">
-                                        <strong>{subitem.title}</strong>
+                                        <strong
+                                          dangerouslySetInnerHTML={{ __html: subitem.title }}
+                                        ></strong>
                                         <span
                                           dangerouslySetInnerHTML={{ __html: subitem.text || "" }}
                                         ></span>

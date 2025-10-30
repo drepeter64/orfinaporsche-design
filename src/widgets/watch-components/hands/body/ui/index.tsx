@@ -42,9 +42,10 @@ export const HandsBodySection: React.FC<HandsBodySectionProps> = ({ data, setFul
                               key={index}
                             >
                               <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
-                              <span className="text-sm sm:text-base leading-relaxed">
-                                {sub_list_item.title}
-                              </span>
+                              <span
+                                className="text-sm sm:text-base leading-relaxed"
+                                dangerouslySetInnerHTML={{ __html: sub_list_item.title }}
+                              ></span>
                             </li>
                           ))}
                         </ul>

@@ -21,7 +21,9 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
             key={index}
             className="space-y-8"
           >
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div
+              className={`grid gap-12 items-start lg:grid-cols-${item.poster && item.poster.length ? 2 : 1}`}
+            >
               <div className="space-y-6">
                 <SectionHeading
                   title={item.title}
@@ -142,12 +144,29 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
                           {color.images && color.images.length ? (
                             color.images.length > 1 ? (
                               color.image_type === "carousel" ? (
-                                <div className="flex flex-col items-center">
-                                  <ImageSlider
-                                    images={color.images}
-                                    setFullScreenImage={setFullScreenImage}
-                                  />
-                                </div>
+                                color.poster ? (
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div className="flex flex-col items-center">
+                                      <FinishImageSection
+                                        image={color.poster}
+                                        setFullScreenImage={setFullScreenImage}
+                                      />
+                                    </div>
+                                    <div className="flex flex-col items-center">
+                                      <ImageSlider
+                                        images={color.images}
+                                        setFullScreenImage={setFullScreenImage}
+                                      />
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div className="flex flex-col items-center">
+                                    <ImageSlider
+                                      images={color.images}
+                                      setFullScreenImage={setFullScreenImage}
+                                    />
+                                  </div>
+                                )
                               ) : (
                                 <div
                                   className={`grid grid-cols-1 gap-8 lg:gap-12 items-start ${color.image_type && color.image_type === "three-row" ? "lg:grid-cols-3" : "lg:grid-cols-2"}`}

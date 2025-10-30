@@ -22,7 +22,7 @@
       "specifications": [
         {
           "label": "year",
-          "value": "1976-On",
+          "value": "1976-On (Tentative)",
           "icon": "calendar"
         },
         {
@@ -54,7 +54,7 @@
       "specifications": [
         {
           "label": "year",
-          "value": "1976-On",
+          "value": "1976-On (Tentative)",
           "icon": "calendar"
         },
         {
@@ -86,7 +86,7 @@
       "specifications": [
         {
           "label": "year",
-          "value": "1976-On",
+          "value": "1976-On (Tentative)",
           "icon": "calendar"
         },
         {
@@ -118,7 +118,7 @@
       "specifications": [
         {
           "label": "year",
-          "value": "1976-On",
+          "value": "1976-On (Tentative)",
           "icon": "calendar"
         },
         {
@@ -180,7 +180,7 @@
       { "label": "Case Material", "value": "Stainless Steel" },
       { "label": "Functions", "value": "Hours, Minutes, Seconds, Chronograph, <br> 24H Totalizer, Day, Date"},
       { "label": "Water Resistance", "value": "100m" },
-      { "label": "Serial Range", "value": "X-X (approx.)" }
+      { "label": "Serial Range", "value": "To Be Updated" }
     ]
   }
 }

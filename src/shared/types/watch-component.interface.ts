@@ -39,6 +39,7 @@ interface StrapsData {
 interface StrapsColors {
   title: string
   image_type: string
+  poster?: ImageInfo
   list?: Bullet[]
   images: ImageInfo[]
 }

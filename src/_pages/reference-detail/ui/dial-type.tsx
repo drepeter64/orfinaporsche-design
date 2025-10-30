@@ -52,8 +52,10 @@ export function DialTypePage({ data }: DialTypePageProps) {
 
           {/* Overview */}
           {data.overview && (
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <p className="text-lg text-gray-700 leading-relaxed">{data.overview}</p>
+            <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
+              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300">
+                {data.overview}
+              </p>
             </div>
           )}
 
@@ -125,7 +127,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                           )}
 
                           {variation.bulletSection && variation.bulletSection.text && (
-                            <ul className="space-y-3">
+                            <ul className="space-y-1">
                               {variation.bulletSection.text.map((item, index) => (
                                 <li
                                   key={index}
@@ -138,7 +140,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                           )}
 
                           {variation.bulletSection && variation.bulletSection.list && (
-                            <ul className="space-y-3">
+                            <ul className="space-y-1">
                               {variation.bulletSection.list.map((item, index) => (
                                 <li
                                   key={index}
@@ -222,7 +224,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                   )}
 
                   {variation.image_type === "none" && (
-                    <div className="space-y-8">
+                    <div className="space-y-6">
                       <SectionHeading
                         title={variation.title}
                         variant="elegant-dark"
@@ -235,7 +237,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                       )}
 
                       {variation.bulletSection && variation.bulletSection.text && (
-                        <ul className="space-y-3">
+                        <ul className="space-y-1">
                           {variation.bulletSection.text.map((item, index) => (
                             <li
                               key={index}
@@ -248,7 +250,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                       )}
 
                       {variation.bulletSection && variation.bulletSection.list && (
-                        <ul className="space-y-3">
+                        <ul className="space-y-1">
                           {variation.bulletSection.list.map((item, index) => (
                             <li
                               key={index}
@@ -268,13 +270,13 @@ export function DialTypePage({ data }: DialTypePageProps) {
 
                   {variation.image_type === "three-row" && variation.images.length > 0 && (
                     <>
-                      <div className="space-y-8">
+                      <div className="space-y-6">
                         <SectionHeading
                           title={variation.title}
                           variant="elegant-dark"
                         />
                         {variation.bulletSection && variation.bulletSection.text && (
-                          <ul className="space-y-3">
+                          <ul className="space-y-1">
                             {variation.bulletSection.text.map((item, index) => (
                               <li
                                 key={index}
@@ -287,7 +289,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                         )}
 
                         {variation.bulletSection && variation.bulletSection.list && (
-                          <ul className="space-y-3">
+                          <ul className="space-y-1">
                             {variation.bulletSection.list.map((item, index) => (
                               <li
                                 key={index}
@@ -318,13 +320,13 @@ export function DialTypePage({ data }: DialTypePageProps) {
 
                   {variation.image_type === "two-row" && variation.images.length > 0 && (
                     <>
-                      <div className="space-y-8">
+                      <div className="space-y-6">
                         <SectionHeading
                           title={variation.title}
                           variant="elegant-dark"
                         />
                         {variation.bulletSection && variation.bulletSection.list && (
-                          <ul className="space-y-3">
+                          <ul className="space-y-1">
                             {variation.bulletSection.list.map((item, index) => (
                               <li
                                 key={index}
@@ -385,13 +387,13 @@ export function DialTypePage({ data }: DialTypePageProps) {
 
                   {variation.image_type === "carousel-row" && variation.images.length > 0 && (
                     <>
-                      <div className="space-y-8">
+                      <div className="space-y-6">
                         <SectionHeading
                           title={variation.title}
                           variant="elegant-dark"
                         />
                         {variation.bulletSection && variation.bulletSection.list && (
-                          <ul className="space-y-3">
+                          <ul className="space-y-1">
                             {variation.bulletSection.list.map((item, index) => (
                               <li
                                 key={index}
@@ -429,7 +431,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                               variant="elegant-dark"
                             />
                             {variation.bulletSection && variation.bulletSection.list && (
-                              <ul className="space-y-3">
+                              <ul className="space-y-1">
                                 {variation.bulletSection.list.map((item, index) => (
                                   <li
                                     key={index}

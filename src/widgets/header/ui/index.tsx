@@ -260,7 +260,7 @@ export const Header = () => {
                 alt={logo_alt}
                 width={80}
                 height={80}
-                className="w-16 h-16 xl:w-20 xl:h-20 object-contain"
+                className="w-16 h-16 xl:w-20 xl:h-20 object-contain transform translate-x-[-150%] translate-y-0"
                 priority
               />
             ) : (
@@ -270,7 +270,7 @@ export const Header = () => {
                   alt={logo_alt}
                   width={80}
                   height={80}
-                  className="w-16 h-16 xl:w-20 xl:h-20 object-contain cursor-pointer"
+                  className="w-16 h-16 xl:w-20 xl:h-20 object-contain cursor-pointer transform translate-x-[-150%] translate-y-0"
                   priority
                 />
               </Link>

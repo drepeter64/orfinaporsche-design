@@ -8,8 +8,8 @@
   "overview": "",
   "variations": [
     {
-      "title": "The caseback engravings on the 7177 differ entirely from those of the 7176 variants. <br><br> Center Text: The 7177 swapped a large Porsche Design logo for a smaller one, added Orfina to the text, and had “Military Chronograph 7177 MOD. DEP. INT. ” stamped on the back.",
-      "note": "Specifically for the Venezuelan, UAE, and BUND-issued variants, there are unique caseback engravings, which will be discussed in their respective headings.",
+      "title": "The caseback engravings on the 7177 differ entirely from those of the 7176 variants. <br><br> <strong>Center Text:</strong> The 7177 swapped a large Porsche Design logo for a smaller one, added Orfina to the text, and had “Military Chronograph 7177 MOD. DEP. INT. ” stamped on the back.",
+      "note": "<strong>Note:</strong> Specifically for the Venezuelan, UAE, and BUND-issued variants, there are unique caseback engravings, which will be discussed in their respective headings.",
 
       "bulletSection": {
         "title": "",
@@ -34,11 +34,11 @@
             "text": "",
             "list": [
               {
-                "title": "Mk. 1 Variant: “7177”",
+                "title": "Mk. 1 Variant: <span class='font-mono'>“7177”</span> ",
                 "text": "Engraved in the 4th line of text."
               },
               {
-                "title": "Mk. 2 Variant: “7177”",
+                "title": "Mk. 2 Variant: <span class='font-mono'>“7177”</span> ",
                 "text": "Engraved in the 5th line of text."
               }
             ]
