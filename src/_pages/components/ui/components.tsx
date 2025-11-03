@@ -10,6 +10,7 @@ import { CrownsBodySection } from "@/widgets/watch-components/crowns/body"
 import { MovemensBodySection } from "@/widgets/watch-components/movements/body"
 import { WheelsBodySection } from "@/widgets/watch-components/date-wheels/body"
 import { BoxesBodySection } from "@/widgets/watch-components/boxes/body"
+import SectionOverview from "@/components/SectionOverview"
 
 interface ComponentsPage {
   data: ComponentsTypeData
@@ -23,24 +24,22 @@ export function ComponentsPage({ data }: ComponentsPage) {
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-black mb-4 sm:mb-6 uppercase tracking-wider">
               {data.pageTitle}
             </h1>
             {data.pageSubTitle && (
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300">
-                {data.pageSubTitle}
-              </p>
+              <SectionOverview
+                className={"mb-12 sm:mb-16 mt-12 sm:mt-16"}
+                text={data.pageSubTitle}
+              />
             )}
           </div>
 
           {/* Overview */}
           {data.overview && (
             <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-              <p
-                dangerouslySetInnerHTML={{ __html: data.overview }}
-                className="text-lg sm:text-xl text-gray-700 leading-relaxed"
-              ></p>
+              <SectionOverview text={data.overview} />
             </div>
           )}
 

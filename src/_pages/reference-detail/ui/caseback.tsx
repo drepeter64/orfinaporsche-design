@@ -11,6 +11,7 @@ import { FinishImageSection } from "@/widgets/case-finishes/finish-image"
 import { PlaceholderImageSection } from "@/widgets/case-finishes/placeholder-image"
 import { Breadcrumbs } from "@/widgets/breadcrumbs"
 import { ClientRoutes } from "@/shared/routes"
+import SectionOverview from "@/components/SectionOverview"
 
 interface CasebackPageProps {
   data: CasebackData
@@ -49,11 +50,11 @@ export function CasebackPage({ data }: CasebackPageProps) {
           </div>
 
           {/* Overview */}
-          <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300">
-              {data.overview}
-            </p>
-          </div>
+          {data.overview && (
+            <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
+              <SectionOverview text={data.overview} />
+            </div>
+          )}
 
           {data.variations &&
             data.variations.length == 1 &&

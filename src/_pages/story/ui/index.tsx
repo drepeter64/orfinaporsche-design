@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import ImageWithLoader from "@/components/ImageWithLoader"
 import { story_page } from "@/shared/data"
 import { useTranslations } from "next-intl"
+import SectionOverview from "@/components/SectionOverview"
 
 export function StoryPage() {
   const [fullScreenImage, setFullScreenImage] = useState<IFullScreenImage | null>(null)
@@ -56,7 +57,7 @@ export function StoryPage() {
             <h1 className="font-sans text-4xl md:text-5xl font-light text-black mb-8 uppercase tracking-wider">
               {title}
             </h1>
-            <p className="font-sans text-xl text-gray-700 leading-relaxed">{sub_title}</p>
+            <SectionOverview text={sub_title} />
           </div>
         </div>
       </section>

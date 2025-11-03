@@ -1,12 +1,13 @@
 import ImageWithLoader from "@/components/ImageWithLoader"
 import { about_page } from "@/shared/data"
+// import SectionOverview from "@/components/SectionOverview"
 
 export function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center bg-gray-50">
-        <div className="w-full mb-8 sm:mb-12 lg:mb-16 relative h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh]">
+      <section className="relative flex flex-col items-center justify-center min-h-screen">
+        <div className="w-full relative min-h-screen">
           <ImageWithLoader
             src={about_page.hero.original}
             alt={about_page.hero.alt}
@@ -18,16 +19,15 @@ export function AboutPage() {
           />
         </div>
 
-        <div className="text-center px-4 sm:px-6 lg:px-8">
-          <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-black mb-6 sm:mb-8 tracking-wider uppercase leading-tight"
-            dangerouslySetInnerHTML={{ __html: about_page.hero.title }}
-          ></h1>
-          <p
-            className="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-gray-600 mb-8 sm:mb-12 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: about_page.hero.subtitle }}
-          ></p>
-        </div>
+        {/*<div className="text-center px-4 sm:px-6 lg:px-8">*/}
+        {/*  <h1*/}
+        {/*    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-black mb-6 sm:mb-8 tracking-wider uppercase leading-tight"*/}
+        {/*    dangerouslySetInnerHTML={{ __html: about_page.hero.title }}*/}
+        {/*  ></h1>*/}
+        {/*  <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">*/}
+        {/*    <SectionOverview text={about_page.hero.subtitle} />*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </section>
 
       <section className="py-20">
@@ -39,7 +39,7 @@ export function AboutPage() {
               [Redacted], and Paul Hyde.
             </p>
           </div>
-          <div className="mb-16">
+          <div>
             <p className="font-sans text-lg text-gray-700 leading-relaxed">
               We welcome fellow enthusiasts, researchers, and collectors to connect with us -
               whether to share discoveries, clarify references, or, importantly, share

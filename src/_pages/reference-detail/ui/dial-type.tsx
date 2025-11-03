@@ -11,6 +11,7 @@ import SectionHeading from "@/components/SectionHeading"
 import ImageWithLoader from "@/components/ImageWithLoader"
 import { FinishImageSection } from "@/widgets/case-finishes/finish-image"
 import ImageSlider from "@/components/ImageSlider"
+import SectionOverview from "@/components/SectionOverview"
 
 interface DialTypePageProps {
   data: DialTypeData
@@ -53,9 +54,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
           {/* Overview */}
           {data.overview && (
             <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300">
-                {data.overview}
-              </p>
+              <SectionOverview text={data.overview} />
             </div>
           )}
 

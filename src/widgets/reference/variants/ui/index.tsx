@@ -1,6 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react"
 import ReferenceVariantCard from "@/components/ReferenceVariantCard"
 import { ImageInfo, ReferenceData } from "@/shared/types"
+import SectionOverview from "@/components/SectionOverview"
 
 export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullScreenImage }) => {
   const { generations, variantsTitle, variantsSubtitle } = data
@@ -11,16 +12,15 @@ export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullS
         {(variantsTitle || variantsSubtitle) && (
           <div className="text-center mb-16">
             {variantsTitle && (
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-black mb-4 uppercase tracking-wider">
-                {variantsTitle}
-              </h2>
+              <SectionOverview
+                text={variantsTitle}
+                className={"uppercase text-2xl sm:text-3xl lg:text-4xl"}
+              />
+              //   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-black mb-4 uppercase tracking-wider">
+              //     {variantsTitle}
+              //   </h2>
             )}
-            {variantsSubtitle && (
-              <p
-                className="text-lg text-gray-600 max-w-2xl mx-auto"
-                dangerouslySetInnerHTML={{ __html: variantsSubtitle }}
-              ></p>
-            )}
+            {variantsSubtitle && <SectionOverview text={variantsSubtitle} />}
           </div>
         )}
 

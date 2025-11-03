@@ -9,6 +9,7 @@ import { Breadcrumbs } from "@/widgets/breadcrumbs"
 import { ClientRoutes } from "@/shared/routes"
 import SectionHeading from "@/components/SectionHeading"
 import { FinishImageSection } from "@/widgets/case-finishes/finish-image"
+import SectionOverview from "@/components/SectionOverview"
 
 interface RehautPageProps {
   data: RehautData
@@ -47,13 +48,7 @@ export function RehautPage({ data }: RehautPageProps) {
 
           {/* Content */}
           <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-            {data.overview && (
-              <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300">
-                  {data.overview}
-                </p>
-              </div>
-            )}
+            {data.overview && <SectionOverview text={data.overview} />}
             {data.note && (
               <div className="mt-8 bg-blue-50 p-6 sm:p-8 rounded-lg border-l-4 border-blue-500">
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed">{data.note}</p>

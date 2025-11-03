@@ -12,6 +12,7 @@ import { DialItemListSection } from "@/widgets/reference-detail/dial-list-item/u
 import { ClientRoutes } from "@/shared/routes"
 import { Breadcrumbs } from "@/widgets/breadcrumbs"
 import { BackNavigationSection } from "@/widgets/reference-detail/back-navigation"
+import SectionOverview from "@/components/SectionOverview"
 
 interface DialPageProps {
   data: DialData
@@ -40,7 +41,7 @@ export function DialPage({ data }: DialPageProps) {
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="text-center mb-12 sm:mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-black mb-4 sm:mb-6 uppercase tracking-wider">
               {tCommon("reference")}&nbsp;{referenceTitle}
             </h1>
@@ -50,13 +51,12 @@ export function DialPage({ data }: DialPageProps) {
           </div>
 
           {/* Content */}
-          <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
             {data.overview && (
-              <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300">
-                  {data.overview}
-                </p>
-              </div>
+              <SectionOverview
+                text={data.overview}
+                className={"mb-12 sm:mb-16"}
+              />
             )}
             {data.note && (
               <div className="prose prose-gray max-w-none mt-8 bg-blue-50 p-6 sm:p-8 rounded-lg border-l-4 border-blue-500">

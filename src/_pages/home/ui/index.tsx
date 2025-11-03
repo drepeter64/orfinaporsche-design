@@ -14,8 +14,8 @@ export const HomePage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center bg-gray-50">
-        <div className="w-full mb-8 sm:mb-12 lg:mb-16 relative h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh]">
+      <section className="relative lg:min-h-screen flex flex-col items-center justify-center bg-gray-50">
+        <div className="w-full relative h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh]">
           <ImageWithLoader
             src={hero.image}
             alt={hero.image_alt}
@@ -29,7 +29,7 @@ export const HomePage = () => {
           />
         </div>
 
-        <div className="text-center px-4 sm:px-6 lg:px-8">
+        <div className="text-center px-14 sm:px-16 lg:px-18 space-y-12 mb-8 sm:mb-12 lg:mb-16 mt-8 sm:mt-12 lg:mt-16">
           <h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-black mb-6 sm:mb-8 tracking-wider uppercase leading-tight"
             dangerouslySetInnerHTML={{ __html: hero.title }}

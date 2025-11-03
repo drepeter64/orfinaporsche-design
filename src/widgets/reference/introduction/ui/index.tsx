@@ -14,7 +14,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
   return (
     <>
       {introduction && (
-        <section className="py-12 bg-white">
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Conditionally render grid or centered layout */}
             {introduction.image ? (

@@ -15,6 +15,7 @@ import { ImageInfo } from "@/shared/types"
 import { FullScreenModal } from "@/widgets/full-screen-modal"
 import { Breadcrumbs } from "@/widgets/breadcrumbs"
 import { ClientRoutes } from "@/shared/routes"
+import SectionOverview from "@/components/SectionOverview"
 
 interface CaseFinishesPageProps {
   data: CaseFinishesData
@@ -40,7 +41,7 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
 
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="text-center mb-12 sm:mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-black mb-4 sm:mb-6 uppercase tracking-wider animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
               {tCommon("reference")}&nbsp;{data.referenceTitle}
             </h1>
@@ -65,36 +66,39 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
           )}
 
           {/* Overview */}
-          <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-            <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300">
-                {data.overview}
-              </p>
-            </div>
-            {data.variations && (
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                {data.variations.map((variantion, index) => (
-                  <div
-                    key={index}
-                    className="bg-gray-50 p-4 sm:p-6 rounded-lg border-l-4 border-black"
-                  >
-                    <h3 className="text-[22px] font-semibold text-black mb-2">
-                      {variantion.title}
-                    </h3>
-                    <p className="text-[16px] text-gray-600">{variantion.description}</p>
+          {data.overview ||
+            (data.variations && (
+              <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
+                {data.overview && (
+                  <SectionOverview
+                    text={data.overview}
+                    className={"mb-8 sm:mb-12 lg:mb-16"}
+                  />
+                )}
+                {data.variations && (
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                    {data.variations.map((variantion, index) => (
+                      <div
+                        key={index}
+                        className="bg-gray-50 p-4 sm:p-6 rounded-lg border-l-4 border-black"
+                      >
+                        <h3 className="text-[22px] font-semibold text-black mb-2">
+                          {variantion.title}
+                        </h3>
+                        <p className="text-[16px] text-gray-600">{variantion.description}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                )}
               </div>
-            )}
-          </div>
+            ))}
 
           {/* Main Info */}
           {data.info && (
-            <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300 mb-8">
-                {data.info}
-              </p>
-            </div>
+            <SectionOverview
+              text={data.info}
+              className={"mb-8 sm:mb-12 lg:mb-16"}
+            />
           )}
 
           {/* Case Variations */}
