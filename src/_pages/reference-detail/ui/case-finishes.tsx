@@ -66,32 +66,31 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
           )}
 
           {/* Overview */}
-          {data.overview ||
-            (data.variations && (
-              <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-                {data.overview && (
-                  <SectionOverview
-                    text={data.overview}
-                    className={"mb-8 sm:mb-12 lg:mb-16"}
-                  />
-                )}
-                {data.variations && (
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                    {data.variations.map((variantion, index) => (
-                      <div
-                        key={index}
-                        className="bg-gray-50 p-4 sm:p-6 rounded-lg border-l-4 border-black"
-                      >
-                        <h3 className="text-[22px] font-semibold text-black mb-2">
-                          {variantion.title}
-                        </h3>
-                        <p className="text-[16px] text-gray-600">{variantion.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+          {(data.overview || data.variations) && (
+            <div className="max-w-4xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
+              {data.overview && (
+                <SectionOverview
+                  text={data.overview}
+                  className={"mb-8 sm:mb-12 lg:mb-16"}
+                />
+              )}
+              {data.variations && (
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                  {data.variations.map((variantion, index) => (
+                    <div
+                      key={index}
+                      className="bg-gray-50 p-4 sm:p-6 rounded-lg border-l-4 border-black"
+                    >
+                      <h3 className="text-[22px] font-semibold text-black mb-2">
+                        {variantion.title}
+                      </h3>
+                      <p className="text-[16px] text-gray-600">{variantion.description}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Main Info */}
           {data.info && (
