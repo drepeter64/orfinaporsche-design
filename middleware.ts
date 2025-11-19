@@ -1,11 +1,22 @@
 import createMiddleware from "next-intl/middleware"
 import { routing } from "@/app/localization/routing"
 import { NextRequest, NextResponse } from "next/server"
+import { hash } from "immutable"
 
 // export default createMiddleware(routing)
 const intlMiddleware = createMiddleware(routing)
 
 export default function middleware(request: NextRequest) {
+  const token = request.cookies.get("auth_token")?.value
+
+  // Protect routes
+  if (
+    (!token || token !== String(hash(process.env.NEXT_PASSWORD))) &&
+    request.nextUrl.pathname !== "/login"
+  ) {
+    return NextResponse.redirect(new URL("/login", request.url))
+  }
+
   const response = intlMiddleware(request)
 
   // When next-intl wants to redirect, response.status is 307
