@@ -7,8 +7,8 @@ export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullS
   const { generations, variantsTitle, variantsSubtitle } = data
 
   return (
-    <section className="py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 bg-background">
+      <div className="mx-auto px-4 sm:px-6 lg:px-20">
         {(variantsTitle || variantsSubtitle) && (
           <div className="text-center mb-16">
             {variantsTitle && (
