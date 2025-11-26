@@ -134,7 +134,7 @@ export const Header = () => {
                 </Link>
               )}
             </div>
-            
+
             {/* Text Logo */}
             {isActive(ClientRoutes.home) ? (
               <div className="text-sm sm:text-base md:text-lg lg:text-xl text-black tracking-widest whitespace-nowrap">
@@ -156,7 +156,9 @@ export const Header = () => {
             <Link
               href={ClientRoutes.story}
               className={`font-normal text-sm xl:text-base uppercase tracking-wider transition-all duration-300 hover:text-gray-600 cursor-pointer bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom pt-0.5 pb-0.5 ${
-                isActive(ClientRoutes.story) ? "text-black bg-[length:100%_1px]" : "text-gray-700 bg-[length:0%_1px] hover:bg-[length:100%_1px]"
+                isActive(ClientRoutes.story)
+                  ? "text-black bg-[length:100%_1px]"
+                  : "text-gray-700 bg-[length:0%_1px] hover:bg-[length:100%_1px]"
               }`}
             >
               {tCommon("story")}
@@ -174,9 +176,13 @@ export const Header = () => {
                 aria-expanded={referencesOpen}
                 aria-haspopup="true"
               >
-                <span className={`transition-all duration-300 bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom pt-0.5 pb-0.5 ${
-                  isReferencesActive ? "bg-[length:100%_1px]" : "bg-[length:0%_1px] group-hover:bg-[length:100%_1px]"
-                }`}>
+                <span
+                  className={`transition-all duration-300 bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom pt-0.5 pb-0.5 ${
+                    isReferencesActive
+                      ? "bg-[length:100%_1px]"
+                      : "bg-[length:0%_1px] group-hover:bg-[length:100%_1px]"
+                  }`}
+                >
                   {tCommon("references")}
                 </span>
                 <ChevronDown
@@ -246,9 +252,13 @@ export const Header = () => {
                 aria-expanded={componentsOpen}
                 aria-haspopup="true"
               >
-                <span className={`transition-all duration-300 bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom pt-0.5 pb-0.5 ${
-                  isComponentsActive ? "bg-[length:100%_1px]" : "bg-[length:0%_1px] group-hover:bg-[length:100%_1px]"
-                }`}>
+                <span
+                  className={`transition-all duration-300 bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom pt-0.5 pb-0.5 ${
+                    isComponentsActive
+                      ? "bg-[length:100%_1px]"
+                      : "bg-[length:0%_1px] group-hover:bg-[length:100%_1px]"
+                  }`}
+                >
                   {tCommon("components")}
                 </span>
                 <ChevronDown
@@ -287,7 +297,9 @@ export const Header = () => {
             <Link
               href={ClientRoutes.about}
               className={`font-normal text-sm xl:text-base uppercase tracking-wider transition-all duration-300 hover:text-black cursor-pointer bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom pt-0.5 pb-0.5 ${
-                isActive(ClientRoutes.about) ? "text-black bg-[length:100%_1px]" : "text-gray-700 bg-[length:0%_1px] hover:bg-[length:100%_1px]"
+                isActive(ClientRoutes.about)
+                  ? "text-black bg-[length:100%_1px]"
+                  : "text-gray-700 bg-[length:0%_1px] hover:bg-[length:100%_1px]"
               }`}
             >
               {tCommon("about")}
