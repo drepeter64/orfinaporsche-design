@@ -1,8 +1,6 @@
 import React from "react"
 import ImageWithLoader from "./ImageWithLoader"
-import SectionHeading from "./SectionHeading"
 import { useTranslations } from "next-intl"
-import { Calendar, Clock, Layers, Settings } from "lucide-react"
 import { ReferenceSpecificationRow } from "@/shared/types/reference.interface"
 import { ImageInfo } from "@/shared/types"
 
@@ -20,7 +18,6 @@ interface ReferenceVariantCardProps {
 }
 
 const ReferenceVariantCard = ({
-  index,
   title,
   imageSrc,
   imageAlt,
@@ -32,102 +29,97 @@ const ReferenceVariantCard = ({
   imageCaption,
 }: ReferenceVariantCardProps) => {
   const tCommon = useTranslations("Common")
-  const lucideIcons = {
-    calendar: Calendar,
-    clock: Clock,
-    layers: Layers,
-    settings: Settings,
-  }
 
-  const getIconComponent = (iconName: React.ComponentType<{ className?: string }>) => {
-    return lucideIcons[iconName as unknown as keyof typeof lucideIcons] || null
+  // Map spec labels to display names
+  const specLabelMap: Record<string, string> = {
+    year: "Production Years",
+    case: "Case",
+    finishes: "Finishes",
+    caseback: "Caseback",
+    rehaut: "Rehaut",
+    dial: "Dial",
   }
 
   return (
-    <div className="animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
-      <SectionHeading
-        title={title}
-        variant="numbered"
-        number={index}
-        // variant="solid"
-        subtitle={subtitle}
-      />
-
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 mb-12 items-center lg:items-start">
-        {/* Image Section */}
-        <div className="relative group lg:w-auto lg:flex-shrink-0">
-          <div
-            className="relative overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl"
-            onClick={() =>
-              onImageClick({
-                src: imageSrc,
-                original: imageOriginal,
-                alt: imageAlt,
-                title: title,
-                subtitle: subtitle,
-              })
-            }
-          >
-            <div className="max-w-md mx-auto lg:mx-0 w-[460px]">
-              <ImageWithLoader
-                src={imageSrc}
-                alt={imageAlt}
-                className="w-full h-auto object-contain rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
-                skeletonClassName="w-full max-w-md h-80 sm:h-96 lg:h-[450px] rounded-lg"
-              />
-            </div>
-            {/* Click indicator */}
-            <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100">
-              <div className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
-                {tCommon("click-zoom")}
+    <div className="bg-white py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
+      <div className="max-w-[1280px] mx-auto">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[72px] items-center">
+          {/* Image Section */}
+          <div className="w-full lg:w-[400px] flex-shrink-0">
+            <div
+              className="bg-[#f9f6f4] shadow-md p-4 cursor-pointer group"
+              onClick={() =>
+                onImageClick({
+                  src: imageSrc,
+                  original: imageOriginal,
+                  alt: imageAlt,
+                  title: title,
+                  subtitle: subtitle,
+                })
+              }
+            >
+              <div className="aspect-[400/600] relative overflow-hidden">
+                <ImageWithLoader
+                  src={imageSrc}
+                  alt={imageAlt}
+                  fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  skeletonClassName="w-full h-full"
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                />
               </div>
-            </div>
-          </div>
-
-          {/* Image Title Below */}
-          <div className="mt-4 text-center">
-            <h3 className="text-lg sm:text-xl font-semibold text-black mb-1">
-              {imageCaption || title}
-            </h3>
-          </div>
-        </div>
-
-        {/* Content Section */}
-        <div className="space-y-8 lg:flex-1">
-          {/* Specifications Table */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <table className="w-full">
-              <tbody className="divide-y divide-gray-200">
-                {specifications.map((spec, idx) => {
-                  const IconComponent = getIconComponent(spec.icon)
-                  return (
-                    <tr
-                      key={idx}
-                      className="hover:bg-gray-50 transition-colors duration-200"
-                    >
-                      <td className="px-6 py-4">
-                        <div className="flex items-center">
-                          <IconComponent className="w-5 h-5 text-gray-600 mr-3" />
-                          <span className="font-medium text-gray-900">
-                            {tCommon(`generation-${spec.label}`)}
-                          </span>
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 text-gray-700 text-right">{spec.value}</td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
-          {/* Note Section */}
-          {note && (
-            <div className="mt-6 bg-blue-50 p-4 sm:p-6 rounded-lg border-l-4 border-blue-500">
-              <p className="text-sm sm:text-base text-blue-800 leading-relaxed">
-                <strong>{tCommon("note")}</strong> {note}
+              <p className="text-lg font-bold text-neutral-500 mt-4 text-center">
+                {imageCaption || title}
               </p>
             </div>
-          )}
+          </div>
+
+          {/* Content Section */}
+          <div className="flex-1 flex flex-col gap-12">
+            {/* Title and Subtitle */}
+            <div className="flex flex-col gap-2">
+              <h2 className="text-3xl md:text-3xl lg:text-4xl text-black leading-[1] tracking-[-0.01em]">
+                {title}
+              </h2>
+              {subtitle && (
+                <p className="text-2xl md:text-2xl text-black/40 leading-[1.2] tracking-[-0.01em]">
+                  {subtitle}
+                </p>
+              )}
+            </div>
+
+            {/* Specifications Table */}
+            <div className="flex flex-col w-full">
+              {specifications.map((spec, idx) => (
+                <div key={idx}>
+                  {/* Top border for first item */}
+                  {idx === 0 && <div className="h-px bg-neutral-200 w-full"></div>}
+
+                  <div className="flex items-center gap-[37px] py-3 text-base md:text-lg tracking-[-0.01em]">
+                    <span className="text-black w-[160px] md:w-[200px] flex-shrink-0">
+                      {specLabelMap[spec.label] || tCommon(`generation-${spec.label}`)}
+                    </span>
+                    <span className="text-black/50">{spec.value}</span>
+                  </div>
+
+                  {/* Bottom border */}
+                  <div className="h-px bg-neutral-200 w-full"></div>
+                </div>
+              ))}
+            </div>
+
+            {/* Note Section */}
+            {note && (
+              <div className="border-neutral-200 border-l-4 px-6 py-2 flex flex-col gap-2">
+                <p className="text-md md:text-base leading-[1.4] tracking-[0.1em]">
+                  <span className="text-neutral-400">{tCommon("note")} </span>
+                </p>
+                <p className="text-base md:text-lg leading-[1.2] tracking-[-0.01em]">
+                  <span className="text-neutral-900">{note}</span>
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -19,8 +19,18 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["Porsche Next", "system-ui", "sans-serif"],
         serif: ["Georgia", "serif"],
+      },
+      spacing: {
+        'gutter': '1rem',      // 16px - mobile
+        'gutter-sm': '1.5rem', // 24px - small screens
+        'gutter-lg': '5rem',   // 80px - desktop
+      },
+      padding: {
+        'gutter': '1rem',      // 16px - mobile
+        'gutter-sm': '1.5rem', // 24px - small screens  
+        'gutter-lg': '5rem',   // 80px - desktop
       },
       colors: {
         border: "hsl(var(--border))",

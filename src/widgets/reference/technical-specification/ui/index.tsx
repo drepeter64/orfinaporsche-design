@@ -6,34 +6,64 @@ import { ReferenceData } from "@/shared/types"
 export const TechnicalSpecificationSection: React.FC<TechnicalSpecificationsProps> = ({ data }) => {
   const tCommon = useTranslations("Common")
 
+  // Split specifications into two columns
+  const specs = data.technicalSpecs.specifications
+  const midpoint = Math.ceil(specs.length / 2)
+  const leftColumnSpecs = specs.slice(0, midpoint)
+  const rightColumnSpecs = specs.slice(midpoint)
+
+  const SpecRow = ({
+    label,
+    value,
+    isLast,
+  }: {
+    label: string
+    value: string
+    isLast?: boolean
+  }) => (
+    <div>
+      <div className="h-px bg-neutral-300 w-full"></div>
+      <div className="flex items-center gap-[37px] py-4 text-lg md:text-xl tracking-[-0.01em]">
+        <span className="text-black w-[120px] md:w-[160px] flex-shrink-0">{label}</span>
+        <span
+          className="text-black/50"
+          dangerouslySetInnerHTML={{ __html: value }}
+        />
+      </div>
+      {isLast && <div className="h-px bg-neutral-300 w-full"></div>}
+    </div>
+  )
+
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-light text-gray-900 mb-12 text-center">
+    <section className="py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20">
+      <div className="flex flex-col gap-12 items-center">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl text-black text-center">
           {tCommon("tech-specification")}
         </h2>
 
-        <div className="bg-gray-50 rounded-2xl shadow-lg overflow-hidden">
-          <div className="px-8 py-6 bg-gray-900">
-            <h3 className="text-2xl font-light text-white">{data.technicalSpecs.title}</h3>
+        <div className="w-full grid md:grid-cols-2 gap-x-12">
+          {/* Left Column */}
+          <div className="flex flex-col">
+            {leftColumnSpecs.map((spec, index) => (
+              <SpecRow
+                key={index}
+                label={spec.label}
+                value={spec.value}
+                isLast={index === leftColumnSpecs.length - 1}
+              />
+            ))}
           </div>
-          <div className="p-8">
-            <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
-              {data.technicalSpecs.specifications.map((spec, index) => (
-                <div
-                  key={index}
-                  className="space-y-4"
-                >
-                  <div className="flex justify-between py-3 border-b border-gray-200">
-                    <span className="font-medium text-gray-700">{spec.label}</span>
-                    <span
-                      className="text-gray-900"
-                      dangerouslySetInnerHTML={{ __html: spec.value }}
-                    ></span>
-                  </div>
-                </div>
-              ))}
-            </div>
+
+          {/* Right Column */}
+          <div className="flex flex-col">
+            {rightColumnSpecs.map((spec, index) => (
+              <SpecRow
+                key={index}
+                label={spec.label}
+                value={spec.value}
+                isLast={index === rightColumnSpecs.length - 1}
+              />
+            ))}
           </div>
         </div>
       </div>

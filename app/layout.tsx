@@ -4,7 +4,6 @@ import React, { PropsWithChildren } from "react"
 import type { Metadata } from "next"
 import { unstable_setRequestLocale } from "next-intl/server"
 import { localeConfig } from "@/app/localization"
-import { openSansFont } from "@/app/fonts"
 import { ClientProviders, ServerProviders } from "@/app/providers"
 
 export const dynamic = "force-dynamic"
@@ -13,7 +12,10 @@ export const metadata: Metadata = {
   title: "Orfina Porsche Design",
   description:
     "Comprehensive guide to Orfina Porsche Design watches - References, Components, and History",
-  icons: "/favicon.png",
+  icons: {
+    icon: [{ url: "/favicon.png?v=2", type: "image/png" }],
+    apple: "/favicon.png?v=2",
+  },
   metadataBase: new URL(process.env.NEXT_PUBLIC_DOMAIN!),
 }
 
@@ -29,7 +31,7 @@ export default function Layout({ children, params: { locale } }: Readonly<ILayou
       lang={locale}
       suppressHydrationWarning
     >
-      <body className={openSansFont.className}>
+      <body>
         <ServerProviders locale={locale}>
           <ClientProviders>{children}</ClientProviders>
         </ServerProviders>

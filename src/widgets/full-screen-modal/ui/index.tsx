@@ -27,7 +27,7 @@ export const FullScreenModal: React.FC<FullScreenModalProps> = ({
       document.removeEventListener("keydown", handleEscape)
       document.body.style.overflow = "unset"
     }
-  }, [fullScreenImage])
+  }, [fullScreenImage, setFullScreenImage])
 
   return (
     <>
@@ -61,7 +61,7 @@ export const FullScreenModal: React.FC<FullScreenModalProps> = ({
             <img
               src={fullScreenImage.original}
               alt={fullScreenImage.alt}
-              className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+              className="max-w-full max-h-[80vh] object-contain shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />
 
@@ -75,7 +75,7 @@ export const FullScreenModal: React.FC<FullScreenModalProps> = ({
             </div>
 
             {/* Instructions */}
-            <div className="mt-8 text-white text-sm opacity-75 text-center">{tCommon("esc")}</div>
+            <div className="mt-4 text-white text-sm opacity-50 text-center">{tCommon("esc")}</div>
           </div>
         </div>
       )}

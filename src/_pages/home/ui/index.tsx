@@ -12,7 +12,7 @@ export const HomePage = () => {
   const { hero, featured } = home_page
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative lg:min-h-screen flex flex-col items-center justify-center bg-gray-50">
         <div className="w-full relative h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh]">
@@ -29,7 +29,7 @@ export const HomePage = () => {
           />
         </div>
 
-        <div className="text-center px-14 sm:px-16 lg:px-18 space-y-12 mb-8 sm:mb-12 lg:mb-16 mt-8 sm:mt-12 lg:mt-16">
+        <div className="text-center px-4 sm:px-6 lg:px-20 space-y-12 mb-8 sm:mb-12 lg:mb-16 mt-8 sm:mt-12 lg:mt-16">
           <h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-black mb-6 sm:mb-8 tracking-wider uppercase leading-tight"
             dangerouslySetInnerHTML={{ __html: hero.title }}
@@ -41,8 +41,8 @@ export const HomePage = () => {
         </div>
       </section>
       {/* Featured References */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background">
+        <div className="mx-auto px-4 sm:px-6 lg:px-20">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-black mb-4 sm:mb-6 uppercase tracking-wider">
               {featured.title}
@@ -100,7 +100,7 @@ export const HomePage = () => {
 
       {/* Contact & Social Media Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="mx-auto px-4 sm:px-6 lg:px-20 text-center">
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center mb-8 sm:mb-12">
             <a
               href={"mailto:" + tCommon("website-email")}

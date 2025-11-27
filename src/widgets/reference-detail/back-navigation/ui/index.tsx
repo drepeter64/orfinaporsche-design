@@ -4,7 +4,7 @@ import { Link } from "@/app/localization"
 export const BackNavigationSection: React.FC<BackNavigationSectionProps> = ({ title, route }) => {
   return (
     <div className="py-8 sm:py-12 bg-gray-50 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-20">
         <Link
           href={route}
           className="inline-flex items-center text-gray-600 hover:text-black transition-colors group"
