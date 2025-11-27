@@ -23,7 +23,7 @@ export function ReferencePage({ data }: ReferencePageProps) {
   const tCommon = useTranslations("Common")
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Breadcrumb */}
       <BreadcrumbSection data={data} />
 
@@ -55,8 +55,8 @@ export function ReferencePage({ data }: ReferencePageProps) {
       </div>
 
       {/* Back to References */}
-      <div className="py-8 bg-white border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="py-8 bg-background border-t border-gray-200">
+        <div className="mx-auto px-4 sm:px-6 lg:px-20">
           <Link
             href={ClientRoutes.home}
             className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"

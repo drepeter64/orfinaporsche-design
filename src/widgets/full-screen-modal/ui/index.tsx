@@ -27,7 +27,7 @@ export const FullScreenModal: React.FC<FullScreenModalProps> = ({
       document.removeEventListener("keydown", handleEscape)
       document.body.style.overflow = "unset"
     }
-  }, [fullScreenImage])
+  }, [fullScreenImage, setFullScreenImage])
 
   return (
     <>

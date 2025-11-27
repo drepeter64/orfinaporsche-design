@@ -16,7 +16,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
   return (
     <section className="relative pt-16 pb-12 overflow-hidden">
       <div className="absolute inset-0 bg-black/5"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto px-4 sm:px-6 lg:px-20">
         <div
           className={`transform transition-all duration-1000 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"

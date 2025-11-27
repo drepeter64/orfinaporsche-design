@@ -7,8 +7,8 @@ export const TechnicalSpecificationSection: React.FC<TechnicalSpecificationsProp
   const tCommon = useTranslations("Common")
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-background">
+      <div className="mx-auto px-4 sm:px-6 lg:px-20">
         <h2 className="text-4xl font-light text-gray-900 mb-12 text-center">
           {tCommon("tech-specification")}
         </h2>

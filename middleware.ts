@@ -1,7 +1,6 @@
 import createMiddleware from "next-intl/middleware"
 import { routing } from "@/app/localization/routing"
 import { NextRequest, NextResponse } from "next/server"
-import { hash } from "immutable"
 
 // export default createMiddleware(routing)
 const intlMiddleware = createMiddleware(routing)
@@ -11,7 +10,7 @@ export default function middleware(request: NextRequest) {
 
   // Protect routes
   if (
-    (!token || token !== String(hash(process.env.NEXT_PASSWORD))) &&
+    (!token || token !== "0caa73be811ae62027817570b89e6dff") &&
     request.nextUrl.pathname !== "/login"
   ) {
     return NextResponse.redirect(new URL("/login", request.url))
@@ -33,6 +32,6 @@ export default function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|icon.png|apple-touch-icon.png|lovable-uploads|favicon.svg|images/books|icons|manifest).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|favicon.png|icon.png|apple-touch-icon.png|lovable-uploads|favicon.svg|images/books|icons|manifest).*)",
   ],
 }

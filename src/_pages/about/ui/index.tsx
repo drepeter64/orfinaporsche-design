@@ -4,7 +4,7 @@ import { about_page } from "@/shared/data"
 
 export function AboutPage() {
   return (
-    <div className="bg-white">
+    <div className="bg-background">
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center min-h-screen">
         <div className="w-full relative min-h-screen">
@@ -31,7 +31,7 @@ export function AboutPage() {
       </section>
 
       <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-20">
           <div className="mb-16">
             <p className="font-sans text-lg text-gray-700 leading-relaxed mb-8">
               This website was created by <b>Drew Peterson</b>, with the invaluable expertise and
@@ -51,7 +51,7 @@ export function AboutPage() {
       </section>
 
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-20 text-center">
           <p className="font-sans text-xl text-gray-700 mb-12 leading-relaxed">
             For a deeper look into Drew’s collecting journey and his perspective on the Orfina
             Porsche Design legacy, watch his video with Hodinkee below:
@@ -73,7 +73,7 @@ export function AboutPage() {
       </section>
 
       <section className="py-20 bg-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-20 text-center">
           <h2 className="font-sans text-3xl font-light text-white mb-8 uppercase tracking-wider">
             Get In Touch
           </h2>
