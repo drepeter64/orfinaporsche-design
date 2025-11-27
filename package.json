@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "npm": ">=10.2.4",
-    "node": ">=20.11.1"
+    "node": "20.x"
   },
   "scripts": {
     "dev": "next dev -p 4040",
