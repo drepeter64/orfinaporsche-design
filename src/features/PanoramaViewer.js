@@ -7,8 +7,11 @@ export function Panorama360() {
   const containerRef = useRef(null)
 
   useEffect(() => {
-    const w = containerRef.current.clientWidth
-    const h = containerRef.current.clientHeight
+    const container = containerRef.current
+    if (!container) return
+
+    const w = container.clientWidth
+    const h = container.clientHeight
     const scene = new THREE.Scene()
 
     // Camera at center of sphere
@@ -17,7 +20,7 @@ export function Panorama360() {
 
     const renderer = new THREE.WebGLRenderer()
     renderer.setSize(w, h)
-    containerRef.current.appendChild(renderer.domElement)
+    container.appendChild(renderer.domElement)
 
     // Sphere for panorama
     const geometry = new THREE.SphereGeometry(500, 60, 40)
@@ -48,8 +51,8 @@ export function Panorama360() {
 
     return () => {
       renderer.dispose()
-      while (containerRef.current.firstChild) {
-        containerRef.current.removeChild(containerRef.current.firstChild)
+      while (container.firstChild) {
+        container.removeChild(container.firstChild)
       }
     }
   }, [])
@@ -66,6 +69,9 @@ export function RotatingImage() {
   const mountRef = useRef(null)
 
   useEffect(() => {
+    const mount = mountRef.current
+    if (!mount) return
+
     const w = window.innerWidth
     const h = window.innerHeight
 
@@ -75,7 +81,7 @@ export function RotatingImage() {
 
     const renderer = new THREE.WebGLRenderer({ alpha: true })
     renderer.setSize(w, h)
-    mountRef.current.appendChild(renderer.domElement)
+    mount.appendChild(renderer.domElement)
 
     // Create Plane with Texture
     const geometry = new THREE.PlaneGeometry(1, 1) // 1x1 size, adjust as needed
@@ -94,8 +100,8 @@ export function RotatingImage() {
 
     return () => {
       renderer.dispose()
-      while (mountRef.current.firstChild) {
-        mountRef.current.removeChild(mountRef.current.firstChild)
+      while (mount.firstChild) {
+        mount.removeChild(mount.firstChild)
       }
     }
   }, [])
@@ -112,6 +118,9 @@ export function Rotating3DImage() {
   const mountRef = useRef(null)
 
   useEffect(() => {
+    const mount = mountRef.current
+    if (!mount) return
+
     const width = window.innerWidth
     const height = window.innerHeight
 
@@ -121,7 +130,7 @@ export function Rotating3DImage() {
 
     const renderer = new THREE.WebGLRenderer({ alpha: true })
     renderer.setSize(width, height)
-    mountRef.current.appendChild(renderer.domElement)
+    mount.appendChild(renderer.domElement)
 
     const geometry = new THREE.PlaneGeometry(3, 3)
     const texture = new THREE.TextureLoader().load("/lovable-uploads/opd-watch2.png")
@@ -147,8 +156,8 @@ export function Rotating3DImage() {
 
     return () => {
       renderer.dispose()
-      while (mountRef.current.firstChild) {
-        mountRef.current.removeChild(mountRef.current.firstChild)
+      while (mount.firstChild) {
+        mount.removeChild(mount.firstChild)
       }
     }
   }, [])
@@ -223,6 +232,9 @@ export default function RotatingSVG() {
   const groupRef = useRef(new THREE.Group())
 
   useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
     const width = window.innerWidth
     const height = window.innerHeight
 
@@ -232,7 +244,7 @@ export default function RotatingSVG() {
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
     renderer.setSize(width, height)
-    containerRef.current.appendChild(renderer.domElement)
+    container.appendChild(renderer.domElement)
 
     // Load SVG and convert to mesh group
     const loader = new SVGLoader()
@@ -270,8 +282,8 @@ export default function RotatingSVG() {
 
     return () => {
       renderer.dispose()
-      while (containerRef.current.firstChild) {
-        containerRef.current.removeChild(containerRef.current.firstChild)
+      while (container.firstChild) {
+        container.removeChild(container.firstChild)
       }
     }
   }, [])

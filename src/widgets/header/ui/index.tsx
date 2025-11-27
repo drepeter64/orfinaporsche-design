@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react"
@@ -20,7 +20,7 @@ export const Header = () => {
   const [mobileReferencesOpen, setMobileReferencesOpen] = useState(false)
   const [mobileComponentsOpen, setMobileComponentsOpen] = useState(false)
 
-  const subDropdownIds: number[] = references.map((item) => item.route)
+  const subDropdownIds: number[] = useMemo(() => references.map((item) => item.route), [references])
 
   const initialState: Record<number, boolean> = subDropdownIds.reduce(
     (acc, id) => {
@@ -87,7 +87,7 @@ export const Header = () => {
     subDropdownIds.forEach((id) => {
       if (refTimeoutRef.current[id]) clearTimeout(refTimeoutRef.current[id] || undefined)
     })
-  }, [pathname])
+  }, [pathname, subDropdownIds])
 
   const handleMobileMenuToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen)
