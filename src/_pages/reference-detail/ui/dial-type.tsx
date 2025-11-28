@@ -217,7 +217,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                 </div>
                               </div>
                               <span
-                                dangerouslySetInnerHTML={{ __html: image.subtitle }}
+                                dangerouslySetInnerHTML={{ __html: image.subtitle || "" }}
                                 className="block text-base sm:text-lg text-gray-600 text-center mt-4 font-medium"
                               ></span>
                             </div>
