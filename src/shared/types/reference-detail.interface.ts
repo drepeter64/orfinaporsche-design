@@ -34,6 +34,13 @@ export interface DialSection {
   isSlider?: boolean
 }
 
+export interface ExploreCard {
+  title: string
+  route: string
+  imageSrc: string
+  imageAlt: string
+}
+
 export interface CaseFinishesData {
   meta_title?: string
   meta_description?: string
@@ -51,6 +58,7 @@ export interface CaseFinishesData {
   sections?: FinishSection[]
   mergedSection?: MergedSection
   finishes?: ImageInfo[]
+  exploreCards?: ExploreCard[]
 }
 interface MergedSection {
   title: string
@@ -63,11 +71,16 @@ export interface FinishItem {
   color: string
   year: string
   images?: ImageInfo[]
+  note?: {
+    title: string
+    content: string
+  }
 }
 
 interface VariationData {
   title: string
   description: string
+  subtitle?: string
   full_description?: string
   finishes_title?: string
   measurements?: Measurement[]

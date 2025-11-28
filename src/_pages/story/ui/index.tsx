@@ -48,10 +48,18 @@ export function StoryPage() {
     }
   })
 
+  const [isVisible, setIsVisibleSection] = useState(false)
+
+  useEffect(() => {
+    setIsVisibleSection(true)
+  }, [])
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-24 bg-gray-50">
+      <section
+        className={`py-24 bg-gray-50 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-20">
           <div className="text-center mb-16">
             <h1 className="font-sans text-4xl md:text-5xl font-light text-black mb-8 uppercase tracking-wider">
@@ -63,7 +71,9 @@ export function StoryPage() {
       </section>
 
       {/* Story Content */}
-      <section className="py-20">
+      <section
+        className={`py-20 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-20">
           <div className="prose prose-lg max-w-none">
             <div
@@ -75,7 +85,9 @@ export function StoryPage() {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20 bg-gray-50">
+      <section
+        className={`py-20 bg-gray-50 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+      >
         <div className="mx-auto px-4 sm:px-6 lg:px-20">
           <div className="text-center mb-16">
             <h2 className="font-sans text-3xl md:text-4xl font-light text-black mb-8 uppercase tracking-wider">

@@ -3,6 +3,7 @@ import ImageWithLoader from "./ImageWithLoader"
 import { useTranslations } from "next-intl"
 import { ReferenceSpecificationRow } from "@/shared/types/reference.interface"
 import { ImageInfo } from "@/shared/types"
+import { useScrollAnimation, getScrollAnimationClasses } from "@/shared/hooks"
 
 interface ReferenceVariantCardProps {
   index: number
@@ -15,6 +16,7 @@ interface ReferenceVariantCardProps {
   subtitle?: string
   note?: string
   imageCaption?: string
+  animationDelay?: number
 }
 
 const ReferenceVariantCard = ({
@@ -27,8 +29,13 @@ const ReferenceVariantCard = ({
   subtitle = "",
   note,
   imageCaption,
+  animationDelay = 0,
 }: ReferenceVariantCardProps) => {
   const tCommon = useTranslations("Common")
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>({
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  })
 
   // Map spec labels to display names
   const specLabelMap: Record<string, string> = {
@@ -41,13 +48,22 @@ const ReferenceVariantCard = ({
   }
 
   return (
-    <div className="bg-white py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
+    <div
+      ref={ref}
+      className={`bg-white py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20 ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
+      style={{ transitionDelay: isVisible ? `${animationDelay}ms` : "0ms" }}
+    >
       <div className="max-w-[1280px] mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-[72px] items-center">
           {/* Image Section */}
-          <div className="w-full lg:w-[400px] flex-shrink-0">
+          <div
+            className={`w-2/3 mx-auto lg:mx-0 lg:w-[400px] flex-shrink-0 transform transition-all duration-700 ease-out ${
+              isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
+            }`}
+            style={{ transitionDelay: isVisible ? `${animationDelay + 200}ms` : "0ms" }}
+          >
             <div
-              className="bg-[#f9f6f4] shadow-md p-4 cursor-pointer group"
+              className="bg-stone-100 border-b-4 border-stone-200 p-4 cursor-pointer group"
               onClick={() =>
                 onImageClick({
                   src: imageSrc,
@@ -65,17 +81,22 @@ const ReferenceVariantCard = ({
                   fill
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   skeletonClassName="w-full h-full"
-                  sizes="(max-width: 1024px) 100vw, 400px"
+                  sizes="(max-width: 1024px) 66vw, 400px"
                 />
               </div>
-              <p className="text-lg font-bold text-neutral-500 mt-4 text-center">
+              <p className="text-lg font-bold text-stone-500 mt-4 text-center">
                 {imageCaption || title}
               </p>
             </div>
           </div>
 
           {/* Content Section */}
-          <div className="flex-1 flex flex-col gap-12">
+          <div
+            className={`flex-1 flex flex-col gap-12 transform transition-all duration-700 ease-out ${
+              isVisible ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+            }`}
+            style={{ transitionDelay: isVisible ? `${animationDelay + 400}ms` : "0ms" }}
+          >
             {/* Title and Subtitle */}
             <div className="flex flex-col gap-2">
               <h2 className="text-3xl md:text-3xl lg:text-4xl text-black leading-[1] tracking-[-0.01em]">
@@ -91,9 +112,17 @@ const ReferenceVariantCard = ({
             {/* Specifications Table */}
             <div className="flex flex-col w-full">
               {specifications.map((spec, idx) => (
-                <div key={idx}>
+                <div
+                  key={idx}
+                  className={`transform transition-all duration-500 ease-out ${
+                    isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                  }`}
+                  style={{
+                    transitionDelay: isVisible ? `${animationDelay + 500 + idx * 75}ms` : "0ms",
+                  }}
+                >
                   {/* Top border for first item */}
-                  {idx === 0 && <div className="h-px bg-neutral-200 w-full"></div>}
+                  {idx === 0 && <div className="h-px bg-stone-200 w-full"></div>}
 
                   <div className="flex items-center gap-[37px] py-3 text-base md:text-lg tracking-[-0.01em]">
                     <span className="text-black w-[160px] md:w-[200px] flex-shrink-0">
@@ -103,20 +132,23 @@ const ReferenceVariantCard = ({
                   </div>
 
                   {/* Bottom border */}
-                  <div className="h-px bg-neutral-200 w-full"></div>
+                  <div className="h-px bg-stone-200 w-full"></div>
                 </div>
               ))}
             </div>
 
             {/* Note Section */}
             {note && (
-              <div className="border-neutral-200 border-l-4 px-6 py-2 flex flex-col gap-2">
-                <p className="text-md md:text-base leading-[1.4] tracking-[0.1em]">
-                  <span className="text-neutral-400">{tCommon("note")} </span>
+              <div
+                className={`border-l-4 border-stone-300 px-7 py-4 flex flex-col gap-2 transform transition-all duration-500 ease-out ${
+                  isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                }`}
+                style={{ transitionDelay: isVisible ? `${animationDelay + 800}ms` : "0ms" }}
+              >
+                <p className="text-xl text-stone-400 tracking-[0.02em] leading-6">
+                  {tCommon("note")}
                 </p>
-                <p className="text-base md:text-lg leading-[1.2] tracking-[-0.01em]">
-                  <span className="text-neutral-900">{note}</span>
-                </p>
+                <p className="text-base text-stone-900 tracking-[-0.01em] leading-5">{note}</p>
               </div>
             )}
           </div>

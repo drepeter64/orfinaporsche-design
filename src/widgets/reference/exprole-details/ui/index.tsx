@@ -3,12 +3,21 @@ import { DetailedHTMLProps, HTMLAttributes } from "react"
 import { useTranslations } from "next-intl"
 import { ReferenceData } from "@/shared/types"
 import ExploreDetailsCard from "@/components/ExploreDetailsCard"
+import { useScrollAnimation, getScrollAnimationClasses } from "@/shared/hooks"
 
 export const ExploreDetailsSection: React.FC<ExploreDetailssProps> = ({ data }) => {
+  const { ref, isVisible } = useScrollAnimation<HTMLElement>({
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  })
+
   const tCommon = useTranslations("Common")
 
   return (
-    <section className="w-full bg-white py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20">
+    <section
+      ref={ref}
+      className={`w-full bg-white py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20 ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
+    >
       <div className="max-w-full mx-auto">
         <div className="flex flex-col gap-12 items-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl text-black tracking-[-0.01em] text-center">
@@ -19,7 +28,10 @@ export const ExploreDetailsSection: React.FC<ExploreDetailssProps> = ({ data }) 
             {data.exploreCards.map((card, index) => (
               <div
                 key={index}
-                className="w-full max-w-[280px]"
+                className={`w-full max-w-[280px] transform transition-all duration-700 ease-out ${
+                  isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                }`}
+                style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
               >
                 <ExploreDetailsCard
                   title={card.title}

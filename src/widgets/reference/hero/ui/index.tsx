@@ -1,14 +1,14 @@
-import { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from "react"
+import { DetailedHTMLProps, HTMLAttributes } from "react"
 
 import { useTranslations } from "next-intl"
 import { ReferenceData } from "@/shared/types"
+import { useScrollAnimation, getScrollAnimationClasses } from "@/shared/hooks"
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>({
+    threshold: 0.1,
+    rootMargin: "0px 0px -20px 0px",
+  })
 
   const tCommon = useTranslations("Common")
   const { heroTitle, variantsSubtitle } = data
@@ -17,9 +17,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
     <section className="relative py-[60px] md:py-[60px] overflow-hidden px-4 sm:px-6 lg:px-20 w-full">
       <div className="max-w-[1280px] mx-auto">
         <div
-          className={`transform transition-all duration-1000 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          ref={ref}
+          className={getScrollAnimationClasses(isVisible, "duration-1000")}
         >
           <div className="flex flex-col items-start gap-4">
             <div className="w-full">

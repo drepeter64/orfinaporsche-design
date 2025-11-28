@@ -1,12 +1,23 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import ImageWithLoader from "@/components/ImageWithLoader"
 import { about_page } from "@/shared/data"
 // import SectionOverview from "@/components/SectionOverview"
 
 export function AboutPage() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
   return (
     <div className="bg-background">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center min-h-screen">
+      <section
+        className={`relative flex flex-col items-center justify-center min-h-screen transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+      >
         <div className="w-full relative min-h-screen">
           <ImageWithLoader
             src={about_page.hero.original}
@@ -30,7 +41,9 @@ export function AboutPage() {
         {/*</div>*/}
       </section>
 
-      <section className="py-20">
+      <section
+        className={`py-20 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-20">
           <div className="mb-16">
             <p className="font-sans text-lg text-gray-700 leading-relaxed mb-8">
@@ -50,10 +63,12 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section
+        className={`py-20 bg-gray-50 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-20 text-center">
           <p className="font-sans text-xl text-gray-700 mb-12 leading-relaxed">
-            For a deeper look into Drew’s collecting journey and his perspective on the Orfina
+            For a deeper look into Drew's collecting journey and his perspective on the Orfina
             Porsche Design legacy, watch his video with Hodinkee below:
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -72,7 +87,9 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section
+        className={`py-20 bg-black transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-20 text-center">
           <h2 className="font-sans text-3xl font-light text-white mb-8 uppercase tracking-wider">
             Get In Touch

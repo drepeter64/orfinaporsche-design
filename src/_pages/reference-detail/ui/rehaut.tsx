@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ImageInfo, RehautData } from "@/shared/types"
 import { useTranslations } from "next-intl"
 import { BackNavigationSection } from "@/widgets/reference-detail/back-navigation"
@@ -16,8 +16,13 @@ interface RehautPageProps {
 }
 
 export function RehautPage({ data }: RehautPageProps) {
+  const [isVisible, setIsVisible] = useState(false)
   const [fullScreenImage, setFullScreenImage] = useState<ImageInfo | null>(null)
   const tCommon = useTranslations("Common")
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
   const { referenceId, referenceTitle } = data
   const breadcrumb = [
     {
@@ -35,7 +40,9 @@ export function RehautPage({ data }: RehautPageProps) {
       <Breadcrumbs links={breadcrumb} />
 
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      <section
+        className={`py-12 sm:py-16 lg:py-20 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+      >
         <div className="mx-auto px-4 sm:px-6 lg:px-20">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-black mb-4 sm:mb-6 uppercase tracking-wider">

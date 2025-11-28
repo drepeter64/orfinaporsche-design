@@ -18,7 +18,7 @@ export function ReferencePage({ data }: ReferencePageProps) {
   const [fullScreenImage, setFullScreenImage] = useState<ImageInfo | null>(null)
 
   return (
-    <div className="min-h-screen bg-[#fafaf6]">
+    <div className="min-h-screen bg-stone-100">
       <div className="flex flex-col items-center w-full">
         {/* Hero Section */}
         <HeroSection data={data} />

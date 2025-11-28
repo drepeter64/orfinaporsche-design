@@ -3,18 +3,27 @@ import { DetailedHTMLProps, HTMLAttributes } from "react"
 import { useTranslations } from "next-intl"
 import { ImageInfo, ReferenceData } from "@/shared/types"
 import ImageWithLoader from "@/components/ImageWithLoader"
+import { useScrollAnimation, getScrollAnimationClasses } from "@/shared/hooks"
 
 export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
   data,
   setFullScreenImage,
 }) => {
+  const { ref: sectionRef, isVisible } = useScrollAnimation<HTMLElement>({
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  })
+
   const tCommon = useTranslations("Common")
   const { introduction } = data
 
   return (
     <>
       {introduction && (
-        <section className="py-16 bg-background">
+        <section
+          ref={sectionRef}
+          className={`py-16 bg-background ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
+        >
           <div className="mx-auto px-4 sm:px-6 lg:px-20">
             {/* Conditionally render grid or centered layout */}
             {introduction.image ? (

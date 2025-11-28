@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { useTranslations } from "next-intl"
 import { Facebook, Instagram, Mail, Twitter } from "lucide-react"
 import ImageWithLoader from "@/components/ImageWithLoader"
@@ -8,13 +9,21 @@ import { home_page } from "@/shared/data"
 import { Link } from "@/app/localization"
 
 export const HomePage = () => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
   const tCommon = useTranslations("Common")
   const { hero, featured } = home_page
 
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative lg:min-h-screen flex flex-col items-center justify-center bg-gray-50">
+      <section
+        className={`relative lg:min-h-screen flex flex-col items-center justify-center bg-gray-50 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+      >
         <div className="w-full relative h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh]">
           <ImageWithLoader
             src={hero.image}
@@ -41,7 +50,9 @@ export const HomePage = () => {
         </div>
       </section>
       {/* Featured References */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-background">
+      <section
+        className={`py-12 sm:py-16 lg:py-20 bg-background transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+      >
         <div className="mx-auto px-4 sm:px-6 lg:px-20">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-black mb-4 sm:mb-6 uppercase tracking-wider">
@@ -99,7 +110,9 @@ export const HomePage = () => {
       </section>
 
       {/* Contact & Social Media Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+      <section
+        className={`py-12 sm:py-16 lg:py-20 bg-gray-50 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+      >
         <div className="mx-auto px-4 sm:px-6 lg:px-20 text-center">
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center mb-8 sm:mb-12">
             <a
