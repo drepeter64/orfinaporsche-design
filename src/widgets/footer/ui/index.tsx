@@ -55,7 +55,7 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Divider */}
-        <div className="mt-12 lg:mt-16 border-t border-neutral-200" />
+        <div className="mt-12 lg:mt-16 border-t border-stone-200" />
       </div>
     </footer>
   )

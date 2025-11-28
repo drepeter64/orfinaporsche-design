@@ -70,7 +70,7 @@ export const FullScreenModal: React.FC<FullScreenModalProps> = ({
               <h3 className="text-white text-xl font-light mb-1">{fullScreenImage.title}</h3>
               <p
                 className="text-gray-300 text-sm"
-                dangerouslySetInnerHTML={{ __html: fullScreenImage.subtitle }}
+                dangerouslySetInnerHTML={{ __html: fullScreenImage.subtitle || "" }}
               ></p>
             </div>
 

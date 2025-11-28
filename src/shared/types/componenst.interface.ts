@@ -14,8 +14,8 @@ export interface ImageInfo {
   src: string
   original: string
   alt: string
-  title: string
-  subtitle: string
+  title?: string
+  subtitle?: string
   caption?: string
   wrapClassName?: string
   imgClassName?: string
