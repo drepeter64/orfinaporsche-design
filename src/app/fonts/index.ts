@@ -1,1 +1,1 @@
-export { openSansFont } from "./google"
+export { primaryFont } from "./google"

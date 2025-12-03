@@ -56,3 +56,4 @@ export const getScrollAnimationClasses = (
 
   return `${base} ${isVisible ? visible : hidden}`
 }
+

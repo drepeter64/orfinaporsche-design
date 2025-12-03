@@ -5,6 +5,7 @@ import type { Metadata } from "next"
 import { unstable_setRequestLocale } from "next-intl/server"
 import { localeConfig } from "@/app/localization"
 import { ClientProviders, ServerProviders } from "@/app/providers"
+import { primaryFont } from "@/app/fonts"
 
 export const dynamic = "force-dynamic"
 
@@ -30,8 +31,9 @@ export default function Layout({ children, params: { locale } }: Readonly<ILayou
     <html
       lang={locale}
       suppressHydrationWarning
+      className={primaryFont.variable}
     >
-      <body>
+      <body className={primaryFont.className}>
         <ServerProviders locale={locale}>
           <ClientProviders>{children}</ClientProviders>
         </ServerProviders>

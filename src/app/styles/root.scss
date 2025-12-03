@@ -3,9 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-// Import Porsche Design System Font Face Styles
-@import url("https://cdn.ui.porsche.com/porsche-design-system/font-face/v3/porsche-next-w-la.min.css");
-
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
 @layer base {
@@ -16,7 +13,8 @@
     }
 
     // === Typography variables ===
-    --ff-primary: "Porsche Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    // Font is loaded via Next.js font system (see app/layout.tsx)
+    --ff-primary: var(--font-primary), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
       sans-serif;
     --font-size: 16px;
 
