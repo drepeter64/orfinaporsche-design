@@ -96,6 +96,7 @@ export interface CasebackData {
   overview?: string
   variations: CaseBackVariations[]
   pageTitle?: string
+  exploreCards?: ExploreCard[]
   sections?: CasebackSection[]
 }
 
