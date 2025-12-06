@@ -9,7 +9,7 @@ import { ClientRoutes } from "@/shared/routes"
 import { CaseCard } from "@/widgets/case-finishes/case-card"
 import { CaseSection } from "@/widgets/case-finishes/case-section"
 import ExploreDetailsCard from "@/components/ExploreDetailsCard"
-import { getScrollAnimationClasses } from "@/shared/hooks"
+import { getScrollAnimationClasses, useScrollAnimation } from "@/shared/hooks"
 
 interface CaseFinishesPageProps {
   data: CaseFinishesData
@@ -18,6 +18,8 @@ interface CaseFinishesPageProps {
 export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
   const [fullScreenImage, setFullScreenImage] = useState<ImageInfo | null>(null)
   const tCommon = useTranslations("Common")
+  const { ref: overviewRef, isVisible: overviewVisible } = useScrollAnimation<HTMLDivElement>()
+  const { ref: exploreRef, isVisible: exploreVisible } = useScrollAnimation<HTMLDivElement>()
 
   // Get explore cards from data if available, otherwise use defaults
   const exploreCards = data.exploreCards || [

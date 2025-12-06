@@ -131,6 +131,7 @@ export interface DialData {
   variations: CaseBackVariations[]
   pageTitle?: string
   sections?: DialSection[]
+  exploreCards?: ExploreCard[]
 }
 export interface DialDataListing {
   route: string
