@@ -193,7 +193,7 @@ export const Header = () => {
               </button>
 
               {referencesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-stone-100 shadow-2xl border border-gray-200 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
+                <div className="absolute top-full left-0 mt-2 w-64 bg-stone-50 shadow-2xl border border-gray-200 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
                   <div className="py-2">
                     {references.map(({ title, route, dropdown }: IMenuReference, index) => (
                       <div
@@ -201,21 +201,21 @@ export const Header = () => {
                         className="relative"
                       >
                         <div
-                          className="flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors duration-200"
+                          className="flex items-center justify-between px-4 py-3 hover:bg-stone-100 transition-colors duration-200"
                           onMouseEnter={() => handleSubDropdownEnter(route)}
                           onMouseLeave={() => handleSubDropdownLeave(route)}
                         >
                           <Link
                             href={ClientRoutes.reference(route.toString())}
-                            className="font-medium text-sm text-black hover:text-gray-600 transition-colors flex-1 cursor-pointer"
+                            className="font-medium text-sm text-stone-600 hover:text-stone-800 transition-colors flex-1 cursor-pointer"
                           >
                             {title}
                           </Link>
-                          <ChevronRight className="w-4 h-4 text-gray-400" />
+                          <ChevronRight className="w-4 h-4 text-stone-400" />
                         </div>
                         {refOpen[route] && (
                           <div
-                            className="absolute left-full top-0 ml-1 w-48 bg-stone-100 shadow-2xl border border-gray-200 z-[60] overflow-hidden animate-in fade-in-0 zoom-in-95 duration-200"
+                            className="absolute left-full top-0 ml-1 w-48 bg-stone-50 shadow-2xl border border-gray-200 z-[60] overflow-hidden animate-in fade-in-0 zoom-in-95 duration-200"
                             onMouseEnter={() => handleSubDropdownEnter(route)}
                             onMouseLeave={() => handleSubDropdownLeave(route)}
                           >
@@ -225,7 +225,7 @@ export const Header = () => {
                                   <Link
                                     key={idx}
                                     href={getReferenceRoute(type, route.toString())}
-                                    className="block px-4 py-2 text-sm text-gray-600 hover:text-black hover:bg-gray-50 transition-colors cursor-pointer"
+                                    className="block px-4 py-2 text-sm text-gray-600 hover:text-black hover:bg-stone-100 transition-colors cursor-pointer"
                                   >
                                     {title}
                                   </Link>

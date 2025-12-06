@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { CaseFinishesData } from "@/shared/types/reference-detail.interface"
 import { useTranslations } from "next-intl"
 import { ImageInfo } from "@/shared/types"
@@ -9,30 +9,15 @@ import { ClientRoutes } from "@/shared/routes"
 import { CaseCard } from "@/widgets/case-finishes/case-card"
 import { CaseSection } from "@/widgets/case-finishes/case-section"
 import ExploreDetailsCard from "@/components/ExploreDetailsCard"
-import { useScrollAnimation, getScrollAnimationClasses } from "@/shared/hooks"
+import { getScrollAnimationClasses } from "@/shared/hooks"
 
 interface CaseFinishesPageProps {
   data: CaseFinishesData
 }
 
 export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
-  const [isVisible, setIsVisible] = useState(false)
   const [fullScreenImage, setFullScreenImage] = useState<ImageInfo | null>(null)
   const tCommon = useTranslations("Common")
-
-  const { ref: overviewRef, isVisible: overviewVisible } = useScrollAnimation<HTMLElement>({
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  })
-
-  const { ref: exploreRef, isVisible: exploreVisible } = useScrollAnimation<HTMLElement>({
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  })
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
 
   // Get explore cards from data if available, otherwise use defaults
   const exploreCards = data.exploreCards || [
@@ -57,10 +42,12 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background bg-white">
       {/* Hero Section */}
       <section
-        className={`w-full bg-stone-100 px-4 sm:px-6 lg:px-20 py-12 lg:py-[60px] transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+        className={
+          "w-full bg-stone-100 px-4 sm:px-6 lg:px-20 py-12 lg:py-[60px] transform transition-all duration-1000"
+        }
       >
         <div className="flex flex-col gap-6 lg:gap-7 items-start">
           <div className="flex flex-col items-start w-full">
