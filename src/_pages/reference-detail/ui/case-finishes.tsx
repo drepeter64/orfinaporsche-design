@@ -133,19 +133,6 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
       {/* Case Sections */}
       {data.variations &&
         data.variations.map((variation, index) => {
-          // Build hero images from the finish images
-          const heroImages: ImageInfo[] = []
-          if (variation.finishes) {
-            variation.finishes.forEach((finish) => {
-              if (finish.images && finish.images.length > 0) {
-                heroImages.push({
-                  ...finish.images[0],
-                  title: finish.title,
-                })
-              }
-            })
-          }
-
           // Format description with paragraphs (split only on double newlines)
           const formattedDescription = variation.full_description
             ? variation.full_description
@@ -161,7 +148,6 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
               title={variation.description}
               subtitle={variation.title ? `a.k.a. ${variation.title}` : undefined}
               description={formattedDescription}
-              heroImages={heroImages.length > 0 ? heroImages.slice(0, 2) : undefined}
               measurements={variation.measurements}
               finishesTitle={variation.finishes_title}
               finishes={variation.finishes?.map((finish) => ({
