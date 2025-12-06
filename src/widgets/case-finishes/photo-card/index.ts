@@ -1,2 +1,1 @@
 export { PhotoCard } from "./ui"
-

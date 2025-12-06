@@ -38,4 +38,3 @@ interface PhotoCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement
   caption?: string
   onClick?: () => void
 }
-
