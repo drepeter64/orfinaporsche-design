@@ -64,7 +64,10 @@ export function CasebackPage({ data }: CasebackPageProps) {
     if (!listItems) return null
 
     return listItems.map((item, itemIndex) => (
-      <li key={itemIndex} className="space-y-2">
+      <li
+        key={itemIndex}
+        className="space-y-2"
+      >
         <div className="flex gap-3 items-start">
           <span className="mt-3 block h-1 w-1 flex-shrink-0 rounded-full bg-stone-900" />
           <div className="space-y-2">
@@ -77,7 +80,10 @@ export function CasebackPage({ data }: CasebackPageProps) {
             {item.list && item.list.length > 0 && (
               <ul className="space-y-2 pl-6">
                 {item.list.map((subitem, subIndex) => (
-                  <li key={subIndex} className="flex gap-3 items-start">
+                  <li
+                    key={subIndex}
+                    className="flex gap-3 items-start"
+                  >
                     <span className="mt-2 block h-1 w-1 rounded-full bg-stone-400" />
                     <p
                       className="text-sm leading-relaxed text-stone-700"
@@ -106,7 +112,9 @@ export function CasebackPage({ data }: CasebackPageProps) {
               {tCommon("reference")} {referenceTitle}
             </h1>
             <div className="w-full h-px bg-stone-300" />
-            <p className="mt-4 text-xl sm:text-2xl lg:text-[32px] text-black/60 leading-10 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-200">{pageTitle}</p>
+            <p className="mt-4 text-xl sm:text-2xl lg:text-[32px] text-black/60 leading-10 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-200">
+              {pageTitle}
+            </p>
           </div>
         </div>
       </section>
@@ -118,32 +126,28 @@ export function CasebackPage({ data }: CasebackPageProps) {
       )}
 
       {variations?.map((variation, index) => {
-        const hasFoundLabel = variation.note?.toLowerCase().includes("found on")
-
         return (
           <section
             key={index}
             className="w-full bg-white px-4 sm:px-6 lg:px-20 py-8 lg:py-12"
           >
             <div className="flex items-baseline gap-3 mb-12">
-                  <span className="text-2xl sm:text-3xl uppercase text-stone-400">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-light text-stone-900">{variation.title}</h3>
-                </div>
+              <span className="text-2xl sm:text-3xl uppercase text-stone-400">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-light text-stone-900">{variation.title}</h3>
+            </div>
             <div className="mx-auto flex flex-col lg:flex-row justify-between items-start pb-24 border-b border-stone-200">
               <div className="flex flex-col gap-6 lg:max-w-[720px]">
-          
-
                 <div className="space-y-5">
-                {variation.note && (
-  <div className="border border-stone-200 bg-stone-50 p-5">
-    <div
-      className="text-base text-stone-700 [&>strong]:block [&>strong]:text-stone-300 [&>strong]:uppercase [&>strong]:tracking-[0.2em] [&>strong]:mb-2 [&>strong]:font-normal"
-      dangerouslySetInnerHTML={{ __html: variation.note }}
-    />
-  </div>
-)}
+                  {variation.note && (
+                    <div className="border border-stone-200 bg-stone-50 p-5">
+                      <div
+                        className="text-base text-stone-700 [&>strong]:block [&>strong]:text-stone-300 [&>strong]:uppercase [&>strong]:tracking-[0.2em] [&>strong]:mb-2 [&>strong]:font-normal"
+                        dangerouslySetInnerHTML={{ __html: variation.note }}
+                      />
+                    </div>
+                  )}
 
                   <div className="bg-white p-5 space-y-4">
                     <p className="text-lg uppercase tracking-[0.2em] text-stone-400">
@@ -166,11 +170,13 @@ export function CasebackPage({ data }: CasebackPageProps) {
                   </div>
 
                   {variation.blueNote && (
-  <div className="border-l-stone-300 border-l-4 bg-stone-50 px-5 py-5 text-base text-stone-700">
-    <span className="text-stone-400 text-base block mb-1 tracking-[0.1em]">{tCommon("note") || "Note:"}</span>
-    {variation.blueNote}
-  </div>
-)}
+                    <div className="border-l-stone-300 border-l-4 bg-stone-50 px-5 py-5 text-base text-stone-700">
+                      <span className="text-stone-400 text-base block mb-1 tracking-[0.1em]">
+                        {tCommon("note") || "Note:"}
+                      </span>
+                      {variation.blueNote}
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -219,7 +225,10 @@ export function CasebackPage({ data }: CasebackPageProps) {
 
             <div className="w-full flex flex-wrap justify-center gap-6">
               {exploreCards.map((card, index) => (
-                <div key={index} className="w-full sm:w-[280px]">
+                <div
+                  key={index}
+                  className="w-full sm:w-[280px]"
+                >
                   <ExploreDetailsCard
                     title={card.title}
                     referenceId={referenceId}
