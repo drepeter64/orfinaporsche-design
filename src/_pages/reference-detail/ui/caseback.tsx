@@ -220,7 +220,7 @@ export function CasebackPage({ data }: CasebackPageProps) {
         <section className="w-full bg-white px-4 sm:px-6 lg:px-20 py-16 lg:py-[90px]">
           <div className="max-w-[1280px] mx-auto flex flex-col gap-12 items-center">
             <h2 className="text-2xl md:text-3xl lg:text-[42px] text-black leading-[1.1] text-center">
-              Explore Other Details
+              {tCommon("explore-details")}
             </h2>
 
             <div className="w-full flex flex-wrap justify-center gap-6">

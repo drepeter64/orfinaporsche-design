@@ -181,4 +181,5 @@ export interface RehautData {
   variations: CaseBackVariations[]
   pageTitle?: string
   sections?: DialSection[]
+  exploreCards?: ExploreCard[]
 }

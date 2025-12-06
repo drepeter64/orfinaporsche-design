@@ -6,7 +6,7 @@
   "referenceId": "7750",
   "referenceTitle":"7750",
   "overview": "There are three known variations of Rehaut found in the 7750 model range.\nThese can be found across all 7750 case marks and dial variations.",
-  "note": "An interesting comparison is that despite being different measurements, the\n1Mile and 1km have the same marks throughout their rehaut. This lack of detail\nmight explain that in the next reference of Orfina Porsche Design watches, the\nmanufacturer just put \"Tachymetre\" solely on the rehaut without either “unit”\ndesignation.",
+  "note": "An interesting comparison is that despite being different measurements, the 1Mile and 1km have the same marks throughout their rehaut. This lack of detail might explain that in the next reference of Orfina Porsche Design watches, the manufacturer just put \"Tachymetre\" solely on the rehaut without either “unit”\ndesignation.",
   "variations": [
     {
       "title": "1Mile",
@@ -71,12 +71,10 @@
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-rehaut/7750-advertisement-rehaut.jpg",
           "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-rehaut/7750-advertisement-rehaut.jpg",
-          "wrapClassName": "max-w-full",
-          "imgClassName": "h-full max-w-lg",
-          "alt": "7750 Advertisement Rehaut<br></br>",
-          "title": "7750 Advertisement Rehaut<br></br>",
-          "subtitle": "7750 Advertisement Rehaut<br></br>",
-          "caption": "7750 Advertisement Rehaut<br></br>"
+          "alt": "7750 Advertisement Rehaut",
+          "title": "7750 Advertisement Rehaut",
+          "subtitle": "7750 Advertisement Rehaut",
+          "caption": "7750 Advertisement Rehaut"
         }
       ]
     }
