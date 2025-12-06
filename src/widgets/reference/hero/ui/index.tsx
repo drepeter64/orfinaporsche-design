@@ -29,7 +29,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
             </div>
 
             {variantsSubtitle && (
-              <div className="py-4 max-w-[500px] mx-auto w-full">
+              <div className="py-4 max-w-[500px] w-full">
                 <p
                   className="text-lg md:text-lg lg:text-xl text-black/60 leading-[1.4] tracking-[-0.01em] text-left"
                   dangerouslySetInnerHTML={{ __html: variantsSubtitle.replace(/\n/g, "<br />") }}

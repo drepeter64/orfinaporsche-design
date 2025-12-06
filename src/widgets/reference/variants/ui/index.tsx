@@ -14,7 +14,7 @@ export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullS
   return (
     <section
       ref={ref}
-      className={`bg-white ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
+      className={`bg-white w-full ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
     >
       {generations &&
         generations.map((generation, index) => (

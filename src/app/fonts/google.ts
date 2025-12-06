@@ -1,7 +1,5 @@
-import { Open_Sans } from "next/font/google"
+// Font configuration moved to app/layout.tsx for proper Next.js integration
+// Using Inter as a fallback since Porsche CDN restricts font access to authorized domains only
+// The Porsche Design System CDN (cdn.ui.porsche.com) blocks requests from non-Porsche domains via CORS
 
-export const openSansFont = Open_Sans({
-  weight: ["400", "500", "700"],
-  display: "swap",
-  subsets: ["latin", "cyrillic"],
-})
+export {}

@@ -2,7 +2,6 @@
 
 import { DetailedHTMLProps, HTMLAttributes } from "react"
 import { useTranslations } from "next-intl"
-import { PhotoCard } from "@/widgets/case-finishes/photo-card"
 import { FinishType } from "@/widgets/case-finishes/finish-type"
 import { ImageInfo } from "@/shared/types"
 import { Measurement, FinishItem } from "@/shared/types/reference-detail.interface"
@@ -13,7 +12,6 @@ interface CaseSectionProps
   title: string
   subtitle?: string
   description?: string
-  heroImages?: ImageInfo[]
   measurements?: Measurement[]
   finishesTitle?: string
   finishes?: FinishItem[]
@@ -24,7 +22,6 @@ export const CaseSection: React.FC<CaseSectionProps> = ({
   title,
   subtitle,
   description,
-  heroImages,
   measurements,
   finishesTitle,
   finishes,
@@ -42,75 +39,44 @@ export const CaseSection: React.FC<CaseSectionProps> = ({
       ref={ref}
       className={`bg-white w-full px-4 sm:px-6 lg:px-20 py-10 lg:py-16 ${getScrollAnimationClasses(isVisible, "duration-1000")} ${className}`}
     >
-      <div className="max-w-[1280px] mx-auto flex flex-col gap-10 lg:gap-16 items-start">
-        {/* Hero Images */}
-        {heroImages && heroImages.length > 0 && (
-          <div className="w-full flex flex-wrap gap-6 lg:gap-8 items-center justify-center mb-6 lg:mb-10">
-            {heroImages.map((image, index) => (
-              <PhotoCard
-                key={index}
-                image={image}
-                caption={image.title || image.alt}
-                onClick={() => onImageClick?.(image)}
-                className="w-full sm:w-[280px] lg:w-[301px]"
-              />
-            ))}
-          </div>
-        )}
-
-        {/* Divider */}
-        <div className="w-full h-px bg-neutral-200" />
-
-        {/* Title & Description Row */}
-        <div className="w-full flex flex-col lg:flex-row gap-6 items-start">
-          {/* Left - Title */}
-          <div className="flex flex-col gap-4 lg:gap-6 flex-1">
-            <h3 className="text-3xl lg:text-[44px] text-black tracking-[-0.01em] leading-[1.1]">
-              {title}
-            </h3>
-            {subtitle && (
-              <p className="text-xl lg:text-2xl text-black/40 tracking-[-0.01em] leading-5">
-                {subtitle}
-              </p>
-            )}
+      <div className="max-w-[1280px] mx-auto flex flex-col gap-28 lg:gap-32 items-start">
+        {/* Title, description, measurements */}
+        <div className="w-full flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
+            <h3 className="text-3xl lg:text-[32px] text-black">{title}</h3>
+            {subtitle && <p className="text-lg lg:text-xl text-stone-500">{subtitle}</p>}
           </div>
 
-          {/* Right - Description & Measurements */}
-          <div className="flex flex-col gap-12 lg:gap-[60px] lg:max-w-[516px]">
+          <div className="w-full flex flex-col lg:flex-row gap-12 lg:items-start lg:justify-between">
             {description && (
               <div
-                className="text-lg text-neutral-700 tracking-[-0.01em] leading-6 [&_p]:mb-4 last:[&_p]:mb-0"
+                className="flex-1 text-sm lg:text-base text-stone-800 leading-6 [&_p]:mb-4 last:[&_p]:mb-0 max-w-[520px]"
                 dangerouslySetInnerHTML={{ __html: description }}
               />
             )}
 
-            {/* Measurements */}
             {measurements && measurements.length > 0 && (
-              <div className="flex flex-col gap-5 w-full">
-                <h4 className="text-2xl lg:text-[32px] text-black tracking-[-0.01em] leading-none">
-                  {tCommon("measurements")}
-                </h4>
-                <div className="w-full h-px bg-neutral-200" />
-                <div className="flex flex-col gap-5">
+              <div className="w-full lg:w-1/3 bg-stone-50 px-6 py-6 gap-4">
+                <p className="text-lg lg:text-xl text-black mb-4">{tCommon("measurements")}</p>
+                <div className="grid text-sm lg:text-base">
                   {measurements.map((measurement, index) => (
                     <div
                       key={index}
-                      className="flex gap-8 lg:gap-[37px] items-center text-base tracking-[-0.01em] leading-5"
+                      className={`flex justify-between px-4 py-3 ${index !== measurements.length - 1 ? "border-b border-neutral-200" : ""}`}
                     >
-                      <span className="text-black w-[140px] lg:w-[180px]">{measurement.label}</span>
-                      <span className="text-black/50">{measurement.value}</span>
+                      <span className="text-neutral-500">{measurement.label}</span>
+                      <span className="text-neutral-900 font-medium">{measurement.value}</span>
                     </div>
                   ))}
                 </div>
-                <div className="w-full h-px bg-neutral-200" />
               </div>
             )}
           </div>
         </div>
 
-        {/* Finishes Title */}
+        {/* Finishes Title (optional) */}
         {finishesTitle && (
-          <p className="text-lg lg:text-xl text-neutral-600 tracking-[-0.01em] leading-none w-full">
+          <p className="text-base lg:text-lg text-neutral-600 leading-none w-full -mb-24">
             {finishesTitle}
           </p>
         )}

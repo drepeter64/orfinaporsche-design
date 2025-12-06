@@ -63,7 +63,7 @@ const ReferenceVariantCard = ({
             style={{ transitionDelay: isVisible ? `${animationDelay + 200}ms` : "0ms" }}
           >
             <div
-              className="bg-stone-100 border-b-4 border-stone-200 p-4 cursor-pointer group"
+              className="bg-stone-100 p-4 cursor-pointer group"
               onClick={() =>
                 onImageClick({
                   src: imageSrc,
@@ -99,13 +99,9 @@ const ReferenceVariantCard = ({
           >
             {/* Title and Subtitle */}
             <div className="flex flex-col gap-2">
-              <h2 className="text-3xl md:text-3xl lg:text-4xl text-black leading-[1] tracking-[-0.01em]">
-                {title}
-              </h2>
+              <h2 className="text-3xl md:text-3xl lg:text-4xl text-black leading-[1]">{title}</h2>
               {subtitle && (
-                <p className="text-2xl md:text-2xl text-black/40 leading-[1.2] tracking-[-0.01em]">
-                  {subtitle}
-                </p>
+                <p className="text-2xl md:text-2xl text-black/40 leading-[1.2]">{subtitle}</p>
               )}
             </div>
 
@@ -121,18 +117,20 @@ const ReferenceVariantCard = ({
                     transitionDelay: isVisible ? `${animationDelay + 500 + idx * 75}ms` : "0ms",
                   }}
                 >
-                  {/* Top border for first item */}
-                  {idx === 0 && <div className="h-px bg-stone-200 w-full"></div>}
+                  {/* Top border for each row */}
+                  <div className="h-px bg-stone-200 w-full"></div>
 
-                  <div className="flex items-center gap-[37px] py-3 text-base md:text-lg tracking-[-0.01em]">
+                  <div className="flex items-center gap-[37px] py-3 text-base md:text-lg">
                     <span className="text-black w-[160px] md:w-[200px] flex-shrink-0">
                       {specLabelMap[spec.label] || tCommon(`generation-${spec.label}`)}
                     </span>
                     <span className="text-black/50">{spec.value}</span>
                   </div>
 
-                  {/* Bottom border */}
-                  <div className="h-px bg-stone-200 w-full"></div>
+                  {/* Bottom border only for last item */}
+                  {idx === specifications.length - 1 && (
+                    <div className="h-px bg-stone-200 w-full"></div>
+                  )}
                 </div>
               ))}
             </div>
@@ -140,15 +138,15 @@ const ReferenceVariantCard = ({
             {/* Note Section */}
             {note && (
               <div
-                className={`border-l-4 border-stone-300 px-7 py-4 flex flex-col gap-2 transform transition-all duration-500 ease-out ${
+                className={`bg-stone-50 border-l-4 border-stone-300 px-7 py-4 flex flex-col gap-2 transform transition-all duration-500 ease-out ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                 }`}
                 style={{ transitionDelay: isVisible ? `${animationDelay + 800}ms` : "0ms" }}
               >
-                <p className="text-xl text-stone-400 tracking-[0.02em] leading-6">
+                <p className="text-md text-stone-400 tracking-[0.02em] leading-6">
                   {tCommon("note")}
                 </p>
-                <p className="text-base text-stone-900 tracking-[-0.01em] leading-5">{note}</p>
+                <p className="text-base text-stone-900 leading-5">{note}</p>
               </div>
             )}
           </div>
