@@ -5,6 +5,7 @@
 
   "referenceId": "7750",
   "referenceTitle":"7750",
+  "pageTitle": "Caseback",
   "overview": "There are two caseback variations found throughout the entire production of the Orfina 7750.",
   "variations": [
     {
@@ -75,6 +76,26 @@
           "caption": "7750 Caseback Mk. 2"
         }
       ]
+    }
+  ],
+  "exploreCards": [
+    {
+      "title": "Case & Finishes",
+      "route": "case",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/button-photos/preview-800x-7750-series-v4-black-flat-top-case-pd-dial-1mile-rehaut.jpg",
+      "imageAlt": "Case & Finishes"
+    },
+    {
+      "title": "Rehaut Variations",
+      "route": "rehaut",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/button-photos/preview-800x-7750-rehaut-1km.jpg",
+      "imageAlt": "Rehaut Variations"
+    },
+    {
+      "title": "Dial Variations",
+      "route": "dial",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/button-photos/preview-800x-7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut.jpg",
+      "imageAlt": "Dial Variations"
     }
   ]
 }
