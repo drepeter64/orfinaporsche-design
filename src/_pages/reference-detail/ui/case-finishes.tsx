@@ -64,12 +64,12 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
       >
         <div className="flex flex-col gap-6 lg:gap-7 items-start">
           <div className="flex flex-col items-start w-full">
-            <h1 className="font-normal text-4xl md:text-8xl lg:text-12xl font-light text-black tracking-[-0.01em] leading-none w-full animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
+            <h1 className="font-normal text-4xl md:text-8xl lg:text-12xl font-light text-black leading-none w-full animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
               {tCommon("reference")} {data.referenceTitle}
             </h1>
             <div className="w-full h-px bg-stone-300 mt-4" />
           </div>
-          <p className="text-xl sm:text-2xl lg:text-[32px] text-black/60 tracking-[-0.01em] leading-10 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-200">
+          <p className="text-xl sm:text-2xl lg:text-[32px] text-black/60 leading-10 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-200">
             {data.pageTitle || tCommon("case-finishes")}
           </p>
         </div>
@@ -85,33 +85,47 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
             <div className="flex flex-col gap-6 lg:gap-7 items-start w-full">
               {/* Overview Text */}
               {data.overview && (
-                <p className="text-base lg:text-xl text-stone-600 tracking-[-0.01em] leading-normal">
+                <p className="text-base lg:text-xl text-stone-600 leading-normal text-center w-full">
                   {data.overview}
                 </p>
               )}
 
               {/* Case Cards */}
               <div className="w-full flex flex-col sm:flex-row gap-4 lg:gap-7 items-stretch">
-                {data.variations.map((variation, index) => (
-                  <CaseCard
-                    key={index}
-                    title={variation.description}
-                    subtitle={variation.title ? `a.k.a ${variation.title}` : undefined}
-                    subtitle2={variation.subtitle}
-                  />
-                ))}
+                {data.variations.map((variation, index) => {
+                  // Combine subtitle into a single line: "a.k.a Mk. 3, or Revised by Orfina Swiss S.A"
+                  const combinedSubtitleRaw = variation.title
+                    ? `a.k.a ${variation.title}${variation.subtitle ? ", or " + variation.subtitle.replace(/^a\\.k\\.a\\s*/i, "") : ""}`
+                    : variation.subtitle
+
+                  // Ensure any lingering "a.k.a" after "or" is removed (e.g., "a.k.a Mk. 3, or a.k.a Revised...")
+                  let combinedSubtitle = combinedSubtitleRaw?.replace(
+                    /,\\s*or\\s+a\\.k\\.a\\s+/i,
+                    ", or ",
+                  )
+                  // Also strip any additional "a.k.a" occurrences after the first one
+                  combinedSubtitle = combinedSubtitle?.replace(/(?!^)\\s*a\\.k\\.a\\s+/gi, " ")
+
+                  return (
+                    <CaseCard
+                      key={index}
+                      title={variation.description}
+                      subtitle={combinedSubtitle}
+                    />
+                  )
+                })}
               </div>
             </div>
 
             {/* Info Text */}
             {data.info && (
-              <p className="text-base lg:text-lg text-[#949598] tracking-[-0.01em] leading-6 text-center max-w-4xl">
+              <p className="text-base lg:text-lg text-stone-500 leading-6 text-center max-w-4xl">
                 {data.info}
               </p>
             )}
 
             {/* Divider */}
-            <div className="w-full h-px bg-neutral-200 mt-6" />
+            <div className="w-full h-px bg-stone-200 mt-6" />
           </div>
         </section>
       )}
@@ -152,8 +166,8 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
               finishesTitle={variation.finishes_title}
               finishes={variation.finishes?.map((finish) => ({
                 ...finish,
-                // Remove the first image since it's shown in hero
-                images: finish.images?.slice(1),
+                // Keep all finish images so the gallery renders every asset
+                images: finish.images,
               }))}
               onImageClick={(image) =>
                 setFullScreenImage({
@@ -173,7 +187,7 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
         className={`w-full bg-white px-4 sm:px-6 lg:px-20 py-16 lg:py-[100px] ${getScrollAnimationClasses(exploreVisible, "duration-1000")}`}
       >
         <div className="max-w-[1280px] mx-auto flex flex-col gap-12 items-center">
-          <h2 className="text-2xl md:text-3xl lg:text-[44px] text-black tracking-[-0.01em] text-center leading-[1.1]">
+          <h2 className="text-2xl md:text-3xl lg:text-[44px] text-black text-center leading-[1.1]">
             {tCommon("explore-details")}
           </h2>
 
@@ -200,7 +214,7 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
           {/* Back to Reference Link */}
           <a
             href={ClientRoutes.reference(data.referenceId)}
-            className="text-lg lg:text-xl text-black/60 tracking-[-0.01em] hover:text-black transition-colors"
+            className="text-lg lg:text-xl text-black/60 hover:text-black transition-colors"
           >
             {tCommon("back_to_refs")} {data.referenceTitle}
           </a>

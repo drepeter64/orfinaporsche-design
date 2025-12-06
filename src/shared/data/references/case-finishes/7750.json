@@ -15,7 +15,7 @@
       "description": "Flat Top",
       "full_description": "The \"Flat Top\" / \"Flat Face\" is the case that started it all. The timeless design of the Porsche Design Chronograph starts its story here.\n\nDr. Ferdinand Alexander \"Butzi\" Porsche's initial design, which as legend has it took inspiration from the gauges of the original 911 that he had designed in 1963. Dr. Porsche's credo was \"Design must be functional and functionality has to be translated visually into aesthetics, without gags that have to be explained first.\" This is often stated as \"form follows function\".\n\nWith this visual translation from a 911's gauges to a watch face with a simple bezel surrounding it we see the rest of the case design continue to follow this design principle. The height of the \"flat\" face (which mimics the simple bezels of VDO gauges of the day) rises from the base of the case just enough to fit the handset and rehaut.\n\nThe overall body of the case then extends out to provide a proper presence on the wrist and include integrated hidden lugs. Because of the use of hidden lugs it could be machined from a single block, adding rigidity and a very masculine and sporty sensibility.\n\nThe case geometry and dimensions are clean and minimalist, lacking unnecessary flourishes or embellishments. This is the birthplace of 50+ years of Porsche Design DNA.",
       "measurements": [
-        { "value": "1973-1974 (Tentative)", "label": "Production Years" },
+       
         { "value": "40.3mm", "label": "Diameter" },
         { "value": "42.5mm", "label": "Lug-To-Lug" },
         { "value": "14.2mm", "label": "Height" }
@@ -37,8 +37,8 @@
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-powder-coat-blackcrop.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-powder-coat-blackcrop.jpg",
-              "alt": "7750 Power Coat Black",
-              "title": "7750 Power Coat Black"
+              "alt": "7750 Powder Coat Black",
+              "title": "7750 Powder Coat Black"
             }
           ]
         },
@@ -76,12 +76,6 @@
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg",
               "alt": "7750 Black PVD",
               "title": "Black PVD"
-            },
-            {
-              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg",
-              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg",
-              "alt": "7750 Black PVD",
-              "title": "7750 Black PVD"
             }
           ]
         },
@@ -96,22 +90,15 @@
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-series-v4.5-sable-round-top-case-pd-dial-1mile-rehaut.jpg",
               "alt": "7750 Silver/Sablé",
               "title": "Silver/Sablé"
-            },
-            {
-              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-series-v4.5-sable-round-top-case-pd-dial-1mile-rehaut.jpg",
-              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-series-v4.5-sable-round-top-case-pd-dial-1mile-rehaut.jpg",
-              "alt": "7750 Silver/Sablé",
-              "title": "7750 Silver/Sablé"
             }
           ]
         }
       ]
     },
     {
-      "title": "Mk. 3",
+      "title": "Mk. 3, a.k.a. Revised by Orfina Swiss S.A",
       "description": "Flat-Face - Modern",
       "full_description": "Similar in design and aesthetic to the Mk. 1 \"Flat Top\" / \"Flat Face\", it has a flat face. Orfina Swiss SA offers it as a replacement for original damaged, or otherwise unusable cases as a modern replacement.\n\nThese cases feature a larger crown as the replacement crown produced for Orfina Swiss SA is larger than the originals and restores the water-resistance of the watch. This case also features larger pushers and mortices milled to fit the larger crown and pushers.",
-      "subtitle": "a.k.a Revised by Orfina Swiss S.A",
       "measurements": [
         { "value": "To Be Updated", "label": "Diameter" },
         { "value": "To Be Updated", "label": "Lug-To-Lug" },
@@ -125,12 +112,6 @@
           "color": "bg-black",
           "year": "2000+ (Tentative)",
           "images": [
-            {
-              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-gen3-2.jpg",
-              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-gen3-2.jpg",
-              "alt": "7750 Black PVD",
-              "title": "Black PVD"
-            },
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-gen3-2.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-gen3-2.jpg",
@@ -153,12 +134,6 @@
           "color": "bg-gray-400",
           "year": "2000+ (Tentative)",
           "images": [
-            {
-              "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-mk.3-case.jpg",
-              "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-mk.3-case.jpg",
-              "alt": "7750 Silver/Sablé",
-              "title": "Silver/Sablé"
-            },
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-mk.3-case.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-mk.3-case.jpg",

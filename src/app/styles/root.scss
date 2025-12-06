@@ -3,6 +3,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Porsche Next Font - Self-hosted to bypass CDN CORS restrictions */
+@font-face {
+  font-family: "Porsche Next";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/porsche-next-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Porsche Next";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/porsche-next-semi-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Porsche Next";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/porsche-next-bold.woff2") format("woff2");
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
 @layer base {
@@ -13,8 +38,8 @@
     }
 
     // === Typography variables ===
-    // Font is loaded via Next.js font system (see app/layout.tsx)
-    --ff-primary: var(--font-primary), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    // Porsche Next font - self-hosted from /public/fonts/
+    --ff-primary: "Porsche Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
       sans-serif;
     --font-size: 16px;
 

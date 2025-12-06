@@ -9,8 +9,10 @@ export const FinishItemSection: React.FC<FinishItemSectionProps> = ({ data }) =>
 
   return (
     <div className="space-y-6 text-center lg:text-left">
-      <div className="flex items-center justify-center lg:justify-start space-x-3 mb-4">
-        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${color}`}>
+      <div className="flex items-start justify-center lg:justify-start space-x-3 mb-4">
+        <div
+          className={`w-8 h-8 mt-2 self-start rounded-full flex items-center justify-center ${color}`}
+        >
           <div className="w-3 h-3 bg-white rounded-full"></div>
         </div>
         <h3 className="text-lg sm:text-xl font-semibold text-black">{title}</h3>
