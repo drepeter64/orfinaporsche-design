@@ -6,7 +6,6 @@ import ExploreDetailsCard from "@/components/ExploreDetailsCard"
 import { useTranslations } from "next-intl"
 import { CasebackData, ImageInfo } from "@/shared/types"
 import { FullScreenModal } from "@/widgets/full-screen-modal"
-import { ClientRoutes } from "@/shared/routes"
 
 interface CasebackPageProps {
   data: CasebackData
@@ -22,6 +21,8 @@ export function CasebackPage({ data }: CasebackPageProps) {
   }, [])
 
   const { referenceTitle, referenceId, overview, variations } = data
+  const backImageSrc =
+    "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/preview-780x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg"
   const pageTitle = data.pageTitle || tCommon("caseback")
 
   const fallbackImage = variations?.[0]?.images?.[0]?.src || "/placeholder.svg"
@@ -48,6 +49,17 @@ export function CasebackPage({ data }: CasebackPageProps) {
             imageAlt: "Dial Variations",
           },
         ]
+
+  const backExploreCard = {
+    title: `${tCommon("back_to_refs")} ${referenceTitle}`,
+    route: "main",
+    imageSrc: backImageSrc,
+    imageAlt: referenceTitle,
+  }
+
+  const exploreCardsWithBack = exploreCards.some((card) => card.route === "main")
+    ? exploreCards
+    : [...exploreCards, backExploreCard]
 
   const handleImageClick = (image: ImageInfo) => {
     setFullScreenImage({
@@ -223,11 +235,11 @@ export function CasebackPage({ data }: CasebackPageProps) {
               {tCommon("explore-details")}
             </h2>
 
-            <div className="w-full flex flex-wrap justify-center gap-6">
-              {exploreCards.map((card, index) => (
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
+              {exploreCardsWithBack.map((card, index) => (
                 <div
                   key={index}
-                  className="w-full sm:w-[280px]"
+                  className="w-full max-w-[280px]"
                 >
                   <ExploreDetailsCard
                     title={card.title}
@@ -239,13 +251,6 @@ export function CasebackPage({ data }: CasebackPageProps) {
                 </div>
               ))}
             </div>
-
-            <a
-              href={ClientRoutes.reference(referenceId)}
-              className="text-lg lg:text-xl text-black/60 hover:text-black transition-colors"
-            >
-              {tCommon("back_to_refs")} {referenceTitle}
-            </a>
           </div>
         </section>
       )}

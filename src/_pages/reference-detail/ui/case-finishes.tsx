@@ -5,7 +5,6 @@ import { CaseFinishesData } from "@/shared/types/reference-detail.interface"
 import { useTranslations } from "next-intl"
 import { ImageInfo } from "@/shared/types"
 import { FullScreenModal } from "@/widgets/full-screen-modal"
-import { ClientRoutes } from "@/shared/routes"
 import { CaseCard } from "@/widgets/case-finishes/case-card"
 import { CaseSection } from "@/widgets/case-finishes/case-section"
 import ExploreDetailsCard from "@/components/ExploreDetailsCard"
@@ -20,6 +19,10 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
   const tCommon = useTranslations("Common")
   const { ref: overviewRef, isVisible: overviewVisible } = useScrollAnimation<HTMLDivElement>()
   const { ref: exploreRef, isVisible: exploreVisible } = useScrollAnimation<HTMLDivElement>()
+
+  // Use a consistent hero image for the back link card
+  const backImageSrc =
+    "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/preview-780x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg"
 
   // Get explore cards from data if available, otherwise use defaults
   const exploreCards = data.exploreCards || [
@@ -42,6 +45,17 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
       imageAlt: "Dial Variations",
     },
   ]
+
+  const backExploreCard = {
+    title: `${tCommon("back_to_refs")} ${data.referenceTitle}`,
+    route: "main",
+    imageSrc: backImageSrc,
+    imageAlt: data.referenceTitle,
+  }
+
+  const exploreCardsWithBack = exploreCards.some((card) => card.route === "main")
+    ? exploreCards
+    : [...exploreCards, backExploreCard]
 
   return (
     <div className="min-h-screen bg-background bg-white">
@@ -82,7 +96,7 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
               {/* Case Cards */}
               <div className="w-full flex flex-col sm:flex-row gap-4 lg:gap-7 items-stretch">
                 {data.variations.map((variation, index) => {
-                  // Combine subtitle into a single line: "a.k.a Mk. 3, or Revised by Orfina Swiss S.A"
+                  // Combine subtitle into a single line: "a.k.a Mk. 3 - Revised by Orfina Swiss S.A"
                   const combinedSubtitleRaw = variation.title
                     ? `a.k.a ${variation.title}${variation.subtitle ? ", or " + variation.subtitle.replace(/^a\\.k\\.a\\s*/i, "") : ""}`
                     : variation.subtitle
@@ -166,11 +180,11 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
             {tCommon("explore-details")}
           </h2>
 
-          <div className="w-full flex flex-wrap gap-6 items-start justify-center">
-            {exploreCards.map((card, index) => (
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center items-start">
+            {exploreCardsWithBack.map((card, index) => (
               <div
                 key={index}
-                className={`w-full sm:w-[280px] transform transition-all duration-700 ease-out ${
+                className={`w-full max-w-[280px] transform transition-all duration-700 ease-out ${
                   exploreVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
                 }`}
                 style={{ transitionDelay: exploreVisible ? `${index * 100}ms` : "0ms" }}
@@ -185,14 +199,6 @@ export function CaseFinishesPage({ data }: CaseFinishesPageProps) {
               </div>
             ))}
           </div>
-
-          {/* Back to Reference Link */}
-          <a
-            href={ClientRoutes.reference(data.referenceId)}
-            className="text-lg lg:text-xl text-black/60 hover:text-black transition-colors"
-          >
-            {tCommon("back_to_refs")} {data.referenceTitle}
-          </a>
         </div>
       </section>
 
