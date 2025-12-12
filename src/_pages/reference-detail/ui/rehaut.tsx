@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl"
 
 import ExploreDetailsCard from "@/components/ExploreDetailsCard"
 import ImageWithLoader from "@/components/ImageWithLoader"
-import { ClientRoutes } from "@/shared/routes"
 import { cn } from "@/shared/lib/utils"
 import { FullScreenModal } from "@/widgets/full-screen-modal"
 import { ImageInfo, RehautData, ReferenceExploreCard } from "@/shared/types"
@@ -28,6 +27,8 @@ export function RehautPage({ data }: RehautPageProps) {
   const subtitle = data.pageTitle || "Rehaut Variations"
   const placeholderImage = "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/placeholder.png"
   const totalVariations = data.variations?.length ?? 0
+  const backImageSrc =
+    "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/preview-780x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg"
 
   const exploreCards: ReferenceExploreCard[] = useMemo(() => {
     if (data.exploreCards?.length) {
@@ -65,6 +66,18 @@ export function RehautPage({ data }: RehautPageProps) {
       },
     ]
   }, [data.variations, data.exploreCards, placeholderImage, referenceId, tCommon])
+
+  const backExploreCard: ReferenceExploreCard = {
+    title: `${tCommon("back_to_refs")} ${data.referenceTitle}`,
+    imageSrc: backImageSrc,
+    imageAlt: data.referenceTitle,
+    route: "main",
+    referenceId,
+  }
+
+  const exploreCardsWithBack = exploreCards.some((card) => card.route === "main")
+    ? exploreCards
+    : [...exploreCards, backExploreCard]
 
   useEffect(() => {
     setFullScreenImage(null)
@@ -251,11 +264,11 @@ export function RehautPage({ data }: RehautPageProps) {
             {tCommon("explore-details")}
           </h2>
 
-          <div className="w-full flex flex-wrap gap-6 items-start justify-center">
-            {exploreCards.map((card, index) => (
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center items-start">
+            {exploreCardsWithBack.map((card, index) => (
               <div
                 key={index}
-                className={`w-full sm:w-[280px] transform transition-all duration-700 ease-out ${
+                className={`w-full max-w-[280px] transform transition-all duration-700 ease-out ${
                   exploreVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
                 }`}
                 style={{ transitionDelay: exploreVisible ? `${index * 100}ms` : "0ms" }}
@@ -270,14 +283,6 @@ export function RehautPage({ data }: RehautPageProps) {
               </div>
             ))}
           </div>
-
-          {/* Back to Reference Link */}
-          <a
-            href={ClientRoutes.reference(data.referenceId)}
-            className="text-lg lg:text-xl text-black/60 hover:text-black transition-colors"
-          >
-            {tCommon("back_to_refs")} {data.referenceTitle}
-          </a>
         </div>
       </section>
 

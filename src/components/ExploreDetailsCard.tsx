@@ -17,7 +17,7 @@ const ExploreDetailsCard = ({
       href={getReferenceRoute(route, referenceId)}
       className="group cursor-pointer"
     >
-      <div className="bg-stone-100 overflow-hidden transition-all duration-300 group-hover:-translate-y-2 p-4 flex flex-col gap-4 border-2 border-transparent group-hover:border-stone-200">
+      <div className="bg-stone-100 overflow-hidden transition-all duration-300 group-hover:-translate-y-2 p-4 flex flex-col gap-4 border border-stone-200">
         {/* Image Container */}
         <div className="h-[240px] overflow-hidden relative flex items-center justify-center">
           <div className="w-[250px] h-[250px] relative">
