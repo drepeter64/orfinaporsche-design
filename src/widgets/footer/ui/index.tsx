@@ -38,7 +38,7 @@ export const Footer = () => {
           </h2>
 
           <div className="flex flex-col gap-10 lg:gap-16">
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-10 items-start">
               <Link
                 href={ClientRoutes.home}
                 className="flex-shrink-0"
@@ -54,7 +54,7 @@ export const Footer = () => {
 
               <nav
                 aria-label="Footer navigation"
-                className="w-full max-w-4xl flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-x-6 sm:gap-y-6 lg:gap-x-8"
+                className="w-full max-w-4xl flex flex-col gap-10"
               >
                 {columns.map((column) => (
                   <FooterColumn

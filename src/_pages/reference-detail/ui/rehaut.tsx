@@ -121,7 +121,7 @@ export function RehautPage({ data }: RehautPageProps) {
             </p>
           )}
           {data.note && (
-            <div className="border-l-stone-200 border-l-4 bg-stone-50 px-6 py-5 text-sm sm:text-base leading-relaxed text-stone-500 whitespace-pre-line">
+            <div className="border border-stone-200 bg-stone-50 px-6 py-5 text-sm sm:text-base leading-relaxed text-stone-500 whitespace-pre-line">
               {data.note}
             </div>
           )}
