@@ -250,7 +250,7 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
                     }
                   />
 
-                  {index < data.sections.length - 1 && (
+                  {index < (data.sections?.length ?? 0) - 1 && (
                     <div className="w-full h-px bg-stone-200 mt-6" />
                   )}
                 </div>
