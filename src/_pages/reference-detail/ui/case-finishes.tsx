@@ -240,7 +240,7 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
                     colorClass={section.color || "bg-black"}
                     images={section.images}
                     note={finishNote}
-                    onImageClick={(image) =>
+                    onImageClick={(image: ImageInfo) =>
                       setFullScreenImage({
                         src: image.src,
                         original: image.original || image.src,
