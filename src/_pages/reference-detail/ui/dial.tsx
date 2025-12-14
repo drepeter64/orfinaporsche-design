@@ -118,17 +118,17 @@ export function DialPage({ data, referenceData }: DialPageProps) {
 
       {/* Overview */}
       <section
-        className={`px-4 sm:px-6 lg:px-20 ${referenceId === "7177" ? "pb-12" : "py-12 pb-20"}`}
+        className={`w-full px-4 sm:px-6 lg:px-20 ${referenceId === "7177" ? "pb-12" : "py-12 pb-20"}`}
       >
-        <div className="space-y-6">
+        <div className="w-full space-y-6">
           {data.overview && (
             <p className="text-base sm:text-lg leading-relaxed text-stone-700 whitespace-pre-line">
               {data.overview}
             </p>
           )}
           {data.note && (
-            <div className="border-l border-l-slate-200 bg-stone-50 px-6 py-5 text-sm sm:text-base leading-relaxed text-stone-500 whitespace-pre-line">
-              {data.note}
+            <div className="border border-stone-200 bg-stone-50 px-6 py-5 text-sm sm:text-base leading-relaxed text-stone-500">
+              {data.note.replace(/\n/g, " ")}
             </div>
           )}
         </div>

@@ -56,7 +56,7 @@ export const CaseSection: React.FC<CaseSectionProps> = ({
             )}
 
             {measurements && measurements.length > 0 && (
-              <div className="w-full lg:w-1/3 bg-stone-50 px-6 py-6 gap-4">
+              <div className="w-full lg:w-1/3 bg-stone-50 px-6 py-6 gap-4 border border-stone-100">
                 <p className="text-lg lg:text-xl text-black mb-4">{tCommon("measurements")}</p>
                 <div className="grid text-sm lg:text-base">
                   {measurements.map((measurement, index) => (

@@ -87,7 +87,7 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
       >
         <div className="flex gap-3 items-start">
           <span className="mt-3 block h-1 w-1 flex-shrink-0 rounded-full bg-stone-900" />
-          <div className="space-y-2">
+          <div className="space-y-4">
             <p
               className="text-base leading-relaxed text-stone-800"
               dangerouslySetInnerHTML={{
@@ -95,7 +95,7 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
               }}
             />
             {item.list && item.list.length > 0 && (
-              <ul className="space-y-2 pl-6">
+              <ul className="space-y-4 pl-6">
                 {item.list.map((subitem, subIndex) => (
                   <li
                     key={subIndex}

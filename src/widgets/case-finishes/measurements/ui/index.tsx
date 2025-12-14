@@ -11,7 +11,7 @@ export const MeasurementsSection: React.FC<MeasurementsSectionProps> = ({ data }
     <>
       {measurements && (
         <div className="mb-8 sm:mb-12">
-          <div className="bg-gray-50 p-6 sm:p-8 rounded-lg border-l-4 border-black">
+          <div className="bg-stone-50 p-6 sm:p-8 border border-stone-300">
             <h3 className="text-lg sm:text-xl font-semibold text-black mb-4">
               {tCommon("measurements")}
             </h3>

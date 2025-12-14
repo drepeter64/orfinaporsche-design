@@ -30,73 +30,52 @@ const ImageSlider = ({ images, setFullScreenImage, className = "" }: ImageSlider
 
   return (
     <div className={`relative ${className}`}>
-      <div
-        className="relative group cursor-pointer"
-        onClick={() =>
-          setFullScreenImage({
-            src: currentImage.src,
-            original: currentImage.original,
-            alt: currentImage.alt,
-            title: currentImage.title,
-            subtitle: currentImage.subtitle || "",
-          })
-        }
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
-        <ImageWithLoader
-          src={currentImage.src}
-          alt={currentImage.alt}
-          className={`relative rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 ${currentImage.imgClassName ?? "w-full max-w-sm h-96 object-cover"}`}
-          skeletonClassName="relative w-full max-w-sm h-96 rounded-lg"
-        />
+      <div className="relative flex items-center">
+        {/* Navigation arrows - only show if more than 1 image */}
+        {images.length > 1 && (
+          <button
+            onClick={goToPrevious}
+            className="absolute -left-12 top-1/2 transform -translate-y-1/2 text-stone-500 hover:text-stone-700 p-2 transition-all duration-200"
+          >
+            <ChevronLeft size={20} />
+          </button>
+        )}
 
-        {/* Click indicator */}
-        <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
-          <div className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
-            {tCommon("click-zoom")}
+        {/* Image container with group hover */}
+        <div
+          className="relative group cursor-pointer"
+          onClick={() =>
+            setFullScreenImage({
+              src: currentImage.src,
+              original: currentImage.original,
+              alt: currentImage.alt,
+              title: currentImage.title,
+              subtitle: currentImage.subtitle || "",
+            })
+          }
+        >
+          <ImageWithLoader
+            src={currentImage.src}
+            alt={currentImage.alt}
+            className={`relative transition-all duration-300 ${currentImage.imgClassName ?? "w-full max-w-sm h-96 object-cover"}`}
+            skeletonClassName="relative w-full max-w-sm h-96"
+          />
+
+          {/* Click indicator - only shows on image hover */}
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <div className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
+              {tCommon("click-zoom")}
+            </div>
           </div>
         </div>
 
-        {/* Navigation arrows - only show if more than 1 image */}
         {images.length > 1 && (
-          <>
-            <button
-              onClick={(e) => {
-                e.stopPropagation()
-                goToPrevious()
-              }}
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-2 rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              onClick={(e) => {
-                e.stopPropagation()
-                goToNext()
-              }}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-2 rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </>
-        )}
-
-        {/* Dots indicator - only show if more than 1 image */}
-        {images.length > 1 && (
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {images.map((_, index) => (
-              <button
-                key={index}
-                onClick={(e) => {
-                  e.stopPropagation()
-                  setCurrentIndex(index)
-                }}
-                className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                  index === currentIndex ? "bg-white" : "bg-white bg-opacity-50 hover:bg-opacity-75"
-                }`}
-              />
-            ))}
-          </div>
+          <button
+            onClick={goToNext}
+            className="absolute -right-12 top-1/2 transform -translate-y-1/2 text-stone-500 hover:text-stone-700 p-2 transition-all duration-200"
+          >
+            <ChevronRight size={20} />
+          </button>
         )}
       </div>
 
@@ -111,6 +90,21 @@ const ImageSlider = ({ images, setFullScreenImage, className = "" }: ImageSlider
           <span className="text-sm text-gray-500">
             {currentIndex + 1} of {images.length}
           </span>
+        </div>
+      )}
+
+      {/* Dots indicator - only show if more than 1 image */}
+      {images.length > 1 && (
+        <div className="flex justify-center space-x-2 mt-4">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
+                index === currentIndex ? "bg-stone-700" : "bg-stone-300 hover:bg-stone-400"
+              }`}
+            />
+          ))}
         </div>
       )}
     </div>
