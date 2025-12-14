@@ -52,7 +52,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
 interface HeroSectionProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  data: ReferenceData
+  data: Pick<ReferenceData, "heroTitle" | "variantsSubtitle">
   showReferencePrefix?: boolean
   backgroundColor?: string
 }
