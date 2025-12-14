@@ -76,14 +76,13 @@ export function DialTypePage({ data }: DialTypePageProps) {
                         })
                       }
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                       <ImageWithLoader
                         src={image.src}
                         alt={image.alt}
-                        className={`relative object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 ${image.imgClassName ?? "w-full h-96 sm:h-[450px] lg:h-[500px] "}`}
-                        skeletonClassName="w-full h-96 sm:h-[450px] lg:h-[500px] rounded-lg"
+                        className={`relative object-cover transition-all duration-300 ${image.imgClassName ?? "w-full h-96 sm:h-[450px] lg:h-[500px] "}`}
+                        skeletonClassName="w-full h-96 sm:h-[450px] lg:h-[500px]"
                       />
-                      <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100">
+                      <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
                         <div className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
                           {tCommon("click-zoom")}
                         </div>
@@ -104,6 +103,10 @@ export function DialTypePage({ data }: DialTypePageProps) {
             {variations &&
               variations.map((variation, index) => (
                 <div key={index}>
+                  {/* Divider between sections */}
+                  {index > 0 && (
+                    <div className="w-full h-px bg-stone-200 mb-16 sm:mb-20 lg:mb-24"></div>
+                  )}
                   {(variation.image_type === "row" || variation.image_type === "right") && (
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
                       <div className="space-y-6">
@@ -193,7 +196,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                 <ImageWithLoader
                                   src={image.src}
                                   alt={image.alt}
-                                  className="relative w-full h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                                  className="relative w-full h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300"
                                   skeletonClassName="w-full h-80 rounded-lg"
                                 />
                                 {/* Click indicator */}
@@ -355,14 +358,13 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                   })
                                 }
                               >
-                                <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                                 <ImageWithLoader
                                   src={image.src}
                                   alt={image.alt}
-                                  className={`relative object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 ${image.imgClassName ?? "w-full h-64 sm:h-80 lg:h-96"}`}
+                                  className={`relative object-cover transition-all duration-300 ${image.imgClassName ?? "w-full h-64 sm:h-80 lg:h-96"}`}
                                   skeletonClassName="w-full h-64 sm:h-80 lg:h-96 rounded-lg"
                                 />
-                                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100">
+                                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
                                   <div className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
                                     {tCommon("click-zoom")}
                                   </div>

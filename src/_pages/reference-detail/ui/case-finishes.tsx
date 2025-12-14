@@ -148,7 +148,13 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
 
             {/* Info Text */}
             {data.info && (
-              <p className="text-base lg:text-lg text-stone-500 leading-6 text-center max-w-4xl">
+              <p
+                className={`text-stone-500 text-center ${
+                  data.referenceId === "7177"
+                    ? "text-lg lg:text-xl leading-7 max-w-none"
+                    : "text-base lg:text-lg leading-6 max-w-4xl"
+                }`}
+              >
                 {data.info}
               </p>
             )}

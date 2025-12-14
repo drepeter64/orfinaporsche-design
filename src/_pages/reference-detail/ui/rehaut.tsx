@@ -224,9 +224,6 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
                             className={cn(
                               "group relative overflow-hidden border border-stone-200 bg-white transition-transform duration-300 hover:-translate-y-1",
                               image.wrapClassName,
-                              variation.images.length === 1 &&
-                                !variation.title.toLowerCase().includes("standard") &&
-                                "sm:col-start-2",
                             )}
                           >
                             <ImageWithLoader
