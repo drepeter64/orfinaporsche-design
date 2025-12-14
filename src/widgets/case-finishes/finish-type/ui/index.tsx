@@ -114,7 +114,7 @@ export const FinishType: React.FC<FinishTypeProps> = ({
                       "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/placeholder.png",
                     alt: images[0].alt || title,
                     title: images[0].title,
-                    subtitle: images[0].subtitle,
+                    subtitle: images[0].subtitle || images[0].title,
                   })
                 }
               >
@@ -137,12 +137,15 @@ export const FinishType: React.FC<FinishTypeProps> = ({
                   </div>
                 </div>
               </div>
-              {images[0].subtitle && (
-                <span
-                  dangerouslySetInnerHTML={{ __html: images[0].subtitle }}
-                  className="block text-base text-neutral-500 text-center mt-6"
-                ></span>
-              )}
+              {(() => {
+                const caption = images[0].subtitle || images[0].title
+                return caption ? (
+                  <span
+                    dangerouslySetInnerHTML={{ __html: caption }}
+                    className="block text-base text-neutral-500 text-center mt-6"
+                  ></span>
+                ) : null
+              })()}
             </div>
           ) : (
             // Multiple images - carousel/slider gallery
@@ -177,7 +180,8 @@ export const FinishType: React.FC<FinishTypeProps> = ({
                         images[currentImageIndex].alt ||
                         `${title} - Image ${currentImageIndex + 1}`,
                       title: images[currentImageIndex].title,
-                      subtitle: images[currentImageIndex].subtitle,
+                      subtitle:
+                        images[currentImageIndex].subtitle || images[currentImageIndex].title,
                     })
                   }
                 >
