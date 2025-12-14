@@ -226,12 +226,12 @@ export function DialPage({ data, referenceData }: DialPageProps) {
                         <button
                           type="button"
                           onClick={() => handleImageClick(image)}
-                          className="group relative w-full max-w-[420px] overflow-hidden border border-stone-200 bg-white transition-transform duration-300 hover:-translate-y-1"
+                          className="group relative w-full max-w-[420px] overflow-hidden border border-stone-200 bg-white transition-all duration-700 ease-[cubic-bezier(0.18,0.45,0.32,1)] hover:-translate-y-1.5 hover:shadow-xl"
                         >
                           <ImageWithLoader
                             src={image.src || placeholderImage}
                             alt={image.alt || image.title || ""}
-                            className="w-full h-[360px] sm:h-[420px] lg:h-[480px] object-cover transition-transform duration-500 group-hover:scale-102"
+                            className="w-full h-[360px] sm:h-[420px] lg:h-[480px] object-cover transition-all duration-800 ease-[cubic-bezier(0.18,0.45,0.32,1)] group-hover:scale-[1.04] group-hover:opacity-95"
                             skeletonClassName="w-full h-[360px] sm:h-[420px] lg:h-[480px]"
                           />
                           {(image.title || image.caption) && (
