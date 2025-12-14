@@ -28,7 +28,7 @@ export const CaseCard: React.FC<CaseCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-stone-50 flex rounded-none border border-stone-100 flex-col gap-2 items-start px-10 py-12 flex-1 min-w-0 ${className}`}
+      className={`bg-stone-50 flex rounded-none border border-stone-100 flex-col gap-2 items-start px-10 py-12 ${className}`}
     >
       <p className="text-2xl text-stone-900 leading-normal">{title}</p>
       {subtitle && <p className="text-base text-stone-500">{formatMkText(subtitle)}</p>}

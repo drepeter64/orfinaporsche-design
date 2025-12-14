@@ -4,14 +4,15 @@ import { useEffect, useState } from "react"
 import ImageWithLoader from "@/components/ImageWithLoader"
 import ExploreDetailsCard from "@/components/ExploreDetailsCard"
 import { useTranslations } from "next-intl"
-import { CasebackData, ImageInfo } from "@/shared/types"
+import { CasebackData, ImageInfo, ReferenceData } from "@/shared/types"
 import { FullScreenModal } from "@/widgets/full-screen-modal"
 
 interface CasebackPageProps {
   data: CasebackData
+  referenceData?: ReferenceData | null
 }
 
-export function CasebackPage({ data }: CasebackPageProps) {
+export function CasebackPage({ data, referenceData }: CasebackPageProps) {
   const [isVisible, setIsVisible] = useState(false)
   const [fullScreenImage, setFullScreenImage] = useState<ImageInfo | null>(null)
   const tCommon = useTranslations("Common")
@@ -21,7 +22,10 @@ export function CasebackPage({ data }: CasebackPageProps) {
   }, [])
 
   const { referenceTitle, referenceId, overview, variations } = data
+  // Use the introduction image (first image from reference page) as primary, then second generation image, or fallback to default
   const backImageSrc =
+    referenceData?.introduction?.image?.src ||
+    referenceData?.generations?.[1]?.image ||
     "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/preview-780x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg"
   const pageTitle = data.pageTitle || tCommon("caseback")
 
@@ -57,9 +61,10 @@ export function CasebackPage({ data }: CasebackPageProps) {
     imageAlt: referenceTitle,
   }
 
+  // Insert "Back to Reference" as the rightmost (last) item
   const exploreCardsWithBack = exploreCards.some((card) => card.route === "main")
     ? exploreCards
-    : [...exploreCards, backExploreCard]
+    : [...exploreCards, backExploreCard] // Back to Reference at the end
 
   const handleImageClick = (image: ImageInfo) => {
     setFullScreenImage({
@@ -149,8 +154,8 @@ export function CasebackPage({ data }: CasebackPageProps) {
               </span>
               <h3 className="text-2xl sm:text-3xl font-light text-stone-900">{variation.title}</h3>
             </div>
-            <div className="mx-auto flex flex-col lg:flex-row justify-between items-start pb-24 border-b border-stone-200">
-              <div className="flex flex-col gap-6 lg:max-w-[720px]">
+            <div className="mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-start lg:gap-12 items-start pb-24 border-b border-stone-200">
+              <div className="flex flex-col gap-6 lg:max-w-[720px] w-full">
                 <div className="space-y-5">
                   {variation.note && (
                     <div className="border border-stone-200 bg-stone-50 p-5">
@@ -192,7 +197,7 @@ export function CasebackPage({ data }: CasebackPageProps) {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center justify-between lg:max-w-[460px] w-full">
+              <div className="flex flex-col items-center gap-6 lg:max-w-[460px] w-full lg:flex-shrink-0 mt-8 lg:mt-0">
                 {variation.images && variation.images.length ? (
                   variation.images.map((img, imageIndex) => (
                     <button
@@ -206,7 +211,7 @@ export function CasebackPage({ data }: CasebackPageProps) {
                           src={img.src || "/placeholder.svg"}
                           alt={img.alt || variation.title}
                           fill
-                          className="object-cover"
+                          className="object-contain"
                           sizes="(max-width: 1024px) 100vw, 480px"
                         />
                       </div>

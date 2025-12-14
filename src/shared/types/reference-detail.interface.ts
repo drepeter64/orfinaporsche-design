@@ -9,6 +9,9 @@ export interface FinishSection {
   id: number
   title: string
   foundOn: string
+  description?: string
+  year?: string
+  color?: string
   note?: string
   images?: ImageInfo[]
   isPlaceholder?: boolean

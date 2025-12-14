@@ -13,7 +13,7 @@ export async function generateMetadata(
     "/src/shared/data/references/",
     `${params.referenceId}.json`,
   )
-  const data = await getJsonByPath(jsonFilePath)
+  const data = getJsonByPath(jsonFilePath)
   const parentData = await parentMeta
 
   if (!data) {
@@ -34,7 +34,7 @@ interface ReferencePageProps {
   }
 }
 
-export default function Reference({ params }: ReferencePageProps) {
+export default async function Reference({ params }: ReferencePageProps) {
   const jsonFilePath = path.join(
     process.cwd(),
     "/src/shared/data/references/",
