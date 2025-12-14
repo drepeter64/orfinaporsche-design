@@ -4,15 +4,29 @@ import { useEffect, useState } from "react"
 import ImageWithLoader from "@/components/ImageWithLoader"
 import { story_page } from "@/shared/data"
 import { useTranslations } from "next-intl"
-import SectionOverview from "@/components/SectionOverview"
+import { HeroSection } from "@/widgets/reference/hero"
 
 export function StoryPage() {
   const [fullScreenImage, setFullScreenImage] = useState<IFullScreenImage | null>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const tCommon = useTranslations("Common")
-  const { title, sub_title, description, gallery_title, gallery_sub_title, gallery_images } =
-    story_page
+  const {
+    heroTitle,
+    variantsSubtitle,
+    header,
+    subheader,
+    description,
+    gallery_title,
+    gallery_sub_title,
+    gallery_images,
+  } = story_page
+
+  // Create data object for HeroSection
+  const data = {
+    heroTitle,
+    variantsSubtitle,
+  }
 
   const openFullScreen = (imageIndex: number) => {
     setCurrentImageIndex(imageIndex)
@@ -55,38 +69,45 @@ export function StoryPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-stone-100">
       {/* Hero Section */}
-      <section
-        className={`py-24 bg-gray-50 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-20">
-          <div className="text-center mb-16">
-            <h1 className="font-sans text-4xl md:text-5xl font-light text-black mb-8 uppercase tracking-wider">
-              {title}
-            </h1>
-            <SectionOverview text={sub_title} />
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        data={data}
+        showReferencePrefix={false}
+        backgroundColor="bg-stone-100"
+      />
 
       {/* Story Content */}
       <section
-        className={`py-20 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+        className={`py-20 bg-white transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-20">
-          <div className="prose prose-lg max-w-none">
+        <div className="mx-auto px-4 space-y-20 sm:px-6 lg:px-20">
+          <div className="max-w-5xl">
             <div
-              className="mb-16 font-sans text-gray-700 leading-relaxed text-lg"
+              className="font-sans text-stone-700 leading-relaxed text-3xl mb-6"
+              dangerouslySetInnerHTML={{ __html: header }}
+            />
+          </div>
+
+          <div className="h-px bg-stone-300 w-full" />
+
+          <div className="max-w-3xl space-y-12 mx-auto">
+            <div
+              className="font-sans text-stone-900 leading-relaxed text-2xl mb-6 !mt-6"
+              dangerouslySetInnerHTML={{ __html: subheader }}
+            />
+
+            <div
+              className="font-sans text-stone-700 leading-relaxed text-lg"
               dangerouslySetInnerHTML={{ __html: description }}
-            ></div>
+            />
           </div>
         </div>
       </section>
 
       {/* Gallery Section */}
       <section
-        className={`py-20 bg-gray-50 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+        className={`py-20 bg-stone-50 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
       >
         <div className="mx-auto px-4 sm:px-6 lg:px-20">
           <div className="text-center mb-16">
@@ -104,7 +125,7 @@ export function StoryPage() {
                 className="group"
               >
                 <div
-                  className="relative cursor-pointer overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                  className="relative cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1"
                   onClick={() => openFullScreen(index)}
                 >
                   <ImageWithLoader
@@ -126,7 +147,7 @@ export function StoryPage() {
 
                 {/* Caption */}
                 <div className="mt-4 px-2">
-                  <h3 className="font-sans text-lg font-medium text-black mb-2">{image.title}</h3>
+                  <h3 className="font-sans text-lg font-medium text-black">{image.title}</h3>
                   <p className="font-sans text-sm text-gray-700 leading-relaxed">{image.caption}</p>
                 </div>
               </div>

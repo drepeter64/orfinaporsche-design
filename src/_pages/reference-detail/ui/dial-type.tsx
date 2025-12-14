@@ -1,11 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { DialTypeData, ImageInfo } from "@/shared/types"
 import { FullScreenModal } from "@/widgets/full-screen-modal"
 import { useTranslations } from "next-intl"
 import { BackNavigationSection } from "@/widgets/reference-detail/back-navigation"
-import { Breadcrumbs } from "@/widgets/breadcrumbs"
 import { ClientRoutes } from "@/shared/routes"
 import SectionHeading from "@/components/SectionHeading"
 import ImageWithLoader from "@/components/ImageWithLoader"
@@ -18,56 +17,47 @@ interface DialTypePageProps {
 }
 
 export function DialTypePage({ data }: DialTypePageProps) {
-  const [isVisible, setIsVisible] = useState(false)
   const [fullScreenImage, setFullScreenImage] = useState<ImageInfo | null>(null)
   const tCommon = useTranslations("Common")
 
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
   const { referenceId, referenceTitle, dialTitle, variations } = data
 
-  const breadcrumb = [
-    {
-      text: `${tCommon("reference")} ${referenceId}`,
-      link: ClientRoutes.reference(referenceId),
-    },
-    {
-      text: tCommon("dial"),
-      link: ClientRoutes.reference_dial(referenceId),
-    },
-    {
-      text: dialTitle,
-    },
-  ]
-
   return (
-    <div className="min-h-[calc(100vh-97px)] bg-background flex flex-col">
-      {/* Breadcrumb */}
-      <Breadcrumbs links={breadcrumb} />
-
+    <div className="min-h-[calc(100vh-97px)] bg-stone-100 flex flex-col">
       {/* Hero Section */}
-      <section
-        className={`py-12 sm:py-16 lg:py-20 flex-1 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
-      >
-        <div className="mx-auto px-4 sm:px-6 lg:px-20">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-black mb-4 sm:mb-6 uppercase tracking-wider">
-              {tCommon("reference")}&nbsp;{referenceTitle}
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light">{dialTitle}</p>
-          </div>
+      <section className="relative py-[60px] md:py-[60px] overflow-hidden px-4 sm:px-6 lg:px-20 w-full h-fit bg-stone-100">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="flex flex-col items-start gap-4 h-fit">
+            <div className="w-full">
+              <h1 className="font-normal text-4xl md:text-8xl lg:text-12xl text-black tracking-[-0.01em] leading-[1]">
+                {tCommon("reference")} {referenceTitle}
+              </h1>
+              <div className="w-full h-px bg-black/20 mt-8"></div>
+            </div>
 
-          {/* Overview */}
+            {dialTitle && (
+              <div className="py-4 max-w-[600px] w-full">
+                <p className="text-lg md:text-lg lg:text-xl text-black/60 leading-[1.4] text-left">
+                  {dialTitle}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Overview Section */}
+      <section className=" bg-white px-4 sm:px-6 lg:px-20 py-12">
+        <div className="max-w-[1280px] mx-auto">
           {data.overview && (
-            <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
+            <div className="mb-16 sm:mb-20 lg:mb-24">
               <SectionOverview text={data.overview} />
             </div>
           )}
 
           {/* Poster Photo */}
           {data.poster && data.poster.length > 0 && (
-            <div className="animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-300 mb-16 sm:mb-20 lg:mb-24">
+            <div className="mb-16 sm:mb-20 lg:mb-24">
               <div className={`grid grid-cols-1 sm:grid-cols-${data.poster.length} gap-6`}>
                 {data.poster.map((image, index) => (
                   <div
@@ -113,10 +103,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
             {/* The Baseline Configuration */}
             {variations &&
               variations.map((variation, index) => (
-                <div
-                  key={index}
-                  className={`animate-in fade-in-0 slide-in-from-bottom-4 duration-1000 delay-${index * 100 + 300}`}
-                >
+                <div key={index}>
                   {(variation.image_type === "row" || variation.image_type === "right") && (
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
                       <div className="space-y-6">

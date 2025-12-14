@@ -59,5 +59,10 @@ export default function Rehaut({ params }: PageProps) {
     exploreCards: referenceData?.exploreCards,
   }
 
-  return <RehautPage data={mergedData} />
+  return (
+    <RehautPage
+      data={mergedData}
+      referenceData={referenceData}
+    />
+  )
 }

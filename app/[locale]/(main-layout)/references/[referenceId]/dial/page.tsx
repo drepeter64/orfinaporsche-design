@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import path from "node:path"
 import { getJsonByPath } from "@/features/getJsonByPath"
 import { Metadata, ResolvingMetadata } from "next"
+import { ReferenceData } from "@/shared/types"
 
 export async function generateMetadata(
   { params }: PageProps,
@@ -42,9 +43,21 @@ export default function Dial({ params }: PageProps) {
   )
   const data = getJsonByPath(jsonFilePath)
 
+  const referenceJsonFilePath = path.join(
+    process.cwd(),
+    "/src/shared/data/references/",
+    `${params.referenceId}.json`,
+  )
+  const referenceData = getJsonByPath(referenceJsonFilePath) as ReferenceData | null
+
   if (!data) {
     notFound()
   }
 
-  return <DialPage data={data} />
+  return (
+    <DialPage
+      data={data}
+      referenceData={referenceData}
+    />
+  )
 }

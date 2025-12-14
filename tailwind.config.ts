@@ -123,4 +123,5 @@ export default {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  safelist: ["bg-lime-950", "bg-lime-800", "bg-green-700", "bg-gray-500", "bg-gray-600"],
 } satisfies Config

@@ -17,6 +17,14 @@ export function useScrollAnimation<T extends HTMLElement = HTMLDivElement>(
     const element = ref.current
     if (!element) return
 
+    // Check initial visibility
+    const rect = element.getBoundingClientRect()
+    const isInitiallyVisible = rect.top < window.innerHeight && rect.bottom > 0
+
+    if (isInitiallyVisible) {
+      setIsVisible(true)
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

@@ -27,10 +27,10 @@ export const TechnicalSpecificationSection: React.FC<TechnicalSpecificationsProp
     value: string
     isLast?: boolean
   }) => (
-    <div>
+    <div className="w-full">
       <div className="h-px bg-stone-300 w-full"></div>
-      <div className="flex items-center gap-[37px] py-4 text-base md:text-lg tracking-[-0.01em]">
-        <span className="text-black w-[120px] md:w-[160px] flex-shrink-0">{label}</span>
+      <div className="flex items-center gap-[37px] py-4 text-base md:text-lg w-full">
+        <span className="text-black w-[140px] flex-shrink-0">{label}</span>
         <span
           className="text-black/50"
           dangerouslySetInnerHTML={{ __html: value }}
@@ -43,14 +43,14 @@ export const TechnicalSpecificationSection: React.FC<TechnicalSpecificationsProp
   return (
     <section
       ref={ref}
-      className={`py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20 ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
+      className={`w-full py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20 ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
     >
       <div className="flex flex-col gap-12 items-center">
         <h2 className="text-2xl md:text-3xl lg:text-4xl text-black text-center">
           {tCommon("tech-specification")}
         </h2>
 
-        <div className="w-full grid md:grid-cols-2 gap-x-12">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Column */}
           <div className="flex flex-col">
             {leftColumnSpecs.map((spec, index) => (

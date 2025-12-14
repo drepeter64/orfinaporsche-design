@@ -15,7 +15,7 @@ export const DialItemListSection: React.FC<DialItemListSectionProps> = ({
     <>
       <Link href={ClientRoutes.dial_type(referenceId, variation.route)}>
         <div
-          className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-gray-100 hover:border-gray-200"
+          className="bg-white shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group border border-stone-200 hover:border-stone-300"
           onMouseEnter={() => setHoveredCard(variation.route)}
           onMouseLeave={() => setHoveredCard("")}
         >
@@ -29,14 +29,14 @@ export const DialItemListSection: React.FC<DialItemListSectionProps> = ({
                       key={index}
                       src={item.src}
                       alt={item.alt}
-                      className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${
+                      className={`absolute inset-0 w-full h-full object-cover transition-all duration-600 ${
                         hoveredCard === variation.route
                           ? index === 0
-                            ? "opacity-0 scale-110"
+                            ? "opacity-0 scale-105"
                             : "opacity-100 scale-100"
                           : index === 0
                             ? "opacity-100 scale-100"
-                            : "opacity-0 scale-110"
+                            : "opacity-0 scale-105"
                       }`}
                     />
                   ))
@@ -76,7 +76,7 @@ export const DialItemListSection: React.FC<DialItemListSectionProps> = ({
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-black transition-colors">
                 {variation.title}
               </h3>
-              <div className="w-16 h-1 bg-gradient-to-r from-gray-300 to-gray-100 group-hover:from-black group-hover:to-gray-400 transition-all duration-300 rounded-full"></div>
+              <div className="w-16 h-1 bg-gradient-to-r from-gray-300 to-gray-100 group-hover:from-black group-hover:to-gray-400 transition-all duration-300"></div>
             </div>
           </div>
         </div>

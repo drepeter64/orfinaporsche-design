@@ -7,14 +7,15 @@ import ExploreDetailsCard from "@/components/ExploreDetailsCard"
 import ImageWithLoader from "@/components/ImageWithLoader"
 import { cn } from "@/shared/lib/utils"
 import { FullScreenModal } from "@/widgets/full-screen-modal"
-import { ImageInfo, RehautData, ReferenceExploreCard } from "@/shared/types"
+import { ImageInfo, RehautData, ReferenceExploreCard, ReferenceData } from "@/shared/types"
 import { useScrollAnimation, getScrollAnimationClasses } from "@/shared/hooks"
 
 interface RehautPageProps {
   data: RehautData
+  referenceData?: ReferenceData | null
 }
 
-export function RehautPage({ data }: RehautPageProps) {
+export function RehautPage({ data, referenceData }: RehautPageProps) {
   const [fullScreenImage, setFullScreenImage] = useState<ImageInfo | null>(null)
   const tCommon = useTranslations("Common")
 
@@ -27,7 +28,10 @@ export function RehautPage({ data }: RehautPageProps) {
   const subtitle = data.pageTitle || "Rehaut Variations"
   const placeholderImage = "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/placeholder.png"
   const totalVariations = data.variations?.length ?? 0
+  // Use the introduction image (first image from reference page) as primary, then second generation image, or fallback to default
   const backImageSrc =
+    referenceData?.introduction?.image?.src ||
+    referenceData?.generations?.[1]?.image ||
     "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/preview-780x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg"
 
   const exploreCards: ReferenceExploreCard[] = useMemo(() => {
@@ -75,9 +79,10 @@ export function RehautPage({ data }: RehautPageProps) {
     referenceId,
   }
 
+  // Insert "Back to Reference" as the rightmost (last) item
   const exploreCardsWithBack = exploreCards.some((card) => card.route === "main")
     ? exploreCards
-    : [...exploreCards, backExploreCard]
+    : [...exploreCards, backExploreCard] // Back to Reference at the end
 
   useEffect(() => {
     setFullScreenImage(null)
@@ -151,9 +156,10 @@ export function RehautPage({ data }: RehautPageProps) {
                     </div>
 
                     {variation.note && (
-                      <p className="text-base sm:text-lg leading-relaxed text-stone-700 whitespace-pre-line">
-                        {variation.note}
-                      </p>
+                      <p
+                        className="text-base sm:text-lg leading-relaxed text-stone-700 whitespace-pre-line"
+                        dangerouslySetInnerHTML={{ __html: variation.note }}
+                      />
                     )}
 
                     {variation.bulletSection?.title && (
@@ -218,7 +224,9 @@ export function RehautPage({ data }: RehautPageProps) {
                             className={cn(
                               "group relative overflow-hidden border border-stone-200 bg-white transition-transform duration-300 hover:-translate-y-1",
                               image.wrapClassName,
-                              variation.images.length === 1 && "sm:col-start-2",
+                              variation.images.length === 1 &&
+                                !variation.title.toLowerCase().includes("standard") &&
+                                "sm:col-start-2",
                             )}
                           >
                             <ImageWithLoader

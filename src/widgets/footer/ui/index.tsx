@@ -30,15 +30,15 @@ export const Footer = () => {
   ]
 
   return (
-    <footer className="w-full bg-background border-t border-gray-100 mt-auto">
-      <div className="max-w-[100rem] mx-auto px-4 sm:px-8 lg:px-20 py-12 lg:py-16">
+    <footer className="w-full bg-stone-100 border-t border-gray-100 mt-auto">
+      <div className="max-w-[100rem] mx-auto px-5 sm:px-10 lg:px-20 py-12 lg:py-16">
         <div className="flex flex-col gap-10 lg:gap-12">
           <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-black tracking-widest whitespace-nowrap">
             {tCommon("store_name")}
           </h2>
 
           <div className="flex flex-col gap-10 lg:gap-16">
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-10 items-start">
+            <div className="flex flex-row items-start gap-10 lg:gap-10 w-full">
               <Link
                 href={ClientRoutes.home}
                 className="flex-shrink-0"
@@ -54,7 +54,7 @@ export const Footer = () => {
 
               <nav
                 aria-label="Footer navigation"
-                className="w-full max-w-4xl flex flex-col gap-10"
+                className="w-full flex flex-row flex-wrap gap-[60px] pr-[200px]"
               >
                 {columns.map((column) => (
                   <FooterColumn
@@ -83,7 +83,7 @@ const FooterColumn = ({ heading, headingHref, items }: FooterColumnProps) => {
   const hasItems = items && items.length > 0
 
   return (
-    <div className="flex flex-col gap-3 min-w-[140px]">
+    <div className="flex w-fit flex-col gap-3 min-w-0">
       {headingHref ? (
         <Link
           href={headingHref}

@@ -155,5 +155,25 @@
         }
       ]
     }
+  ],
+  "exploreCards": [
+    {
+      "title": "Case & Finishes",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-caseandfinishes/preview-780x-7176-series-v4-black-case-pd-dial-tachymetre-rehaut.jpg",
+      "imageAlt": "Case & Finishes",
+      "route": "case"
+    },
+    {
+      "title": "Rehaut Variations",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-rehaut/preview-560x-7176-yellow-triangle-rehaut.jpg",
+      "imageAlt": "Rehaut Variations",
+      "route": "rehaut"
+    },
+    {
+      "title": "Dial Variations",
+      "imageSrc": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-dial-variations/preview-780x-7176-series-v4-sable-case-pd-dial-tachymetre-rehaut.jpg",
+      "imageAlt": "Dial Variations",
+      "route": "dial"
+    }
   ]
 }

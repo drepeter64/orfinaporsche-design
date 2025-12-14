@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { Metadata, ResolvingMetadata } from "next"
 import path from "node:path"
 import { getJsonByPath } from "@/features/getJsonByPath"
+import { ReferenceData } from "@/shared/types"
 
 export async function generateMetadata(
   { params }: PageProps,
@@ -42,9 +43,21 @@ export default function CaseFinishes({ params }: PageProps) {
   )
   const data = getJsonByPath(jsonFilePath)
 
+  const referenceJsonFilePath = path.join(
+    process.cwd(),
+    "/src/shared/data/references/",
+    `${params.referenceId}.json`,
+  )
+  const referenceData = getJsonByPath(referenceJsonFilePath) as ReferenceData | null
+
   if (!data) {
     notFound()
   }
 
-  return <CaseFinishesPage data={data} />
+  return (
+    <CaseFinishesPage
+      data={data}
+      referenceData={referenceData}
+    />
+  )
 }
