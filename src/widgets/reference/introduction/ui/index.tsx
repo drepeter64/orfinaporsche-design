@@ -77,7 +77,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
                     </div>
 
                     <div className="mt-4 text-center">
-                      <h3 className="text-lg sm:text-xl font-semibold text-stone-800 mb-1">
+                      <h3 className="text-lg sm:text-xl font-normal text-stone-800 mb-1">
                         {introduction.image.title}
                       </h3>
                       <p className="text-sm sm:text-base text-gray-600">
