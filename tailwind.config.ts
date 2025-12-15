@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Porsche Next", "system-ui", "sans-serif"],
+        sans: ["var(--font-archivo-narrow)", "system-ui", "sans-serif"],
         serif: ["Georgia", "serif"],
       },
       spacing: {
