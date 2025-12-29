@@ -15,7 +15,7 @@ export const DialItemListSection: React.FC<DialItemListSectionProps> = ({
     <>
       <Link href={ClientRoutes.dial_type(referenceId, variation.route)}>
         <div
-          className="bg-white shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group border border-stone-200 hover:border-stone-300"
+          className="bg-white shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group border border-stone-200 hover:border-stone-300 hover:-translate-y-2"
           onMouseEnter={() => setHoveredCard(variation.route)}
           onMouseLeave={() => setHoveredCard("")}
         >

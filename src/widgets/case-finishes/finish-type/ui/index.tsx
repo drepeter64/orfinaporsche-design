@@ -153,7 +153,7 @@ export const FinishType: React.FC<FinishTypeProps> = ({
                 return caption ? (
                   <span
                     dangerouslySetInnerHTML={{ __html: caption }}
-                    className="block text-base text-neutral-500 text-center mt-6"
+                    className="block text-base text-neutral-500 text-center mt-6 tracking-wide"
                   ></span>
                 ) : null
               })()}
@@ -234,7 +234,7 @@ export const FinishType: React.FC<FinishTypeProps> = ({
 
               {/* Image caption/title */}
               {images[currentImageIndex].title && (
-                <span className="block text-base text-neutral-500 text-center mt-6">
+                <span className="block text-base text-neutral-500 text-center mt-6 tracking-wide">
                   {images[currentImageIndex].title}
                 </span>
               )}

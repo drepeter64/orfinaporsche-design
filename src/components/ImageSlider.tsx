@@ -80,7 +80,7 @@ const ImageSlider = ({ images, setFullScreenImage, className = "" }: ImageSlider
       </div>
 
       {/* Image caption */}
-      <span className="block text-base sm:text-lg text-gray-600 text-center mt-4 font-bold">
+      <span className="block text-base sm:text-lg text-gray-600 text-center mt-4 font-bold tracking-wide">
         {currentImage.title}
       </span>
 

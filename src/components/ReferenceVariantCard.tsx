@@ -84,7 +84,9 @@ const ReferenceVariantCard = ({
                   sizes="(max-width: 1024px) 66vw, 400px"
                 />
               </div>
-              <p className="text-lg text-stone-500 mt-4 text-center">{imageCaption || title}</p>
+              <p className="text-lg text-stone-500 mt-4 text-center tracking-wide">
+                {imageCaption || title}
+              </p>
             </div>
           </div>
 

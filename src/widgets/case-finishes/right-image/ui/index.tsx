@@ -30,7 +30,7 @@ export const RightImageSection: React.FC<RightImageSectionProps> = ({
       </div>
       <div className="mt-4 text-center">
         <h3 className="text-base sm:text-lg text-black font-semibold mb-1">{image.title}</h3>
-        <p className="text-sm text-gray-600 leading-relaxed">{image.caption}</p>
+        <p className="text-sm text-gray-600 leading-relaxed tracking-wide">{image.caption}</p>
       </div>
     </div>
   )

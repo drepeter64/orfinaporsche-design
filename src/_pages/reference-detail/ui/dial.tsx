@@ -108,6 +108,7 @@ export function DialPage({ data, referenceData }: DialPageProps) {
             <h1 className="font-normal text-4xl md:text-8xl lg:text-12xl font-light text-black leading-none w-full">
               {tCommon("reference")} {referenceTitle}
             </h1>
+            <div className="w-full h-px bg-black/20 mt-8"></div>
           </div>
           <p className="text-xl sm:text-2xl lg:text-[32px] text-black/60 leading-10">
             {tCommon("dial-variations")}
@@ -116,22 +117,28 @@ export function DialPage({ data, referenceData }: DialPageProps) {
       </section>
 
       {/* Overview */}
-      <section
-        className={`w-full px-4 sm:px-6 lg:px-20 ${referenceId === "7177" ? "pb-12" : "py-12 pb-20"}`}
-      >
-        <div className="w-full space-y-6">
-          {data.overview && (
-            <p className="text-base sm:text-lg leading-relaxed text-stone-700 whitespace-pre-line">
-              {data.overview}
-            </p>
-          )}
-          {data.note && (
-            <p className="text-base sm:text-lg leading-relaxed text-stone-700">
-              {data.note.replace(/\n/g, " ")}
-            </p>
-          )}
-        </div>
-      </section>
+      {(data.overview || data.note) && (
+        <section className="w-full px-4 sm:px-6 lg:px-20 py-12 pb-20">
+          <div className="w-full space-y-6">
+            {data.overview && (
+              <p className="text-base sm:text-lg leading-relaxed text-stone-700 whitespace-pre-line text-center">
+                {data.overview}
+              </p>
+            )}
+            {data.overview && data.note && (
+              <div
+                className="w-full h-px bg-stone-200"
+                aria-hidden="true"
+              />
+            )}
+            {data.note && (
+              <p className="text-base sm:text-lg leading-relaxed text-stone-700">
+                {data.note.replace(/\n/g, " ")}
+              </p>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Dial Listing (for pages with listing instead of variations) */}
       {data.listing && data.listing.length > 0 && (
@@ -246,7 +253,7 @@ export function DialPage({ data, referenceData }: DialPageProps) {
                             skeletonClassName="w-full h-[360px] sm:h-[420px] lg:h-[480px]"
                           />
                           {(image.title || image.caption) && (
-                            <div className="px-3 pb-3 pt-2 text-center text-sm text-stone-600">
+                            <div className="px-3 pb-3 pt-2 text-center text-sm text-stone-600 tracking-wide">
                               {image.title || image.caption}
                             </div>
                           )}

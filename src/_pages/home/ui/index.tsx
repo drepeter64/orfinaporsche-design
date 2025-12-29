@@ -33,7 +33,7 @@ export const HomePage = () => {
         </div>
 
         {/* Dark Gradient Overlay */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black/80 via-black/50 via-40% to-transparent" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-t from-stone-950/90 via-stone-950/60 via-40% to-transparent" />
 
         {/* Content Overlay - Bottom Left */}
         <div className="relative z-10 px-4 sm:px-6 lg:px-20 pb-8 sm:pb-10 lg:pb-12 max-w-2xl">
@@ -61,7 +61,7 @@ export const HomePage = () => {
           >
             <Link
               href={ClientRoutes.reference_guide}
-              className="inline-block mt-6 sm:mt-8 text-sm sm:text-base font-normal text-stone-50 tracking-wide uppercase border-b border-stone-50 pb-1 hover:text-white hover:border-white transition-colors duration-300"
+              className="inline-block mt-6 sm:mt-8 text-sm sm:text-base font-normal text-stone-50 tracking-wider uppercase border-b border-stone-50 pb-1 hover:text-white hover:border-white transition-colors duration-300"
             >
               Explore
             </Link>
@@ -108,7 +108,7 @@ export const HomePage = () => {
                       <h3 className="text-2xl font-normal text-black/70 group-hover:text-black mb-1.5 tracking-wide transition-colors duration-300 text-center">
                         {title}
                       </h3>
-                      <span className="text-stone-500 font-normal text-base tracking-wide group-hover:text-stone-700 transition-all duration-300 inline-flex items-center justify-center w-full">
+                      <span className="text-stone-400 font-normal text-base tracking-wider group-hover:text-stone-700 transition-all duration-300 inline-flex items-center justify-center w-full uppercase">
                         {tCommon("explore-details")}
                         <svg
                           className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"

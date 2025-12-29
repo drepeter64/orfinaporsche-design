@@ -24,7 +24,7 @@ export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullS
               {variantsTitle}
             </p>
           </AnimatedText>
-          <div className="w-full h-px bg-black/10 mt-[60px] md:mt-[80px] lg:mt-[100px]"></div>
+          <div className="w-full h-px bg-black/10 mt-[30px] md:mt-[40px] lg:mt-[50px]"></div>
         </div>
       )}
       {generations &&
