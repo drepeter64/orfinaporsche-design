@@ -31,12 +31,6 @@
 .button._dark {
   --btn-color: var(--text-color-primary);
   --btn-bg: var(--bg-secondary);
-
-  &:active,
-  &:hover {
-    --btn-color: var(--text-color-secondary);
-    border-color: var(--btn-bg);
-  }
 }
 
 .button._dark._filled {
@@ -46,22 +40,11 @@
 
   background-color: var(--bg-secondary);
   border-color: var(--bg-secondary);
-
-  &:active,
-  &:hover {
-    --btn-color: var(--text-color-primary);
-  }
 }
 
 .button._light {
   --btn-color: var(--text-color-secondary);
   --btn-bg: var(--bg-primary);
-
-  &:active,
-  &:hover {
-    --btn-color: var(--text-color-primary);
-    border-color: var(--btn-bg);
-  }
 }
 
 .button._light._filled {
@@ -71,11 +54,6 @@
 
   background-color: var(--bg-primary);
   border-color: var(--bg-primary);
-
-  &:active,
-  &:hover {
-    --btn-color: var(--text-color-secondary);
-  }
 }
 
 .content {
@@ -104,11 +82,4 @@
   transition-duration: 500ms;
   transition-property: width, border-radius, color, background-color;
   transform: translate(-50%, -50%);
-}
-
-.button:active .bg,
-.button:hover .bg {
-  width: 250%;
-
-  transition-duration: 750ms;
 }

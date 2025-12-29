@@ -1,6 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react"
 
-import { useTranslations } from "next-intl"
 import { ImageInfo, ReferenceData } from "@/shared/types"
 import ImageWithLoader from "@/components/ImageWithLoader"
 import AnimatedImage from "@/components/AnimatedImage"
@@ -16,7 +15,6 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
     rootMargin: "0px 0px -50px 0px",
   })
 
-  const tCommon = useTranslations("Common")
   const { introduction } = data
 
   return (
@@ -71,45 +69,29 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
 
                   {/* Group Photo */}
                   <AnimatedImage delay={0.2}>
-                    <div className="relative group">
-                      {/* Decorative background element */}
-                      <div className="absolute -inset-4 bg-gradient-to-br from-stone-100 to-stone-200/50 rounded-sm -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                      <div
-                        className="relative overflow-hidden cursor-pointer transition-all duration-500"
-                        onClick={() =>
-                          setFullScreenImage({
-                            src: introduction.image!.src,
-                            original: introduction.image!.original,
-                            alt: introduction.image!.alt,
-                            title: introduction.image!.title,
-                            subtitle: introduction.image!.subtitle,
-                          })
-                        }
-                      >
+                    <div
+                      className="bg-stone-100 p-4 cursor-pointer group transition-shadow duration-300 shadow-sm hover:shadow-md border border-stone-200"
+                      onClick={() =>
+                        setFullScreenImage({
+                          src: introduction.image!.src,
+                          original: introduction.image!.original,
+                          alt: introduction.image!.alt,
+                          title: introduction.image!.title,
+                          subtitle: introduction.image!.subtitle,
+                        })
+                      }
+                    >
+                      <div className="relative overflow-hidden">
                         <ImageWithLoader
                           src={introduction.image.src}
                           alt={introduction.image.alt}
-                          className="w-full h-auto object-contain transition-transform duration-700 hover:scale-[1.02]"
+                          className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                           skeletonClassName="w-full h-80 sm:h-96 lg:h-[500px]"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-6">
-                          <div className="bg-white/95 backdrop-blur-sm text-stone-900 px-5 py-2.5 text-sm font-medium tracking-wider uppercase">
-                            {tCommon("click-zoom")}
-                          </div>
-                        </div>
                       </div>
-
-                      <div className="mt-6 text-center">
-                        <h3 className="text-xl md:text-2xl font-normal text-stone-800 tracking-wide">
-                          {introduction.image.title}
-                        </h3>
-                        {introduction.image.subtitle && (
-                          <p className="text-sm text-stone-500 mt-1 tracking-wide">
-                            {introduction.image.subtitle}
-                          </p>
-                        )}
-                      </div>
+                      <p className="text-lg text-stone-500 mt-4 text-center tracking-wide">
+                        {introduction.image.title}
+                      </p>
                     </div>
                   </AnimatedImage>
                 </div>
