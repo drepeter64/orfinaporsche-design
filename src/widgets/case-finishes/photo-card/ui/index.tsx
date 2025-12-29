@@ -25,9 +25,7 @@ export const PhotoCard: React.FC<PhotoCardProps> = ({
         />
       </div>
       {caption && (
-        <p className="text-base text-neutral-600 tracking-[-0.01em] leading-5 text-center">
-          {caption}
-        </p>
+        <p className="text-base text-neutral-600 tracking-wide leading-5 text-center">{caption}</p>
       )}
     </div>
   )

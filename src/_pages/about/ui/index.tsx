@@ -25,7 +25,7 @@ export function AboutPage() {
         </div>
 
         {/* Dark Gradient Overlay */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black/80 via-black/50 via-40% to-transparent" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-t from-stone-950/90 via-stone-950/60 via-40% to-transparent" />
 
         {/* Content Overlay - Bottom Left */}
         <div className="relative z-10 px-4 sm:px-6 lg:px-20 pb-8 sm:pb-10 lg:pb-12 max-w-2xl">

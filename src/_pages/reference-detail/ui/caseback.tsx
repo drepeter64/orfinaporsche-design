@@ -103,7 +103,7 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
                   >
                     <span className="mt-2 block h-1 w-1 rounded-full bg-stone-400" />
                     <p
-                      className="text-sm leading-relaxed text-stone-700"
+                      className="text-base leading-relaxed text-stone-700"
                       dangerouslySetInnerHTML={{
                         __html: `<strong>${subitem.title}</strong> ${subitem.text || ""}`,
                       }}
@@ -138,7 +138,10 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
 
       {overview && (
         <section className="w-full bg-white px-4 sm:px-6 lg:px-20 py-10">
-          <p className="text-base lg:text-xl text-stone-600 leading-normal">{overview}</p>
+          <p className="text-base lg:text-xl text-stone-600 leading-normal text-center">
+            {overview}
+          </p>
+          <div className="w-full h-px bg-stone-100 mt-10" />
         </section>
       )}
 
@@ -146,30 +149,23 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
         return (
           <section
             key={index}
-            className="w-full bg-white px-4 sm:px-6 lg:px-20 py-8 lg:py-12"
+            className="w-full bg-white px-4 sm:px-6 lg:px-20 pt-8 pb-8 lg:pb-12"
           >
-            <div className="flex items-baseline gap-3 mb-12">
-              {variations.length > 1 && (
-                <span className="text-2xl sm:text-3xl uppercase text-stone-400">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-              )}
-              <h3 className="text-2xl sm:text-3xl font-light text-stone-900 tracking-wide">
-                {variation.title}
-              </h3>
-            </div>
+            {variation.title && (
+              <div className="flex items-baseline gap-3 mb-12">
+                {variations.length > 1 && (
+                  <span className="text-2xl sm:text-3xl uppercase text-stone-400">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                )}
+                <h3 className="text-2xl sm:text-3xl font-light text-stone-900 tracking-wide">
+                  {variation.title}
+                </h3>
+              </div>
+            )}
             <div className="mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-start lg:gap-12 items-start pb-24 border-b border-stone-200">
               <div className="flex flex-col gap-6 lg:max-w-[720px] w-full">
                 <div className="space-y-5">
-                  {variation.note && (
-                    <div className="border border-stone-200 bg-stone-50 p-5">
-                      <p
-                        className="text-base text-stone-700 [&>strong]:font-semibold [&>b]:font-semibold"
-                        dangerouslySetInnerHTML={{ __html: variation.note }}
-                      />
-                    </div>
-                  )}
-
                   <div className="bg-white p-5 space-y-4">
                     <p className="text-lg uppercase tracking-[0.2em] text-stone-400">
                       {variation.bulletSection.title?.trim() || "Details"}
@@ -189,6 +185,15 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
 
                     <ul className="space-y-4">{renderBulletList(variation.bulletSection.list)}</ul>
                   </div>
+
+                  {variation.note && (
+                    <div className="border border-stone-200 bg-stone-50 p-5">
+                      <p
+                        className="text-base text-stone-700 [&>strong]:font-semibold [&>b]:font-semibold"
+                        dangerouslySetInnerHTML={{ __html: variation.note }}
+                      />
+                    </div>
+                  )}
 
                   {variation.blueNote && (
                     <div className="border border-stone-200 bg-stone-50 p-5">
@@ -222,7 +227,7 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
                         />
                       </div>
                       {(img.caption || img.subtitle || img.title) && (
-                        <p className="mt-3 text-sm text-stone-600 text-center">
+                        <p className="mt-3 text-sm text-stone-600 text-center tracking-wide">
                           {img.caption || img.subtitle || img.title}
                         </p>
                       )}

@@ -79,6 +79,7 @@ export const Watch3DShowcase = () => {
   const [selectedVariant, setSelectedVariant] = useState(watchVariants[0])
   const [isAutoRotating, setIsAutoRotating] = useState(true)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [isModelLoading, setIsModelLoading] = useState(true)
   const modelViewerRef = useRef<HTMLElement>(null)
 
   // Load model-viewer script
@@ -93,6 +94,26 @@ export const Watch3DShowcase = () => {
       document.head.removeChild(script)
     }
   }, [])
+
+  // Set model loading when variant changes
+  useEffect(() => {
+    setIsModelLoading(true)
+  }, [selectedVariant])
+
+  // Listen for model load event
+  useEffect(() => {
+    const modelViewer = modelViewerRef.current
+    if (!modelViewer) return
+
+    const handleLoad = () => {
+      setIsModelLoading(false)
+    }
+
+    modelViewer.addEventListener("load", handleLoad)
+    return () => {
+      modelViewer.removeEventListener("load", handleLoad)
+    }
+  }, [isLoaded])
 
   // Toggle auto-rotation
   const toggleAutoRotate = () => {
@@ -110,7 +131,7 @@ export const Watch3DShowcase = () => {
 
       <div className="relative z-10 flex flex-col h-full">
         {/* Main content area - desktop: side by side, mobile: stacked */}
-        <div className="flex-1 flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 lg:px-20 pt-12 lg:pt-0">
+        <div className="flex-1 flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 lg:px-20 pt-8 sm:pt-12 lg:pt-16">
           {/* Left side - Watch info (visible on all screens) */}
           <div className="lg:w-1/4 text-center lg:text-left order-2 lg:order-1 mt-4 lg:mt-0">
             <AnimatedText delay={0.1}>
@@ -158,9 +179,16 @@ export const Watch3DShowcase = () => {
                 />
               )}
 
-              {/* Loading state */}
+              {/* Loading state for script */}
               {!isLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-12 h-12 border-2 border-stone-300 border-t-stone-600 rounded-full animate-spin" />
+                </div>
+              )}
+
+              {/* Loading state for model */}
+              {isLoaded && isModelLoading && (
+                <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
                   <div className="w-12 h-12 border-2 border-stone-300 border-t-stone-600 rounded-full animate-spin" />
                 </div>
               )}

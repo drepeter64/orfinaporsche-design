@@ -160,7 +160,9 @@ export function StoryPage() {
 
                   {/* Caption */}
                   <div className="mt-2 px-2">
-                    <p className="font-sans text-sm text-stone-600">{image.caption}</p>
+                    <p className="font-sans text-sm text-stone-600 tracking-wide">
+                      {image.caption}
+                    </p>
                   </div>
                 </div>
               </AnimatedImage>

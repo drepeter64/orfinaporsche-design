@@ -121,7 +121,7 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
       <section className="px-4 sm:px-6 lg:px-20 py-12 pb-24">
         <div className="space-y-6">
           {data.overview && (
-            <p className="text-base sm:text-lg leading-relaxed text-stone-700 whitespace-pre-line">
+            <p className="text-base sm:text-lg leading-relaxed text-stone-700 whitespace-pre-line text-center max-w-5xl mx-auto">
               {data.overview}
             </p>
           )}
@@ -251,7 +251,7 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
                               skeletonClassName={cn("w-full rounded-md", imageHeightClass)}
                             />
                             {(image.title || image.caption) && (
-                              <div className="px-3 pb-3 pt-2 text-center text-sm text-stone-600">
+                              <div className="px-3 pb-3 pt-2 text-center text-sm text-stone-600 tracking-wide">
                                 {image.title || image.caption}
                               </div>
                             )}

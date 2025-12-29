@@ -67,17 +67,19 @@ export const CaseSection: React.FC<CaseSectionProps> = ({
                 delay={0.2}
               >
                 <div className="w-full lg:w-auto lg:min-w-[420px] bg-stone-50 px-6 py-6 border border-stone-100">
-                  <p className="text-lg lg:text-xl text-black mb-4">{tCommon("measurements")}</p>
+                  <p className="text-lg lg:text-xl text-black mb-4 tracking-wide">
+                    {tCommon("measurements")}
+                  </p>
                   <div className="grid text-sm lg:text-base">
                     {measurements.map((measurement, index) => (
                       <div
                         key={index}
                         className={`flex justify-between gap-8 px-4 py-3 ${index !== measurements.length - 1 ? "border-b border-neutral-200" : ""}`}
                       >
-                        <span className="text-neutral-500 whitespace-nowrap">
+                        <span className="text-neutral-500 whitespace-nowrap tracking-wide">
                           {measurement.label}
                         </span>
-                        <span className="text-neutral-900 font-medium whitespace-nowrap">
+                        <span className="text-neutral-900 font-medium whitespace-nowrap tracking-wide">
                           {measurement.value}
                         </span>
                       </div>

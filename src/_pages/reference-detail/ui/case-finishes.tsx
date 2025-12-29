@@ -93,7 +93,7 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
           ref={overviewRef}
           className={`w-full bg-white px-4 sm:px-6 lg:px-20 py-12 lg:py-[60px] ${getScrollAnimationClasses(overviewVisible, "duration-1000")}`}
         >
-          <div className="max-w-[1280px] mx-auto flex flex-col gap-6 lg:gap-7">
+          <div className="flex flex-col gap-6 lg:gap-7">
             {/* Descriptions and Measurements Row */}
             {(data.descriptions?.length ||
               data.info ||
@@ -101,7 +101,9 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
               <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-36 items-start">
                 {/* Descriptions or Info - case/model specific intro text */}
                 {(data.descriptions && data.descriptions.length > 0) || data.info ? (
-                  <div className="flex flex-col gap-4 max-w-[520px]">
+                  <div
+                    className={`flex flex-col gap-4 ${data.descriptions && data.descriptions.length > 0 ? "max-w-[520px]" : ""}`}
+                  >
                     {data.descriptions && data.descriptions.length > 0 ? (
                       data.descriptions.map((desc, index) => (
                         <p
@@ -206,19 +208,6 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
                 </div>
               )}
             </div>
-
-            {/* Info Text */}
-            {data.info && (
-              <p
-                className={`text-stone-500 text-center mx-auto ${
-                  data.referenceId === "7177"
-                    ? "text-lg lg:text-xl leading-7 max-w-none"
-                    : "text-base lg:text-lg leading-6 max-w-4xl"
-                }`}
-              >
-                {data.info}
-              </p>
-            )}
 
             {/* Additional Info Text Block */}
             {data.additionalInfo && (
@@ -363,7 +352,7 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
 
               {/* Merged Section Caption */}
               {data.mergedSection.image?.caption && (
-                <p className="text-base lg:text-lg text-stone-600 text-center">
+                <p className="text-base lg:text-lg text-stone-600 text-center tracking-wide">
                   {data.mergedSection.image.caption}
                 </p>
               )}
