@@ -248,7 +248,7 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
                                 "w-full object-cover transition-transform duration-500 group-hover:scale-102",
                                 imageHeightClass,
                               )}
-                              skeletonClassName={cn("w-full rounded-md", imageHeightClass)}
+                              skeletonClassName={cn("w-full", imageHeightClass)}
                             />
                             {(image.title || image.caption) && (
                               <div className="px-3 pb-3 pt-2 text-center text-sm text-stone-600 tracking-wide">

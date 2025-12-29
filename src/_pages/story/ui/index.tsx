@@ -145,7 +145,7 @@ export function StoryPage() {
                       src={image.src}
                       alt={image.alt}
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110 border border-stone-200"
-                      skeletonClassName="w-full h-64 rounded-lg"
+                      skeletonClassName="w-full h-64"
                     />
 
                     {/* Overlay */}
@@ -241,8 +241,8 @@ export function StoryPage() {
                 <ImageWithLoader
                   src={fullScreenImage.original || fullScreenImage.src}
                   alt={fullScreenImage.alt}
-                  className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
-                  skeletonClassName="w-96 h-96 rounded-lg"
+                  className="max-w-full max-h-[80vh] object-contain shadow-2xl"
+                  skeletonClassName="w-96 h-96"
                 />
               </div>
 
