@@ -14,10 +14,16 @@ export const Footer = () => {
     { heading: tCommon("story"), headingHref: ClientRoutes.story },
     {
       heading: tCommon("references"),
-      items: references.map((reference) => ({
-        label: reference.title,
-        href: ClientRoutes.reference(String(reference.route)),
-      })),
+      items: [
+        {
+          label: tCommon("reference_guide"),
+          href: ClientRoutes.reference_guide,
+        },
+        ...references.map((reference) => ({
+          label: reference.title,
+          href: ClientRoutes.reference(String(reference.route)),
+        })),
+      ],
     },
     {
       heading: tCommon("components"),

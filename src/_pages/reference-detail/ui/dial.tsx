@@ -108,7 +108,6 @@ export function DialPage({ data, referenceData }: DialPageProps) {
             <h1 className="font-normal text-4xl md:text-8xl lg:text-12xl font-light text-black leading-none w-full">
               {tCommon("reference")} {referenceTitle}
             </h1>
-            <div className="w-full h-px bg-stone-300 mt-4" />
           </div>
           <p className="text-xl sm:text-2xl lg:text-[32px] text-black/60 leading-10">
             {tCommon("dial-variations")}
@@ -127,16 +126,16 @@ export function DialPage({ data, referenceData }: DialPageProps) {
             </p>
           )}
           {data.note && (
-            <div className="border border-stone-200 bg-stone-50 px-6 py-5 text-sm sm:text-base leading-relaxed text-stone-500">
+            <p className="text-base sm:text-lg leading-relaxed text-stone-700">
               {data.note.replace(/\n/g, " ")}
-            </div>
+            </p>
           )}
         </div>
       </section>
 
       {/* Dial Listing (for pages with listing instead of variations) */}
       {data.listing && data.listing.length > 0 && (
-        <section className="px-4 sm:px-6 lg:px-20 py-12 pb-20">
+        <section className="bg-stone-50 px-4 sm:px-6 lg:px-20 py-20">
           <div className="max-w-[1280px] mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {data.listing.map((item, index) => (
@@ -169,54 +168,66 @@ export function DialPage({ data, referenceData }: DialPageProps) {
                     <div className="flex flex-col gap-5">
                       <div className="flex items-baseline gap-4">
                         <span className="text-3xl font-light text-stone-400">{displayNumber}</span>
-                        <h2 className="text-2xl sm:text-3xl tracking-tight">{variation.title}</h2>
+                        <h2 className="text-2xl sm:text-3xl tracking-wide">{variation.title}</h2>
                       </div>
 
                       {variation.note && (
-                        <div
-                          className="bg-stone-50 border-l-4 border-stone-200 px-5 py-4 text-base sm:text-lg leading-relaxed text-stone-700"
-                          dangerouslySetInnerHTML={{ __html: variation.note }}
-                        />
+                        <div className="border border-stone-200 bg-stone-50 p-5">
+                          <p
+                            className="text-base text-stone-700 [&>strong]:font-semibold [&>b]:font-semibold"
+                            dangerouslySetInnerHTML={{ __html: variation.note }}
+                          />
+                        </div>
                       )}
 
-                      {variation.bulletSection?.text?.map((paragraph, textIndex) => (
-                        <p
-                          key={textIndex}
-                          className="text-base sm:text-lg leading-relaxed text-stone-700"
-                          dangerouslySetInnerHTML={{ __html: paragraph }}
-                        />
-                      ))}
-
-                      {variation.bulletSection?.list?.length ? (
-                        <ul className="space-y-3 text-stone-700">
-                          {variation.bulletSection.list.map((item, itemIndex) => (
-                            <li
-                              key={itemIndex}
-                              className="flex gap-3"
-                            >
-                              <span className="mt-2 h-1.5 w-1.5 rounded-full bg-stone-500 flex-shrink-0" />
-                              <div className="space-y-1 text-sm sm:text-base leading-relaxed">
-                                <div>
-                                  <strong>{item.title}</strong> {item.text}
-                                </div>
-                                {item.list?.length ? (
-                                  <ul className="space-y-1 pl-4 text-stone-600">
-                                    {item.list.map((subItem, subIndex) => (
-                                      <li key={subIndex}>
-                                        <strong>{subItem.title}</strong> {subItem.text}
-                                      </li>
-                                    ))}
-                                  </ul>
-                                ) : null}
-                              </div>
-                            </li>
+                      {variation.bulletSection?.text?.length ||
+                      variation.bulletSection?.list?.length ? (
+                        <div className="bg-white p-5 space-y-4">
+                          {variation.bulletSection?.text?.map((paragraph, textIndex) => (
+                            <p
+                              key={textIndex}
+                              className="text-base sm:text-lg leading-relaxed text-stone-700"
+                              dangerouslySetInnerHTML={{ __html: paragraph }}
+                            />
                           ))}
-                        </ul>
+
+                          {variation.bulletSection?.list?.length ? (
+                            <ul className="space-y-3 text-stone-700">
+                              {variation.bulletSection.list.map((item, itemIndex) => (
+                                <li
+                                  key={itemIndex}
+                                  className="flex gap-3"
+                                >
+                                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-stone-500 flex-shrink-0" />
+                                  <div className="space-y-1 text-sm sm:text-base leading-relaxed">
+                                    <div>
+                                      <strong>{item.title}</strong> {item.text}
+                                    </div>
+                                    {item.list?.length ? (
+                                      <ul className="space-y-1 pl-4 text-stone-600">
+                                        {item.list.map((subItem, subIndex) => (
+                                          <li key={subIndex}>
+                                            <strong>{subItem.title}</strong> {subItem.text}
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    ) : null}
+                                  </div>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : null}
+                        </div>
                       ) : null}
 
                       {variation.blueNote && (
-                        <div className="border-l-4 border-blue-500 bg-blue-50 px-4 py-3 text-sm sm:text-base text-blue-800 leading-relaxed">
-                          <strong>{tCommon("note")}</strong> {variation.blueNote}
+                        <div className="border border-stone-200 bg-stone-50 p-5">
+                          <p className="text-base font-normal text-stone-400 uppercase tracking-wide mb-2">
+                            {tCommon("note")}
+                          </p>
+                          <p className="text-base text-stone-700 leading-relaxed">
+                            {variation.blueNote}
+                          </p>
                         </div>
                       )}
                     </div>
@@ -226,7 +237,7 @@ export function DialPage({ data, referenceData }: DialPageProps) {
                         <button
                           type="button"
                           onClick={() => handleImageClick(image)}
-                          className="group relative w-full max-w-[420px] overflow-hidden border border-stone-200 bg-white transition-all duration-700 ease-[cubic-bezier(0.18,0.45,0.32,1)] hover:-translate-y-1.5 hover:shadow-xl"
+                          className="group relative w-full max-w-[420px] overflow-hidden border border-stone-200 bg-white transition-transform duration-700 ease-[cubic-bezier(0.18,0.45,0.32,1)] hover:-translate-y-1.5"
                         >
                           <ImageWithLoader
                             src={image.src || placeholderImage}
@@ -267,7 +278,7 @@ export function DialPage({ data, referenceData }: DialPageProps) {
         className={`w-full bg-white px-4 sm:px-6 lg:px-20 py-16 lg:py-[100px] ${getScrollAnimationClasses(exploreVisible, "duration-1000")}`}
       >
         <div className="max-w-[1280px] mx-auto flex flex-col gap-12 items-center">
-          <h2 className="text-2xl md:text-3xl lg:text-[44px] text-black text-center leading-[1.1]">
+          <h2 className="text-2xl md:text-3xl lg:text-[44px] text-black text-center leading-[1.1] tracking-wide">
             {tCommon("explore-details")}
           </h2>
 

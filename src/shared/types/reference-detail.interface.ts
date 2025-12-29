@@ -58,6 +58,7 @@ export interface CaseFinishesData {
   variation_type?: "numbered" | "solid" | "elegant" | "elegant-dark"
   descriptions?: string[]
   info?: string
+  additionalInfo?: string
   sections?: FinishSection[]
   mergedSection?: MergedSection
   finishes?: ImageInfo[]

@@ -2,6 +2,7 @@ import { DetailedHTMLProps, HTMLAttributes } from "react"
 
 import { useTranslations } from "next-intl"
 import { ReferenceData } from "@/shared/types"
+import AnimatedText from "@/components/AnimatedText"
 import { useScrollAnimation, getScrollAnimationClasses } from "@/shared/hooks"
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
@@ -28,20 +29,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         >
           <div className="flex flex-col items-start gap-4 h-fit">
             <div className="w-full">
-              <h1 className="font-normal text-4xl md:text-8xl lg:text-12xl text-black tracking-[-0.01em] leading-[1]">
-                {showReferencePrefix && `${tCommon("reference")} `}
-                {heroTitle}
-              </h1>
+              <AnimatedText delay={0}>
+                <h1 className="font-normal text-4xl md:text-8xl lg:text-12xl text-black tracking-wide leading-[1]">
+                  {showReferencePrefix && `${tCommon("reference")} `}
+                  {heroTitle}
+                </h1>
+              </AnimatedText>
               <div className="w-full h-px bg-black/20 mt-8"></div>
             </div>
 
             {variantsSubtitle && (
-              <div className="py-4 max-w-[600px] w-full">
-                <p
-                  className="text-lg md:text-lg lg:text-xl text-black/60 leading-[1.4] text-left"
-                  dangerouslySetInnerHTML={{ __html: variantsSubtitle.replace(/\n/g, "<br />") }}
-                />
-              </div>
+              <AnimatedText delay={0.2}>
+                <div className="py-4 max-w-[800px] w-full">
+                  <p
+                    className="text-xl text-black/60 leading-[1.4] text-left tracking-wide"
+                    dangerouslySetInnerHTML={{ __html: variantsSubtitle.replace(/\n/g, "<br />") }}
+                  />
+                </div>
+              </AnimatedText>
             )}
           </div>
         </div>

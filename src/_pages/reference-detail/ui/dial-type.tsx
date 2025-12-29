@@ -29,7 +29,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
         <div className="max-w-[1280px] mx-auto">
           <div className="flex flex-col items-start gap-4 h-fit">
             <div className="w-full">
-              <h1 className="font-normal text-4xl md:text-8xl lg:text-12xl text-black tracking-[-0.01em] leading-[1]">
+              <h1 className="font-normal text-4xl md:text-8xl lg:text-12xl text-black tracking-wide leading-[1]">
                 {tCommon("reference")} {referenceTitle}
               </h1>
               <div className="w-full h-px bg-black/20 mt-8"></div>
@@ -65,7 +65,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                     className="flex flex-col items-center"
                   >
                     <div
-                      className="relative group cursor-pointer"
+                      className="relative group cursor-pointer transition-shadow duration-300 shadow-sm hover:shadow-md"
                       onClick={() =>
                         setFullScreenImage({
                           src: image.src,
@@ -108,7 +108,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                     <div className="w-full h-px bg-stone-200 mb-16 sm:mb-20 lg:mb-24"></div>
                   )}
                   {(variation.image_type === "row" || variation.image_type === "right") && (
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                       <div className="space-y-6">
                         <div className="space-y-5">
                           <SectionHeading
@@ -136,7 +136,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                           )}
 
                           {variation.bulletSection && variation.bulletSection.list && (
-                            <ul className="space-y-1">
+                            <ul className="space-y-1 ml-12">
                               {variation.bulletSection.list.map((item, index) => (
                                 <li
                                   key={index}
@@ -181,7 +181,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                               className="flex flex-col items-center"
                             >
                               <div
-                                className="relative group cursor-pointer"
+                                className="relative group cursor-pointer transition-shadow duration-300 shadow-sm hover:shadow-md"
                                 onClick={() =>
                                   setFullScreenImage({
                                     src: image.src,
@@ -246,7 +246,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                       )}
 
                       {variation.bulletSection && variation.bulletSection.list && (
-                        <ul className="space-y-1">
+                        <ul className="space-y-1 ml-12">
                           {variation.bulletSection.list.map((item, index) => (
                             <li
                               key={index}
@@ -285,7 +285,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                         )}
 
                         {variation.bulletSection && variation.bulletSection.list && (
-                          <ul className="space-y-1">
+                          <ul className="space-y-1 ml-12">
                             {variation.bulletSection.list.map((item, index) => (
                               <li
                                 key={index}
@@ -322,7 +322,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                           variant="elegant-dark"
                         />
                         {variation.bulletSection && variation.bulletSection.list && (
-                          <ul className="space-y-1">
+                          <ul className="space-y-1 ml-12">
                             {variation.bulletSection.list.map((item, index) => (
                               <li
                                 key={index}
@@ -347,7 +347,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                               className="flex flex-col items-center"
                             >
                               <div
-                                className="relative group cursor-pointer"
+                                className="relative group cursor-pointer transition-shadow duration-300 shadow-sm hover:shadow-md"
                                 onClick={() =>
                                   setFullScreenImage({
                                     src: image.src,
@@ -388,7 +388,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                           variant="elegant-dark"
                         />
                         {variation.bulletSection && variation.bulletSection.list && (
-                          <ul className="space-y-1">
+                          <ul className="space-y-1 ml-12">
                             {variation.bulletSection.list.map((item, index) => (
                               <li
                                 key={index}
@@ -426,7 +426,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                               variant="elegant-dark"
                             />
                             {variation.bulletSection && variation.bulletSection.list && (
-                              <ul className="space-y-1">
+                              <ul className="space-y-1 ml-12">
                                 {variation.bulletSection.list.map((item, index) => (
                                   <li
                                     key={index}

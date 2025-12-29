@@ -1,6 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react"
 import ReferenceVariantCard from "@/components/ReferenceVariantCard"
 import { ImageInfo, ReferenceData } from "@/shared/types"
+import AnimatedText from "@/components/AnimatedText"
 import { useScrollAnimation, getScrollAnimationClasses } from "@/shared/hooks"
 
 export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullScreenImage }) => {
@@ -9,13 +10,23 @@ export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullS
     rootMargin: "0px 0px -30px 0px",
   })
 
-  const { generations } = data
+  const { generations, variantsTitle } = data
 
   return (
     <section
       ref={ref}
       className={`bg-white w-full ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
     >
+      {variantsTitle && (
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-20 pt-16">
+          <AnimatedText delay={0}>
+            <p className="text-base lg:text-xl text-stone-600 leading-normal text-center">
+              {variantsTitle}
+            </p>
+          </AnimatedText>
+          <div className="w-full h-px bg-black/10 mt-[60px] md:mt-[80px] lg:mt-[100px]"></div>
+        </div>
+      )}
       {generations &&
         generations.map((generation, index) => (
           <div key={index}>

@@ -1,0 +1,90 @@
+{
+  "heroTitle": "Reference Guide",
+  "heroSubtitle": "A comprehensive guide to the Orfina Porsche Design Chronograph One",
+  "introduction": {
+    "title": "The Evolution of a Legend",
+    "paragraphs": [
+      "The story of the Orfina Porsche Design Chronograph One is one of evolution — across movements, finishes, and eras but bound together by a single partnership between Dr. Ferdinand Alexander \"Butzi\" Porsche and Umberto Maglioli.",
+      "Over nearly two decades, the partnership evolved through three principal reference generations — each a response to the changing landscape of watchmaking and design, and each maintaining the spirit of Butzi's original vision."
+    ]
+  },
+  "howToUse": {
+    "title": "How to Use These Reference Pages",
+    "description": "Each Reference Page in this archive is designed to operate both as a collector's guide and a historical record. Within each, you'll find detailed documentation of every major technical and design element that defines the Chronograph One lineage:",
+    "items": [
+      {
+        "title": "Case & Finish Sections",
+        "description": "Outlining each case variation, available finishes, and known case geometry."
+      },
+      {
+        "title": "Caseback Variations",
+        "description": "Cataloging engraving styles, manufacturer markings, and serial ranges across production."
+      },
+      {
+        "title": "Rehaut Variations",
+        "description": "Comparing tachymeter scales, unit markings (1Mile, 1km), and overall design differences."
+      },
+      {
+        "title": "Dial Variations",
+        "description": "Documenting each generation of printing, typography, and issued markings/heritage."
+      }
+    ]
+  },
+  "references": [
+    {
+      "id": "7750",
+      "title": "Reference 7750",
+      "subtitle": "The Genesis",
+      "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-main-page/preview-780x-7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut.jpg",
+      "imageCaption": "7750 Generation 1 \"Orfina\"",
+      "description": "The Reference 7750 marks the genesis of the Chronograph One story — the first black-coated chronograph ever produced and the original embodiment of Porsche Design's \"form follows function\" creed. It featured a flat crystal, a very fitting large tachymeter, and was configured with 30-minute and 12-hour counters, a central and small seconds hand, as well as a quick-set day and date mechanisms.",
+      "details": "As its name suggests, the reference was powered by the Valjoux 7750 movement. Unveiled in 1973 as Valjoux's late entry into the automatic chronograph race, the 7750 quickly became one of the most enduring calibers in Swiss watchmaking. Although the Porsche Design Chronograph One was officially launched in 1972, the first production pieces reached customers by 1973. Despite its early success, the Valjoux 7750 movement production was abruptly halted just two years later amid the Quartz Crisis, which devastated mechanical watch manufacturing.",
+      "specs": {
+        "generations": "Three Generations (Generation 1, Generation 2, Generation 3)",
+        "cases": "Three Cases (Mk. 1 - Flat Top, Mk. 2 - Transitional Round Top, and Mk. 3 - Flat-Face a.k.a Service)",
+        "finishes": "Three Finishes (Powder Coat Black, Black PVD, and Silver/Sablé)",
+        "casebacks": "Two Casebacks (Mk. 1 and Mk. 2)",
+        "rehauts": "Two Rehauts (1Mile and 1km)",
+        "dials": "Two Dials (Orfina and PD dials)"
+      },
+      "link": "7750"
+    },
+    {
+      "id": "7176",
+      "title": "Reference 7176",
+      "subtitle": "The Civilian Evolution",
+      "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7176/7176-main-page/preview-780x-7176-series-v1-black-case-pd-dial.jpg",
+      "imageCaption": "7176 Civilian",
+      "description": "The Reference 7176 represents the second major evolution of the Chronograph One and the first to feature the Lemania 5100 movement. Introduced in the late 1970s, the Lemania 5100 was purpose-built for durability, affordability, and ease of mass production. With military, aviation, and tool-watch applications in mind, the movement incorporated practical materials like Delrin plastic for non-critical components and utilized a simplified cam and shuttle chronograph mechanism.",
+      "details": "The transition required a complete redesign of the case architecture, as the Lemania 5100 differed in both dimension and structure from the 7750. The result was a taller and more robust case profile. The Chronograph layout was updated to include the 5100's distinctive central chronograph minutes and seconds hands, alongside a 12-hour totalizer at six o'clock, small seconds at nine o'clock, 24-hour display at twelve o'clock, and continued day-date functions at three o'clock.",
+      "specs": {
+        "generations": "Four Generations (7176, 7176 Military, 7176 D, and 7176 S)",
+        "cases": "One Case (Standard)",
+        "finishes": "Seven Finishes (Black PVD, Silver/Sablé, Polished Steel, Grey PVD, Olive Green PVD, Cadet Grey PVD, and NTS PVD)",
+        "casebacks": "Four Casebacks (Mk. 1, 7176 D, 7176 S, and Prototype)",
+        "rehauts": "Four Rehauts (Yellow Triangle, TACHYMETRE, 1km, and 1Mile)",
+        "dials": "Six Dials (Civilian, Civilian - Messy, Civilian - Short Lume, Military, Blue by Orfina, and Black by Orfina)"
+      },
+      "link": "7176"
+    },
+    {
+      "id": "7177",
+      "title": "Reference 7177",
+      "subtitle": "The Military Standard",
+      "image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-main-page/preview-1200x-7177-mix-color.jpg",
+      "imageCaption": "7177 Military Variants",
+      "description": "The 7177 encompassed the widest range of issued models ever associated with Orfina and Porsche Design. The 7177 was available for retail purchase over the counter as well as issued directly through military organizations, as evidenced by the multiple military variants. However, these watches are often considered quasi-issued as multiple variations were made available to the public.",
+      "details": "The 7177 military variants were identical to the civilian 7176 variant, including the case, except in five main ways — Available Finishes, Caseback Engravings, Central Chronograph-Minutes Hand and Hour Chronograph Hands, Rehaut, and Dial. Produced from the late 1970s through 1991 when Porsche Design ended its partnership with Orfina, the 7176 and 7177 spanned the longest of any Orfina Porsche Design reference.",
+      "specs": {
+        "finishes": "Six Finishes (Black PVD, Silver/Sablé, Cadet Grey PVD, Olive Green PVD, NTS PVD, and Gold PVD - UAE Only)",
+        "casebacks": "Seven Casebacks (Mk. 1, Mk. 2, BUND Single-Struck, BUND Double-Struck, EJERCITO DE VENEZUELA, REPUBLICA DE VENEZUELA, and Mid-Caseback Serial)",
+        "rehauts": "Two Rehauts (Crooked-Seven 12-hr, and Standard 12-hr)",
+        "dials": "12 Dials (Four-Logo, Baseline, Nato, Swiss Coat of Arms, Military Chronograph, Service, Mk. 1 Flying Tiger, Mk. 2 Flying Tiger, Royal Navy, UAE Mk. 1, UAE Mk. 2, and by Orfina)"
+      },
+      "link": "7177"
+    }
+  ],
+  "meta_title": "Reference Guide | Orfina Porsche Design Archive",
+  "meta_description": "A comprehensive guide to the Orfina Porsche Design Chronograph One references - 7750, 7176, and 7177. Explore the evolution of movements, finishes, and eras."
+}
+

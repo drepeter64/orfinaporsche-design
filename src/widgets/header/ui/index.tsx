@@ -111,73 +111,64 @@ export const Header = () => {
           {/* Logo with Watch Image */}
           <div className="flex items-center gap-2 lg:gap-4">
             {/* Watch Image - Left of Text (visible on all screen sizes) */}
-            <div>
-              {isActive(ClientRoutes.home) ? (
-                <Image
-                  src={pc_logo}
-                  alt={logo_alt}
-                  width={80}
-                  height={80}
-                  className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 object-contain"
-                  priority
-                />
-              ) : (
-                <Link href={ClientRoutes.home}>
-                  <Image
-                    src={pc_logo}
-                    alt={logo_alt}
-                    width={80}
-                    height={80}
-                    className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 object-contain cursor-pointer"
-                    priority
-                  />
-                </Link>
-              )}
-            </div>
+            <Link href={ClientRoutes.home}>
+              <Image
+                src={pc_logo}
+                alt={logo_alt}
+                width={80}
+                height={80}
+                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 object-contain cursor-pointer"
+                priority
+              />
+            </Link>
 
             {/* Text Logo */}
-            {isActive(ClientRoutes.home) ? (
-              <div className="text-sm sm:text-base md:text-lg lg:text-xl text-black tracking-widest whitespace-nowrap">
+            <Link href={ClientRoutes.home}>
+              <div className="text-sm sm:text-base md:text-lg lg:text-xl text-black tracking-widest whitespace-nowrap cursor-pointer">
                 <span className="hidden sm:inline">{tCommon("store_name")}</span>
                 <span className="sm:hidden">{tCommon("short_store_name")}</span>
               </div>
-            ) : (
-              <Link href={ClientRoutes.home}>
-                <div className="text-sm sm:text-base md:text-lg lg:text-xl text-black tracking-widest whitespace-nowrap cursor-pointer">
-                  <span className="hidden sm:inline">{tCommon("store_name")}</span>
-                  <span className="sm:hidden">{tCommon("short_store_name")}</span>
-                </div>
-              </Link>
-            )}
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex flex-1 justify-left items-center px-12 space-x-8 xl:space-x-12">
             <Link
               href={ClientRoutes.story}
-              className={`font-normal text-sm xl:text-base uppercase tracking-wider transition-all duration-300 hover:text-gray-600 cursor-pointer bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom pt-0.5 pb-0.5 ${
-                isActive(ClientRoutes.story)
-                  ? "text-black bg-[length:100%_1px]"
-                  : "text-gray-700 bg-[length:0%_1px] hover:bg-[length:100%_1px]"
+              className={`group py-2 px-1 font-normal text-sm xl:text-base uppercase tracking-wider transition-all duration-300 hover:text-gray-600 cursor-pointer ${
+                isActive(ClientRoutes.story) ? "text-black" : "text-gray-700"
               }`}
             >
-              {tCommon("story")}
+              <span
+                className={`bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom transition-all duration-300 ${
+                  isActive(ClientRoutes.story)
+                    ? "bg-[length:100%_1px]"
+                    : "bg-[length:0%_1px] group-hover:bg-[length:100%_1px]"
+                }`}
+              >
+                {tCommon("story")}
+              </span>
             </Link>
 
             <div
               className="relative"
               ref={referencesRef}
             >
-              <button
-                className={`flex items-center font-normal text-sm xl:text-base uppercase tracking-wider hover:text-black transition-all duration-200 group ${
+              <Link
+                href={ClientRoutes.reference_guide}
+                className={`flex items-center py-2 px-1 font-normal text-sm xl:text-base uppercase tracking-wider hover:text-black transition-all duration-200 group ${
                   isReferencesActive ? "text-black" : "text-gray-700"
                 }`}
-                onClick={() => setReferencesOpen((open) => !open)}
-                aria-expanded={referencesOpen}
-                aria-haspopup="true"
+                onClick={(e) => {
+                  setReferencesOpen((open) => !open)
+                  // If already on references page, prevent navigation to keep dropdown visible
+                  if (isReferencesActive) {
+                    e.preventDefault()
+                  }
+                }}
               >
                 <span
-                  className={`transition-all duration-300 bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom pt-0.5 pb-0.5 ${
+                  className={`transition-all duration-300 bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom ${
                     isReferencesActive
                       ? "bg-[length:100%_1px]"
                       : "bg-[length:0%_1px] group-hover:bg-[length:100%_1px]"
@@ -186,46 +177,48 @@ export const Header = () => {
                   {tCommon("references")}
                 </span>
                 <ChevronDown
-                  className={`ml-1 w-3 h-3 transition-transform duration-300 ${
+                  className={`ml-1 w-4 h-4 transition-transform duration-300 ${
                     referencesOpen ? "rotate-180" : ""
                   }`}
                 />
-              </button>
+              </Link>
 
               {referencesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-stone-50 shadow-2xl border border-gray-200 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
-                  <div className="py-2">
+                  <div>
+                    <Link
+                      href={ClientRoutes.reference_guide}
+                      className="block px-4 py-3 font-medium text-sm text-stone-600 hover:text-stone-800 hover:bg-stone-100 transition-colors cursor-pointer border-b border-gray-200"
+                    >
+                      {tCommon("reference_guide")}
+                    </Link>
                     {references.map(({ title, route, dropdown }: IMenuReference, index) => (
                       <div
                         key={index}
                         className="relative"
+                        onMouseEnter={() => handleSubDropdownEnter(route)}
+                        onMouseLeave={() => handleSubDropdownLeave(route)}
                       >
-                        <div
-                          className="flex items-center justify-between px-4 py-3 hover:bg-stone-100 transition-colors duration-200"
-                          onMouseEnter={() => handleSubDropdownEnter(route)}
-                          onMouseLeave={() => handleSubDropdownLeave(route)}
+                        <Link
+                          href={ClientRoutes.reference(route.toString())}
+                          className="flex items-center justify-between px-4 py-3 hover:bg-stone-100 transition-colors duration-200 font-medium text-sm text-stone-600 hover:text-stone-800 cursor-pointer"
                         >
-                          <Link
-                            href={ClientRoutes.reference(route.toString())}
-                            className="font-medium text-sm text-stone-600 hover:text-stone-800 transition-colors flex-1 cursor-pointer"
-                          >
-                            {title}
-                          </Link>
+                          <span>{title}</span>
                           <ChevronRight className="w-4 h-4 text-stone-400" />
-                        </div>
+                        </Link>
                         {refOpen[route] && (
                           <div
                             className="absolute left-full top-0 ml-1 w-48 bg-stone-50 shadow-2xl border border-gray-200 z-[60] overflow-hidden animate-in fade-in-0 zoom-in-95 duration-200"
                             onMouseEnter={() => handleSubDropdownEnter(route)}
                             onMouseLeave={() => handleSubDropdownLeave(route)}
                           >
-                            <div className="py-2">
+                            <div>
                               {dropdown &&
                                 dropdown.map(({ title, type }, idx) => (
                                   <Link
                                     key={idx}
                                     href={getReferenceRoute(type, route.toString())}
-                                    className="block px-4 py-2 text-sm text-gray-600 hover:text-black hover:bg-stone-100 transition-colors cursor-pointer"
+                                    className="block px-4 py-3 text-sm text-gray-600 hover:text-black hover:bg-stone-100 transition-colors cursor-pointer"
                                   >
                                     {title}
                                   </Link>
@@ -245,7 +238,7 @@ export const Header = () => {
               ref={componentsRef}
             >
               <button
-                className={`flex items-center font-normal text-sm xl:text-base uppercase tracking-wider hover:text-black transition-all duration-200 group ${
+                className={`flex items-center py-2 px-1 font-normal text-sm xl:text-base uppercase tracking-wider hover:text-black transition-all duration-200 group ${
                   isComponentsActive ? "text-black" : "text-gray-700"
                 }`}
                 onClick={() => setComponentsOpen((open) => !open)}
@@ -253,7 +246,7 @@ export const Header = () => {
                 aria-haspopup="true"
               >
                 <span
-                  className={`transition-all duration-300 bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom pt-0.5 pb-0.5 ${
+                  className={`transition-all duration-300 bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom ${
                     isComponentsActive
                       ? "bg-[length:100%_1px]"
                       : "bg-[length:0%_1px] group-hover:bg-[length:100%_1px]"
@@ -262,14 +255,14 @@ export const Header = () => {
                   {tCommon("components")}
                 </span>
                 <ChevronDown
-                  className={`ml-1 w-3 h-3 transition-transform duration-300 ${
+                  className={`ml-1 w-4 h-4 transition-transform duration-300 ${
                     componentsOpen ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
               {componentsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-stone-100 shadow-2xl border border-gray-200 z-50 overflow-hidden animate-in fade-in-0 zoom-in-95 duration-200">
+                <div className="absolute top-full left-0 mt-2 w-72 bg-stone-50 shadow-2xl border border-gray-200 z-50 overflow-hidden animate-in fade-in-0 zoom-in-95 duration-200">
                   <div className="py-4">
                     <div className="px-6 py-2 border-b border-gray-100">
                       <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
@@ -281,7 +274,7 @@ export const Header = () => {
                       {components.map(({ title, route }, index) => (
                         <Link
                           key={index}
-                          className="group flex items-center px-3 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-black transition-all duration-200 cursor-pointer"
+                          className="group flex items-center px-3 py-3 text-sm text-gray-700 hover:bg-stone-100 hover:text-black transition-all duration-200 cursor-pointer"
                           href={ClientRoutes.components(route)}
                         >
                           <div className="w-2 h-2 bg-gray-400 rounded-full mr-3 group-hover:bg-gray-900 transition-colors"></div>
@@ -296,13 +289,19 @@ export const Header = () => {
 
             <Link
               href={ClientRoutes.about}
-              className={`font-normal text-sm xl:text-base uppercase tracking-wider transition-all duration-300 hover:text-black cursor-pointer bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom pt-0.5 pb-0.5 ${
-                isActive(ClientRoutes.about)
-                  ? "text-black bg-[length:100%_1px]"
-                  : "text-gray-700 bg-[length:0%_1px] hover:bg-[length:100%_1px]"
+              className={`group py-2 px-1 font-normal text-sm xl:text-base uppercase tracking-wider transition-all duration-300 hover:text-black cursor-pointer ${
+                isActive(ClientRoutes.about) ? "text-black" : "text-gray-700"
               }`}
             >
-              {tCommon("about")}
+              <span
+                className={`bg-gradient-to-r from-current to-current bg-no-repeat bg-bottom transition-all duration-300 ${
+                  isActive(ClientRoutes.about)
+                    ? "bg-[length:100%_1px]"
+                    : "bg-[length:0%_1px] group-hover:bg-[length:100%_1px]"
+                }`}
+              >
+                {tCommon("about")}
+              </span>
             </Link>
           </div>
 
@@ -335,19 +334,26 @@ export const Header = () => {
 
             {/* Mobile References Section */}
             <div className="space-y-2">
-              <button
-                className="flex items-center justify-between w-full py-3 px-4 text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 rounded-md transition-colors touch-manipulation"
-                onClick={handleMobileReferencesToggle}
-                aria-expanded={mobileReferencesOpen}
-                aria-label="Toggle references menu"
-              >
-                {tCommon("references")}
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-300 ${
-                    mobileReferencesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+              <div className="flex items-center justify-between">
+                <Link
+                  href={ClientRoutes.reference_guide}
+                  className="flex-1 py-3 px-4 text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors touch-manipulation rounded-l-md"
+                >
+                  {tCommon("references")}
+                </Link>
+                <button
+                  className="py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-r-md transition-colors touch-manipulation"
+                  onClick={handleMobileReferencesToggle}
+                  aria-expanded={mobileReferencesOpen}
+                  aria-label="Toggle references menu"
+                >
+                  <ChevronDown
+                    className={`w-5 h-5 transition-transform duration-300 ${
+                      mobileReferencesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+              </div>
 
               {mobileReferencesOpen && (
                 <div className="pl-4 space-y-2 bg-gray-50 rounded-md py-3 animate-in slide-in-from-top-1 duration-200">
@@ -409,7 +415,7 @@ export const Header = () => {
 
             {/* Mobile Logo */}
             <div className="pt-4 border-t border-gray-200 flex justify-center">
-              {isActive(ClientRoutes.home) ? (
+              <Link href={ClientRoutes.home}>
                 <Image
                   src={mobile_logo}
                   alt={logo_alt}
@@ -417,17 +423,7 @@ export const Header = () => {
                   height={64}
                   className="w-16 h-16 object-contain cursor-pointer"
                 />
-              ) : (
-                <Link href={ClientRoutes.home}>
-                  <Image
-                    src={mobile_logo}
-                    alt={logo_alt}
-                    width={64}
-                    height={64}
-                    className="w-16 h-16 object-contain cursor-pointer"
-                  />
-                </Link>
-              )}
+              </Link>
             </div>
           </div>
         </div>

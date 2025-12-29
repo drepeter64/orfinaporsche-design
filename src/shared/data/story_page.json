@@ -1,9 +1,40 @@
 {
-  "heroTitle": "Our Story",
-  "variantsSubtitle": "The Emergence of the Orfina Porsche Design Watch",
-  "header": "In 1972, <b>Ferdinand Alexander \"Butzi\" Porsche</b>, the legendary designer of the Porsche 911 and grandson of the company's founder, Ferdinand Porsche, launched <b>Porsche Design</b> as an independent studio specializing in industrial design.",
-  "subheader": "His first product wasn't a car or a piece of furniture; it was a wristwatch.",
-  "description": "<p>But it wasn't just any timepiece: it was the world's first entirely blacked-out watch, a revolutionary departure from the shiny stainless steel and gold cases of the era. Built on the same design principles as the 911 - and inspired by its gauge cluster - this new chronograph marked the beginning of a new chapter in both watchmaking and design history. Ferdinand stated, \"My idea was for the watch to match the design of the car - the 911 has a black speedometer and tachometer in order not to blind the driver.\"</p><br></br><p>To bring his vision to life, Butzi Porsche partnered with Umberto Maglioli, a former Porsche racing driver who had acquired the Swiss watch company Orfina. Their collaboration merged timeless automotive design with the rugged, purpose-built ethos of Swiss chronograph engineering. Initially powered by the Valjoux 7750 automatic movement, introduced in 1973 as Valjoux's late entry into the automatic chronograph race, Porsche Design and Orfina were forced to adapt when the quartz crisis disrupted mechanical watchmaking and shuttered Valjoux's production. They responded by switching to the Lemania 5100, a movement famed for its shock resistance and reliability. It was the only chronograph caliber at the time that could withstand vertical accelerations of up to 7 Gs without its central seconds hand halting or losing accuracy - a quality that made it a favorite among fighter pilots and military forces alike.</p><br></br><p>The resulting watch wasn't just innovative in design - it was engineered for performance under extreme conditions. This synthesis of Porsche's design DNA and Orfina's mechanical grit gave rise to a cult classic: the Orfina Porsche Design Chronograph.</p>",
+  "heroTitle": "The Story",
+  "sections": [
+    {
+      "title": "The Emergence of the<br>Orfina Porsche Design Watch",
+      "paragraphs": [
+        "In 1972, Ferdinand Alexander \"Butzi\" Porsche, the visionary designer of the Porsche 911 and grandson of the company's founder, Ferdinand Porsche, launched Porsche Design as an independent industrial design studio.",
+        "The origin of Porsche Design came when Butzi found himself along with all other Porsche descendants - removed from executive roles at the family company. The catalyst being Butzi's father \"Ferry\" Porsche, son of the company's founder Ferdinand Porsche, becoming so exasperated by the constant in-fighting with his sister Louise Piëch's side of the family that he decided to unilaterally strip all direct descendants of management authority.",
+        "Butzi, the man responsible for designing the legendary 911, immediately responded by establishing the Porsche Design Studio - first in Stuttgart and later in Zell am See, Austria. His first creation under the new banner wasn't a car or piece of furniture but a wristwatch - and not just any wristwatch. It was the world's first fully blacked-out chronograph, a radical departure from the shiny steel and gold cases of the era.",
+        "Guided by the same principles that defined the 911, Butzi envisioned a timepiece inspired by the car's gauge cluster. As he explained, <i>\"My idea was for the watch to match the design of the car - the 911 has a black speedometer and tachometer in order not to blind the driver.\"</i> His philosophy was equally clear: <i>\"Design must be functional, and functionality must be translated visually into aesthetics - without gags that have to be explained first.\"</i> This credo - often summarized as form follows function - would define both Porsche Design and the watch itself.",
+        "Yet while Butzi had the vision and design, he needed a manufacturer. That solution came through Umberto Maglioli, an Italian Formula One driver who had raced for Ferrari, Maserati, and Porsche in the 1950s and, fittingly, ended his career behind the wheel of a Porsche. Maglioli, who had recently retired, purchased the Swiss watch manufacturer Orfina in 1970. Founded in the 1920s by Roland Ruefli, the company had undergone several rebrandings - from Jorin SA to Finora Watch Co., and finally, in 1947, to Montres Orfina.",
+        "The partnership between Butzi Porsche's design and Maglioli's manufacturing capabilities birthed the Porsche Design Chronograph One."
+      ]
+    },
+    {
+      "title": "The Valjoux 7750 Era",
+      "paragraphs": [
+        "The first iteration, the Reference 7750, featured a flat crystal, large tachymeter bezel, and 30-minute and 12-hour counters, along with small seconds and a quick-set day-date mechanism - the first of its kind in a sports chronograph. True to its name, it was powered by the newly introduced Valjoux 7750, a movement that would become one of the most prolific automatic chronograph calibers in history. Although the Chronograph One was officially launched in 1972, production models began reaching customers in 1973 - making them among the earliest watches in the world to use the 7750 movement. Unfortunately, the Quartz Crisis soon struck, devastating the mechanical watch industry and halting Valjoux 7750's production only two years after its debut."
+      ]
+    },
+    {
+      "title": "The Lemania 5100 Transition",
+      "paragraphs": [
+        "Unwilling to compromise his belief in the mechanical chronograph, Butzi Porsche turned to a new movement: the Lemania 5100. Introduced in the mid 1970s, the 5100 was engineered for durability, reliability, and affordability. With military, aviation, and tool-watch applications in mind, the movement incorporated practical materials like Delrin plastic for non-critical components and used a cam-and-shuttle system instead of the more delicate column wheel. Thanks to its shock-absorbing Delrin plate, the 5100 was the only chronograph caliber at the time that could withstand vertical accelerations of up to 7 Gs without its central seconds hand halting or losing accuracy - a quality that made it a favorite among fighter pilots and military forces alike.",
+        "With the new movement came a subtle redesign of the Chronograph One. The 5100 introduced its signature central chronograph minutes and seconds hands, improving readability during flight or racing. The watch now featured a 12-hour totalizer at six o'clock, small seconds at nine, a 24-hour indicator at twelve, and continued the day-date display at three o'clock. Two major references emerged - the Reference 7176 (civilian version) and the Reference 7177 (military version).",
+        "Production continued until 1991, when the Porsche Design-Orfina partnership officially ended."
+      ]
+    },
+    {
+      "title": "An Enduring Legacy",
+      "paragraphs": [
+        "After 1991, Orfina continued producing similar models under the label \"Prestige Watch International\" (PWI), often retaining the 7176 and 7177 reference engravings. Meanwhile, Porsche Design embarked on other collaborations - first with IWC Schaffhausen in 1978, producing another line of innovative watches, and later with Eterna in the 1990s.",
+        "The Chronograph One cemented its place in cultural history through both cinema and motorsport. It famously adorned the wrist of Pete \"Maverick\" Mitchell (Tom Cruise) in Top Gun, and racing legend Mario Andretti - who owned multiple, the first of which was stolen off his wrist while he slept on a beach in Rio after the 1978 Rio Grand Prix. Other noted motorsport wearers included Jürgen Barth, Gijs van Lennep, Hurley Haywood, and Thierry Sabine, founder of the Paris–Dakar Rally (where the famed Cartier Cheich was later born), and others.",
+        "Among its most iconic admirers was Gianni Agnelli, the legendary Italian industrialist and head of Fiat, who famously wore his Chronograph One over his shirt cuff. Even in music, the watch found its way onto Jack Douglas's wrist, the legendary producer who worked with Patti Smith, Miles Davis, and Cheap Trick, and was photographed wearing his the same day John Lennon was captured at The Hit Factory with his Patek Philippe 2499."
+      ]
+    }
+  ],
   "gallery_title": "Historical Photos",
   "gallery_sub_title": "",
   "gallery_images": [
@@ -15,67 +46,102 @@
       "caption": "Ferdinand Alexander Porsche"
     },
     {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The Story/Top Gun - Naval Aviator Lieutenant Pete Maverick Mitchell.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The Story/Top Gun - Naval Aviator Lieutenant Pete Maverick Mitchell.jpg",
+      "alt": "Top Gun - Naval Aviator Lieutenant Pete \"Maverick\" Mitchell",
+      "title": "Top Gun - Naval Aviator Lieutenant Pete \"Maverick\" Mitchell",
+      "caption": "Top Gun - Naval Aviator Lieutenant Pete \"Maverick\" Mitchell"
+    },
+    {
       "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/top-gun-2.jpg",
       "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/top-gun-2.jpg",
-      "alt": "Top Gun",
-      "title": "Top Gun",
-      "caption": "Top Gun - Naval Aviator Lieutenant Pete “Maverick” Mitchell"
+      "alt": "Top Gun - Naval Aviator Lieutenant Pete \"Maverick\" Mitchell",
+      "title": "Top Gun - Naval Aviator Lieutenant Pete \"Maverick\" Mitchell",
+      "caption": "Top Gun - Naval Aviator Lieutenant Pete \"Maverick\" Mitchell"
     },
     {
       "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/mario-andretti-1975-monza-gp.jpg",
       "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/mario-andretti-1975-monza-gp.jpg",
       "alt": "Mario Andretti - 1975 Monza GP",
-      "title": "Mario Andretti",
+      "title": "Mario Andretti - 1975 Monza GP",
       "caption": "Mario Andretti - 1975 Monza GP"
     },
     {
       "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/mario-andretti-and-niki-lauda-1975-monaco-gp.jpg",
       "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/mario-andretti-and-niki-lauda-1975-monaco-gp.jpg",
       "alt": "Mario Andretti and Niki Lauda - 1975 Monaco GP",
-      "title": "Mario Andretti and Niki Lauda",
+      "title": "Mario Andretti and Niki Lauda - 1975 Monaco GP",
       "caption": "Mario Andretti and Niki Lauda - 1975 Monaco GP"
+    },
+    {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The Story/Mario Andretti (middle) wearing the Orfina Porsche Design Chronograph 1.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The Story/Mario Andretti (middle) wearing the Orfina Porsche Design Chronograph 1.jpg",
+      "alt": "Mario Andretti - 1978 Monaco GP",
+      "title": "Mario Andretti - 1978 Monaco GP",
+      "caption": "Mario Andretti - 1978 Monaco GP"
+    },
+    {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The Story/Mario Andretti - Daytona 500 copy.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The Story/Mario Andretti - Daytona 500 copy.jpg",
+      "alt": "Mario Andretti - Daytona 500",
+      "title": "Mario Andretti - Daytona 500",
+      "caption": "Mario Andretti - Daytona 500"
     },
     {
       "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/martini-porsche-won-the-24-hours-of-le-mans-jurgen.jpg",
       "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/martini-porsche-won-the-24-hours-of-le-mans-jurgen.jpg",
-      "alt": "Jurgen Barth at Le Mans 1977",
-      "title": "Jurgen Barth",
+      "alt": "Jurgen Barth - 1977 Martini Porsche Wins 24 Hours of Le Mans",
+      "title": "Jurgen Barth - 1977 Martini Porsche Wins 24 Hours of Le Mans",
       "caption": "Jurgen Barth - 1977 Martini Porsche Wins 24 Hours of Le Mans"
+    },
+    {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The Story/Jurgen Barth copy.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The Story/Jurgen Barth copy.jpg",
+      "alt": "Jurgen Barth",
+      "title": "Jurgen Barth",
+      "caption": "Jurgen Barth"
     },
     {
       "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/gjis-van-lennep-1975-german-grand-prix.jpg",
       "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/gjis-van-lennep-1975-german-grand-prix.jpg",
       "alt": "Gjis van Lennep - 1975 German Grand Prix",
-      "title": "Gjis van Lennep",
+      "title": "Gjis van Lennep - 1975 German Grand Prix",
       "caption": "Gjis van Lennep - 1975 German Grand Prix"
     },
     {
       "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/peter-gregg-1975.jpg",
       "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/peter-gregg-1975.jpg",
-      "alt": "Peter Gregg and Hurley Haywood - 1975",
-      "title": "Peter Gregg and Hurley Haywood",
+      "alt": "Peter Gregg (left) and Hurley Haywood - Racing a Porsche Carrera for Bromos Porsche in 1975",
+      "title": "Peter Gregg (left) and Hurley Haywood",
       "caption": "Peter Gregg (left) and Hurley Haywood - Racing a Porsche Carrera for Bromos Porsche in 1975"
     },
     {
       "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/thierry-sabine-paris-to-dakar-rally.jpg",
       "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/thierry-sabine-paris-to-dakar-rally.jpg",
-      "alt": "Thierry Sabine - Founder of the Paris to Dakar Rally",
-      "title": "Thierry Sabine",
+      "alt": "Thierry Sabine - Founder and Organizer of the Paris to Dakar Rally",
+      "title": "Thierry Sabine - Founder and Organizer of the Paris to Dakar Rally",
       "caption": "Thierry Sabine - Founder and Organizer of the Paris to Dakar Rally"
     },
     {
       "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/gianni-agnelli.jpg",
       "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/gianni-agnelli.jpg",
-      "alt": "Gianni Agnelli wearing Chronograph One",
+      "alt": "Gianni Agnelli - Famous Italian Industrialist and head of the Fiat Group, as usual, wearing his Chronograph One out over his shirt cuff",
       "title": "Gianni Agnelli",
-      "caption": "Gianni Agnelli — as usual, wearing his Chronograph One outside of his shirt cuff."
+      "caption": "Gianni Agnelli - Famous Italian Industrialist and head of the Fiat Group, as usual, wearing his Chronograph One out over his shirt cuff"
     },
     {
       "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/jack-douglas.jpg",
       "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/the-story/jack-douglas.jpg",
-      "alt": "Jack Douglas",
-      "title": "Jack Douglas",
-      "caption": "Music Producer Jack Douglas - Pictured Jay Messina and Steven Tyler"
+      "alt": "Music Producer Jack Douglas (Right), Steven Tyler, and Jay Messina",
+      "title": "Music Producer Jack Douglas (Right), Steven Tyler, and Jay Messina",
+      "caption": "Music Producer Jack Douglas (Right), Steven Tyler, and Jay Messina"
+    },
+    {
+      "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The Story/JACKDOUGLASandjohnlennon.jpg",
+      "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/The Story/JACKDOUGLASandjohnlennon.jpg",
+      "alt": "Jack Douglas (Right), and John Lennon - 1980 The Hit Factory",
+      "title": "Jack Douglas and John Lennon - 1980 The Hit Factory",
+      "caption": "Jack Douglas (Right), and John Lennon - 1980 The Hit Factory"
     }
   ]
 }
