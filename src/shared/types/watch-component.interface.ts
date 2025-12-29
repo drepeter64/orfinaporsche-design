@@ -7,6 +7,7 @@ export interface ComponentsTypeData {
   type: "bracelets" | "straps" | "hands" | "crowns" | "movements" | "boxes" | "wheels"
   pageTitle: string
   pageSubTitle?: string
+  note?: string
   overview?: string
   quota?: QuotaData
   bracelets?: BraceletsData[]
@@ -112,7 +113,7 @@ interface WheelsSpecialNotesItems {
 
 interface Bullet {
   title: string
-  text?: []
+  text?: string
   list?: BulletListItem[]
 }
 interface BulletListItem {

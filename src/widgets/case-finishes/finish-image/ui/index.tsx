@@ -3,6 +3,8 @@ import { DetailedHTMLProps, HTMLAttributes } from "react"
 import { useTranslations } from "next-intl"
 import { ImageInfo } from "@/shared/types"
 import ImageWithLoader from "@/components/ImageWithLoader"
+import AnimatedImage from "@/components/AnimatedImage"
+import AnimatedText from "@/components/AnimatedText"
 
 export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
   image,
@@ -18,7 +20,7 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
   const renderImage = (img: ImageInfo) => (
     <div
       key={img.src}
-      className={`relative group cursor-pointer ${img.wrapClassName ?? "max-w-lg"}`}
+      className={`relative group cursor-pointer transition-shadow duration-300 shadow-sm hover:shadow-md ${img.wrapClassName ?? "max-w-lg"}`}
       onClick={() =>
         setFullScreenImage({
           src: img.src || "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/placeholder.png",
@@ -53,12 +55,14 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
     const img = imageList[0]
     return (
       <div className="flex flex-col items-center justify-start">
-        {renderImage(img)}
+        <AnimatedImage delay={0.1}>{renderImage(img)}</AnimatedImage>
         {img.subtitle && (
-          <span
-            dangerouslySetInnerHTML={{ __html: img.subtitle }}
-            className="block text-base sm:text-lg text-gray-600 text-center mt-4 font-medium"
-          ></span>
+          <AnimatedText delay={0.2}>
+            <span
+              dangerouslySetInnerHTML={{ __html: img.subtitle }}
+              className="block text-base sm:text-lg text-gray-600 text-center mt-4 font-medium"
+            ></span>
+          </AnimatedText>
         )}
       </div>
     )
@@ -68,7 +72,14 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
   return (
     <div className="flex flex-col items-center justify-start gap-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-        {imageList.map((img) => renderImage(img))}
+        {imageList.map((img, index) => (
+          <AnimatedImage
+            key={img.src}
+            delay={0.1 + index * 0.1}
+          >
+            {renderImage(img)}
+          </AnimatedImage>
+        ))}
       </div>
     </div>
   )

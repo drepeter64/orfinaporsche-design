@@ -10,7 +10,9 @@ import { CrownsBodySection } from "@/widgets/watch-components/crowns/body"
 import { MovemensBodySection } from "@/widgets/watch-components/movements/body"
 import { WheelsBodySection } from "@/widgets/watch-components/date-wheels/body"
 import { BoxesBodySection } from "@/widgets/watch-components/boxes/body"
-import SectionOverview from "@/components/SectionOverview"
+import { HeroSection } from "@/widgets/reference/hero"
+import AnimatedSection from "@/components/AnimatedSection"
+import AnimatedText from "@/components/AnimatedText"
 
 interface ComponentsPage {
   data: ComponentsTypeData
@@ -19,31 +21,62 @@ interface ComponentsPage {
 export function ComponentsPage({ data }: ComponentsPage) {
   const [fullScreenImage, setFullScreenImage] = useState<ImageInfo | null>(null)
 
+  // Create data object for HeroSection
+  const heroData = {
+    heroTitle: data.pageTitle,
+    variantsSubtitle: data.pageSubTitle,
+  }
+
   return (
-    <div className="min-h-[calc(100vh-97px)] bg-background flex flex-col">
+    <div className="min-h-screen bg-stone-100">
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="mx-auto px-4 sm:px-6 lg:px-20">
-          <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-black mb-4 sm:mb-6 uppercase tracking-wider">
-              {data.pageTitle}
-            </h1>
-            {data.pageSubTitle && (
-              <SectionOverview
-                className={"mb-12 sm:mb-16 mt-12 sm:mt-16"}
-                text={data.pageSubTitle}
-              />
-            )}
+      <HeroSection
+        data={heroData}
+        showReferencePrefix={false}
+        backgroundColor="bg-stone-100"
+      />
+
+      {/* Note Banner */}
+      {data.note && (
+        <AnimatedSection
+          as="section"
+          className="bg-stone-100 px-4 sm:px-6 lg:px-20 pb-8"
+          animation="fade-in"
+          delay={0}
+        >
+          <div className="max-w-[1280px] mx-auto">
+            <AnimatedText delay={0.1}>
+              <div className="bg-stone-50 border border-stone-300 px-6 py-4">
+                <p className="text-stone-700 text-sm sm:text-base font-medium text-center tracking-wide">
+                  {data.note}
+                </p>
+              </div>
+            </AnimatedText>
           </div>
+        </AnimatedSection>
+      )}
 
-          {/* Overview */}
-          {data.overview && (
-            <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20 lg:mb-24">
-              <SectionOverview text={data.overview} />
-            </div>
-          )}
+      {/* Overview Section */}
+      {data.overview && (
+        <AnimatedSection
+          as="section"
+          className="py-16 md:py-20 bg-white px-4 sm:px-6 lg:px-20"
+          animation="fade-in"
+          delay={0}
+        >
+          <div className="max-w-[1280px] mx-auto">
+            <AnimatedText delay={0.1}>
+              <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] lg:text-lg tracking-wide text-center max-w-3xl mx-auto">
+                {data.overview}
+              </p>
+            </AnimatedText>
+          </div>
+        </AnimatedSection>
+      )}
 
-          {/* Main Content */}
+      {/* Main Content */}
+      <section className="bg-white w-full">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-20 py-12 lg:py-[60px]">
           <div className="space-y-16 sm:space-y-20 lg:space-y-24">
             {data.type === "bracelets" && (
               <BraceletsBodySection

@@ -5,7 +5,7 @@
   "referenceId": "7177",
   "referenceTitle": "7177",
   "pageTitle": "Case & Finishes",
-  "info": "The 7177's case is identical to that of the 7176's case, but differed in the available finishes with five distinct variations.",
+  "info": "The 7177's case is identical to that of the 7176, but differs in the available finishes.",
   "measurements": [
     {
       "value": "40.6mm",
@@ -21,12 +21,12 @@
     }
   ],
   "mergedSection": {
-    "title": "Five Produced Finishes",
+    "title": "Six Available Finishes",
     "image": {
       "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-case-and-finishes-photos/preview-1200x-7177-colorgroup.jpg",
       "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/7177-case-and-finishes-photos/7177-colorgroup.jpg",
-      "alt": "All 7177 Finishes",
-      "title": "All 7177 Finishes",
+      "alt": "All 7177 Standard Finishes",
+      "title": "All 7177 Standard Finishes",
       "imgClassName": "w-full h-full object-contain",
       "caption": "Left To Right: (Non-PVD Silver/Sablé, Black PVD, Olive Green PVD, Cadet Grey PVD, NTS PVD)",
       "subtitle": "Left To Right: (Non-PVD Silver/Sablé, Black PVD, Olive Green PVD, Cadet Grey PVD, NTS PVD)"
@@ -51,6 +51,10 @@
       {
         "title": "NTS PVD",
         "description": "Only Available on the 7177"
+      },
+      {
+        "title": "Gold PVD",
+        "description": "Only Available on the 7177 UAE"
       }
     ]
   },

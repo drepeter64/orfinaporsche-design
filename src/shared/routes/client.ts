@@ -7,6 +7,7 @@ export const ClientRoutes = {
   story: "/story",
   about: "/about",
   not_found: "/404",
+  reference_guide: "/references",
   // Components routes
   // components__: {
   //   bracelets: "/components/bracelets",

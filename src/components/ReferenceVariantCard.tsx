@@ -63,7 +63,7 @@ const ReferenceVariantCard = ({
             style={{ transitionDelay: isVisible ? `${animationDelay + 200}ms` : "0ms" }}
           >
             <div
-              className="bg-stone-100 p-4 cursor-pointer group"
+              className="bg-stone-100 p-4 cursor-pointer group transition-shadow duration-300 shadow-sm hover:shadow-md border border-stone-200"
               onClick={() =>
                 onImageClick({
                   src: imageSrc,
@@ -84,9 +84,7 @@ const ReferenceVariantCard = ({
                   sizes="(max-width: 1024px) 66vw, 400px"
                 />
               </div>
-              <p className="text-lg font-bold text-stone-500 mt-4 text-center">
-                {imageCaption || title}
-              </p>
+              <p className="text-lg text-stone-500 mt-4 text-center">{imageCaption || title}</p>
             </div>
           </div>
 
@@ -99,7 +97,9 @@ const ReferenceVariantCard = ({
           >
             {/* Title and Subtitle */}
             <div className="flex flex-col gap-2">
-              <h2 className="text-3xl md:text-3xl lg:text-4xl text-black leading-[1]">{title}</h2>
+              <h2 className="text-3xl md:text-3xl lg:text-4xl text-black leading-[1] tracking-wide">
+                {title}
+              </h2>
               {subtitle && (
                 <p className="text-2xl md:text-2xl text-black/40 leading-[1.2]">{subtitle}</p>
               )}
@@ -138,15 +138,15 @@ const ReferenceVariantCard = ({
             {/* Note Section */}
             {note && (
               <div
-                className={`bg-stone-50 border-l-4 border-stone-300 px-7 py-4 flex flex-col gap-2 transform transition-all duration-500 ease-out ${
+                className={`bg-stone-50 border border-stone-200 p-5 flex flex-col gap-2 transform transition-all duration-500 ease-out ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                 }`}
                 style={{ transitionDelay: isVisible ? `${animationDelay + 800}ms` : "0ms" }}
               >
-                <p className="text-md text-stone-400 tracking-[0.02em] leading-6">
+                <p className="text-base font-normal text-stone-400 uppercase tracking-wide">
                   {tCommon("note")}
                 </p>
-                <p className="text-base text-stone-900 leading-5">{note}</p>
+                <p className="text-base text-stone-700 leading-relaxed">{note}</p>
               </div>
             )}
           </div>

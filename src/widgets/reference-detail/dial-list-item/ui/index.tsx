@@ -73,10 +73,9 @@ export const DialItemListSection: React.FC<DialItemListSectionProps> = ({
 
             {/* Content */}
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-black transition-colors">
+              <h3 className="text-xl font-semibold text-gray-900 mb-1 group-hover:text-black transition-colors">
                 {variation.title}
               </h3>
-              <div className="w-16 h-1 bg-gradient-to-r from-gray-300 to-gray-100 group-hover:from-black group-hover:to-gray-400 transition-all duration-300"></div>
             </div>
           </div>
         </div>

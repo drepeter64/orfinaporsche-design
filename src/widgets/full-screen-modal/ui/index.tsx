@@ -36,27 +36,30 @@ export const FullScreenModal: React.FC<FullScreenModalProps> = ({
           className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center p-4"
           onClick={() => setFullScreenImage(null)}
         >
-          <div className="relative max-w-full max-h-full flex flex-col items-center">
-            {/* Close Button */}
-            <button
-              onClick={() => setFullScreenImage(null)}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+          {/* Close Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              setFullScreenImage(null)
+            }}
+            className="fixed top-4 right-4 text-white hover:text-gray-300 transition-colors z-50"
+          >
+            <svg
+              className="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              <svg
-                className="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
 
+          <div className="relative max-w-full max-h-full flex flex-col items-center">
             {/* Image */}
             <img
               src={fullScreenImage.original}
@@ -75,7 +78,7 @@ export const FullScreenModal: React.FC<FullScreenModalProps> = ({
             </div>
 
             {/* Instructions */}
-            <div className="mt-4 text-white text-sm opacity-50 text-center">{tCommon("esc")}</div>
+            <div className="mt-0 text-white text-sm opacity-50 text-center">{tCommon("esc")}</div>
           </div>
         </div>
       )}

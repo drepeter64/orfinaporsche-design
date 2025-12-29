@@ -72,7 +72,9 @@ const SectionHeading = ({
         {number}
       </div>
       <div>
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-black">{title}</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-black tracking-wide">
+          {title}
+        </h2>
         {subtitle && <p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>}
       </div>
     </div>

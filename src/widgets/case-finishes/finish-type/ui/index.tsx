@@ -10,6 +10,7 @@ interface FinishTypeProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   title: string
   productionYears?: string
+  foundOn?: string
   description?: string
   colorClass?: string
   images?: ImageInfo[]
@@ -23,6 +24,7 @@ interface FinishTypeProps
 export const FinishType: React.FC<FinishTypeProps> = ({
   title,
   productionYears,
+  foundOn,
   description,
   colorClass = "bg-black",
   images,
@@ -63,7 +65,7 @@ export const FinishType: React.FC<FinishTypeProps> = ({
         )}
 
         {/* Text Content */}
-        <div className="flex flex-col gap-12 flex-1">
+        <div className="flex flex-col gap-8 flex-1">
           {/* Title and Production Years */}
           <div className="flex flex-col gap-3">
             <h3 className="text-2xl lg:text-[32px] font-normal text-black leading-none">{title}</h3>
@@ -73,6 +75,15 @@ export const FinishType: React.FC<FinishTypeProps> = ({
               </p>
             )}
           </div>
+
+          {/* Found On - inline style matching dial page */}
+          {foundOn && (
+            <div className="border border-stone-200 bg-stone-50 p-5">
+              <p className="text-base text-stone-700">
+                <strong className="font-semibold">Found On:</strong> {foundOn}
+              </p>
+            </div>
+          )}
 
           {/* Description */}
           {description && (
@@ -84,8 +95,8 @@ export const FinishType: React.FC<FinishTypeProps> = ({
 
           {/* Note */}
           {note && (
-            <div className="bg-stone-50 border-l-4 border-stone-300 px-7 py-5">
-              <h4 className="text-base font-normal text-stone-400 mb-2.5 uppercase tracking-wide">
+            <div className="bg-stone-50 border border-stone-200 p-5">
+              <h4 className="text-base font-normal text-stone-400 mb-2 uppercase tracking-wide">
                 {note.title}
               </h4>
               <p className="text-base text-stone-700">{note.content}</p>

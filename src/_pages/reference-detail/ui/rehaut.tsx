@@ -126,8 +126,13 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
             </p>
           )}
           {data.note && (
-            <div className="border border-stone-200 bg-stone-50 px-6 py-5 text-sm sm:text-base leading-relaxed text-stone-500 whitespace-pre-line">
-              {data.note}
+            <div className="border border-stone-200 bg-stone-50 p-5">
+              <p className="text-base font-normal text-stone-400 uppercase tracking-wide mb-2">
+                {tCommon("note")}
+              </p>
+              <p className="text-base sm:text-lg leading-relaxed text-stone-700 whitespace-pre-line">
+                {data.note}
+              </p>
             </div>
           )}
         </div>
@@ -152,55 +157,63 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
                       <span className="text-3xl font-light text-stone-400">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <h2 className="text-2xl sm:text-3xl tracking-tight">{variation.title}</h2>
+                      <h2 className="text-2xl sm:text-3xl tracking-wide">{variation.title}</h2>
                     </div>
 
                     {variation.note && (
-                      <p
-                        className="text-base sm:text-lg leading-relaxed text-stone-700 whitespace-pre-line"
-                        dangerouslySetInnerHTML={{ __html: variation.note }}
-                      />
+                      <div className="border border-stone-200 bg-stone-50 p-5">
+                        <p
+                          className="text-base text-stone-700 [&>strong]:font-semibold [&>b]:font-semibold"
+                          dangerouslySetInnerHTML={{ __html: variation.note }}
+                        />
+                      </div>
                     )}
 
-                    {variation.bulletSection?.title && (
-                      <h3 className="text-lg font-medium text-stone-900">
-                        {variation.bulletSection.title}
-                      </h3>
-                    )}
+                    {variation.bulletSection?.title ||
+                    variation.bulletSection?.text?.length ||
+                    variation.bulletSection?.list?.length ? (
+                      <div className="bg-white p-5 space-y-4">
+                        {variation.bulletSection?.title && (
+                          <h3 className="text-lg font-medium text-stone-900">
+                            {variation.bulletSection.title}
+                          </h3>
+                        )}
 
-                    {variation.bulletSection?.text?.map((paragraph, textIndex) => (
-                      <p
-                        key={textIndex}
-                        className="text-base leading-relaxed text-stone-700"
-                        dangerouslySetInnerHTML={{ __html: paragraph }}
-                      />
-                    ))}
-
-                    {variation.bulletSection?.list?.length ? (
-                      <ul className="space-y-2 text-stone-700">
-                        {variation.bulletSection.list.map((item, itemIndex) => (
-                          <li
-                            key={itemIndex}
-                            className="flex gap-3"
-                          >
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-stone-500 flex-shrink-0" />
-                            <div className="space-y-1 text-sm sm:text-base leading-relaxed">
-                              <div>
-                                <strong>{item.title}</strong> {item.text}
-                              </div>
-                              {item.list?.length ? (
-                                <ul className="space-y-1 pl-4 text-stone-600">
-                                  {item.list.map((subItem, subIndex) => (
-                                    <li key={subIndex}>
-                                      <strong>{subItem.title}</strong> {subItem.text}
-                                    </li>
-                                  ))}
-                                </ul>
-                              ) : null}
-                            </div>
-                          </li>
+                        {variation.bulletSection?.text?.map((paragraph, textIndex) => (
+                          <p
+                            key={textIndex}
+                            className="text-base leading-relaxed text-stone-700"
+                            dangerouslySetInnerHTML={{ __html: paragraph }}
+                          />
                         ))}
-                      </ul>
+
+                        {variation.bulletSection?.list?.length ? (
+                          <ul className="space-y-2 text-stone-700">
+                            {variation.bulletSection.list.map((item, itemIndex) => (
+                              <li
+                                key={itemIndex}
+                                className="flex gap-3"
+                              >
+                                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-stone-500 flex-shrink-0" />
+                                <div className="space-y-1 text-sm sm:text-base leading-relaxed">
+                                  <div>
+                                    <strong>{item.title}</strong> {item.text}
+                                  </div>
+                                  {item.list?.length ? (
+                                    <ul className="space-y-1 pl-4 text-stone-600">
+                                      {item.list.map((subItem, subIndex) => (
+                                        <li key={subIndex}>
+                                          <strong>{subItem.title}</strong> {subItem.text}
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  ) : null}
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </div>
                     ) : null}
                   </div>
 
@@ -210,6 +223,8 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
                         "grid grid-cols-1 gap-6 sm:grid-cols-2",
                         gridColumns,
                         !isEven && "lg:order-1",
+                        variation.images.length === 1 &&
+                          "sm:grid-cols-1 lg:grid-cols-1 justify-items-center",
                       )}
                     >
                       {variation.images.map((image, imgIndex) => {
@@ -265,7 +280,7 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
         className={`w-full bg-white px-4 sm:px-6 lg:px-20 py-16 lg:py-[100px] ${getScrollAnimationClasses(exploreVisible, "duration-1000")}`}
       >
         <div className="max-w-[1280px] mx-auto flex flex-col gap-12 items-center">
-          <h2 className="text-2xl md:text-3xl lg:text-[44px] text-black text-center leading-[1.1]">
+          <h2 className="text-2xl md:text-3xl lg:text-[44px] text-black text-center leading-[1.1] tracking-wide">
             {tCommon("explore-details")}
           </h2>
 

@@ -17,7 +17,7 @@ const ExploreDetailsCard = ({
       href={getReferenceRoute(route, referenceId)}
       className="group cursor-pointer"
     >
-      <div className="bg-stone-100 overflow-hidden transition-all duration-300 group-hover:-translate-y-2 p-4 flex flex-col items-center justify-start gap-4 border border-stone-200">
+      <div className="bg-stone-100 overflow-hidden transition-all duration-300 group-hover:-translate-y-2 shadow-sm group-hover:shadow-md p-4 flex flex-col items-center justify-start gap-4 border border-stone-200">
         {/* Image Container */}
         <div className="h-[240px] overflow-hidden relative flex items-center justify-center">
           <div className="w-[250px] h-[250px] relative">
@@ -33,7 +33,7 @@ const ExploreDetailsCard = ({
         </div>
 
         {/* Title */}
-        <h3 className="text-lg md:text-xl text-black/70 group-hover:text-black text-center tracking-[-0.01em] leading-[1.2] transition-colors duration-300">
+        <h3 className="text-lg md:text-xl font-normal text-black/70 group-hover:text-black text-center tracking-wide leading-[1.2] transition-colors duration-300">
           {title}
         </h3>
       </div>

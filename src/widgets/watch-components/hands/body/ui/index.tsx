@@ -1,83 +1,114 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react"
 import { ComponentsTypeData, ImageInfo } from "@/shared/types"
-import SectionHeading from "@/components/SectionHeading"
 import { FinishImageSection } from "@/widgets/case-finishes/finish-image"
 import { PlaceholderImageSection } from "@/widgets/case-finishes/placeholder-image"
+import AnimatedSection from "@/components/AnimatedSection"
+import AnimatedText from "@/components/AnimatedText"
+import { Circle } from "lucide-react"
 
 export const HandsBodySection: React.FC<HandsBodySectionProps> = ({ data, setFullScreenImage }) => {
   return (
-    <>
+    <div className="flex flex-col gap-16">
       {data.hands &&
         data.hands.map((item, index) => (
-          <div key={index}>
+          <AnimatedSection
+            key={index}
+            animation="fade-in"
+            delay={0}
+            className="flex flex-col gap-8"
+          >
             <div
-              className={`grid grid-cols-1 gap-8 lg:gap-12 items-center ${item.images.length > 1 ? "lg:grid-cols-1" : "lg:grid-cols-2"}`}
+              className={`flex flex-col gap-8 lg:gap-16 items-start ${item.images.length > 1 ? "" : "lg:flex-row lg:justify-between"}`}
             >
-              <div className={`space-y-6${index % 2 !== 0 ? " lg:order-2" : ""}`}>
-                <SectionHeading
-                  title={item.title}
-                  variant="numbered"
-                  number={index + 1}
-                />
+              <div
+                className={`space-y-6 w-full ${item.images.length > 1 ? "" : "lg:flex-1"}${index % 2 !== 0 ? " lg:order-2" : ""}`}
+              >
+                {/* Section Header */}
+                <div className="flex items-baseline gap-4">
+                  <span className="text-3xl font-light text-stone-400">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl tracking-wide text-black">{item.title}</h2>
+                </div>
 
                 {item.info && (
-                  <span
-                    dangerouslySetInnerHTML={{ __html: item.info }}
-                    className="block text-base sm:text-lg text-gray-600 mt-4 font-medium"
-                  ></span>
+                  <AnimatedText delay={0.1}>
+                    <div className="bg-stone-50 border border-stone-200 px-6 py-5">
+                      <span
+                        dangerouslySetInnerHTML={{ __html: item.info }}
+                        className="block text-base sm:text-lg text-stone-600 leading-relaxed"
+                      ></span>
+                    </div>
+                  </AnimatedText>
                 )}
 
                 {item.list &&
-                  item.list.map((list_item, index) => (
-                    <div
-                      className="bg-gray-50 p-6 sm:p-8 rounded-lg border-l-4 border-black"
-                      key={index}
+                  item.list.map((list_item, listIndex) => (
+                    <AnimatedText
+                      key={listIndex}
+                      delay={0.15 + listIndex * 0.05}
                     >
-                      <h3 className="text-lg font-semibold text-black mb-4">{list_item.title}</h3>
-                      {list_item.list && (
-                        <ul className="space-y-3 text-gray-700">
-                          {list_item.list.map((sub_list_item, index) => (
-                            <li
-                              className="flex items-start space-x-3"
-                              key={index}
-                            >
-                              <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
-                              <span
-                                className="text-sm sm:text-base leading-relaxed"
-                                dangerouslySetInnerHTML={{ __html: sub_list_item.title }}
-                              ></span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
+                      <div className="bg-stone-50 border border-stone-200 px-6 py-5">
+                        <h3 className="text-base font-medium text-stone-700 mb-4 uppercase tracking-wider">
+                          {list_item.title}
+                        </h3>
+                        {list_item.list && (
+                          <ul className="space-y-3 text-stone-600">
+                            {list_item.list.map((sub_list_item, subIndex) => (
+                              <li
+                                className="flex items-start gap-2"
+                                key={subIndex}
+                              >
+                                <Circle className="w-1.5 h-1.5 mt-2.5 flex-shrink-0 fill-stone-400 text-stone-400" />
+                                <span
+                                  className="text-sm sm:text-base leading-relaxed"
+                                  dangerouslySetInnerHTML={{ __html: sub_list_item.title }}
+                                ></span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </AnimatedText>
                   ))}
               </div>
-              {item.images && item.images.length ? (
-                item.images.length > 1 ? (
-                  <div className="flex flex-row items-start justify-around">
-                    {item.images.map((item, index) => (
+              <AnimatedText
+                delay={0.2}
+                className={`w-full ${item.images.length > 1 ? "" : "lg:flex-1"}`}
+              >
+                <div className={index % 2 !== 0 ? "lg:order-1" : ""}>
+                  {item.images && item.images.length ? (
+                    item.images.length > 1 ? (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {item.images.map((imgItem, imgIndex) => (
+                          <FinishImageSection
+                            key={imgIndex}
+                            image={imgItem}
+                            setFullScreenImage={setFullScreenImage}
+                          />
+                        ))}
+                      </div>
+                    ) : (
                       <FinishImageSection
-                        key={index}
-                        image={item}
+                        image={item.images[0]}
                         setFullScreenImage={setFullScreenImage}
+                        sectionTitle={item.title}
                       />
-                    ))}
-                  </div>
-                ) : (
-                  <FinishImageSection
-                    image={item.images[0]}
-                    setFullScreenImage={setFullScreenImage}
-                    sectionTitle={item.title}
-                  />
-                )
-              ) : (
-                <PlaceholderImageSection title={item.title} />
-              )}
+                    )
+                  ) : (
+                    <PlaceholderImageSection title={item.title} />
+                  )}
+                </div>
+              </AnimatedText>
             </div>
-          </div>
+
+            {/* Divider */}
+            {index < (data.hands?.length || 0) - 1 && (
+              <div className="w-full h-px bg-stone-200 mt-4" />
+            )}
+          </AnimatedSection>
         ))}
-    </>
+    </div>
   )
 }
 

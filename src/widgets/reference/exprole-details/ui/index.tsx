@@ -3,6 +3,8 @@ import { DetailedHTMLProps, HTMLAttributes } from "react"
 import { useTranslations } from "next-intl"
 import { ReferenceData } from "@/shared/types"
 import ExploreDetailsCard from "@/components/ExploreDetailsCard"
+import AnimatedText from "@/components/AnimatedText"
+import AnimatedImage from "@/components/AnimatedImage"
 import { useScrollAnimation, getScrollAnimationClasses } from "@/shared/hooks"
 
 export const ExploreDetailsSection: React.FC<ExploreDetailssProps> = ({ data }) => {
@@ -20,18 +22,18 @@ export const ExploreDetailsSection: React.FC<ExploreDetailssProps> = ({ data }) 
     >
       <div className="max-w-full mx-auto">
         <div className="flex flex-col gap-12 items-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl text-black tracking-[-0.01em] text-center">
-            {tCommon("explore-details")}
-          </h2>
+          <AnimatedText delay={0}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl text-black tracking-wide text-center">
+              {tCommon("explore-details")}
+            </h2>
+          </AnimatedText>
 
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
             {data.exploreCards.map((card, index) => (
-              <div
+              <AnimatedImage
                 key={index}
-                className={`w-full max-w-[280px] transform transition-all duration-700 ease-out ${
-                  isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-                }`}
-                style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
+                delay={0.1 + index * 0.1}
+                className="w-full max-w-[280px]"
               >
                 <ExploreDetailsCard
                   title={card.title}
@@ -40,7 +42,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailssProps> = ({ data }) 
                   imageAlt={card.imageAlt}
                   route={card.route}
                 />
-              </div>
+              </AnimatedImage>
             ))}
           </div>
         </div>

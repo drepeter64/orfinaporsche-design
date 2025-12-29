@@ -2,6 +2,8 @@ import { DetailedHTMLProps, HTMLAttributes } from "react"
 
 import { useTranslations } from "next-intl"
 import { ReferenceData } from "@/shared/types"
+import AnimatedText from "@/components/AnimatedText"
+import AnimatedSection from "@/components/AnimatedSection"
 import { useScrollAnimation, getScrollAnimationClasses } from "@/shared/hooks"
 
 export const TechnicalSpecificationSection: React.FC<TechnicalSpecificationsProps> = ({ data }) => {
@@ -46,34 +48,46 @@ export const TechnicalSpecificationSection: React.FC<TechnicalSpecificationsProp
       className={`w-full py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20 ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
     >
       <div className="flex flex-col gap-12 items-center">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl text-black text-center">
-          {tCommon("tech-specification")}
-        </h2>
+        <AnimatedText delay={0}>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl text-black text-center">
+            {tCommon("tech-specification")}
+          </h2>
+        </AnimatedText>
 
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Column */}
-          <div className="flex flex-col">
-            {leftColumnSpecs.map((spec, index) => (
-              <SpecRow
-                key={index}
-                label={spec.label}
-                value={spec.value}
-                isLast={index === leftColumnSpecs.length - 1}
-              />
-            ))}
-          </div>
+          <AnimatedSection
+            animation="fade-in"
+            delay={0.1}
+          >
+            <div className="flex flex-col">
+              {leftColumnSpecs.map((spec, index) => (
+                <SpecRow
+                  key={index}
+                  label={spec.label}
+                  value={spec.value}
+                  isLast={index === leftColumnSpecs.length - 1}
+                />
+              ))}
+            </div>
+          </AnimatedSection>
 
           {/* Right Column */}
-          <div className="flex flex-col">
-            {rightColumnSpecs.map((spec, index) => (
-              <SpecRow
-                key={index}
-                label={spec.label}
-                value={spec.value}
-                isLast={index === rightColumnSpecs.length - 1}
-              />
-            ))}
-          </div>
+          <AnimatedSection
+            animation="fade-in"
+            delay={0.2}
+          >
+            <div className="flex flex-col">
+              {rightColumnSpecs.map((spec, index) => (
+                <SpecRow
+                  key={index}
+                  label={spec.label}
+                  value={spec.value}
+                  isLast={index === rightColumnSpecs.length - 1}
+                />
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

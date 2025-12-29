@@ -149,18 +149,22 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
             className="w-full bg-white px-4 sm:px-6 lg:px-20 py-8 lg:py-12"
           >
             <div className="flex items-baseline gap-3 mb-12">
-              <span className="text-2xl sm:text-3xl uppercase text-stone-400">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-light text-stone-900">{variation.title}</h3>
+              {variations.length > 1 && (
+                <span className="text-2xl sm:text-3xl uppercase text-stone-400">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              )}
+              <h3 className="text-2xl sm:text-3xl font-light text-stone-900 tracking-wide">
+                {variation.title}
+              </h3>
             </div>
             <div className="mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-start lg:gap-12 items-start pb-24 border-b border-stone-200">
               <div className="flex flex-col gap-6 lg:max-w-[720px] w-full">
                 <div className="space-y-5">
                   {variation.note && (
                     <div className="border border-stone-200 bg-stone-50 p-5">
-                      <div
-                        className="text-base text-stone-700 [&>strong]:block [&>strong]:text-stone-300 [&>strong]:uppercase [&>strong]:tracking-[0.2em] [&>strong]:mb-2 [&>strong]:font-normal"
+                      <p
+                        className="text-base text-stone-700 [&>strong]:font-semibold [&>b]:font-semibold"
                         dangerouslySetInnerHTML={{ __html: variation.note }}
                       />
                     </div>
@@ -187,11 +191,13 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
                   </div>
 
                   {variation.blueNote && (
-                    <div className="border-l-stone-300 border-l-4 bg-stone-50 px-5 py-5 text-base text-stone-700">
-                      <span className="text-stone-400 text-base block mb-1 tracking-[0.1em]">
+                    <div className="border border-stone-200 bg-stone-50 p-5">
+                      <p className="text-base font-normal text-stone-400 uppercase tracking-wide mb-2">
                         {tCommon("note") || "Note:"}
-                      </span>
-                      {variation.blueNote}
+                      </p>
+                      <p className="text-base text-stone-700 leading-relaxed">
+                        {variation.blueNote}
+                      </p>
                     </div>
                   )}
                 </div>
@@ -236,7 +242,7 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
       {exploreCards && exploreCards.length > 0 && (
         <section className="w-full bg-white px-4 sm:px-6 lg:px-20 py-16 lg:py-[90px]">
           <div className="max-w-[1280px] mx-auto flex flex-col gap-12 items-center">
-            <h2 className="text-2xl md:text-3xl lg:text-[42px] text-black leading-[1.1] text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-[42px] text-black leading-[1.1] text-center tracking-wide">
               {tCommon("explore-details")}
             </h2>
 

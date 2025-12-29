@@ -12,7 +12,7 @@ export const PhotoCard: React.FC<PhotoCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-[#f9f6f4] flex flex-col gap-4 items-center p-4 cursor-pointer group ${className}`}
+      className={`bg-[#f9f6f4] flex flex-col gap-4 items-center p-4 cursor-pointer group transition-shadow duration-300 shadow-sm hover:shadow-md ${className}`}
       onClick={onClick}
     >
       <div className="aspect-[400/600] relative w-full overflow-hidden">
