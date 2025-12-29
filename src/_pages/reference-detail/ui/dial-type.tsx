@@ -65,7 +65,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                     className="flex flex-col items-center"
                   >
                     <div
-                      className="relative group cursor-pointer transition-shadow duration-300 shadow-sm hover:shadow-md"
+                      className="relative group cursor-pointer"
                       onClick={() =>
                         setFullScreenImage({
                           src: image.src,
@@ -181,7 +181,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                               className="flex flex-col items-center"
                             >
                               <div
-                                className="relative group cursor-pointer transition-shadow duration-300 shadow-sm hover:shadow-md"
+                                className="relative group cursor-pointer"
                                 onClick={() =>
                                   setFullScreenImage({
                                     src: image.src,
@@ -192,15 +192,14 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                   })
                                 }
                               >
-                                <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
                                 <ImageWithLoader
                                   src={image.src}
                                   alt={image.alt}
-                                  className="relative w-full h-80 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300"
-                                  skeletonClassName="w-full h-80 rounded-lg"
+                                  className="relative w-full h-80 object-cover transition-all duration-300"
+                                  skeletonClassName="w-full h-80"
                                 />
                                 {/* Click indicator */}
-                                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100">
+                                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
                                   <div className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
                                     {tCommon("click-zoom")}
                                   </div>
@@ -301,7 +300,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                           </ul>
                         )}
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
                           {variation.images.map((image, index) => (
                             <FinishImageSection
                               key={index}
@@ -339,7 +338,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                         )}
 
                         <div
-                          className={`grid grid-cols-1 md:grid-cols-${variation.images.length} gap-8`}
+                          className={`grid grid-cols-1 md:grid-cols-${variation.images.length} gap-8 mt-6`}
                         >
                           {variation.images.map((image, index) => (
                             <div
@@ -347,7 +346,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                               className="flex flex-col items-center"
                             >
                               <div
-                                className="relative group cursor-pointer transition-shadow duration-300 shadow-sm hover:shadow-md"
+                                className="relative group cursor-pointer"
                                 onClick={() =>
                                   setFullScreenImage({
                                     src: image.src,
@@ -362,7 +361,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                   src={image.src}
                                   alt={image.alt}
                                   className={`relative object-cover transition-all duration-300 ${image.imgClassName ?? "w-full h-64 sm:h-80 lg:h-96"}`}
-                                  skeletonClassName="w-full h-64 sm:h-80 lg:h-96 rounded-lg"
+                                  skeletonClassName="w-full h-64 sm:h-80 lg:h-96"
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
                                   <div className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">

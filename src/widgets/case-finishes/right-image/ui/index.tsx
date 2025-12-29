@@ -15,14 +15,13 @@ export const RightImageSection: React.FC<RightImageSectionProps> = ({
         className="relative group cursor-pointer"
         onClick={() => setFullScreenImage(image)}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
         <img
           src={image.src}
           alt={image.alt}
-          className={`relative rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 ${image.imgClassName ?? "w-full max-w-lg h-96 object-cover"}`}
+          className={`relative transition-all duration-300 group-hover:scale-105 ${image.imgClassName ?? "w-full max-w-lg h-96 object-cover"}`}
         />
         {/* Click indicator */}
-        <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100">
+        <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
           <div className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
             {tCommon("click-zoom")}
           </div>

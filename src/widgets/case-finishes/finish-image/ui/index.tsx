@@ -20,7 +20,7 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
   const renderImage = (img: ImageInfo) => (
     <div
       key={img.src}
-      className={`relative group cursor-pointer transition-shadow duration-300 shadow-sm hover:shadow-md ${img.wrapClassName ?? "max-w-lg"}`}
+      className={`relative group cursor-pointer ${img.wrapClassName ?? "max-w-lg"}`}
       onClick={() =>
         setFullScreenImage({
           src: img.src || "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/placeholder.png",
