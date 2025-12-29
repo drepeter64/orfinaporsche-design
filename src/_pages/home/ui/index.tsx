@@ -108,7 +108,7 @@ export const HomePage = () => {
                       <h3 className="text-2xl font-normal text-black/70 group-hover:text-black mb-1.5 tracking-wide transition-colors duration-300 text-center">
                         {title}
                       </h3>
-                      <span className="text-stone-400 font-normal text-base tracking-wider group-hover:text-stone-700 transition-all duration-300 inline-flex items-center justify-center w-full uppercase">
+                      <span className="text-stone-400 font-normal text-sm tracking-wider group-hover:text-stone-700 transition-all duration-300 inline-flex items-center justify-center w-full uppercase">
                         {tCommon("explore-details")}
                         <svg
                           className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"
