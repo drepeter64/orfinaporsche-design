@@ -56,6 +56,9 @@ export const Header = () => {
   const isReferencesActive = pathname?.includes("/references")
   const isComponentsActive = pathname?.includes("/components")
 
+  // Check if on home page (pathname is "/" or just the locale like "/en")
+  const isHomePage = pathname === "/" || /^\/[a-z]{2}(-[A-Z]{2})?\/?$/.test(pathname || "")
+
   useEffect(() => {
     function handleClickOutside(event: Event) {
       if (referencesRef.current && !referencesRef.current.contains(event.target as Node)) {
@@ -105,7 +108,7 @@ export const Header = () => {
   }
 
   return (
-    <nav className="sticky top-0 z-50 bg-stone-100">
+    <nav className={`sticky top-0 z-50 bg-stone-100 ${isHomePage ? "shadow-md" : ""}`}>
       <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-20">
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo with Watch Image */}

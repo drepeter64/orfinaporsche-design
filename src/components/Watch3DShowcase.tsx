@@ -37,7 +37,7 @@ const watchVariants = [
     id: "olive-green-pvd",
     name: "Olive Green PVD",
     model: "/models/Olive Green PVD.glb",
-    color: "#2B2519",
+    color: "#554C38",
     description: "Olive green finish",
   },
 ]
@@ -101,7 +101,7 @@ export const Watch3DShowcase = () => {
     const modelViewer = modelViewerRef.current
     if (!modelViewer || !isLoaded) return
 
-    const zoom = isMobile ? "65%" : "100%"
+    const zoom = isMobile ? "103%" : "125%"
     modelViewer.setAttribute("camera-orbit", `0deg 75deg ${zoom}`)
     modelViewer.setAttribute("min-camera-orbit", `auto auto ${zoom}`)
     modelViewer.setAttribute("max-camera-orbit", `auto auto ${zoom}`)
@@ -175,7 +175,7 @@ export const Watch3DShowcase = () => {
           {/* Center - 3D Model Viewer */}
           <div className="lg:w-1/2 flex flex-col items-center justify-center order-1 lg:order-2 w-full">
             <div
-              className="relative w-full aspect-square max-w-[90vw] sm:max-w-[450px] lg:max-w-[550px] transition-opacity duration-500"
+              className="relative w-full aspect-[1/1.3] max-w-[70vw] sm:max-w-[450px] lg:max-w-[550px] transition-opacity duration-500"
               style={{ opacity: isLoaded ? 1 : 0 }}
             >
               {isLoaded && (
@@ -190,9 +190,9 @@ export const Watch3DShowcase = () => {
                   exposure="1"
                   rotation-per-second="30deg"
                   interaction-prompt="none"
-                  camera-orbit={isMobile ? "0deg 75deg 65%" : "0deg 75deg 100%"}
-                  min-camera-orbit={isMobile ? "auto auto 65%" : "auto auto 100%"}
-                  max-camera-orbit={isMobile ? "auto auto 65%" : "auto auto 100%"}
+                  camera-orbit={isMobile ? "0deg 75deg 103%" : "0deg 75deg 125%"}
+                  min-camera-orbit={isMobile ? "auto auto 103%" : "auto auto 125%"}
+                  max-camera-orbit={isMobile ? "auto auto 103%" : "auto auto 125%"}
                   field-of-view="30deg"
                   disable-zoom
                   loading="eager"
@@ -221,7 +221,7 @@ export const Watch3DShowcase = () => {
             </div>
 
             {/* Shadow/reflection effect */}
-            <div className="w-full max-w-[70vw] sm:max-w-[400px] h-6 sm:h-6 bg-gradient-to-t from-stone-300/50 to-transparent rounded-full blur-xl -mt-6 sm:-mt-8" />
+            <div className="w-full max-w-[50vw] sm:max-w-[400px] h-5 sm:h-6 bg-gradient-to-t from-stone-300/50 to-transparent rounded-full blur-xl -mt-4 sm:-mt-8" />
 
             {/* Drag to explore hint */}
             <p className="text-stone-400 text-xs sm:text-sm tracking-wider mt-1 sm:mt-2 mb-2 sm:mb-4">
@@ -233,7 +233,7 @@ export const Watch3DShowcase = () => {
           <div className="lg:w-1/4 flex justify-center lg:justify-end order-3 absolute right-4 bottom-16 sm:bottom-32 lg:relative lg:right-0 lg:bottom-0">
             <button
               onClick={toggleAutoRotate}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow duration-300 group"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow duration-300 group ring-1 ring-gray-100"
               aria-label={isAutoRotating ? "Pause rotation" : "Play rotation"}
             >
               {isAutoRotating ? (
