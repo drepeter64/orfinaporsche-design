@@ -19,15 +19,8 @@ const howToUseImages = [
 ]
 
 export function ReferenceGuidePage() {
-  const {
-    heroTitle,
-    heroSubtitle,
-    introduction,
-    howToUse,
-    references,
-    lemaniaSection,
-    lemaniaReferences,
-  } = reference_guide
+  const { heroTitle, heroSubtitle, howToUse, references, lemaniaSection, lemaniaReferences } =
+    reference_guide
 
   // Create data object for HeroSection
   const heroData = {
@@ -43,43 +36,6 @@ export function ReferenceGuidePage() {
         showReferencePrefix={false}
         backgroundColor="bg-stone-100"
       />
-
-      {/* Introduction Section - Two-column layout */}
-      {introduction && (
-        <AnimatedSection
-          as="section"
-          className="py-20 md:py-28 lg:py-32 bg-white px-4 sm:px-6 lg:px-20"
-          animation="fade-in"
-          delay={0}
-        >
-          <div className="max-w-[1280px] mx-auto">
-            <div className="flex flex-col md:flex-row md:justify-between">
-              {/* Left: Title - fixed width on desktop */}
-              <div className="md:w-[48%] lg:w-[45%] flex-shrink-0 mb-10 md:mb-0">
-                <AnimatedText delay={0.1}>
-                  <h2 className="font-sans text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl text-black tracking-wide leading-[1.15]">
-                    {introduction.title}
-                  </h2>
-                </AnimatedText>
-              </div>
-
-              {/* Right: Paragraphs - fixed width, right aligned */}
-              <div className="md:w-[45%] lg:w-[42%] space-y-6">
-                {introduction.paragraphs.map((paragraph, index) => (
-                  <AnimatedText
-                    key={index}
-                    delay={0.15 + index * 0.1}
-                  >
-                    <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] lg:text-lg tracking-wide">
-                      {paragraph}
-                    </p>
-                  </AnimatedText>
-                ))}
-              </div>
-            </div>
-          </div>
-        </AnimatedSection>
-      )}
 
       {/* How to Use Section */}
       <AnimatedSection
