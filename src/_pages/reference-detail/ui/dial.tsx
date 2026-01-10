@@ -132,7 +132,7 @@ export function DialPage({ data, referenceData }: DialPageProps) {
               />
             )}
             {data.note && (
-              <p className="text-base sm:text-lg leading-relaxed text-stone-700">
+              <p className="text-base sm:text-lg leading-relaxed text-stone-700 max-w-2xl mx-auto text-left">
                 {data.note.replace(/\n/g, " ")}
               </p>
             )}

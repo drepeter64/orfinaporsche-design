@@ -18,7 +18,7 @@ export const HandsBodySection: React.FC<HandsBodySectionProps> = ({ data, setFul
             className="flex flex-col gap-8"
           >
             <div
-              className={`flex flex-col gap-8 lg:gap-16 items-start ${item.images.length > 1 ? "" : "lg:flex-row lg:justify-between"}`}
+              className={`flex flex-col gap-8 lg:gap-16 ${item.images.length > 1 ? "items-start" : "lg:flex-row lg:justify-between lg:items-center items-start"}`}
             >
               <div
                 className={`space-y-6 w-full ${item.images.length > 1 ? "" : "lg:flex-1"}${index % 2 !== 0 ? " lg:order-2" : ""}`}
@@ -79,14 +79,20 @@ export const HandsBodySection: React.FC<HandsBodySectionProps> = ({ data, setFul
                 <div className={index % 2 !== 0 ? "lg:order-1" : ""}>
                   {item.images && item.images.length ? (
                     item.images.length > 1 ? (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {item.images.map((imgItem, imgIndex) => (
-                          <FinishImageSection
-                            key={imgIndex}
-                            image={imgItem}
-                            setFullScreenImage={setFullScreenImage}
-                          />
-                        ))}
+                      <div
+                        className={`flex justify-center w-full ${item.images.length === 2 ? "gap-12" : "gap-6"}`}
+                      >
+                        <div
+                          className={`grid grid-cols-1 ${item.images.length === 2 ? "sm:grid-cols-2 gap-12" : "sm:grid-cols-2 lg:grid-cols-4 gap-6"}`}
+                        >
+                          {item.images.map((imgItem, imgIndex) => (
+                            <FinishImageSection
+                              key={imgIndex}
+                              image={imgItem}
+                              setFullScreenImage={setFullScreenImage}
+                            />
+                          ))}
+                        </div>
                       </div>
                     ) : (
                       <FinishImageSection

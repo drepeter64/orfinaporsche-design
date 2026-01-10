@@ -81,16 +81,18 @@ export const MovemensBodySection: React.FC<MovemensBodySectionProps> = ({
                 <div className={index % 2 !== 0 ? "lg:order-1" : ""}>
                   {item.images && item.images.length ? (
                     item.images.length > 1 ? (
-                      <div
-                        className={`${item.image_type && item.image_type === "three-row" ? "grid grid-cols-1 lg:grid-cols-4 gap-6" : "space-y-6"}`}
-                      >
-                        {item.images.map((imgItem, imgIndex) => (
-                          <FinishImageSection
-                            key={imgIndex}
-                            image={imgItem}
-                            setFullScreenImage={setFullScreenImage}
-                          />
-                        ))}
+                      <div className="flex justify-center w-full">
+                        <div
+                          className={`${item.image_type && item.image_type === "three-row" ? "grid grid-cols-1 sm:grid-cols-3 gap-6" : "space-y-6"}`}
+                        >
+                          {item.images.map((imgItem, imgIndex) => (
+                            <FinishImageSection
+                              key={imgIndex}
+                              image={imgItem}
+                              setFullScreenImage={setFullScreenImage}
+                            />
+                          ))}
+                        </div>
                       </div>
                     ) : (
                       <FinishImageSection

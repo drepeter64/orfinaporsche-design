@@ -31,7 +31,7 @@
       "id": 1,
       "title": "Black PVD",
       "foundOn": "7176, 7176 Military, 7176 D, 7176 S",
-      "description": "The Black PVD (Physical Vapor Deposition) finish represents the signature aesthetic of the 7176 series. This matte-black coating was applied using the same pioneering PVD technique first used on the 7750 Mk. 2, creating a highly durable and uniform finish that became synonymous with Porsche Design's minimalist industrial aesthetic.\n\nThe deep, matte-black appearance eliminates reflections and glare, making it ideal for both civilian and military applications. This finish was available across all 7176 variants, making it one of the most common and recognizable finishes for the reference.",
+      "description": "",
       "color": "bg-black",
       "year": "1976-On (Tentative)",
       "images": [
@@ -48,7 +48,7 @@
       "id": 2,
       "title": "Silver/Sablé",
       "foundOn": "7176, 7176 Military, 7176 D, 7176 S",
-      "description": "The Silver/Sablé finish features a matte-blasted stainless steel surface that provides a sophisticated alternative to the black PVD coating. This finish maintains the utilitarian aesthetic of the 7176 while offering a lighter, more traditional appearance.\n\nThe matte finish reduces reflections while preserving the case's clean, industrial lines. Like the Black PVD, this finish was available across all 7176 variants, offering collectors and wearers a choice between the iconic black and the more traditional silver aesthetic.",
+      "description": "",
       "color": "bg-gray-400",
       "year": "1976-On (Tentative)",
       "images": [
@@ -65,7 +65,7 @@
       "id": 3,
       "title": "Polished",
       "foundOn": "7176 (Exclusive)",
-      "description": "The Polished finish represents a premium variation within the 7176 production, offering a high-gloss, mirror-like surface that contrasts sharply with the matte finishes typically associated with Porsche Design watches.\n\nThis finish was produced as part of the Silver finish production line but with additional polishing steps to achieve a reflective, dress-watch aesthetic. The polished finish was exclusive to the standard 7176 reference, making it a rarer variant for collectors.",
+      "description": "",
       "color": "bg-gray-300",
       "year": "1976-On (Tentative)",
       "note": "Throughout the 7176 production, a variation was offered in the Silver finish production. This was offered as \"Polished,\" and examples retain a higher, mirror-like, polished finish.",
@@ -83,7 +83,7 @@
       "id": 4,
       "title": "Grey PVD",
       "foundOn": "7176 Military (Exclusive)",
-      "description": "The Grey PVD finish was developed specifically for military applications, offering a more subdued appearance than the standard Black PVD while maintaining the durability and anti-reflective properties essential for tactical use.\n\nThis finish was exclusive to the 7176 Military variant, reflecting the specialized requirements of military procurement. The grey tone provides better camouflage properties in certain environments while maintaining the functional benefits of PVD coating.",
+      "description": "",
       "color": "bg-gray-600",
       "year": "1976-On (Tentative)",
       "images": [
@@ -100,7 +100,7 @@
       "id": 5,
       "title": "Olive Green PVD",
       "foundOn": "7176 Military (Exclusive)",
-      "description": "The Olive Green PVD finish represents one of the most distinctive military-specific finishes in the 7176 series. This olive-green coating was designed to provide optimal camouflage in field environments while maintaining the functional benefits of PVD protection.\n\nLike the Grey PVD, this finish was exclusive to the 7176 Military variant. The green tone reflects the military's need for specialized finishes that blend with natural environments, making it one of the most sought-after variants for collectors interested in military-issued timepieces.",
+      "description": "",
       "color": "bg-lime-950",
       "year": "1976-On (Tentative)",
       "images": [
@@ -117,7 +117,7 @@
       "id": 6,
       "title": "Cadet Grey PVD",
       "foundOn": "7176 D and 7176 S",
-      "description": "The Cadet Grey PVD finish offers a unique mid-tone appearance that sits between the standard Black PVD and the Silver/Sablé finishes. This distinctive grey coating was available exclusively on the 7176 D and 7176 S variants.\n\nThe cadet grey tone provides a sophisticated alternative to the standard finishes, offering collectors a distinctive colorway that stands out while maintaining the matte, anti-reflective properties that define Porsche Design's aesthetic philosophy.",
+      "description": "",
       "color": "bg-gray-500",
       "year": "1976-On (Tentative)",
       "images": [
@@ -134,7 +134,7 @@
       "id": 7,
       "title": "NTS PVD",
       "foundOn": "7176 S (Exclusive)",
-      "description": "The NTS (Non-Traditional Silver) PVD finish represents one of the rarest and most distinctive finishes in the 7176 series. This finish was exclusive to the 7176 S variant, making it particularly sought after by collectors.\n\nThe NTS PVD coating provides a unique appearance that differs from both the standard Black PVD and the Silver/Sablé finishes, offering a specialized aesthetic that reflects the 7176 S variant's unique position within the 7176 family.",
+      "description": "",
       "color": "bg-gray-400",
       "year": "1976-On (Tentative)",
       "images": [

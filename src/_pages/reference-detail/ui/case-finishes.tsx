@@ -98,11 +98,13 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
             {(data.descriptions?.length ||
               data.info ||
               (data.measurements?.length && !data.variations)) && (
-              <div className="w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-36 items-start">
+              <div
+                className={`w-full ${data.referenceId === "7177" ? "flex flex-col items-center gap-8" : "grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-36 items-start"}`}
+              >
                 {/* Descriptions or Info - case/model specific intro text */}
                 {(data.descriptions && data.descriptions.length > 0) || data.info ? (
                   <div
-                    className={`flex flex-col gap-4 ${data.descriptions && data.descriptions.length > 0 ? "max-w-[520px]" : ""}`}
+                    className={`flex flex-col gap-4 ${data.descriptions && data.descriptions.length > 0 ? "max-w-[520px]" : ""} ${data.referenceId === "7177" ? "text-center" : ""}`}
                   >
                     {data.descriptions && data.descriptions.length > 0 ? (
                       data.descriptions.map((desc, index) => (

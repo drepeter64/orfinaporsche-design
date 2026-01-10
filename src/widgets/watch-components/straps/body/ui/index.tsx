@@ -30,9 +30,11 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
               >
                 {/* Section Header */}
                 <div className="flex items-baseline gap-4">
-                  <span className="text-3xl font-light text-stone-400">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                  {index !== 1 && index !== 2 && (
+                    <span className="text-3xl font-light text-stone-400">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  )}
                   <h2 className="text-2xl sm:text-3xl tracking-wide text-black">{item.title}</h2>
                 </div>
                 {item.info && (
@@ -73,20 +75,20 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
               {item.poster && item.poster.length > 0 && (
                 <AnimatedText
                   delay={0.2}
-                  className="w-full lg:flex-1"
+                  className="w-full lg:flex-1 h-full"
                 >
-                  <div className="space-y-6">
+                  <div className="space-y-6 h-full">
                     <div
-                      className={`grid grid-cols-1 ${item.poster.length > 1 ? "sm:grid-cols-2" : ""} gap-4`}
+                      className={`grid grid-cols-1 ${item.poster.length > 1 ? "sm:grid-cols-2" : ""} gap-4 h-full`}
                     >
                       {item.poster.map((image, imgIndex) => (
                         <div
                           key={imgIndex}
-                          className="flex justify-center relative"
+                          className="flex justify-center relative h-full"
                         >
-                          <div className="flex flex-col items-center justify-center max-w-lg w-full group">
+                          <div className="flex flex-col items-center justify-center max-w-lg w-full h-full group">
                             <div
-                              className="w-full aspect-video bg-stone-100 flex items-center justify-center cursor-pointer overflow-hidden border border-stone-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                              className="w-full h-full bg-stone-100 flex items-center justify-center cursor-pointer overflow-hidden border border-stone-200 relative"
                               onClick={() =>
                                 setFullScreenImage({
                                   src: image.src,
@@ -100,9 +102,15 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
                               <ImageWithLoader
                                 src={image.src}
                                 alt={image.alt}
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                skeletonClassName="w-full aspect-video"
+                                className="w-full h-full object-cover"
+                                skeletonClassName="w-full h-full"
                               />
+                              {/* Click to zoom indicator */}
+                              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                <div className="bg-white bg-opacity-90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
+                                  Click to zoom
+                                </div>
+                              </div>
                             </div>
                             <p className="text-sm text-center text-stone-600 mt-3 tracking-wide">
                               {image.subtitle}
@@ -116,9 +124,14 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
               )}
             </div>
 
+            {/* Divider between main content and color variants */}
+            {item.colors && item.colors.length > 0 && (
+              <div className="w-full h-px bg-stone-200 my-8" />
+            )}
+
             {/* Color Variants */}
             {item.colors && item.colors.length > 0 && (
-              <div className="space-y-12 mt-8">
+              <div className="space-y-12">
                 {item.colors.map((color, colorIndex) => (
                   <AnimatedSection
                     key={colorIndex}
@@ -130,9 +143,16 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
                       <div className="grid grid-cols-1 gap-8">
                         <div className="space-y-6">
                           <AnimatedText delay={0.1}>
-                            <h3 className="text-xl sm:text-2xl tracking-wide text-black">
-                              {color.title}
-                            </h3>
+                            <div className="flex items-baseline gap-4">
+                              {index === 1 && (
+                                <span className="text-xl sm:text-2xl font-light text-stone-400">
+                                  {String(colorIndex + 2).padStart(2, "0")}
+                                </span>
+                              )}
+                              <h3 className="text-xl sm:text-2xl tracking-wide text-black">
+                                {color.title}
+                              </h3>
+                            </div>
                           </AnimatedText>
                           <div>
                             {color.list &&
@@ -218,7 +238,7 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
 
                     {/* Divider between colors */}
                     {colorIndex < (item.colors?.length || 0) - 1 && (
-                      <div className="w-full h-px bg-stone-200 mt-4" />
+                      <div className="w-full h-px bg-stone-200 my-8" />
                     )}
                   </AnimatedSection>
                 ))}
@@ -227,7 +247,7 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
 
             {/* Divider between straps */}
             {index < (data.straps?.length || 0) - 1 && (
-              <div className="w-full h-px bg-stone-200 mt-4" />
+              <div className="w-full h-px bg-stone-200 my-8" />
             )}
           </AnimatedSection>
         ))}

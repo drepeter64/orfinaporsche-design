@@ -19,7 +19,15 @@ const howToUseImages = [
 ]
 
 export function ReferenceGuidePage() {
-  const { heroTitle, heroSubtitle, introduction, howToUse, references } = reference_guide
+  const {
+    heroTitle,
+    heroSubtitle,
+    introduction,
+    howToUse,
+    references,
+    lemaniaSection,
+    lemaniaReferences,
+  } = reference_guide
 
   // Create data object for HeroSection
   const heroData = {
@@ -37,39 +45,41 @@ export function ReferenceGuidePage() {
       />
 
       {/* Introduction Section - Two-column layout */}
-      <AnimatedSection
-        as="section"
-        className="py-20 md:py-28 lg:py-32 bg-white px-4 sm:px-6 lg:px-20"
-        animation="fade-in"
-        delay={0}
-      >
-        <div className="max-w-[1280px] mx-auto">
-          <div className="flex flex-col md:flex-row md:justify-between">
-            {/* Left: Title - fixed width on desktop */}
-            <div className="md:w-[48%] lg:w-[45%] flex-shrink-0 mb-10 md:mb-0">
-              <AnimatedText delay={0.1}>
-                <h2 className="font-sans text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl text-black tracking-wide leading-[1.15]">
-                  {introduction.title}
-                </h2>
-              </AnimatedText>
-            </div>
-
-            {/* Right: Paragraphs - fixed width, right aligned */}
-            <div className="md:w-[45%] lg:w-[42%] space-y-6">
-              {introduction.paragraphs.map((paragraph, index) => (
-                <AnimatedText
-                  key={index}
-                  delay={0.15 + index * 0.1}
-                >
-                  <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] lg:text-lg tracking-wide">
-                    {paragraph}
-                  </p>
+      {introduction && (
+        <AnimatedSection
+          as="section"
+          className="py-20 md:py-28 lg:py-32 bg-white px-4 sm:px-6 lg:px-20"
+          animation="fade-in"
+          delay={0}
+        >
+          <div className="max-w-[1280px] mx-auto">
+            <div className="flex flex-col md:flex-row md:justify-between">
+              {/* Left: Title - fixed width on desktop */}
+              <div className="md:w-[48%] lg:w-[45%] flex-shrink-0 mb-10 md:mb-0">
+                <AnimatedText delay={0.1}>
+                  <h2 className="font-sans text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl text-black tracking-wide leading-[1.15]">
+                    {introduction.title}
+                  </h2>
                 </AnimatedText>
-              ))}
+              </div>
+
+              {/* Right: Paragraphs - fixed width, right aligned */}
+              <div className="md:w-[45%] lg:w-[42%] space-y-6">
+                {introduction.paragraphs.map((paragraph, index) => (
+                  <AnimatedText
+                    key={index}
+                    delay={0.15 + index * 0.1}
+                  >
+                    <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] lg:text-lg tracking-wide">
+                      {paragraph}
+                    </p>
+                  </AnimatedText>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </AnimatedSection>
+        </AnimatedSection>
+      )}
 
       {/* How to Use Section */}
       <AnimatedSection
@@ -131,7 +141,7 @@ export function ReferenceGuidePage() {
         </div>
       </AnimatedSection>
 
-      {/* Reference Cards Section */}
+      {/* Reference Cards Section - 7750 */}
       <section className="bg-white w-full">
         {references.map((ref, index) => (
           <div key={ref.id}>
@@ -184,24 +194,28 @@ export function ReferenceGuidePage() {
                     </AnimatedText>
 
                     {/* Description */}
-                    <AnimatedText delay={0.25 + index * 0.1}>
-                      <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] tracking-wide">
-                        {ref.description}
-                      </p>
-                    </AnimatedText>
+                    {ref.description && (
+                      <AnimatedText delay={0.25 + index * 0.1}>
+                        <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] tracking-wide">
+                          {ref.description}
+                        </p>
+                      </AnimatedText>
+                    )}
 
-                    <AnimatedText delay={0.3 + index * 0.1}>
-                      <p className="font-sans text-stone-500 leading-[1.85] text-sm md:text-[0.9375rem] tracking-wide">
-                        {ref.details}
-                      </p>
-                    </AnimatedText>
+                    {ref.details && (
+                      <AnimatedText delay={0.3 + index * 0.1}>
+                        <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] tracking-wide">
+                          {ref.details}
+                        </p>
+                      </AnimatedText>
+                    )}
 
                     {/* Specifications Table */}
                     <AnimatedText delay={0.35 + index * 0.1}>
                       <div className="flex flex-col w-full">
                         <div className="bg-white border border-stone-200 p-5">
                           <h4 className="font-sans text-sm font-medium text-black uppercase tracking-wider mb-4">
-                            At a Glance
+                            Within the {ref.id} lineage there exists:
                           </h4>
                           <div className="space-y-3">
                             {Object.entries(ref.specs).map(([key, value]) => (
@@ -234,16 +248,171 @@ export function ReferenceGuidePage() {
                 </div>
               </div>
             </AnimatedSection>
-
-            {/* Divider between references */}
-            {index < references.length - 1 && (
-              <div className="flex justify-center">
-                <div className="w-full max-w-[1280px] h-px bg-black/10 mx-4 sm:mx-6 lg:mx-20"></div>
-              </div>
-            )}
           </div>
         ))}
       </section>
+
+      {/* Lemania 5100 Era Section */}
+      {lemaniaSection && (
+        <AnimatedSection
+          as="section"
+          className="py-16 md:py-20 bg-stone-50 px-4 sm:px-6 lg:px-20"
+          animation="fade-in"
+          delay={0}
+        >
+          <div className="max-w-[1280px] mx-auto">
+            <div className="flex flex-col md:flex-row md:justify-between">
+              {/* Left: Title */}
+              <div className="md:w-[48%] lg:w-[45%] flex-shrink-0 mb-10 md:mb-0">
+                <AnimatedText delay={0.1}>
+                  <h2 className="font-sans text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl text-black tracking-wide leading-[1.15]">
+                    {lemaniaSection.title}
+                  </h2>
+                </AnimatedText>
+              </div>
+
+              {/* Right: Paragraphs */}
+              <div className="md:w-[45%] lg:w-[42%] space-y-6">
+                <AnimatedText delay={0.15}>
+                  <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] lg:text-lg tracking-wide">
+                    {lemaniaSection.description}
+                  </p>
+                </AnimatedText>
+                <AnimatedText delay={0.2}>
+                  <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] lg:text-lg tracking-wide">
+                    {lemaniaSection.details}
+                  </p>
+                </AnimatedText>
+                <AnimatedText delay={0.25}>
+                  <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] lg:text-lg tracking-wide">
+                    {lemaniaSection.details2}
+                  </p>
+                </AnimatedText>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+      )}
+
+      {/* Lemania References Section - 7176 & 7177 */}
+      {lemaniaReferences && (
+        <section className="bg-white w-full">
+          {lemaniaReferences.map((ref, index) => (
+            <div key={ref.id}>
+              <AnimatedSection
+                as="div"
+                className="bg-white py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20"
+                animation="fade-in"
+                delay={0}
+              >
+                <div className="max-w-[1280px] mx-auto">
+                  <div className="flex flex-col lg:flex-row gap-8 lg:gap-[72px] items-start">
+                    {/* Image Section */}
+                    <AnimatedText delay={0.1 + index * 0.1}>
+                      <Link
+                        href={ClientRoutes.reference(ref.link)}
+                        className="block group"
+                      >
+                        <div className="w-2/3 mx-auto lg:mx-0 lg:w-[480px] flex-shrink-0">
+                          <div className="bg-stone-100 p-4 transition-shadow duration-300 shadow-sm group-hover:shadow-md border border-stone-200">
+                            <div className="aspect-[400/600] relative overflow-hidden">
+                              <ImageWithLoader
+                                src={ref.image}
+                                alt={ref.title}
+                                fill
+                                className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                                skeletonClassName="w-full h-full"
+                                sizes="(max-width: 1024px) 66vw, 480px"
+                              />
+                            </div>
+                            <p className="text-lg text-stone-500 mt-4 text-center tracking-wide">
+                              {ref.imageCaption || ref.title}
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+                    </AnimatedText>
+
+                    {/* Content Section */}
+                    <div className="flex-1 flex flex-col gap-12">
+                      {/* Title and Subtitle */}
+                      <AnimatedText delay={0.2 + index * 0.1}>
+                        <div className="flex flex-col gap-3">
+                          <span className="text-base font-medium text-stone-500 uppercase tracking-wider">
+                            {ref.subtitle}
+                          </span>
+                          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl text-black leading-[1.15] tracking-wide">
+                            {ref.title}
+                          </h2>
+                        </div>
+                      </AnimatedText>
+
+                      {/* Description */}
+                      {ref.description && (
+                        <AnimatedText delay={0.25 + index * 0.1}>
+                          <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] tracking-wide">
+                            {ref.description}
+                          </p>
+                        </AnimatedText>
+                      )}
+
+                      {ref.details && (
+                        <AnimatedText delay={0.3 + index * 0.1}>
+                          <p className="font-sans text-stone-600 leading-[1.85] text-base md:text-[1.0625rem] tracking-wide">
+                            {ref.details}
+                          </p>
+                        </AnimatedText>
+                      )}
+
+                      {/* Specifications Table */}
+                      <AnimatedText delay={0.35 + index * 0.1}>
+                        <div className="flex flex-col w-full">
+                          <div className="bg-white border border-stone-200 p-5">
+                            <h4 className="font-sans text-sm font-medium text-black uppercase tracking-wider mb-4">
+                              Within the {ref.id} lineage there exists:
+                            </h4>
+                            <div className="space-y-3">
+                              {Object.entries(ref.specs).map(([key, value]) => (
+                                <div
+                                  key={key}
+                                  className="flex items-start gap-2"
+                                >
+                                  <Circle className="w-1.5 h-1.5 mt-2 flex-shrink-0 fill-stone-400 text-stone-400" />
+                                  <span className="font-sans text-sm text-stone-600">{value}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </AnimatedText>
+
+                      {/* CTA */}
+                      <AnimatedText delay={0.4 + index * 0.1}>
+                        <Link
+                          href={ClientRoutes.reference(ref.link)}
+                          className="inline-flex items-center text-black hover:text-stone-600 transition-colors group/cta"
+                        >
+                          <span className="font-sans text-sm uppercase tracking-wider mr-2">
+                            Explore Reference
+                          </span>
+                          <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/cta:translate-x-1" />
+                        </Link>
+                      </AnimatedText>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+
+              {/* Divider between references */}
+              {index < lemaniaReferences.length - 1 && (
+                <div className="flex justify-center">
+                  <div className="w-full max-w-[1280px] h-px bg-black/10 mx-4 sm:mx-6 lg:mx-20"></div>
+                </div>
+              )}
+            </div>
+          ))}
+        </section>
+      )}
 
       {/* Timeline Section */}
       <AnimatedSection

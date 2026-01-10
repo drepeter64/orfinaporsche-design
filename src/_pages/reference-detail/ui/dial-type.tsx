@@ -107,7 +107,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                   {index > 0 && (
                     <div className="w-full h-px bg-stone-200 mb-16 sm:mb-20 lg:mb-24"></div>
                   )}
-                  {(variation.image_type === "row" || variation.image_type === "right") && (
+                  {variation.image_type === "row" && (
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                       <div className="space-y-6">
                         <div className="space-y-5">
@@ -155,7 +155,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                       </div>
 
                       {/* Images Side by Side */}
-                      {variation.image_type === "row" && variation.images.length > 0 && (
+                      {variation.images.length > 0 && (
                         <div className="space-y-8">
                           <div
                             className={`grid grid-cols-1 sm:grid-cols-${variation.images.length} gap-6`}
@@ -171,14 +171,64 @@ export function DialTypePage({ data }: DialTypePageProps) {
                           </div>
                         </div>
                       )}
+                    </div>
+                  )}
+
+                  {/* Image on Right - uses flex-row layout */}
+                  {variation.image_type === "right" && (
+                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                      <div className="space-y-6 flex-shrink-0 lg:w-[35%]">
+                        <div className="space-y-5">
+                          <SectionHeading
+                            title={variation.title}
+                            variant="elegant-dark"
+                          />
+
+                          {variation.bulletSection && variation.bulletSection.title && (
+                            <span className="text-sm sm:text-lg leading-relaxed">
+                              {variation.bulletSection.title}
+                            </span>
+                          )}
+
+                          {variation.bulletSection && variation.bulletSection.text && (
+                            <ul className="space-y-1">
+                              {variation.bulletSection.text.map((item, index) => (
+                                <li
+                                  key={index}
+                                  className="flex items-start space-x-6 ml-5"
+                                >
+                                  <span className="text-sm sm:text-lg leading-relaxed">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+
+                          {variation.bulletSection && variation.bulletSection.list && (
+                            <ul className="space-y-1 ml-12">
+                              {variation.bulletSection.list.map((item, index) => (
+                                <li
+                                  key={index}
+                                  className="flex items-start space-x-3"
+                                >
+                                  <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                  <span className="text-sm sm:text-lg leading-relaxed">
+                                    {item.title && <strong>{item.title}</strong>}
+                                    {item.text}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      </div>
 
                       {/* Group Image on Right */}
-                      {variation.image_type === "right" && variation.images.length > 0 && (
-                        <div className="flex justify-center">
+                      {variation.images.length > 0 && (
+                        <div className="flex-1 flex justify-center">
                           {variation.images.map((image, index) => (
                             <div
                               key={index}
-                              className="flex flex-col items-center"
+                              className="flex flex-col items-center w-full"
                             >
                               <div
                                 className="relative group cursor-pointer"
@@ -195,8 +245,8 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                 <ImageWithLoader
                                   src={image.src}
                                   alt={image.alt}
-                                  className="relative w-full h-80 object-cover transition-all duration-300"
-                                  skeletonClassName="w-full h-80"
+                                  className={`relative object-cover transition-all duration-300 ${image.imgClassName ?? "w-full h-80"}`}
+                                  skeletonClassName={image.imgClassName ?? "w-full h-80"}
                                 />
                                 {/* Click indicator */}
                                 <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
@@ -213,8 +263,6 @@ export function DialTypePage({ data }: DialTypePageProps) {
                           ))}
                         </div>
                       )}
-
-                      {/* Individual Finish Examples Grid */}
                     </div>
                   )}
 

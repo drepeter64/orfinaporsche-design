@@ -215,6 +215,17 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
                         ) : null}
                       </div>
                     ) : null}
+
+                    {variation.blueNote && (
+                      <div className="border border-stone-200 bg-stone-50 p-5">
+                        <p className="text-base font-normal text-stone-400 uppercase tracking-wide mb-2">
+                          {tCommon("note")}
+                        </p>
+                        <p className="text-base text-stone-700 leading-relaxed">
+                          {variation.blueNote}
+                        </p>
+                      </div>
+                    )}
                   </div>
 
                   {variation.images?.length > 0 && (
