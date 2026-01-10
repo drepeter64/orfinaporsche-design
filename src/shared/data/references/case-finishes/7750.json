@@ -7,7 +7,7 @@
   "referenceTitle": "7750",
   "pageTitle": "Case & Finishes",
   "info": "The three marks of the 7750 case were produced in a mix of Powder Coat Black, Black PVD, and Silver/Sablé.",
-  "overview": "There are three main case variations for the 7750",
+  "overview": "There are three main case variations for the 7750:",
   "variation_type": "numbered",
   "variations": [
     {
@@ -32,13 +32,13 @@
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-series-v4-black-flat-top-case-orfina-dial-1km-rehaut.jpg",
               "alt": "7750 Flat Top – a.k.a Mk. 1",
-              "title": "7750 Flat Top – a.k.a Mk. 1"
+              "title": "7750 \"Flat Top\" Mk. 1 (Powder Coat Black)"
             },
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-powder-coat-blackcrop.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-powder-coat-blackcrop.jpg",
               "alt": "7750 Power Coat Black",
-              "title": "7750 Power Coat Black"
+              "title": "7750 \"Flat Top\" Mk. 1 (Powder Coat Black)"
             }
           ]
         },
@@ -75,7 +75,7 @@
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-series-v4-black-round-top-case-pd-dial-1mile-rehaut.jpg",
               "alt": "7750 Transitional Round Top – a.k.a Mk. 2 (Black PVD)",
-              "title": "7750 Transitional Round Top – a.k.a Mk. 2 (Black PVD)"
+              "title": "7750 \"Transitional Round Top\" Mk. 2 (Black PVD)"
             }
           ]
         },
@@ -89,7 +89,7 @@
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-series-v4.5-sable-round-top-case-pd-dial-1mile-rehaut.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-series-v4.5-sable-round-top-case-pd-dial-1mile-rehaut.jpg",
               "alt": "7750 Transitional Round Top – a.k.a Mk. 2 (Silver/Sablé)",
-              "title": "7750 Transitional Round Top – a.k.a Mk. 2 (Silver/Sablé)"
+              "title": "7750 \"Transitional Round Top\" Mk. 2 (Silver/Sablé)"
             }
           ]
         }
@@ -116,13 +116,13 @@
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/preview-780x-7750-gen3-2.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-gen3-2.jpg",
               "alt": "Orfina 7750 [FLAT-FACE - Service] - a.k.a Mk. 3 (Black PVD)",
-              "title": "Orfina 7750 [FLAT-FACE - Service] - a.k.a Mk. 3 (Black PVD)"
+              "title": "Orfina 7750 \"Service\" Mk. 3 (Black PVD)"
             },
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Gen3-3crop.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/images/7750-photos/7750-Gen3-3crop.jpg",
               "alt": "Orfina 7750 [FLAT-FACE - Service] - a.k.a Mk. 3 Crown",
-              "title": "Orfina 7750 [FLAT-FACE - Service] - a.k.a Mk. 3 Crown",
+              "title": "Orfina 7750 \"Service\" Mk. 3 Crown",
               "wrapClassName": "!max-w-[360px]",
               "imgClassName": "h-[240px] lg:h-[300px]"
             }
@@ -138,7 +138,7 @@
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-mk.3-case.jpg",
               "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7750/7750-case-and-finishes/7750-mk.3-case.jpg",
               "alt": "Orfina 7750 [FLAT-FACE - Service] - a.k.a Mk. 3 (Silver/Sablé)",
-              "title": "Orfina 7750 [FLAT-FACE - Service] - a.k.a Mk. 3 (Silver/Sablé)"
+              "title": "Orfina 7750 \"Service\" Mk. 3 (Silver/Sablé)"
             }
           ]
         }

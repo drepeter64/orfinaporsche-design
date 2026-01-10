@@ -54,7 +54,7 @@ export const TechnicalSpecificationSection: React.FC<TechnicalSpecificationsProp
           </h2>
         </AnimatedText>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Column */}
           <AnimatedSection
             animation="fade-in"

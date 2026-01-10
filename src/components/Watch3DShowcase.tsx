@@ -107,16 +107,39 @@ export const Watch3DShowcase = () => {
     modelViewer.setAttribute("max-camera-orbit", `auto auto ${zoom}`)
   }, [isMobile, isLoaded])
 
-  // Load model-viewer script
+  // Load model-viewer script and preload all models
   useEffect(() => {
+    // Preload the model-viewer script
+    const scriptPreload = document.createElement("link")
+    scriptPreload.rel = "preload"
+    scriptPreload.as = "script"
+    scriptPreload.href =
+      "https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
+    document.head.appendChild(scriptPreload)
+
+    // Load the script
     const script = document.createElement("script")
     script.type = "module"
     script.src = "https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
     script.onload = () => setIsLoaded(true)
     document.head.appendChild(script)
 
+    // Preload all GLB models for faster variant switching
+    const preloadLinks: HTMLLinkElement[] = []
+    watchVariants.forEach((variant) => {
+      const link = document.createElement("link")
+      link.rel = "preload"
+      link.as = "fetch"
+      link.href = variant.model
+      link.crossOrigin = "anonymous"
+      document.head.appendChild(link)
+      preloadLinks.push(link)
+    })
+
     return () => {
       document.head.removeChild(script)
+      document.head.removeChild(scriptPreload)
+      preloadLinks.forEach((link) => document.head.removeChild(link))
     }
   }, [])
 
@@ -196,6 +219,7 @@ export const Watch3DShowcase = () => {
                   field-of-view="30deg"
                   disable-zoom
                   loading="eager"
+                  reveal="auto"
                   style={{
                     width: "100%",
                     height: "100%",

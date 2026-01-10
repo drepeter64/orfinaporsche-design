@@ -52,10 +52,11 @@
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/preview-560x-7177-series-v4-sable-case-w-bund-strap-3h-mil-pd-dial-caseback-pro-s-shot.jpg",
           "original": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/7177-series-v4-sable-case-w-bund-strap-3h-mil-pd-dial-caseback-pro-s-shot.jpg",
-          "alt": "7177 BUND Singe-Struck Caseback",
-          "title": "7177 BUND Singe-Struck Caseback",
-          "subtitle": "7177 BUND Singe-Struck Caseback",
-          "caption": "7177 BUND Singe-Struck Caseback"
+          "alt": "7177 BUND Single-Struck Caseback",
+          "title": "7177 BUND Single-Struck Caseback",
+          "subtitle": "7177 BUND Single-Struck Caseback",
+          "caption": "7177 BUND Single-Struck Caseback",
+          "imgClassName": "w-[300px] h-[300px] object-cover"
         },
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/7177/bund-dial/double-strike-bundcrop.jpg",

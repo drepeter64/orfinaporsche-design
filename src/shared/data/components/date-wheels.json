@@ -26,7 +26,7 @@
     },
     {
       "title": "Type 2 - Curve Hooked 7",
-      "found": "<strong>Found On:</strong> Across 7176 References, 7177",
+      "found": "<strong>Found On:</strong> 7176, 7176 Military, 7176 S, 7176 D, 7177",
       "images": [
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/preview-560x-7177-7-type2.jpg",
@@ -41,7 +41,7 @@
     },
     {
       "title": "Type 3 - Curve Non-hooked 7",
-      "found": "<strong>Found On:</strong> Across 7176 References, 7177",
+      "found": "<strong>Found On:</strong> 7176, 7176 Military, 7176 S, 7176 D, 7177",
       "images": [
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/preview-560x-7177-7-type3.jpg",
@@ -248,7 +248,7 @@
       ]
     },
     {
-      "title": "7176, 7176 Military, 7176 S",
+      "title": "7176, 7176 Military, 7176 S, 7176 D",
       "subtitle": "Day/Date Wheel Languages",
       "info": "",
       "list": [
@@ -285,19 +285,6 @@
         {
           "heading": {
             "title": "Dutch (possibly)",
-            "tip": ""
-          }
-        }
-      ]
-    },
-    {
-      "title": "7176 D",
-      "subtitle": "Day/Date Wheel Languages",
-      "info": "",
-      "list": [
-        {
-          "heading": {
-            "title": "German",
             "tip": ""
           }
         }
@@ -347,7 +334,7 @@
       ],
       "specialNotes": [
         {
-          "title": "7177 Olive Green PVD",
+          "title": "7177 Olive Green PVD (Baseline Dial)",
           "text": "This variant should always bear an Italian Day Disk (Easily identifiable by the word GIO - which stands for Thursday in Italian)",
           "images": [
             {
@@ -364,7 +351,7 @@
         },
         {
           "title": "The 7177 NATO Dial",
-          "text": "Is believed to be the only variant of the 7177 reference to feature a white Day/Date wheel - a characteristic observed on select examples of this model.",
+          "text": "The 7177 NATO Dial is believed to be the only variant of the 7177 reference to feature a white Day/Date wheel - a characteristic observed on select examples of this model.",
           "images": [
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/date-wheels/preview-560x-7177-series-v4-0028-7177-nato-grey-case-w-bund-strap-3h-mil.jpg",

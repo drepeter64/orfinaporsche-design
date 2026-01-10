@@ -5,7 +5,7 @@
 
   "type": "movements",
   "pageTitle": "Movements",
-  "pageSubTitle": "There are a variety of crowns found across the Orfina Porsche Design references.",
+  "pageSubTitle": "\"The best car analogy I can find is the Valjoux 7750 and the Lemania 5100 are the Chevy 350 and the Ford 351-C of watches. Both are tried and true designs, nigh bulletproof when treated with a modicum of care, with outstanding parts availability and as common as dirt.\" - Chuck",
 
   "overview": "",
   "quota": {
@@ -51,7 +51,7 @@
           "title": "Mk. 1 Valjoux 7750 Rotor",
           "subtitle": "Mk. 1 Valjoux 7750 Rotor",
           "caption": "Mk. 1 Valjoux 7750 Rotor",
-          "imgClassName": "w-full h-80"
+          "imgClassName": "h-[320px] w-auto"
         },
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/movements/movement-7750-mk.-2.jpg",
@@ -60,7 +60,7 @@
           "title": "Mk. 2 Valjoux 7750 Rotor",
           "subtitle": "Mk. 2 Valjoux 7750 Rotor",
           "caption": "Mk. 2 Valjoux 7750 Rotor",
-          "imgClassName": "w-full h-80"
+          "imgClassName": "h-[320px] w-auto"
         }
       ]
     },
@@ -107,7 +107,7 @@
           "title": "Lemania 5100 Serial Type 1",
           "subtitle": "Lemania 5100 Serial Type 1 <br><small>Provided Serial: 4049628</small>",
           "caption": "Lemania 5100 Serial Type 1",
-          "imgClassName": "w-full h-80"
+          "imgClassName": "h-[320px] w-auto"
         },
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/movements/l5100-serial-mk.2.jpg",
@@ -116,7 +116,7 @@
           "title": "Lemania 5100 Serial Type 2",
           "subtitle": "Lemania 5100 Serial Type 2 <br><small>Provided Serial: 4436289</small>",
           "caption": "Lemania 5100 Serial Type 2",
-          "imgClassName": "w-full h-80"
+          "imgClassName": "h-[320px] w-auto"
         }
       ]
     },
@@ -158,7 +158,7 @@
           "title": "Mk. 1 Lemania 5100 Rotor",
           "subtitle": "Mk. 1 Lemania 5100 Rotor",
           "caption": "Mk. 1 Lemania 5100 Rotor",
-          "imgClassName": "w-full h-80"
+          "imgClassName": "h-[320px] w-auto"
         },
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/movements/mk.2lemania-5100rotor.jpg",
@@ -167,7 +167,7 @@
           "title": "Mk. 2 Lemania 5100 Rotor",
           "subtitle": "Mk. 2 Lemania 5100 Rotor",
           "caption": "Mk. 2 Lemania 5100 Rotor",
-          "imgClassName": "w-full h-80"
+          "imgClassName": "h-[320px] w-auto"
         },
         {
           "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/movements/mk.3lemania-5100rotor.jpg",
@@ -176,7 +176,7 @@
           "title": "Mk. 3 Lemania 5100 Rotor",
           "subtitle": "Mk. 3 Lemania 5100 Rotor",
           "caption": "Mk. 3 Lemania 5100 Rotor",
-          "imgClassName": "w-full h-80"
+          "imgClassName": "h-[320px] w-auto"
         }
       ]
     }

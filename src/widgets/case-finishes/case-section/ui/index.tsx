@@ -39,7 +39,7 @@ export const CaseSection: React.FC<CaseSectionProps> = ({
   return (
     <section
       ref={ref}
-      className={`bg-white w-full px-4 sm:px-6 lg:px-20 py-16 sm:py-24 lg:py-32 ${getScrollAnimationClasses(isVisible, "duration-1000")} ${className}`}
+      className={`bg-white w-full px-4 sm:px-6 lg:px-20 pt-6 sm:pt-8 lg:pt-10 pb-12 sm:pb-16 lg:pb-20 ${getScrollAnimationClasses(isVisible, "duration-1000")} ${className}`}
     >
       <div className="max-w-[1280px] mx-auto flex flex-col gap-28 lg:gap-32 items-start">
         {/* Title, description, measurements */}
@@ -94,7 +94,7 @@ export const CaseSection: React.FC<CaseSectionProps> = ({
         {/* Finishes Title (optional) */}
         {finishesTitle && (
           <AnimatedText delay={0.1}>
-            <p className="text-base lg:text-lg text-neutral-600 leading-none w-full -mb-24">
+            <p className="text-base lg:text-lg text-neutral-600 -mb-96 leading-none w-full">
               {finishesTitle}
             </p>
           </AnimatedText>
@@ -102,7 +102,7 @@ export const CaseSection: React.FC<CaseSectionProps> = ({
 
         {/* Finishes */}
         {finishes && finishes.length > 0 && (
-          <div className="w-full flex flex-col">
+          <div className="-mt-14 w-full flex flex-col">
             {finishes.map((finish, index) => (
               <AnimatedSection
                 key={index}

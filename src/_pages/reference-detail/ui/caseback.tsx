@@ -166,6 +166,15 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
             <div className="mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-start lg:gap-12 items-start pb-24 border-b border-stone-200">
               <div className="flex flex-col gap-6 lg:max-w-[720px] w-full">
                 <div className="space-y-5">
+                  {variation.note && (
+                    <div className="border border-stone-200 bg-stone-50 p-5">
+                      <p
+                        className="text-base text-stone-700 [&>strong]:font-semibold [&>b]:font-semibold"
+                        dangerouslySetInnerHTML={{ __html: variation.note }}
+                      />
+                    </div>
+                  )}
+
                   <div className="bg-white p-5 space-y-4">
                     <p className="text-lg uppercase tracking-[0.2em] text-stone-400">
                       {variation.bulletSection.title?.trim() || "Details"}
@@ -185,15 +194,6 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
 
                     <ul className="space-y-4">{renderBulletList(variation.bulletSection.list)}</ul>
                   </div>
-
-                  {variation.note && (
-                    <div className="border border-stone-200 bg-stone-50 p-5">
-                      <p
-                        className="text-base text-stone-700 [&>strong]:font-semibold [&>b]:font-semibold"
-                        dangerouslySetInnerHTML={{ __html: variation.note }}
-                      />
-                    </div>
-                  )}
 
                   {variation.blueNote && (
                     <div className="border border-stone-200 bg-stone-50 p-5">

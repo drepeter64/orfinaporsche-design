@@ -53,7 +53,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
                                 key={index}
                                 className="flex items-center gap-4 group"
                               >
-                                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-stone-400 text-white flex items-center justify-center text-sm font-medium transition-all duration-300 group-hover:bg-stone-500">
+                                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-stone-200 text-stone-600 flex items-center justify-center text-sm font-medium">
                                   {index + 1}
                                 </span>
                                 <span className="text-base md:text-lg text-stone-700 leading-relaxed font-medium tracking-wide">

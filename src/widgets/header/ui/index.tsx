@@ -187,11 +187,11 @@ export const Header = () => {
               </Link>
 
               {referencesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-stone-50 shadow-2xl border border-gray-200 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
+                <div className="absolute top-full left-0 mt-2 w-64 bg-stone-50 shadow-lg border border-gray-200 z-50 animate-in fade-in-0 zoom-in-95 duration-200">
                   <div>
                     <Link
                       href={ClientRoutes.reference_guide}
-                      className="block px-4 py-3 font-medium text-sm text-stone-600 hover:text-stone-800 hover:bg-stone-100 transition-colors cursor-pointer border-b border-gray-200"
+                      className="block px-4 py-3 font-medium text-sm text-stone-600 hover:text-stone-800 hover:bg-stone-200 transition-colors cursor-pointer border-b border-gray-200"
                     >
                       {tCommon("reference_guide")}
                     </Link>
@@ -204,14 +204,14 @@ export const Header = () => {
                       >
                         <Link
                           href={ClientRoutes.reference(route.toString())}
-                          className="flex items-center justify-between px-4 py-3 hover:bg-stone-100 transition-colors duration-200 font-medium text-sm text-stone-600 hover:text-stone-800 cursor-pointer"
+                          className="flex items-center justify-between px-4 py-3 hover:bg-stone-200 transition-colors duration-200 font-medium text-sm text-stone-600 hover:text-stone-800 cursor-pointer"
                         >
                           <span>{title}</span>
                           <ChevronRight className="w-4 h-4 text-stone-400" />
                         </Link>
                         {refOpen[route] && (
                           <div
-                            className="absolute left-full top-0 ml-1 w-48 bg-stone-50 shadow-2xl border border-gray-200 z-[60] overflow-hidden animate-in fade-in-0 zoom-in-95 duration-200"
+                            className="absolute left-full top-0 ml-1 w-48 bg-stone-50 shadow-lg border border-gray-200 z-[60] overflow-hidden animate-in fade-in-0 zoom-in-95 duration-200"
                             onMouseEnter={() => handleSubDropdownEnter(route)}
                             onMouseLeave={() => handleSubDropdownLeave(route)}
                           >
@@ -221,7 +221,7 @@ export const Header = () => {
                                   <Link
                                     key={idx}
                                     href={getReferenceRoute(type, route.toString())}
-                                    className="block px-4 py-3 text-sm text-gray-600 hover:text-black hover:bg-stone-100 transition-colors cursor-pointer"
+                                    className="block px-4 py-3 text-sm text-gray-600 hover:text-black hover:bg-stone-200 transition-colors cursor-pointer"
                                   >
                                     {title}
                                   </Link>
@@ -265,26 +265,17 @@ export const Header = () => {
               </button>
 
               {componentsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-stone-50 shadow-2xl border border-gray-200 z-50 overflow-hidden animate-in fade-in-0 zoom-in-95 duration-200">
-                  <div className="py-4">
-                    <div className="px-6 py-2 border-b border-gray-100">
-                      <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                        {tCommon("watch-components")}
-                      </h3>
-                    </div>
-
-                    <div className="px-4 py-2">
-                      {components.map(({ title, route }, index) => (
-                        <Link
-                          key={index}
-                          className="group flex items-center px-3 py-3 text-sm text-gray-700 hover:bg-stone-100 hover:text-black transition-all duration-200 cursor-pointer"
-                          href={ClientRoutes.components(route)}
-                        >
-                          <div className="w-2 h-2 bg-gray-400 rounded-full mr-3 group-hover:bg-gray-900 transition-colors"></div>
-                          <span className="font-medium">{title}</span>
-                        </Link>
-                      ))}
-                    </div>
+                <div className="absolute top-full left-0 mt-2 w-64 bg-stone-50 shadow-lg border border-gray-200 z-50 overflow-hidden animate-in fade-in-0 zoom-in-95 duration-200">
+                  <div>
+                    {components.map(({ title, route }, index) => (
+                      <Link
+                        key={index}
+                        className="block px-4 py-3 font-medium text-sm text-stone-600 hover:text-stone-800 hover:bg-stone-200 transition-colors cursor-pointer"
+                        href={ClientRoutes.components(route)}
+                      >
+                        {title}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               )}
@@ -310,7 +301,7 @@ export const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-black hover:bg-gray-100 transition-colors touch-manipulation"
+            className="lg:hidden p-2 text-gray-700 hover:text-black hover:bg-gray-100 transition-colors touch-manipulation"
             onClick={handleMobileMenuToggle}
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle mobile menu"
@@ -326,7 +317,7 @@ export const Header = () => {
           <div className="px-4 py-4 space-y-4">
             <Link
               href={ClientRoutes.story}
-              className={`block py-3 px-4 text-base font-medium rounded-md transition-colors touch-manipulation cursor-pointer ${
+              className={`block py-3 px-4 text-base font-medium transition-colors touch-manipulation cursor-pointer ${
                 isActive(ClientRoutes.story)
                   ? "text-black bg-gray-100"
                   : "text-gray-700 hover:text-black hover:bg-gray-50"
@@ -340,12 +331,12 @@ export const Header = () => {
               <div className="flex items-center justify-between">
                 <Link
                   href={ClientRoutes.reference_guide}
-                  className="flex-1 py-3 px-4 text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors touch-manipulation rounded-l-md"
+                  className="flex-1 py-3 px-4 text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors touch-manipulation"
                 >
                   {tCommon("references")}
                 </Link>
                 <button
-                  className="py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-r-md transition-colors touch-manipulation"
+                  className="py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 transition-colors touch-manipulation"
                   onClick={handleMobileReferencesToggle}
                   aria-expanded={mobileReferencesOpen}
                   aria-label="Toggle references menu"
@@ -359,12 +350,12 @@ export const Header = () => {
               </div>
 
               {mobileReferencesOpen && (
-                <div className="pl-4 space-y-2 bg-gray-50 rounded-md py-3 animate-in slide-in-from-top-1 duration-200">
+                <div className="pl-4 space-y-2 bg-gray-50 py-3 animate-in slide-in-from-top-1 duration-200">
                   {references.map(({ title, route }, index) => (
                     <Link
                       key={index}
                       href={ClientRoutes.reference(route.toString())}
-                      className="block py-3 px-3 text-sm font-medium text-black hover:bg-gray-100 rounded-md transition-colors touch-manipulation cursor-pointer"
+                      className="block py-3 px-3 text-sm font-medium text-black hover:bg-gray-100 transition-colors touch-manipulation cursor-pointer"
                     >
                       {title}
                     </Link>
@@ -376,7 +367,7 @@ export const Header = () => {
             {/* Mobile Components Section */}
             <div className="space-y-2">
               <button
-                className="flex items-center justify-between w-full py-3 px-4 text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 rounded-md transition-colors touch-manipulation"
+                className="flex items-center justify-between w-full py-3 px-4 text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors touch-manipulation"
                 onClick={handleMobileComponentsToggle}
                 aria-expanded={mobileComponentsOpen}
                 aria-label="Toggle components menu"
@@ -390,12 +381,12 @@ export const Header = () => {
               </button>
 
               {mobileComponentsOpen && (
-                <div className="pl-4 space-y-2 bg-gray-50 rounded-md py-3 animate-in slide-in-from-top-1 duration-200">
+                <div className="pl-4 space-y-2 bg-gray-50 py-3 animate-in slide-in-from-top-1 duration-200">
                   <div className="grid grid-cols-2 gap-2">
                     {components.map(({ title, route }, index) => (
                       <Link
                         key={index}
-                        className="block py-3 px-3 text-sm text-gray-700 hover:text-black hover:bg-gray-100 rounded-md transition-colors touch-manipulation cursor-pointer"
+                        className="block py-3 px-3 text-sm text-gray-700 hover:text-black hover:bg-gray-100 transition-colors touch-manipulation cursor-pointer"
                         href={ClientRoutes.components(route)}
                       >
                         {title}
@@ -407,7 +398,7 @@ export const Header = () => {
             </div>
             <Link
               href={ClientRoutes.about}
-              className={`block py-3 px-4 text-base font-medium rounded-md transition-colors touch-manipulation cursor-pointer ${
+              className={`block py-3 px-4 text-base font-medium transition-colors touch-manipulation cursor-pointer ${
                 isActive(ClientRoutes.about)
                   ? "text-black bg-gray-100"
                   : "text-gray-700 hover:text-black hover:bg-gray-50"

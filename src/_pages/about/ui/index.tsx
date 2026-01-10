@@ -27,13 +27,8 @@ export function AboutPage() {
         {/* Dark Gradient Overlay */}
         <div className="absolute inset-0 z-[1] bg-gradient-to-t from-stone-950/90 via-stone-950/60 via-40% to-transparent" />
 
-        {/* Content Overlay - Bottom Left */}
-        <div className="relative z-10 px-4 sm:px-6 lg:px-20 pb-8 sm:pb-10 lg:pb-12 max-w-2xl">
-          <AnimatedText delay={0.2}>
-            <p className="font-sans text-xs sm:text-sm tracking-[0.35em] text-white/90 uppercase mb-4">
-              Behind the Collection
-            </p>
-          </AnimatedText>
+        {/* Content Overlay - Left Aligned */}
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-20 pb-8 sm:pb-10 lg:pb-12">
           <AnimatedText delay={0.4}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-stone-50 leading-[1.2] tracking-wide">
               About
@@ -42,41 +37,30 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Two-Column Content Section */}
+      {/* Content Section */}
       <section className="bg-stone-100 py-16 sm:py-20 px-4 sm:px-6 lg:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 max-w-[1800px]">
-          {/* Left Column - Large  headline */}
-          <AnimatedText delay={0.1}>
-            <h2 className="font-sans text-3xl sm:text-4xl text-stone-800 leading-tight ">
-              A dedication to documenting
-              <br className="hidden sm:block" /> Orfina Porsche Design history
-            </h2>
+        <div className="max-w-3xl font-normal mx-auto space-y-7">
+          <AnimatedText delay={0.2}>
+            <p className="font-sans text-lg md:text-xl text-stone-700 leading-[1.85] indent-8">
+              This website was created by <strong>Drew Peterson</strong>, with the invaluable
+              expertise and contributions of long-time Orfina Porsche Design collectors — Alan
+              Fronshtein, David [Redacted], and Paul Hyde.
+            </p>
           </AnimatedText>
-
-          {/* Right Column - Body text */}
-          <div className="space-y-6">
-            <AnimatedText delay={0.2}>
-              <p className="font-sans text-lg text-stone-700 leading-relaxed">
-                <strong>This website was created by Drew Peterson</strong>, with the invaluable
-                expertise and contributions of long-time Orfina Porsche Design collectors — Alan
-                Fronshtein, David [Redacted], and Paul Hyde.
-              </p>
-            </AnimatedText>
-            <AnimatedText delay={0.3}>
-              <p className="font-sans text-lg text-stone-700 leading-relaxed">
-                We welcome fellow enthusiasts, researchers, and collectors to connect with us —
-                whether to share discoveries, clarify references, or, importantly, share
-                original-owner watches. Every verified example helps us refine production timelines
-                and better understand the evolution of these references and dial variations.
-              </p>
-            </AnimatedText>
-            <AnimatedText delay={0.4}>
-              <p className="font-sans text-lg text-stone-700 leading-relaxed">
-                As a collector, it is a pleasure and treat hearing about watches from their original
-                owners and, if they are so inclined, being able to acquire them.
-              </p>
-            </AnimatedText>
-          </div>
+          <AnimatedText delay={0.3}>
+            <p className="font-sans text-lg md:text-xl text-stone-700 leading-[1.85] indent-8">
+              We welcome fellow enthusiasts, researchers, and collectors to connect with us —
+              whether to share discoveries, clarify references, or, importantly, share
+              original-owner watches. Every verified example helps us refine production timelines
+              and better understand the evolution of these references and dial variations.
+            </p>
+          </AnimatedText>
+          <AnimatedText delay={0.4}>
+            <p className="font-sans text-lg md:text-xl text-stone-700 leading-[1.85] indent-8">
+              As a collector, it is a pleasure and treat hearing about watches from their original
+              owners and, if they are so inclined, being able to acquire them.
+            </p>
+          </AnimatedText>
         </div>
       </section>
 
@@ -93,7 +77,7 @@ export function AboutPage() {
               <p className="font-sans text-xs sm:text-sm tracking-[0.25em] text-stone-500 uppercase mb-4">
                 Featured
               </p>
-              <h2 className="font-sans text-3xl sm:text-4xl text-stone-800 leading-tight  mb-6">
+              <h2 className="font-sans text-3xl sm:text-4xl text-stone-800 mb-6">
                 A deeper look into the collecting journey
               </h2>
               <p className="font-sans text-lg text-stone-600 leading-relaxed">
@@ -145,26 +129,39 @@ export function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-24">
               <AnimatedText delay={0.3}>
                 <div>
-                  <p className="font-sans text-xs tracking-[0.2em] text-stone-400 uppercase mb-2">
+                  <p className="font-sans text-xs tracking-[0.2em] text-stone-400 uppercase mb-4">
                     Email
                   </p>
                   <a
                     href="mailto:drew.pbp@gmail.com"
-                    className="font-sans text-xl text-stone-800 hover:text-stone-600 transition-colors underline underline-offset-4"
+                    className="inline-flex items-center gap-2 px-8 py-3 bg-stone-800 text-white font-sans text-base tracking-wide hover:bg-stone-700 transition-colors duration-300 rounded-xs"
                   >
-                    drew.pbp@gmail.com
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    Contact
                   </a>
                 </div>
               </AnimatedText>
               <AnimatedText delay={0.4}>
                 <div>
-                  <p className="font-sans text-xs tracking-[0.2em] text-stone-400 uppercase mb-2">
+                  <p className="font-sans text-xs tracking-[0.2em] text-stone-400 uppercase mb-4">
                     Instagram
                   </p>
                   <a
                     href="https://www.instagram.com/BFMOTORCLUB"
                     target="_blank"
-                    className="font-sans text-xl text-stone-800 hover:text-stone-600 transition-colors underline underline-offset-4"
+                    className="inline-flex items-center font-sans text-base text-stone-800 hover:text-stone-600 transition-colors underline underline-offset-4 py-3"
                   >
                     @BFMOTORCLUB
                   </a>
