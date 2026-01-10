@@ -8,7 +8,6 @@ import { HandsBodySection } from "@/widgets/watch-components/hands/body"
 import { CrownsBodySection } from "@/widgets/watch-components/crowns/body"
 import { MovemensBodySection } from "@/widgets/watch-components/movements/body"
 import { WheelsBodySection } from "@/widgets/watch-components/date-wheels/body"
-import { BoxesBodySection } from "@/widgets/watch-components/boxes/body"
 import { HeroSection } from "@/widgets/reference/hero"
 import AnimatedSection from "@/components/AnimatedSection"
 import AnimatedText from "@/components/AnimatedText"
@@ -112,8 +111,6 @@ export function ComponentsPage({ data }: ComponentsPage) {
                   data={data}
                 />
               )}
-
-              {data.type === "boxes" && <BoxesBodySection data={data} />}
             </div>
           </div>
         </section>
