@@ -11,7 +11,7 @@ export const BreadcrumbSection: React.FC<BreadcrumbsProps> = ({ data }) => {
 
   return (
     <div className="bg-gray-50 py-4 border-b border-gray-200">
-      <div className="mx-auto px-4 sm:px-6 lg:px-20">
+      <div className="mx-auto px-8 sm:px-6 lg:px-20">
         <nav className="text-sm">
           <Link
             href={ClientRoutes.home}

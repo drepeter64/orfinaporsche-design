@@ -125,7 +125,7 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
   return (
     <div className="min-h-screen bg-[#f8f7f2] text-stone-900">
       <section
-        className={`w-full bg-stone-100 px-4 sm:px-6 lg:px-20 py-12 lg:py-[60px] transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+        className={`w-full bg-stone-100 px-8 sm:px-6 lg:px-20 py-12 lg:py-[60px] transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
       >
         <div className="mx-auto flex flex-col gap-6 lg:gap-7">
           <div className="flex flex-col gap-4 items-start">
@@ -141,7 +141,7 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
       </section>
 
       {overview && (
-        <section className="w-full bg-white px-4 sm:px-6 lg:px-20 py-10">
+        <section className="w-full bg-white px-8 sm:px-6 lg:px-20 py-10">
           <p className="text-base lg:text-xl text-stone-600 leading-normal text-center">
             {overview}
           </p>
@@ -153,7 +153,7 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
         return (
           <section
             key={index}
-            className="w-full bg-white px-4 sm:px-6 lg:px-20 pt-8 pb-8 lg:pb-12"
+            className="w-full bg-white px-8 sm:px-6 lg:px-20 pt-8 pb-8 lg:pb-12"
           >
             {variation.title && (
               <div className="flex items-baseline gap-3 mb-12">
@@ -249,7 +249,7 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
       })}
 
       {exploreCards && exploreCards.length > 0 && (
-        <section className="w-full bg-white px-4 sm:px-6 lg:px-20 py-16 lg:py-[90px]">
+        <section className="w-full bg-white px-8 sm:px-6 lg:px-20 py-16 lg:py-[90px]">
           <div className="max-w-[1280px] mx-auto flex flex-col gap-12 items-center">
             <h2 className="text-2xl md:text-3xl lg:text-[42px] text-black leading-[1.1] text-center tracking-wide">
               {tCommon("explore-details")}

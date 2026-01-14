@@ -40,7 +40,7 @@ export function ReferenceGuidePage() {
       {/* How to Use Section */}
       <AnimatedSection
         as="section"
-        className="w-full bg-stone-50 px-4 sm:px-6 lg:px-20 py-16 lg:py-[100px]"
+        className="w-full bg-stone-50 px-8 sm:px-6 lg:px-20 py-16 lg:py-[100px]"
         animation="fade-in"
         delay={0}
       >
@@ -105,7 +105,7 @@ export function ReferenceGuidePage() {
           <div key={ref.id}>
             <AnimatedSection
               as="div"
-              className="bg-white py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20"
+              className="bg-white py-[60px] md:py-[80px] lg:py-[100px] px-8 sm:px-6 lg:px-20"
               animation="fade-in"
               delay={0}
             >
@@ -217,7 +217,7 @@ export function ReferenceGuidePage() {
       {lemaniaSection && (
         <AnimatedSection
           as="section"
-          className="py-16 md:py-20 bg-stone-50 px-4 sm:px-6 lg:px-20"
+          className="py-16 md:py-20 bg-stone-50 px-8 sm:px-6 lg:px-20"
           animation="fade-in"
           delay={0}
         >
@@ -262,7 +262,7 @@ export function ReferenceGuidePage() {
             <div key={ref.id}>
               <AnimatedSection
                 as="div"
-                className="bg-white py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20"
+                className="bg-white py-[60px] md:py-[80px] lg:py-[100px] px-8 sm:px-6 lg:px-20"
                 animation="fade-in"
                 delay={0}
               >

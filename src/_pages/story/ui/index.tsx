@@ -116,7 +116,7 @@ export function StoryPage() {
         animation="fade-in"
         delay={0}
       >
-        <div className="mx-auto px-4 sm:px-6 lg:px-20">
+        <div className="mx-auto px-8 sm:px-6 lg:px-20">
           <div className="text-center mb-16">
             <AnimatedText delay={0.1}>
               <h2 className="font-sans text-3xl md:text-4xl font-light text-black mb-4 uppercase tracking-wider">

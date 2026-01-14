@@ -24,7 +24,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = ({
           ref={sectionRef}
           className={`py-16 md:py-24 bg-gradient-to-b from-white to-stone-50/50 w-full h-fit ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
         >
-          <div className="px-4 sm:px-6 lg:px-20">
+          <div className="px-8 sm:px-6 lg:px-20">
             <div className="max-w-[1280px] mx-auto">
               {/* Conditionally render grid or centered layout */}
               {introduction.image ? (

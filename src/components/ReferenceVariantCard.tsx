@@ -50,7 +50,7 @@ const ReferenceVariantCard = ({
   return (
     <div
       ref={ref}
-      className={`bg-white py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20 ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
+      className={`bg-white py-[60px] md:py-[80px] lg:py-[100px] px-8 sm:px-6 lg:px-20 ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
       style={{ transitionDelay: isVisible ? `${animationDelay}ms` : "0ms" }}
     >
       <div className="max-w-[1280px] mx-auto">

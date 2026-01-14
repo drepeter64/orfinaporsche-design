@@ -68,7 +68,7 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
       {/* Hero Section */}
       <section
         className={
-          "w-full bg-stone-100 px-4 sm:px-6 lg:px-20 py-12 lg:py-[60px] transform transition-all duration-1000"
+          "w-full bg-stone-100 px-8 sm:px-6 lg:px-20 py-12 lg:py-[60px] transform transition-all duration-1000"
         }
       >
         <div className="flex flex-col gap-6 lg:gap-7 items-start">
@@ -91,7 +91,7 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
         (data.info && !data.mergedSection)) && (
         <section
           ref={overviewRef}
-          className={`w-full bg-white px-4 sm:px-6 lg:px-20 py-12 lg:py-[60px] ${getScrollAnimationClasses(overviewVisible, "duration-1000")}`}
+          className={`w-full bg-white px-8 sm:px-6 lg:px-20 py-12 lg:py-[60px] ${getScrollAnimationClasses(overviewVisible, "duration-1000")}`}
         >
           <div className="flex flex-col gap-6 lg:gap-7">
             {/* Descriptions and Measurements Row */}
@@ -263,7 +263,7 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
 
       {/* Sections (fallback when variations is not available) */}
       {!data.variations && data.sections && data.sections.length > 0 && (
-        <section className="w-full bg-white px-4 sm:px-6 lg:px-20 py-12 lg:py-[60px]">
+        <section className="w-full bg-white px-8 sm:px-6 lg:px-20 py-12 lg:py-[60px]">
           <div className="max-w-[1280px] mx-auto flex flex-col gap-12">
             {data.sections.map((section, index) => {
               // Format description with paragraphs if it exists
@@ -319,7 +319,7 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
 
       {/* Merged Section (for 7177 style layout) */}
       {data.mergedSection && (
-        <section className="w-full bg-white px-4 sm:px-6 lg:px-20 py-12 lg:py-[60px]">
+        <section className="w-full bg-white px-8 sm:px-6 lg:px-20 py-12 lg:py-[60px]">
           <div className="max-w-[1280px] mx-auto flex flex-col gap-12">
             <div className="flex flex-col gap-8">
               {/* Merged Section Title */}
@@ -384,7 +384,7 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
 
       {/* Finishes Gallery (for 7177 style) */}
       {data.finishes && data.finishes.length > 0 && (
-        <section className="w-full bg-stone-50 px-4 sm:px-6 lg:px-20 py-16 lg:py-[100px]">
+        <section className="w-full bg-stone-50 px-8 sm:px-6 lg:px-20 py-16 lg:py-[100px]">
           <div className="max-w-[1440px] mx-auto flex flex-col gap-8">
             <h2 className="text-2xl md:text-3xl lg:text-4xl text-black text-center leading-tight tracking-wide">
               Finish Gallery
@@ -428,7 +428,7 @@ export function CaseFinishesPage({ data, referenceData }: CaseFinishesPageProps)
       {/* Explore Other Details Section */}
       <section
         ref={exploreRef}
-        className={`w-full bg-white px-4 sm:px-6 lg:px-20 py-16 lg:py-[100px] ${getScrollAnimationClasses(exploreVisible, "duration-1000")}`}
+        className={`w-full bg-white px-8 sm:px-6 lg:px-20 py-16 lg:py-[100px] ${getScrollAnimationClasses(exploreVisible, "duration-1000")}`}
       >
         <div className="max-w-[1280px] mx-auto flex flex-col gap-12 items-center">
           <h2 className="text-2xl md:text-3xl lg:text-[44px] text-black text-center leading-[1.1] tracking-wide">

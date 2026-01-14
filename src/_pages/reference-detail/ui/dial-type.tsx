@@ -25,7 +25,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
   return (
     <div className="min-h-[calc(100vh-97px)] bg-stone-100 flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-[60px] md:py-[60px] overflow-hidden px-4 sm:px-6 lg:px-20 w-full h-fit bg-stone-100">
+      <section className="relative py-[60px] md:py-[60px] overflow-hidden px-8 sm:px-6 lg:px-20 w-full h-fit bg-stone-100">
         <div className="max-w-[1280px] mx-auto">
           <div className="flex flex-col items-start gap-4 h-fit">
             <div className="w-full">
@@ -47,7 +47,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
       </section>
 
       {/* Overview Section */}
-      <section className=" bg-white px-4 sm:px-6 lg:px-20 py-12">
+      <section className=" bg-white px-8 sm:px-6 lg:px-20 py-12">
         <div className="max-w-[1280px] mx-auto">
           {data.overview && (
             <div className="mb-16 sm:mb-20 lg:mb-24">

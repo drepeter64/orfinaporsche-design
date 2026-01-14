@@ -36,7 +36,7 @@ export const HomePage = () => {
         <div className="absolute inset-0 z-[1] bg-gradient-to-t from-stone-950/90 via-stone-950/60 via-40% to-transparent" />
 
         {/* Content Overlay - Bottom Left */}
-        <div className="relative z-10 px-4 sm:px-6 lg:px-20 pb-8 sm:pb-10 lg:pb-12 max-w-2xl">
+        <div className="relative z-10 px-8 sm:px-6 lg:px-20 pb-8 sm:pb-10 lg:pb-12 max-w-2xl">
           <AnimatedText
             as="h1"
             delay={0.2}
@@ -74,7 +74,7 @@ export const HomePage = () => {
 
       {/* Featured References */}
       <section className="py-16 sm:py-24 lg:py-32 bg-stone-50">
-        <div className="mx-auto px-4 sm:px-6 lg:px-20">
+        <div className="mx-auto px-8 sm:px-6 lg:px-20">
           <AnimatedText
             className="text-center mb-6 sm:mb-8 lg:mb-10"
             delay={0}

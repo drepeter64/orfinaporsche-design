@@ -20,7 +20,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <section
-      className={`relative py-[60px] md:py-[60px] overflow-hidden px-4 sm:px-6 lg:px-20 w-full h-fit ${backgroundColor || ""}`}
+      className={`relative py-[60px] md:py-[60px] overflow-hidden px-8 sm:px-6 lg:px-20 w-full h-fit ${backgroundColor || ""}`}
     >
       <div className="max-w-[1280px] mx-auto">
         <div

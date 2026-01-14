@@ -28,7 +28,7 @@ export function AboutPage() {
         <div className="absolute inset-0 z-[1] bg-gradient-to-t from-stone-950/90 via-stone-950/60 via-40% to-transparent" />
 
         {/* Content Overlay - Left Aligned */}
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-20 pb-8 sm:pb-10 lg:pb-12">
+        <div className="relative z-10 w-full px-8 sm:px-6 lg:px-20 pb-8 sm:pb-10 lg:pb-12">
           <AnimatedText delay={0.4}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-stone-50 leading-[1.2] tracking-wide">
               About
@@ -38,7 +38,7 @@ export function AboutPage() {
       </section>
 
       {/* Content Section */}
-      <section className="bg-stone-100 py-16 sm:py-20 px-4 sm:px-6 lg:px-20">
+      <section className="bg-stone-100 py-16 sm:py-20 px-8 sm:px-6 lg:px-20">
         <div className="max-w-3xl font-normal mx-auto space-y-7">
           <AnimatedText delay={0.2}>
             <p className="font-sans text-lg md:text-xl text-stone-700 leading-[1.85] indent-8">
@@ -67,7 +67,7 @@ export function AboutPage() {
       {/* Video Section */}
       <AnimatedSection
         as="section"
-        className="py-16 sm:py-20 bg-white px-4 sm:px-6 lg:px-20"
+        className="py-16 sm:py-20 bg-white px-8 sm:px-6 lg:px-20"
         animation="fade-in"
         delay={0}
       >
@@ -105,7 +105,7 @@ export function AboutPage() {
       {/* Contact Section */}
       <AnimatedSection
         as="section"
-        className="py-16 sm:py-20 bg-stone-50 px-4 sm:px-6 lg:px-20"
+        className="py-16 sm:py-20 bg-stone-50 px-8 sm:px-6 lg:px-20"
         animation="fade-in"
         delay={0}
       >

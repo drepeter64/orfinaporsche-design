@@ -45,7 +45,7 @@ export const TechnicalSpecificationSection: React.FC<TechnicalSpecificationsProp
   return (
     <section
       ref={ref}
-      className={`w-full py-[60px] md:py-[80px] lg:py-[100px] px-4 sm:px-6 lg:px-20 ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
+      className={`w-full py-[60px] md:py-[80px] lg:py-[100px] px-8 sm:px-6 lg:px-20 ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
     >
       <div className="flex flex-col gap-12 items-center">
         <AnimatedText delay={0}>

@@ -38,7 +38,7 @@ export function ComponentsPage({ data }: ComponentsPage) {
       {data.note && (
         <AnimatedSection
           as="section"
-          className="bg-stone-100 px-4 sm:px-6 lg:px-20 pb-8"
+          className="bg-stone-100 px-8 sm:px-6 lg:px-20 pb-8"
           animation="fade-in"
           delay={0}
         >
@@ -58,7 +58,7 @@ export function ComponentsPage({ data }: ComponentsPage) {
       {data.overview && data.type !== "bracelets" && data.type !== "boxes" && (
         <AnimatedSection
           as="section"
-          className="py-16 md:py-20 bg-white px-4 sm:px-6 lg:px-20"
+          className="py-16 md:py-20 bg-white px-8 sm:px-6 lg:px-20"
           animation="fade-in"
           delay={0}
         >
@@ -74,7 +74,7 @@ export function ComponentsPage({ data }: ComponentsPage) {
 
       {/* Main Content */}
       {data.type !== "bracelets" && data.type !== "boxes" && (
-        <section className="bg-white w-full px-4 sm:px-6 lg:px-20">
+        <section className="bg-white w-full px-8 sm:px-6 lg:px-20">
           <div className="max-w-[1800px] mx-auto py-12 lg:py-[60px]">
             <div className="space-y-16 sm:space-y-20 lg:space-y-24">
               {data.type === "straps" && (

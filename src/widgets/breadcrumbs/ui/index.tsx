@@ -9,7 +9,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ links }) => {
 
   return (
     <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-4 sm:py-6">
-      <div className="mx-auto px-4 sm:px-6 lg:px-20">
+      <div className="mx-auto px-8 sm:px-6 lg:px-20">
         <nav className="text-sm">
           <Link
             href={ClientRoutes.home}
