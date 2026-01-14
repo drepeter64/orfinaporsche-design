@@ -304,8 +304,8 @@ export function DialTypePage({ data }: DialTypePageProps) {
                               className="flex items-start space-x-3"
                             >
                               <span className="h-[1.625em] flex items-center flex-shrink-0">
-                                    <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
-                                  </span>
+                                <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                              </span>
                               <span className="text-sm sm:text-lg leading-relaxed">
                                 {item.title && <strong>{item.title}</strong>}
                                 {item.text}
@@ -345,8 +345,8 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                 className="flex items-start space-x-3"
                               >
                                 <span className="h-[1.625em] flex items-center flex-shrink-0">
-                                    <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
-                                  </span>
+                                  <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                                </span>
                                 <span className="text-sm sm:text-lg leading-relaxed">
                                   {item.title && <strong>{item.title}</strong>}
                                   {item.text}
@@ -384,8 +384,8 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                 className="flex items-start space-x-3"
                               >
                                 <span className="h-[1.625em] flex items-center flex-shrink-0">
-                                    <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
-                                  </span>
+                                  <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                                </span>
                                 <span className="text-sm sm:text-lg leading-relaxed">
                                   {item.title && <strong>{item.title}</strong>}
                                   {item.text}
@@ -452,8 +452,8 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                 className="flex items-start space-x-3"
                               >
                                 <span className="h-[1.625em] flex items-center flex-shrink-0">
-                                    <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
-                                  </span>
+                                  <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                                </span>
                                 <span className="text-sm sm:text-lg leading-relaxed">
                                   {item.title && <strong>{item.title}</strong>}
                                   {item.text}
@@ -492,8 +492,8 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                     className="flex items-start space-x-3"
                                   >
                                     <span className="h-[1.625em] flex items-center flex-shrink-0">
-                                    <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
-                                  </span>
+                                      <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                                    </span>
                                     <span className="text-sm sm:text-lg leading-relaxed">
                                       {item.title && <strong>{item.title}</strong>}
                                       {item.text}
