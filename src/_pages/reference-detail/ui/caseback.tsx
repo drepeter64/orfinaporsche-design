@@ -86,7 +86,9 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
         className="space-y-2"
       >
         <div className="flex gap-3 items-start">
-          <span className="mt-3 block h-1 w-1 flex-shrink-0 rounded-full bg-stone-900" />
+          <span className="h-[1.625em] flex items-center flex-shrink-0">
+            <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+          </span>
           <div className="space-y-4">
             <p
               className="text-base leading-relaxed text-stone-800"
@@ -101,7 +103,9 @@ export function CasebackPage({ data, referenceData }: CasebackPageProps) {
                     key={subIndex}
                     className="flex gap-3 items-start"
                   >
-                    <span className="mt-2 block h-1 w-1 rounded-full bg-stone-400" />
+                    <span className="h-[1.625em] flex items-center flex-shrink-0">
+                      <span className="block h-1.5 w-1.5 rounded-full bg-stone-400" />
+                    </span>
                     <p
                       className="text-base leading-relaxed text-stone-700"
                       dangerouslySetInnerHTML={{

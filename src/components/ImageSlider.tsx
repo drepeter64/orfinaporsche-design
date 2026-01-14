@@ -43,7 +43,7 @@ const ImageSlider = ({ images, setFullScreenImage, className = "" }: ImageSlider
 
         {/* Image container with group hover */}
         <div
-          className="relative group cursor-pointer"
+          className="relative group cursor-pointer w-full"
           onClick={() =>
             setFullScreenImage({
               src: currentImage.src,

@@ -28,7 +28,7 @@ export const ExploreDetailsSection: React.FC<ExploreDetailssProps> = ({ data }) 
             </h2>
           </AnimatedText>
 
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center items-start">
             {data.exploreCards.map((card, index) => (
               <AnimatedImage
                 key={index}

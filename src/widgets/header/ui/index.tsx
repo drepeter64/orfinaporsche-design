@@ -19,6 +19,7 @@ export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileReferencesOpen, setMobileReferencesOpen] = useState(false)
   const [mobileComponentsOpen, setMobileComponentsOpen] = useState(false)
+  const [mobileRefSubOpen, setMobileRefSubOpen] = useState<{ [key: number]: boolean }>({})
 
   const subDropdownIds: number[] = useMemo(() => references.map((item) => item.route), [references])
 
@@ -107,6 +108,10 @@ export const Header = () => {
     setMobileComponentsOpen(!mobileComponentsOpen)
   }
 
+  const handleMobileRefSubToggle = (route: number) => {
+    setMobileRefSubOpen((prev) => ({ ...prev, [route]: !prev[route] }))
+  }
+
   return (
     <nav className={`sticky top-0 z-50 bg-stone-100 ${isHomePage ? "shadow-md" : ""}`}>
       <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-20">
@@ -120,14 +125,14 @@ export const Header = () => {
                 alt={logo_alt}
                 width={80}
                 height={80}
-                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 object-contain cursor-pointer"
+                className="w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 object-contain cursor-pointer"
                 priority
               />
             </Link>
 
             {/* Text Logo */}
             <Link href={ClientRoutes.home}>
-              <div className="text-sm sm:text-base md:text-lg lg:text-xl text-black tracking-widest whitespace-nowrap cursor-pointer">
+              <div className="text-base sm:text-base md:text-lg lg:text-xl text-black tracking-widest whitespace-nowrap cursor-pointer">
                 <span className="hidden sm:inline">{tCommon("store_name")}</span>
                 <span className="sm:hidden">{tCommon("short_store_name")}</span>
               </div>
@@ -319,8 +324,8 @@ export const Header = () => {
               href={ClientRoutes.story}
               className={`block py-3 px-4 text-base font-medium transition-colors touch-manipulation cursor-pointer ${
                 isActive(ClientRoutes.story)
-                  ? "text-black bg-gray-100"
-                  : "text-gray-700 hover:text-black hover:bg-gray-50"
+                  ? "text-black bg-stone-200"
+                  : "text-gray-700 hover:text-black hover:bg-stone-200"
               }`}
             >
               {tCommon("story")}
@@ -331,12 +336,12 @@ export const Header = () => {
               <div className="flex items-center justify-between">
                 <Link
                   href={ClientRoutes.reference_guide}
-                  className="flex-1 py-3 px-4 text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors touch-manipulation"
+                  className="flex-1 py-3 px-4 text-base font-medium text-gray-700 hover:text-black hover:bg-stone-200 transition-colors touch-manipulation"
                 >
                   {tCommon("references")}
                 </Link>
                 <button
-                  className="py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 transition-colors touch-manipulation"
+                  className="py-3 px-4 text-gray-700 hover:text-black hover:bg-stone-200 transition-colors touch-manipulation"
                   onClick={handleMobileReferencesToggle}
                   aria-expanded={mobileReferencesOpen}
                   aria-label="Toggle references menu"
@@ -350,15 +355,50 @@ export const Header = () => {
               </div>
 
               {mobileReferencesOpen && (
-                <div className="pl-4 space-y-2 bg-gray-50 py-3 animate-in slide-in-from-top-1 duration-200">
-                  {references.map(({ title, route }, index) => (
-                    <Link
-                      key={index}
-                      href={ClientRoutes.reference(route.toString())}
-                      className="block py-3 px-3 text-sm font-medium text-black hover:bg-gray-100 transition-colors touch-manipulation cursor-pointer"
-                    >
-                      {title}
-                    </Link>
+                <div className="pl-4 space-y-1 py-2 animate-in slide-in-from-top-1 duration-200">
+                  <Link
+                    href={ClientRoutes.reference_guide}
+                    className="block py-3 px-3 text-sm font-medium text-stone-600 hover:text-stone-800 hover:bg-stone-200 transition-colors touch-manipulation cursor-pointer"
+                  >
+                    {tCommon("reference_guide")}
+                  </Link>
+                  {references.map(({ title, route, dropdown }: IMenuReference, index) => (
+                    <div key={index}>
+                      <div className="flex items-center justify-between">
+                        <Link
+                          href={ClientRoutes.reference(route.toString())}
+                          className="flex-1 py-3 px-3 text-sm font-medium text-stone-600 hover:text-stone-800 hover:bg-stone-200 transition-colors touch-manipulation cursor-pointer"
+                        >
+                          {title}
+                        </Link>
+                        {dropdown && dropdown.length > 0 && (
+                          <button
+                            className="py-3 px-3 text-stone-500 hover:text-stone-800 hover:bg-stone-200 transition-colors touch-manipulation"
+                            onClick={() => handleMobileRefSubToggle(route)}
+                            aria-expanded={mobileRefSubOpen[route]}
+                          >
+                            <ChevronDown
+                              className={`w-4 h-4 transition-transform duration-300 ${
+                                mobileRefSubOpen[route] ? "rotate-180" : ""
+                              }`}
+                            />
+                          </button>
+                        )}
+                      </div>
+                      {mobileRefSubOpen[route] && dropdown && (
+                        <div className="pl-4 space-y-1 py-1 animate-in slide-in-from-top-1 duration-200">
+                          {dropdown.map(({ title: subTitle, type }, idx) => (
+                            <Link
+                              key={idx}
+                              href={getReferenceRoute(type, route.toString())}
+                              className="block py-3 px-3 text-sm font-medium text-stone-600 hover:text-stone-800 hover:bg-stone-200 transition-colors touch-manipulation cursor-pointer"
+                            >
+                              {subTitle}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               )}
@@ -367,7 +407,7 @@ export const Header = () => {
             {/* Mobile Components Section */}
             <div className="space-y-2">
               <button
-                className="flex items-center justify-between w-full py-3 px-4 text-base font-medium text-gray-700 hover:text-black hover:bg-gray-50 transition-colors touch-manipulation"
+                className="flex items-center justify-between w-full py-3 px-4 text-base font-medium text-gray-700 hover:text-black hover:bg-stone-200 transition-colors touch-manipulation"
                 onClick={handleMobileComponentsToggle}
                 aria-expanded={mobileComponentsOpen}
                 aria-label="Toggle components menu"
@@ -381,18 +421,16 @@ export const Header = () => {
               </button>
 
               {mobileComponentsOpen && (
-                <div className="pl-4 space-y-2 bg-gray-50 py-3 animate-in slide-in-from-top-1 duration-200">
-                  <div className="grid grid-cols-2 gap-2">
-                    {components.map(({ title, route }, index) => (
-                      <Link
-                        key={index}
-                        className="block py-3 px-3 text-sm text-gray-700 hover:text-black hover:bg-gray-100 transition-colors touch-manipulation cursor-pointer"
-                        href={ClientRoutes.components(route)}
-                      >
-                        {title}
-                      </Link>
-                    ))}
-                  </div>
+                <div className="pl-4 space-y-1 py-2 animate-in slide-in-from-top-1 duration-200">
+                  {components.map(({ title, route }, index) => (
+                    <Link
+                      key={index}
+                      className="block py-3 px-3 text-sm font-medium text-stone-600 hover:text-stone-800 hover:bg-stone-200 transition-colors touch-manipulation cursor-pointer"
+                      href={ClientRoutes.components(route)}
+                    >
+                      {title}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
@@ -400,8 +438,8 @@ export const Header = () => {
               href={ClientRoutes.about}
               className={`block py-3 px-4 text-base font-medium transition-colors touch-manipulation cursor-pointer ${
                 isActive(ClientRoutes.about)
-                  ? "text-black bg-gray-100"
-                  : "text-gray-700 hover:text-black hover:bg-gray-50"
+                  ? "text-black bg-stone-200"
+                  : "text-gray-700 hover:text-black hover:bg-stone-200"
               }`}
             >
               {tCommon("about")}

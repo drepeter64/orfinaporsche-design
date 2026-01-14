@@ -68,24 +68,26 @@ export function ReferenceGuidePage() {
                   delay={0.2 + index * 0.1}
                   className="h-full"
                 >
-                  <div className="bg-white overflow-hidden transition-all duration-300 hover:-translate-y-2 shadow-sm hover:shadow-md group p-4 flex flex-col items-center gap-4 border border-stone-200 h-full">
-                    {/* Image Container - Square aspect ratio */}
-                    <div className="w-full aspect-square overflow-hidden relative">
-                      <Image
-                        src={howToUseImages[index]}
-                        alt={item.title}
-                        fill
-                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
-                      />
+                  <div className="bg-white overflow-hidden transition-all duration-300 hover:-translate-y-2 shadow-sm hover:shadow-md group p-4 flex flex-col items-center justify-start gap-4 border border-stone-200 h-full">
+                    {/* Image Container - Fixed height like ExploreDetailsCard */}
+                    <div className="h-[240px] overflow-hidden relative flex items-center justify-center">
+                      <div className="w-[250px] h-[250px] relative">
+                        <Image
+                          src={howToUseImages[index]}
+                          alt={item.title}
+                          fill
+                          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
+                        />
+                      </div>
                     </div>
 
                     {/* Content */}
-                    <div className="w-full text-center">
-                      <h3 className="font-sans text-lg md:text-xl font-normal text-black mb-2 tracking-wide leading-tight">
+                    <div className="w-full text-center flex-1 flex flex-col">
+                      <h3 className="text-lg md:text-xl font-normal text-black/70 group-hover:text-black tracking-wide leading-[1.2] transition-colors duration-300">
                         {item.title}
                       </h3>
-                      <p className="font-sans text-sm text-stone-600 leading-relaxed tracking-wide">
+                      <p className="font-sans text-sm text-stone-600 leading-relaxed tracking-wide mt-2">
                         {item.description}
                       </p>
                     </div>

@@ -33,20 +33,20 @@
     },
     "variations": [
       {
-        "title": "Black PVD",
-        "description": "Identical to the 7176 Finish"
-      },
-      {
         "title": "Non-PVD Silver/Sablé",
         "description": "Identical to the 7176 Finish"
       },
       {
-        "title": "Cadet Grey PVD",
-        "description": "Only Available on the 7177"
+        "title": "Black PVD",
+        "description": "Identical to the 7176 Finish"
       },
       {
         "title": "Olive Green PVD",
         "description": "Identical to the 7176 Military Finish"
+      },
+      {
+        "title": "Cadet Grey PVD",
+        "description": "Only Available on the 7177"
       },
       {
         "title": "NTS PVD",

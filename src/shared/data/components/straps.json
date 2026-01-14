@@ -53,7 +53,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-64"
             },
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-bund-green-backloosecrop.jpg",
@@ -62,7 +62,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-64"
             }
           ],
           "poster": {
@@ -93,7 +93,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-64"
             }
           ]
         },
@@ -116,7 +116,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-64"
             }
           ]
         }
@@ -155,7 +155,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-64"
             }
           ],
           "list": [
@@ -188,7 +188,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-64"
             }
           ],
           "list": [
