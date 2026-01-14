@@ -100,7 +100,8 @@
           "title": "Military Chronograph Dial",
           "subtitle": "Military Chronograph Dial",
           "caption": "Military Chronograph Dial",
-          "imgClassName": "w-[280px] h-auto"
+          "imgClassName": "w-[400px]",
+          "wrapClassName": "mx-auto"
         }
       ]
     },

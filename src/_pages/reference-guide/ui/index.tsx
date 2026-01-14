@@ -112,12 +112,15 @@ export function ReferenceGuidePage() {
               <div className="max-w-[1280px] mx-auto">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-[72px] items-start">
                   {/* Image Section */}
-                  <AnimatedText delay={0.1 + index * 0.1}>
+                  <AnimatedText
+                    delay={0.1 + index * 0.1}
+                    className="w-full lg:w-auto"
+                  >
                     <Link
                       href={ClientRoutes.reference(ref.link)}
-                      className="block group"
+                      className="block group w-full lg:w-auto"
                     >
-                      <div className="w-2/3 mx-auto lg:mx-0 lg:w-[480px] flex-shrink-0">
+                      <div className="w-full max-w-[360px] mx-auto lg:mx-0 lg:max-w-none lg:w-[480px] flex-shrink-0">
                         <div className="bg-stone-100 p-4 transition-shadow duration-300 shadow-sm group-hover:shadow-md border border-stone-200">
                           <div className="aspect-[400/600] relative overflow-hidden">
                             <ImageWithLoader
@@ -126,7 +129,7 @@ export function ReferenceGuidePage() {
                               fill
                               className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                               skeletonClassName="w-full h-full"
-                              sizes="(max-width: 1024px) 66vw, 480px"
+                              sizes="(max-width: 1024px) 100vw, 480px"
                             />
                           </div>
                           <p className="text-lg text-stone-500 mt-4 text-center tracking-wide">
@@ -266,12 +269,15 @@ export function ReferenceGuidePage() {
                 <div className="max-w-[1280px] mx-auto">
                   <div className="flex flex-col lg:flex-row gap-8 lg:gap-[72px] items-start">
                     {/* Image Section */}
-                    <AnimatedText delay={0.1 + index * 0.1}>
+                    <AnimatedText
+                      delay={0.1 + index * 0.1}
+                      className="w-full lg:w-auto"
+                    >
                       <Link
                         href={ClientRoutes.reference(ref.link)}
-                        className="block group"
+                        className="block group w-full lg:w-auto"
                       >
-                        <div className="w-2/3 mx-auto lg:mx-0 lg:w-[480px] flex-shrink-0">
+                        <div className="w-full max-w-[360px] mx-auto lg:mx-0 lg:max-w-none lg:w-[480px] flex-shrink-0">
                           <div className="bg-stone-100 p-4 transition-shadow duration-300 shadow-sm group-hover:shadow-md border border-stone-200">
                             <div className="aspect-[400/600] relative overflow-hidden">
                               <ImageWithLoader
@@ -280,7 +286,7 @@ export function ReferenceGuidePage() {
                                 fill
                                 className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                                 skeletonClassName="w-full h-full"
-                                sizes="(max-width: 1024px) 66vw, 480px"
+                                sizes="(max-width: 1024px) 100vw, 480px"
                               />
                             </div>
                             <p className="text-lg text-stone-500 mt-4 text-center tracking-wide">
