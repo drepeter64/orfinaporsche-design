@@ -101,7 +101,7 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
       {/* Hero Section */}
       <section
         className={
-          "w-full bg-stone-100 px-4 sm:px-6 lg:px-20 py-12 lg:py-[60px] transform transition-all duration-1000"
+          "w-full bg-stone-100 px-8 sm:px-6 lg:px-20 py-12 lg:py-[60px] transform transition-all duration-1000"
         }
       >
         <div className="flex flex-col gap-6 lg:gap-7 items-start">
@@ -118,7 +118,7 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
       </section>
 
       {/* Overview */}
-      <section className="px-4 sm:px-6 lg:px-20 py-12 pb-24">
+      <section className="px-8 sm:px-6 lg:px-20 py-12 pb-24">
         <div className="space-y-6">
           {data.overview && (
             <p className="text-base sm:text-lg leading-relaxed text-stone-700 whitespace-pre-line text-center max-w-5xl mx-auto">
@@ -139,7 +139,7 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
       </section>
 
       {/* Variations */}
-      <section className="px-4 sm:px-8 lg:px-24 pb-6">
+      <section className="px-8 sm:px-8 lg:px-24 pb-6">
         <div className="mx-auto space-y-16 sm:space-y-20">
           {data.variations?.map((variation, index) => {
             const isEven = index % 2 === 0
@@ -290,7 +290,7 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
       {/* Explore Other Details */}
       <section
         ref={exploreRef}
-        className={`w-full bg-white px-4 sm:px-6 lg:px-20 py-16 lg:py-[100px] ${getScrollAnimationClasses(exploreVisible, "duration-1000")}`}
+        className={`w-full bg-white px-8 sm:px-6 lg:px-20 py-16 lg:py-[100px] ${getScrollAnimationClasses(exploreVisible, "duration-1000")}`}
       >
         <div className="max-w-[1280px] mx-auto flex flex-col gap-12 items-center">
           <h2 className="text-2xl md:text-3xl lg:text-[44px] text-black text-center leading-[1.1] tracking-wide">

@@ -102,7 +102,7 @@ export function DialPage({ data, referenceData }: DialPageProps) {
   return (
     <div className="min-h-screen bg-white text-black">
       {/* Hero Section */}
-      <section className="w-full bg-stone-100 px-4 sm:px-6 lg:px-20 py-12 lg:py-[60px]">
+      <section className="w-full bg-stone-100 px-8 sm:px-6 lg:px-20 py-12 lg:py-[60px]">
         <div className="flex flex-col gap-6 lg:gap-7 items-start">
           <div className="flex flex-col items-start w-full">
             <h1 className="font-normal text-4xl md:text-8xl lg:text-12xl font-light text-black leading-none w-full">
@@ -118,7 +118,7 @@ export function DialPage({ data, referenceData }: DialPageProps) {
 
       {/* Overview */}
       {(data.overview || data.note) && (
-        <section className="w-full px-4 sm:px-6 lg:px-20 py-12 pb-20">
+        <section className="w-full px-8 sm:px-6 lg:px-20 py-12 pb-20">
           <div className="w-full space-y-6">
             {data.overview && (
               <p className="text-base sm:text-lg leading-relaxed text-stone-700 whitespace-pre-line text-center">
@@ -142,7 +142,7 @@ export function DialPage({ data, referenceData }: DialPageProps) {
 
       {/* Dial Listing (for pages with listing instead of variations) */}
       {data.listing && data.listing.length > 0 && (
-        <section className="bg-stone-50 px-4 sm:px-6 lg:px-20 py-20">
+        <section className="bg-stone-50 px-8 sm:px-6 lg:px-20 py-20">
           <div className="max-w-[1280px] mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {data.listing.map((item, index) => (
@@ -159,7 +159,7 @@ export function DialPage({ data, referenceData }: DialPageProps) {
 
       {/* Dial Variations */}
       {data.variations && data.variations.length > 0 && (
-        <section className="px-4 sm:px-8 lg:px-24 pb-12">
+        <section className="px-8 sm:px-8 lg:px-24 pb-12">
           <div className="mx-auto space-y-16 sm:space-y-20">
             {data.variations.map((variation, index) => {
               const isLast = index === (data.variations?.length || 0) - 1
@@ -284,7 +284,7 @@ export function DialPage({ data, referenceData }: DialPageProps) {
       {/* Explore Other Details */}
       <section
         ref={exploreRef}
-        className={`w-full bg-white px-4 sm:px-6 lg:px-20 py-16 lg:py-[100px] ${getScrollAnimationClasses(exploreVisible, "duration-1000")}`}
+        className={`w-full bg-white px-8 sm:px-6 lg:px-20 py-16 lg:py-[100px] ${getScrollAnimationClasses(exploreVisible, "duration-1000")}`}
       >
         <div className="max-w-[1280px] mx-auto flex flex-col gap-12 items-center">
           <h2 className="text-2xl md:text-3xl lg:text-[44px] text-black text-center leading-[1.1] tracking-wide">

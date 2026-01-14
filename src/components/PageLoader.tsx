@@ -16,7 +16,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
     <div className={`min-h-screen bg-background ${className}`}>
       {/* Navigation skeleton */}
       <div className="w-full h-16 bg-background border-b border-gray-200">
-        <div className="mx-auto px-4 sm:px-6 lg:px-20 h-full flex items-center justify-between">
+        <div className="mx-auto px-8 sm:px-6 lg:px-20 h-full flex items-center justify-between">
           <Skeleton className="h-8 w-32" />
           <div className="hidden md:flex space-x-8">
             {[...Array(4)].map((_, i) => (
@@ -35,7 +35,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
           <div className="w-full mb-8 sm:mb-12 lg:mb-16">
             <Skeleton className="w-full h-[60vh] sm:h-[70vh] lg:h-[80vh] xl:h-[90vh]" />
           </div>
-          <div className="text-center px-4 sm:px-6 lg:px-20">
+          <div className="text-center px-8 sm:px-6 lg:px-20">
             <Skeleton className="h-12 sm:h-16 md:h-20 lg:h-24 w-80 sm:w-96 md:w-[500px] lg:w-[600px] mx-auto mb-6 sm:mb-8" />
             <Skeleton className="h-6 sm:h-8 w-full max-w-3xl mx-auto mb-8 sm:mb-12" />
           </div>
@@ -45,7 +45,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({
       {/* Grid section skeleton */}
       {showGrid && (
         <section className="py-12 sm:py-16 lg:py-20 bg-background">
-          <div className="mx-auto px-4 sm:px-6 lg:px-20">
+          <div className="mx-auto px-8 sm:px-6 lg:px-20">
             <div className="text-center mb-12 sm:mb-16 lg:mb-20">
               <Skeleton className="h-8 sm:h-10 md:h-12 lg:h-14 w-64 sm:w-80 md:w-96 mx-auto mb-4 sm:mb-6" />
             </div>

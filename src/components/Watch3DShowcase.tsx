@@ -286,9 +286,9 @@ export const Watch3DShowcase = () => {
 
       <div className="relative z-10 flex flex-col h-full sm:min-h-[700px] lg:min-h-[800px]">
         {/* Main content area - desktop: side by side, mobile: stacked */}
-        <div className="sm:flex-1 flex flex-col lg:flex-row items-center justify-start sm:justify-center lg:justify-between px-4 sm:px-10 lg:px-20 pt-6 sm:pt-12 lg:pt-16">
+        <div className="sm:flex-1 flex flex-col lg:flex-row items-center justify-start sm:justify-center lg:justify-between px-8 sm:px-10 lg:px-20 pt-6 sm:pt-12 lg:pt-16">
           {/* Left side - Watch info (visible on all screens) */}
-          <div className="lg:w-1/4 text-center lg:text-left order-2 lg:order-1 mt-2 sm:mt-4 lg:mt-0">
+          <div className="lg:w-1/4 text-center lg:text-left order-2 lg:order-1 mt-8 sm:mt-4 lg:mt-0">
             <AnimatedText delay={0.1}>
               <p className="text-stone-500 text-xs sm:text-sm tracking-widest uppercase mb-1 sm:mb-2">
                 Case Finish
@@ -401,7 +401,7 @@ export const Watch3DShowcase = () => {
 
             {/* Mobile 360° View Slider - inspired by Richard Mille */}
             {isMobile && (
-              <div className="w-full mt-4 px-4">
+              <div className="w-3/4 mx-auto mt-4">
                 {/* Rotation slider track */}
                 <div
                   ref={sliderRef}
@@ -442,17 +442,18 @@ export const Watch3DShowcase = () => {
                   />
                 </div>
 
-                {/* View labels - evenly distributed */}
-                <div className="flex justify-between mt-1">
-                  {cameraViews.map((view) => (
+                {/* View labels - centered under each dot */}
+                <div className="relative w-full mt-1 h-4">
+                  {cameraViews.map((view, index) => (
                     <button
                       key={view.id}
                       onClick={() => jumpToView(view)}
-                      className={`text-[10px] tracking-wider transition-colors ${
+                      className={`absolute -translate-x-1/2 text-[10px] tracking-wider transition-colors whitespace-nowrap ${
                         selectedView.id === view.id
                           ? "text-stone-800 font-medium"
                           : "text-stone-400"
                       }`}
+                      style={{ left: `${(index / (cameraViews.length - 1)) * 100}%` }}
                     >
                       {view.name}
                     </button>

@@ -18,7 +18,7 @@ export const VariantsSection: React.FC<VariantsSectionProps> = ({ data, setFullS
       className={`bg-white w-full ${getScrollAnimationClasses(isVisible, "duration-1000")}`}
     >
       {variantsTitle && (
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-20 pt-16">
+        <div className="max-w-[1280px] mx-auto px-8 sm:px-6 lg:px-20 pt-16">
           <AnimatedText delay={0}>
             <p className="text-base lg:text-xl text-stone-600 leading-normal text-center">
               {variantsTitle}

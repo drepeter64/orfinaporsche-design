@@ -39,7 +39,7 @@ export const CaseSection: React.FC<CaseSectionProps> = ({
   return (
     <section
       ref={ref}
-      className={`bg-white w-full px-4 sm:px-6 lg:px-20 pt-6 sm:pt-8 lg:pt-10 pb-12 sm:pb-16 lg:pb-20 ${getScrollAnimationClasses(isVisible, "duration-1000")} ${className}`}
+      className={`bg-white w-full px-8 sm:px-6 lg:px-20 pt-6 sm:pt-8 lg:pt-10 pb-12 sm:pb-16 lg:pb-20 ${getScrollAnimationClasses(isVisible, "duration-1000")} ${className}`}
     >
       <div className="max-w-[1280px] mx-auto flex flex-col gap-28 lg:gap-32 items-start">
         {/* Title, description, measurements */}

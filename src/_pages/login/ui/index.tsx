@@ -34,7 +34,7 @@ export function LoginPage() {
   return (
     <div className="bg-background min-h-screen flex justify-between flex-col">
       <section className="py-20 bg-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-20 text-center">
+        <div className="max-w-4xl mx-auto px-8 sm:px-6 lg:px-20 text-center">
           <h2 className="font-sans text-3xl font-light text-white mb-8 uppercase tracking-wider">
             Please insert your password
           </h2>

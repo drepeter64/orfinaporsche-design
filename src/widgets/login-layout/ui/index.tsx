@@ -10,7 +10,7 @@ export const LoginLayout: React.FC<ILayoutProps> = ({ children }) => {
   return (
     <div>
       <nav className="sticky top-0 z-50 bg-background border-b border-gray-200">
-        <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-20">
+        <div className="max-w-[100rem] mx-auto px-8 sm:px-6 lg:px-20">
           <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
             {/* Logo */}
             <div className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-black tracking-wide whitespace-nowrap">
