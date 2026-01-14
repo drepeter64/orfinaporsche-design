@@ -187,17 +187,18 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
                             color.images.length > 1 ? (
                               color.image_type === "carousel" ? (
                                 color.poster ? (
-                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="flex flex-col items-center">
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
+                                    <div className="flex flex-col items-center justify-center">
                                       <FinishImageSection
                                         image={color.poster}
                                         setFullScreenImage={setFullScreenImage}
                                       />
                                     </div>
-                                    <div className="flex flex-col items-center">
+                                    <div className="flex flex-col items-center w-full">
                                       <ImageSlider
                                         images={color.images}
                                         setFullScreenImage={setFullScreenImage}
+                                        className="w-full max-w-[580px]"
                                       />
                                     </div>
                                   </div>
@@ -211,7 +212,7 @@ export const StrapsBodySection: React.FC<StrapsBodySectionProps> = ({
                                 )
                               ) : (
                                 <div
-                                  className={`grid grid-cols-1 gap-6 ${color.image_type && color.image_type === "three-row" ? "lg:grid-cols-3" : "lg:grid-cols-2"}`}
+                                  className={`grid grid-cols-1 gap-6 justify-items-center ${color.image_type && color.image_type === "three-row" ? "lg:grid-cols-3" : "lg:grid-cols-2"}`}
                                 >
                                   {color.images.map((imgItem, imgIndex) => (
                                     <FinishImageSection

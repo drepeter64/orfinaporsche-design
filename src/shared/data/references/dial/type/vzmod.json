@@ -35,8 +35,16 @@
       "title": "Caseback Markings: ",
       "bulletSection": {
         "title": "",
-        "text": [
-          "The Venezuelan variant watches are known to come in two batches, one\nstamped \"EJERCITO DE VENEZUELA\" and the other stamped\n“REPUBLICA DE VENEZUELA MINISTERIO DE LA DEFENSA” on the\ncaseback. For both batches, an issue number is also engraved on the\ncaseback."
+        "text": [],
+        "list": [
+          {
+            "title": "",
+            "text": "The Venezuelan variant watches are known to come in two batches, one stamped \"EJERCITO DE VENEZUELA\" and the other stamped \"REPUBLICA DE VENEZUELA MINISTERIO DE LA DEFENSA\" on the caseback."
+          },
+          {
+            "title": "",
+            "text": "For both batches, an issue number is also engraved on the caseback."
+          }
         ]
       },
       "image_type": "row",
@@ -63,11 +71,24 @@
       "title": "Dial Variations: ",
       "bulletSection": {
         "title": "VZMOD examples have been found with",
-        "text": [
-          "1. Four-Logo Dial",
-          "2. Baseline Dial",
-          "3. Military Chronograph Dial",
-          "4. Service Dial"
+        "text": [],
+        "list": [
+          {
+            "title": "",
+            "text": "Four-Logo Dial"
+          },
+          {
+            "title": "",
+            "text": "Baseline Dial"
+          },
+          {
+            "title": "",
+            "text": "Military Chronograph Dial"
+          },
+          {
+            "title": "",
+            "text": "Service Dial"
+          }
         ]
       },
       "image_type": "row",
@@ -78,7 +99,9 @@
           "alt": "Military Chronograph Dial",
           "title": "Military Chronograph Dial",
           "subtitle": "Military Chronograph Dial",
-          "caption": "Military Chronograph Dial"
+          "caption": "Military Chronograph Dial",
+          "imgClassName": "w-[400px]",
+          "wrapClassName": "mx-auto"
         }
       ]
     },

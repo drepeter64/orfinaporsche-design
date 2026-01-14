@@ -142,7 +142,9 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                   key={index}
                                   className="flex items-start space-x-3"
                                 >
-                                  <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                  <span className="h-[1.625em] flex items-center flex-shrink-0">
+                                    <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                                  </span>
                                   <span className="text-sm sm:text-lg leading-relaxed">
                                     {item.title && <strong>{item.title}</strong>}
                                     {item.text}
@@ -210,7 +212,9 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                   key={index}
                                   className="flex items-start space-x-3"
                                 >
-                                  <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                  <span className="h-[1.625em] flex items-center flex-shrink-0">
+                                    <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                                  </span>
                                   <span className="text-sm sm:text-lg leading-relaxed">
                                     {item.title && <strong>{item.title}</strong>}
                                     {item.text}
@@ -228,7 +232,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                           {variation.images.map((image, index) => (
                             <div
                               key={index}
-                              className="flex flex-col items-center w-full"
+                              className={`flex flex-col items-center ${image.imgClassName ? "w-auto" : "w-full"}`}
                             >
                               <div
                                 className="relative group cursor-pointer"
@@ -245,7 +249,7 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                 <ImageWithLoader
                                   src={image.src}
                                   alt={image.alt}
-                                  className={`relative object-cover transition-all duration-300 ${image.imgClassName ?? "w-full h-80"}`}
+                                  className={`relative object-contain transition-all duration-300 ${image.imgClassName ?? "w-full h-80"}`}
                                   skeletonClassName={image.imgClassName ?? "w-full h-80"}
                                 />
                                 {/* Click indicator */}
@@ -299,7 +303,9 @@ export function DialTypePage({ data }: DialTypePageProps) {
                               key={index}
                               className="flex items-start space-x-3"
                             >
-                              <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="h-[1.625em] flex items-center flex-shrink-0">
+                                <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                              </span>
                               <span className="text-sm sm:text-lg leading-relaxed">
                                 {item.title && <strong>{item.title}</strong>}
                                 {item.text}
@@ -338,7 +344,9 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                 key={index}
                                 className="flex items-start space-x-3"
                               >
-                                <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="h-[1.625em] flex items-center flex-shrink-0">
+                                  <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                                </span>
                                 <span className="text-sm sm:text-lg leading-relaxed">
                                   {item.title && <strong>{item.title}</strong>}
                                   {item.text}
@@ -375,7 +383,9 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                 key={index}
                                 className="flex items-start space-x-3"
                               >
-                                <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="h-[1.625em] flex items-center flex-shrink-0">
+                                  <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                                </span>
                                 <span className="text-sm sm:text-lg leading-relaxed">
                                   {item.title && <strong>{item.title}</strong>}
                                   {item.text}
@@ -441,7 +451,9 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                 key={index}
                                 className="flex items-start space-x-3"
                               >
-                                <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="h-[1.625em] flex items-center flex-shrink-0">
+                                  <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                                </span>
                                 <span className="text-sm sm:text-lg leading-relaxed">
                                   {item.title && <strong>{item.title}</strong>}
                                   {item.text}
@@ -479,7 +491,9 @@ export function DialTypePage({ data }: DialTypePageProps) {
                                     key={index}
                                     className="flex items-start space-x-3"
                                   >
-                                    <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
+                                    <span className="h-[1.625em] flex items-center flex-shrink-0">
+                                      <span className="block h-1.5 w-1.5 rounded-full bg-stone-900" />
+                                    </span>
                                     <span className="text-sm sm:text-lg leading-relaxed">
                                       {item.title && <strong>{item.title}</strong>}
                                       {item.text}

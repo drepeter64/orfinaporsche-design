@@ -12,8 +12,16 @@
       "title": "General Notes: ",
       "bulletSection": {
         "title": "",
-        "text": [
-          "Both of the UAE dial variants came in a variety of the 7177 finishes.\nInterestingly, a small batch of circa ~25 watches featuring gold-colored\ncases were produced."
+        "text": [],
+        "list": [
+          {
+            "title": "",
+            "text": "Both of the UAE dial variants came in a variety of the 7177 finishes."
+          },
+          {
+            "title": "",
+            "text": "Interestingly, a small batch of circa ~25 watches featuring gold-colored cases were produced."
+          }
         ]
       },
       "image_type": "none",
@@ -23,8 +31,16 @@
       "title": "Caseback: ",
       "bulletSection": {
         "title": "",
-        "text": [
-          "There is a very small batch of casebacks in which the serial number's\nlocation shifted to the middle of the caseback. This is found on UAE\nissued examples, in the low ~3000 serial range."
+        "text": [],
+        "list": [
+          {
+            "title": "",
+            "text": "There is a very small batch of casebacks in which the serial number's location shifted to the middle of the caseback."
+          },
+          {
+            "title": "",
+            "text": "This is found on UAE issued examples, in the low ~3000 serial range."
+          }
         ]
       },
       "image_type": "right",

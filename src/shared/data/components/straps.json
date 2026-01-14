@@ -53,7 +53,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-auto"
             },
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-bund-green-backloosecrop.jpg",
@@ -62,7 +62,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-auto"
             }
           ],
           "poster": {
@@ -71,7 +71,9 @@
             "alt": "Green BUND",
             "title": "Green BUND",
             "subtitle": "",
-            "caption": ""
+            "caption": "",
+            "imgClassName": "w-[300px]",
+            "wrapClassName": "mx-auto"
           }
         },
         {
@@ -84,7 +86,9 @@
               "alt": "Black BUND",
               "title": "",
               "subtitle": "",
-              "caption": ""
+              "caption": "",
+              "imgClassName": "w-[300px]",
+              "wrapClassName": "mx-auto"
             },
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-bund-black-loosecrop.jpg",
@@ -93,7 +97,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-64"
             }
           ]
         },
@@ -107,7 +111,9 @@
               "alt": "Grey BUND",
               "title": "",
               "subtitle": "",
-              "caption": ""
+              "caption": "",
+              "imgClassName": "w-[300px]",
+              "wrapClassName": "mx-auto"
             },
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-560x-7177-bund-grey-loosecrop.jpg",
@@ -116,7 +122,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-64"
             }
           ]
         }
@@ -155,7 +161,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-64"
             }
           ],
           "list": [
@@ -188,7 +194,7 @@
               "title": "",
               "subtitle": "",
               "caption": "",
-              "imgClassName": "w-full h-96"
+              "imgClassName": "w-full h-64"
             }
           ],
           "list": [

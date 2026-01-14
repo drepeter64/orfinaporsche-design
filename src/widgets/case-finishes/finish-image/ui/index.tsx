@@ -68,12 +68,11 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
     }
 
     // Check for other sizing patterns
-    const hasWidthClass = img.imgClassName?.includes("w-[")
+    const hasWidthClass = img.imgClassName?.match(/w-\[(\d+)px\]/)
     const hasHeightClass = img.imgClassName?.includes("h-[")
 
-    // Extract width class for wrapper when width-based
-    const widthClassMatch = img.imgClassName?.match(/w-\[\d+px\]/)
-    const wrapperClass = hasWidthClass ? widthClassMatch?.[0] || "" : ""
+    // Extract width value for inline style (more reliable than Tailwind JIT)
+    const widthValue = hasWidthClass ? parseInt(hasWidthClass[1]) : null
 
     // For width-based: wrapper gets width, img fills it
     // For height-based: img gets the full imgClassName directly
@@ -85,7 +84,8 @@ export const FinishImageSection: React.FC<FinishImageSectionProps> = ({
     return (
       <div
         key={img.src}
-        className={`relative inline-block group cursor-pointer ${wrapperClass} ${img.wrapClassName ?? ""}`}
+        className={`relative inline-block group cursor-pointer ${img.wrapClassName ?? ""}`}
+        style={widthValue ? { width: `${widthValue}px`, maxWidth: `${widthValue}px` } : undefined}
         onClick={() =>
           setFullScreenImage({
             src:

@@ -132,7 +132,7 @@ export function DialPage({ data, referenceData }: DialPageProps) {
               />
             )}
             {data.note && (
-              <p className="text-base sm:text-lg leading-relaxed text-stone-700 max-w-2xl mx-auto text-left">
+              <p className="text-base sm:text-lg leading-relaxed text-stone-700 max-w-3xl mx-auto text-left">
                 {data.note.replace(/\n/g, " ")}
               </p>
             )}
@@ -205,7 +205,9 @@ export function DialPage({ data, referenceData }: DialPageProps) {
                                   key={itemIndex}
                                   className="flex gap-3"
                                 >
-                                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-stone-500 flex-shrink-0" />
+                                  <span className="h-[1.625em] flex items-center flex-shrink-0">
+                                    <span className="block h-1.5 w-1.5 rounded-full bg-stone-500" />
+                                  </span>
                                   <div className="space-y-1 text-sm sm:text-base leading-relaxed">
                                     <div>
                                       <strong>{item.title}</strong> {item.text}

@@ -194,7 +194,9 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
                                 key={itemIndex}
                                 className="flex gap-3"
                               >
-                                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-stone-500 flex-shrink-0" />
+                                <span className="h-[1.625em] flex items-center flex-shrink-0">
+                                  <span className="block h-1.5 w-1.5 rounded-full bg-stone-500" />
+                                </span>
                                 <div className="space-y-1 text-sm sm:text-base leading-relaxed">
                                   <div>
                                     <strong>{item.title}</strong> {item.text}
