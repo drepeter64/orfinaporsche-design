@@ -110,15 +110,23 @@ export const Watch3DShowcase = () => {
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
 
-  // Update camera orbit when mobile state changes
+  // Update camera orbit and auto-rotate when mobile state changes
   useEffect(() => {
     const modelViewer = modelViewerRef.current
     if (!modelViewer || !isLoaded) return
 
     const zoom = isMobile ? "103%" : "125%"
-    modelViewer.setAttribute("camera-orbit", `0deg 75deg ${zoom}`)
+    // On mobile, use 90deg phi for straight-on horizontal rotation (Richard Mille style)
+    const phi = isMobile ? "90deg" : "75deg"
+    modelViewer.setAttribute("camera-orbit", `0deg ${phi} ${zoom}`)
     modelViewer.setAttribute("min-camera-orbit", `auto auto ${zoom}`)
     modelViewer.setAttribute("max-camera-orbit", `auto auto ${zoom}`)
+
+    // Disable auto-rotate on mobile
+    if (isMobile) {
+      const mv = modelViewer as unknown as { autoRotate: boolean }
+      mv.autoRotate = false
+    }
   }, [isMobile, isLoaded])
 
   // Load model-viewer script and preload all models
@@ -177,8 +185,9 @@ export const Watch3DShowcase = () => {
     }
   }, [isLoaded])
 
-  // Toggle auto-rotation
+  // Toggle auto-rotation (desktop only)
   const toggleAutoRotate = () => {
+    if (isMobile) return // Don't allow toggling on mobile
     setIsAutoRotating(!isAutoRotating)
     if (modelViewerRef.current) {
       const mv = modelViewerRef.current as unknown as { autoRotate: boolean }
@@ -191,7 +200,9 @@ export const Watch3DShowcase = () => {
     (angle: number) => {
       if (!modelViewerRef.current || !isLoaded) return
       const zoom = isMobile ? "103%" : "125%"
-      modelViewerRef.current.setAttribute("camera-orbit", `${angle}deg 75deg ${zoom}`)
+      // On mobile, use 90deg phi for straight-on horizontal rotation (Richard Mille style)
+      const phi = isMobile ? "90deg" : "75deg"
+      modelViewerRef.current.setAttribute("camera-orbit", `${angle}deg ${phi} ${zoom}`)
 
       // Update selected view indicator based on angle (0-270 range)
       const closestView = cameraViews.reduce((prev, curr) => {
@@ -304,46 +315,6 @@ export const Watch3DShowcase = () => {
 
           {/* Center - 3D Model Viewer */}
           <div className="lg:w-1/2 flex flex-col items-center justify-center order-1 lg:order-2 w-full">
-            {/* Mobile Play/Pause button - above watch */}
-            {isMobile && (
-              <div className="flex justify-center mb-2">
-                <button
-                  onClick={toggleAutoRotate}
-                  className="w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow duration-300 group ring-1 ring-gray-100"
-                  aria-label={isAutoRotating ? "Pause rotation" : "Play rotation"}
-                >
-                  {isAutoRotating ? (
-                    <svg
-                      className="w-4 h-4 text-stone-700 group-hover:text-black transition-colors"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <rect
-                        x="6"
-                        y="4"
-                        width="4"
-                        height="16"
-                      />
-                      <rect
-                        x="14"
-                        y="4"
-                        width="4"
-                        height="16"
-                      />
-                    </svg>
-                  ) : (
-                    <svg
-                      className="w-4 h-4 text-stone-700 group-hover:text-black transition-colors ml-0.5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  )}
-                </button>
-              </div>
-            )}
-
             <div
               className="relative w-full aspect-[1/1.3] max-w-[70vw] sm:max-w-[450px] lg:max-w-[550px] transition-opacity duration-500"
               style={{ opacity: isLoaded ? 1 : 0 }}
@@ -353,14 +324,14 @@ export const Watch3DShowcase = () => {
                   ref={modelViewerRef}
                   src={selectedVariant.model}
                   alt={`${selectedVariant.name} Watch`}
-                  auto-rotate={isAutoRotating}
+                  auto-rotate={!isMobile && isAutoRotating}
                   camera-controls
                   shadow-intensity="0.5"
                   shadow-softness="1"
                   exposure="1"
                   rotation-per-second="30deg"
                   interaction-prompt="none"
-                  camera-orbit={isMobile ? "0deg 75deg 103%" : "0deg 75deg 125%"}
+                  camera-orbit={isMobile ? "0deg 90deg 103%" : "0deg 75deg 125%"}
                   min-camera-orbit={isMobile ? "auto auto 103%" : "auto auto 125%"}
                   max-camera-orbit={isMobile ? "auto auto 103%" : "auto auto 125%"}
                   field-of-view="30deg"
@@ -435,7 +406,7 @@ export const Watch3DShowcase = () => {
 
                   {/* Current position indicator - maps angle to slider position */}
                   <div
-                    className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-stone-500 bg-white shadow-md pointer-events-none"
+                    className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-stone-500 bg-stone-500 pointer-events-none"
                     style={{
                       left: `${(rotationAngle / 270) * 100}%`,
                     }}
@@ -504,12 +475,12 @@ export const Watch3DShowcase = () => {
 
         {/* Color selector - fixed at bottom */}
         <div className="pt-4 pb-6 sm:pt-0 sm:pb-12 lg:pb-16 px-3 sm:px-6">
-          <div className="flex items-center justify-center gap-3 sm:gap-6 lg:gap-8 flex-wrap">
+          <div className="flex items-start justify-center gap-5 sm:gap-8 lg:gap-10">
             {watchVariants.map((variant) => (
               <button
                 key={variant.id}
                 onClick={() => setSelectedVariant(variant)}
-                className="group flex flex-col items-center gap-1.5 sm:gap-2"
+                className="group flex flex-col items-center gap-1.5 sm:gap-2 w-14 sm:w-16 lg:w-20"
                 aria-label={`Select ${variant.name}`}
               >
                 {/* Color circle with ring indicator */}
@@ -525,10 +496,10 @@ export const Watch3DShowcase = () => {
                   style={{ backgroundColor: variant.color }}
                 />
 
-                {/* Label - hidden on very small screens, shown on sm+ */}
+                {/* Label - allows 2 lines if needed */}
                 <span
                   className={`
-                    text-[10px] sm:text-xs lg:text-sm tracking-wider transition-colors duration-300 whitespace-nowrap
+                    text-[10px] sm:text-xs lg:text-sm tracking-wider transition-colors duration-300 text-center leading-tight
                     ${
                       selectedVariant.id === variant.id
                         ? "text-stone-600 font-medium"

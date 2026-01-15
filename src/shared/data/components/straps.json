@@ -152,7 +152,9 @@
               "alt": "Type 2 (BUND with Staple)",
               "title": "",
               "subtitle": "",
-              "caption": ""
+              "caption": "",
+              "imgClassName": "w-[300px]",
+              "wrapClassName": "mx-auto"
             },
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-780x-7177-bund-strap-backs-and-bund-boxes-black-typ2.jpg",
@@ -185,7 +187,9 @@
               "alt": "Black BUND",
               "title": "",
               "subtitle": "",
-              "caption": ""
+              "caption": "",
+              "imgClassName": "w-[300px]",
+              "wrapClassName": "mx-auto"
             },
             {
               "src": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/bund/preview-780x-7177-bund-strap-backs-and-bund-boxes-black.jpg",

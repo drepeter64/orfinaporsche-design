@@ -293,7 +293,7 @@ export function RehautPage({ data, referenceData }: RehautPageProps) {
         className={`w-full bg-white px-8 sm:px-6 lg:px-20 py-16 lg:py-[100px] ${getScrollAnimationClasses(exploreVisible, "duration-1000")}`}
       >
         <div className="max-w-[1280px] mx-auto flex flex-col gap-12 items-center">
-          <h2 className="text-2xl md:text-3xl lg:text-[44px] text-black text-center leading-[1.1] tracking-wide">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl text-black text-center leading-[1.1] tracking-wide">
             {tCommon("explore-details")}
           </h2>
 

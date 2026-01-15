@@ -6,15 +6,16 @@ import { NextRequest, NextResponse } from "next/server"
 const intlMiddleware = createMiddleware(routing)
 
 export default function middleware(request: NextRequest) {
-  const token = request.cookies.get("auth_token")?.value
+  // Password protection disabled for now
+  // const token = request.cookies.get("auth_token")?.value
 
-  // Protect routes
-  if (
-    (!token || token !== "0caa73be811ae62027817570b89e6dff") &&
-    request.nextUrl.pathname !== "/login"
-  ) {
-    return NextResponse.redirect(new URL("/login", request.url))
-  }
+  // // Protect routes
+  // if (
+  //   (!token || token !== "0caa73be811ae62027817570b89e6dff") &&
+  //   request.nextUrl.pathname !== "/login"
+  // ) {
+  //   return NextResponse.redirect(new URL("/login", request.url))
+  // }
 
   const response = intlMiddleware(request)
 
