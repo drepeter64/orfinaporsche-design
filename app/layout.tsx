@@ -58,14 +58,94 @@ const archivoNarrow = localFont({
 export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
-  title: "Orfina Porsche Design",
+  title: {
+    default: "Orfina Porsche Design | Chronograph One Archive",
+    template: "%s | Orfina Porsche Design",
+  },
   description:
-    "Comprehensive guide to Orfina Porsche Design watches - References, Components, and History",
+    "Comprehensive guide to Orfina Porsche Design watches - References, Components, and History of the iconic Chronograph One designed by Ferdinand Alexander Porsche.",
+  keywords: [
+    "Orfina Porsche Design",
+    "Chronograph One",
+    "Porsche Design Watch",
+    "Reference 7750",
+    "Reference 7176",
+    "Reference 7177",
+    "Valjoux 7750",
+    "Lemania 5100",
+    "Ferdinand Porsche",
+    "Vintage Chronograph",
+    "Black PVD Watch",
+    "Top Gun Watch",
+  ],
+  authors: [{ name: "Orfina Porsche Design Archive" }],
+  creator: "Orfina Porsche Design Archive",
+  publisher: "Orfina Porsche Design Archive",
   icons: {
     icon: [{ url: "/favicon.png?v=2", type: "image/png" }],
     apple: "/favicon.png?v=2",
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_DOMAIN!),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Orfina Porsche Design",
+    title: "Orfina Porsche Design | Chronograph One Archive",
+    description:
+      "Comprehensive guide to Orfina Porsche Design watches - References, Components, and History of the iconic Chronograph One.",
+    images: [
+      {
+        url: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/preview-3840x-hero-shot.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Orfina Porsche Design Chronograph One Collection",
+        type: "image/jpeg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@orfinaporsche",
+    creator: "@orfinaporsche",
+    title: "Orfina Porsche Design | Chronograph One Archive",
+    description:
+      "Comprehensive guide to Orfina Porsche Design watches - References, Components, and History.",
+    images: [
+      {
+        url: "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/preview-3840x-hero-shot.jpg",
+        alt: "Orfina Porsche Design Chronograph One Collection",
+      },
+    ],
+  },
+  other: {
+    "fb:app_id": "",
+    "og:image:secure_url": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/preview-3840x-hero-shot.jpg",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "telegram:channel": "",
+    "linkedin:image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/preview-3840x-hero-shot.jpg",
+  },
+  appleWebApp: {
+    capable: true,
+    title: "Orfina Porsche Design",
+    statusBarStyle: "black-translucent",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Add your verification codes here when you have them
+    // google: "your-google-verification-code",
+    // yandex: "your-yandex-verification-code",
+  },
 }
 
 export function generateStaticParams() {
@@ -81,6 +161,19 @@ export default function Layout({ children, params: { locale } }: Readonly<ILayou
       suppressHydrationWarning
       className={archivoNarrow.variable}
     >
+      <head>
+        <script
+          type="module"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+        />
+        {/* Preload default watch model with high priority for faster initial load */}
+        <link rel="preload" href="/updated-models/black.glb" as="fetch" crossOrigin="anonymous" fetchPriority="high" />
+        {/* Prefetch other models in background */}
+        <link rel="prefetch" href="/updated-models/grey.glb" as="fetch" crossOrigin="anonymous" />
+        <link rel="prefetch" href="/updated-models/silver.glb" as="fetch" crossOrigin="anonymous" />
+        <link rel="prefetch" href="/updated-models/nts.glb" as="fetch" crossOrigin="anonymous" />
+        <link rel="prefetch" href="/updated-models/green.glb" as="fetch" crossOrigin="anonymous" />
+      </head>
       <body className={archivoNarrow.className}>
         <ServerProviders locale={locale}>
           <ClientProviders>{children}</ClientProviders>

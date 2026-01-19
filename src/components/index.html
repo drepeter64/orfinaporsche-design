@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Viewer</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .thumbnail.active {
+            border: 3px solid #3B82F6;
+        }
+    </style>
+</head>
+<body class="m-0 p-0 overflow-hidden">
+
+<model-viewer id="mainModel"
+              src="models/green.glb"
+              alt="3D Model"
+              auto-rotate
+              camera-controls
+              style="width:100vw; height:100vh; background-color: transparent;">
+</model-viewer>
+
+<div class="absolute bottom-4 left-4 flex space-x-2 bg-black bg-opacity-50 p-2 rounded">
+    <img src="images/gun.webp" data-model="models/green.glb" class="thumbnail w-16 h-16 cursor-pointer rounded">
+    <img src="images/joker.webp" data-model="models/nts.glb" class="thumbnail w-16 h-16 cursor-pointer rounded">
+    <img src="images/rex.webp" data-model="models/gray.glb" class="thumbnail w-16 h-16 cursor-pointer rounded">
+    <img src="images/rex.webp" data-model="models/silver.glb" class="thumbnail w-16 h-16 cursor-pointer rounded">
+    <img src="images/robot.webp" data-model="models/black.glb" class="thumbnail w-16 h-16 cursor-pointer rounded">
+</div>
+
+<script>
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainModel = document.getElementById('mainModel');
+
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            mainModel.src = thumb.dataset.model;
+
+            thumbnails.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        });
+    });
+
+    thumbnails[0].classList.add('active');
+</script>
+
+</body>
+</html>
