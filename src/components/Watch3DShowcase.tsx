@@ -1,14 +1,26 @@
 "use client"
 
-import React, { useEffect, useRef, useState, useCallback } from "react"
+import React, { useEffect, useState, useCallback, useRef } from "react"
+import dynamic from "next/dynamic"
 import AnimatedText from "@/components/AnimatedText"
 
+// Dynamically import Model Viewer wrapper to avoid SSR issues
+const Watch3DViewer = dynamic(() => import("@/components/Watch3DViewer"), {
+  ssr: false,
+  loading: () => (
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="w-12 h-12 border-2 border-stone-300 border-t-stone-600 rounded-full animate-spin" />
+    </div>
+  ),
+})
+
 // Define camera view positions for 360° rotation
+// Labels match what's visible at each slider position (with 90deg offset applied in viewer)
 const cameraViews = [
-  { id: "top", name: "TOP VIEW", orbit: "0deg 75deg", angle: 0 },
-  { id: "right", name: "RIGHT VIEW", orbit: "90deg 75deg", angle: 90 },
-  { id: "back", name: "BACK VIEW", orbit: "180deg 75deg", angle: 180 },
-  { id: "left", name: "LEFT VIEW", orbit: "270deg 75deg", angle: 270 },
+  { id: "left", name: "LEFT", orbit: "90deg 75deg", angle: 0 },
+  { id: "back", name: "BACK", orbit: "180deg 75deg", angle: 90 },
+  { id: "right", name: "RIGHT", orbit: "270deg 75deg", angle: 180 },
+  { id: "front", name: "FRONT", orbit: "0deg 75deg", angle: 270 },
 ]
 
 // Define the watch variants with their model paths and colors
@@ -16,84 +28,49 @@ const watchVariants = [
   {
     id: "black-pvd",
     name: "Black PVD",
-    model: "/updated-models/Black-PVD.glb",
+    model: "/updated-models/black.glb",
     color: "#1a1a1a",
     description: "Stealth black PVD coating",
   },
   {
     id: "cadet-grey-pvd",
     name: "Cadet Grey PVD",
-    model: "/updated-models/Cadet-Grey-PVD.glb",
+    model: "/updated-models/grey.glb",
     color: "#5a5a5a",
     description: "Military-inspired grey finish",
   },
   {
     id: "non-pvd-silver",
     name: "Silver Sablé",
-    model: "/updated-models/Non-PVD-Silver-Sable.glb",
+    model: "/updated-models/silver.glb",
     color: "#c0c0c0",
     description: "Classic brushed silver",
   },
   {
     id: "nts-pvd",
     name: "NTS PVD",
-    model: "/updated-models/NTS-PVD.glb",
+    model: "/updated-models/nts.glb",
     color: "#4a4a4a",
     description: "Natural titanium",
   },
   {
     id: "olive-green-pvd",
     name: "Olive Green PVD",
-    model: "/updated-models/Olive-Green-PVD.glb",
+    model: "/updated-models/green.glb",
     color: "#554C38",
     description: "Olive green finish",
   },
 ]
 
-// Model-viewer custom element props
-interface ModelViewerProps
-  extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
-  src?: string
-  alt?: string
-  "auto-rotate"?: boolean
-  "camera-controls"?: boolean
-  "shadow-intensity"?: string
-  "shadow-softness"?: string
-  exposure?: string
-  "environment-image"?: string
-  "rotation-per-second"?: string
-  "interaction-prompt"?: string
-  "camera-orbit"?: string
-  "min-camera-orbit"?: string
-  "max-camera-orbit"?: string
-  "field-of-view"?: string
-  "disable-zoom"?: boolean
-  ar?: boolean
-  loading?: "auto" | "lazy" | "eager"
-  reveal?: "auto" | "manual"
-  poster?: string
-}
-
-// Extend JSX for model-viewer custom element
-declare module "react" {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace JSX {
-    interface IntrinsicElements {
-      "model-viewer": ModelViewerProps
-    }
-  }
-}
-
 export const Watch3DShowcase = () => {
   const [selectedVariant, setSelectedVariant] = useState(watchVariants[0])
   const [isAutoRotating, setIsAutoRotating] = useState(true)
   const [isLoaded, setIsLoaded] = useState(false)
-  const [isModelLoading, setIsModelLoading] = useState(true)
+  const [isModelLoading, setIsModelLoading] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [selectedView, setSelectedView] = useState(cameraViews[0])
   const [rotationAngle, setRotationAngle] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
-  const modelViewerRef = useRef<HTMLElement>(null)
   const sliderRef = useRef<HTMLDivElement>(null)
   const touchStartX = useRef(0)
   const lastAngle = useRef(0)
@@ -104,116 +81,38 @@ export const Watch3DShowcase = () => {
       const mobile = window.innerWidth < 640
       setIsMobile(mobile)
     }
-    // Check immediately
     checkMobile()
     window.addEventListener("resize", checkMobile)
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
 
-  // Update camera orbit and auto-rotate when mobile state changes
+  // Disable auto-rotate on mobile
   useEffect(() => {
-    const modelViewer = modelViewerRef.current
-    if (!modelViewer || !isLoaded) return
-
-    const zoom = isMobile ? "103%" : "125%"
-    // On mobile, use 90deg phi for straight-on horizontal rotation (Richard Mille style)
-    const phi = isMobile ? "90deg" : "75deg"
-    modelViewer.setAttribute("camera-orbit", `0deg ${phi} ${zoom}`)
-    modelViewer.setAttribute("min-camera-orbit", `auto auto ${zoom}`)
-    modelViewer.setAttribute("max-camera-orbit", `auto auto ${zoom}`)
-
-    // Disable auto-rotate on mobile
     if (isMobile) {
-      const mv = modelViewer as unknown as { autoRotate: boolean }
-      mv.autoRotate = false
+      setIsAutoRotating(false)
     }
-  }, [isMobile, isLoaded])
+  }, [isMobile])
 
-  // Load model-viewer script and preload all models
+  // Mark as loaded once component mounts (Three.js handles its own loading)
   useEffect(() => {
-    // Preload the model-viewer script
-    const scriptPreload = document.createElement("link")
-    scriptPreload.rel = "preload"
-    scriptPreload.as = "script"
-    scriptPreload.href =
-      "https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
-    document.head.appendChild(scriptPreload)
-
-    // Load the script
-    const script = document.createElement("script")
-    script.type = "module"
-    script.src = "https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
-    script.onload = () => setIsLoaded(true)
-    document.head.appendChild(script)
-
-    // Preload all GLB models for faster variant switching
-    const preloadLinks: HTMLLinkElement[] = []
-    watchVariants.forEach((variant) => {
-      const link = document.createElement("link")
-      link.rel = "preload"
-      link.as = "fetch"
-      link.href = variant.model
-      link.crossOrigin = "anonymous"
-      document.head.appendChild(link)
-      preloadLinks.push(link)
-    })
-
-    return () => {
-      document.head.removeChild(script)
-      document.head.removeChild(scriptPreload)
-      preloadLinks.forEach((link) => document.head.removeChild(link))
-    }
+    setIsLoaded(true)
   }, [])
-
-  // Set model loading when variant changes
-  useEffect(() => {
-    setIsModelLoading(true)
-  }, [selectedVariant])
-
-  // Listen for model load event
-  useEffect(() => {
-    const modelViewer = modelViewerRef.current
-    if (!modelViewer) return
-
-    const handleLoad = () => {
-      setIsModelLoading(false)
-    }
-
-    modelViewer.addEventListener("load", handleLoad)
-    return () => {
-      modelViewer.removeEventListener("load", handleLoad)
-    }
-  }, [isLoaded])
 
   // Toggle auto-rotation (desktop only)
   const toggleAutoRotate = () => {
-    if (isMobile) return // Don't allow toggling on mobile
-    setIsAutoRotating(!isAutoRotating)
-    if (modelViewerRef.current) {
-      const mv = modelViewerRef.current as unknown as { autoRotate: boolean }
-      mv.autoRotate = !isAutoRotating
-    }
+    if (isMobile) return
+    setIsAutoRotating((prev) => !prev)
   }
 
-  // Update camera orbit based on rotation angle (for mobile slider)
-  const updateCameraOrbit = useCallback(
-    (angle: number) => {
-      if (!modelViewerRef.current || !isLoaded) return
-      const zoom = isMobile ? "103%" : "125%"
-      // On mobile, use 90deg phi for straight-on horizontal rotation (Richard Mille style)
-      const phi = isMobile ? "90deg" : "75deg"
-      modelViewerRef.current.setAttribute("camera-orbit", `${angle}deg ${phi} ${zoom}`)
-
-      // Update selected view indicator based on angle (0-270 range)
-      const closestView = cameraViews.reduce((prev, curr) => {
-        const prevDiff = Math.abs(prev.angle - angle)
-        const currDiff = Math.abs(curr.angle - angle)
-        return currDiff < prevDiff ? curr : prev
-      })
-      setSelectedView(closestView)
-    },
-    [isLoaded, isMobile],
-  )
+  // Update selected view indicator based on rotation angle
+  const updateCameraOrbit = useCallback((angle: number) => {
+    const closestView = cameraViews.reduce((prev, curr) => {
+      const prevDiff = Math.abs(prev.angle - angle)
+      const currDiff = Math.abs(curr.angle - angle)
+      return currDiff < prevDiff ? curr : prev
+    })
+    setSelectedView(closestView)
+  }, [])
 
   // Handle touch/mouse events for horizontal rotation slider
   const handleSliderStart = useCallback(
@@ -316,34 +215,16 @@ export const Watch3DShowcase = () => {
           {/* Center - 3D Model Viewer */}
           <div className="lg:w-1/2 flex flex-col items-center justify-center order-1 lg:order-2 w-full">
             <div
-              className="relative w-full aspect-[1/1.3] max-w-[70vw] sm:max-w-[450px] lg:max-w-[550px] transition-opacity duration-500"
+              className="relative w-full aspect-[1/1.1] max-w-[70vw] sm:max-w-[450px] lg:max-w-[550px] transition-opacity duration-500"
               style={{ opacity: isLoaded ? 1 : 0 }}
             >
               {isLoaded && (
-                <model-viewer
-                  ref={modelViewerRef}
-                  src={selectedVariant.model}
-                  alt={`${selectedVariant.name} Watch`}
-                  auto-rotate={!isMobile && isAutoRotating}
-                  camera-controls
-                  shadow-intensity="0.5"
-                  shadow-softness="1"
-                  exposure="1"
-                  rotation-per-second="30deg"
-                  interaction-prompt="none"
-                  camera-orbit={isMobile ? "0deg 90deg 103%" : "0deg 75deg 125%"}
-                  min-camera-orbit={isMobile ? "auto auto 103%" : "auto auto 125%"}
-                  max-camera-orbit={isMobile ? "auto auto 103%" : "auto auto 125%"}
-                  field-of-view="30deg"
-                  disable-zoom
-                  loading="eager"
-                  reveal="auto"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    backgroundColor: "transparent",
-                    outline: "none",
-                  }}
+                <Watch3DViewer
+                  modelPath={selectedVariant.model}
+                  autoRotate={!isMobile && isAutoRotating}
+                  isMobile={isMobile}
+                  rotationAngle={rotationAngle}
+                  onLoad={() => setIsModelLoading(false)}
                 />
               )}
 

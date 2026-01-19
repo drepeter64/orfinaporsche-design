@@ -1,12 +1,14 @@
 import { MetadataRoute } from "next"
 
+const baseUrl = process.env.NEXT_PUBLIC_DOMAIN || "https://orfinaporschedesign.com"
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/private/",
+      disallow: ["/login/", "/api/"],
     },
-    sitemap: "https://acme.com/sitemap.xml",
+    sitemap: `${baseUrl}/sitemap.xml`,
   }
 }
