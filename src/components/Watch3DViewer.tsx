@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react"
 
 // Declare model-viewer as a valid JSX element
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace JSX {
     interface IntrinsicElements {
       "model-viewer": React.DetailedHTMLProps<
@@ -18,11 +19,11 @@ declare global {
           "rotation-per-second"?: string
           "interaction-prompt"?: string
           "environment-image"?: string
-          "exposure"?: string | number
+          exposure?: string | number
           "shadow-intensity"?: string | number
           "shadow-softness"?: string | number
-          "loading"?: string
-          "reveal"?: string
+          loading?: string
+          reveal?: string
           style?: React.CSSProperties
         },
         HTMLElement
@@ -39,7 +40,13 @@ interface Watch3DViewerProps {
   onLoad?: () => void
 }
 
-export function Watch3DViewer({ modelPath, autoRotate, isMobile, rotationAngle = 0, onLoad }: Watch3DViewerProps) {
+export function Watch3DViewer({
+  modelPath,
+  autoRotate,
+  isMobile,
+  rotationAngle = 0,
+  onLoad,
+}: Watch3DViewerProps) {
   const modelViewerRef = useRef<HTMLElement>(null)
   const currentRotationRef = useRef(0)
 
@@ -100,7 +107,9 @@ export function Watch3DViewer({ modelPath, autoRotate, isMobile, rotationAngle =
         auto-rotate={autoRotate ? "" : undefined}
         auto-rotate-delay="0"
         rotation-per-second="30deg"
-        camera-orbit={!autoRotate && isMobile ? `${rotationAngle + 90}deg 75deg auto` : "90deg 75deg auto"}
+        camera-orbit={
+          !autoRotate && isMobile ? `${rotationAngle + 90}deg 75deg auto` : "90deg 75deg auto"
+        }
         environment-image="legacy"
         exposure="0.7"
         tone-mapping="commerce"

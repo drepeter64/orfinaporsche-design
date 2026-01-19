@@ -119,11 +119,13 @@ export const metadata: Metadata = {
   },
   other: {
     "fb:app_id": "",
-    "og:image:secure_url": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/preview-3840x-hero-shot.jpg",
+    "og:image:secure_url":
+      "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/preview-3840x-hero-shot.jpg",
     "og:image:width": "1200",
     "og:image:height": "630",
     "telegram:channel": "",
-    "linkedin:image": "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/preview-3840x-hero-shot.jpg",
+    "linkedin:image":
+      "https://pub-2402089ff2104077a64e15b6935f53e6.r2.dev/img/main-page-photos/preview-3840x-hero-shot.jpg",
   },
   appleWebApp: {
     capable: true,
@@ -162,17 +164,44 @@ export default function Layout({ children, params: { locale } }: Readonly<ILayou
       className={archivoNarrow.variable}
     >
       <head>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script
           type="module"
           src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
         />
         {/* Preload default watch model with high priority for faster initial load */}
-        <link rel="preload" href="/updated-models/black.glb" as="fetch" crossOrigin="anonymous" fetchPriority="high" />
+        <link
+          rel="preload"
+          href="/updated-models/black.glb"
+          as="fetch"
+          crossOrigin="anonymous"
+          fetchPriority="high"
+        />
         {/* Prefetch other models in background */}
-        <link rel="prefetch" href="/updated-models/grey.glb" as="fetch" crossOrigin="anonymous" />
-        <link rel="prefetch" href="/updated-models/silver.glb" as="fetch" crossOrigin="anonymous" />
-        <link rel="prefetch" href="/updated-models/nts.glb" as="fetch" crossOrigin="anonymous" />
-        <link rel="prefetch" href="/updated-models/green.glb" as="fetch" crossOrigin="anonymous" />
+        <link
+          rel="prefetch"
+          href="/updated-models/grey.glb"
+          as="fetch"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="prefetch"
+          href="/updated-models/silver.glb"
+          as="fetch"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="prefetch"
+          href="/updated-models/nts.glb"
+          as="fetch"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="prefetch"
+          href="/updated-models/green.glb"
+          as="fetch"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={archivoNarrow.className}>
         <ServerProviders locale={locale}>

@@ -21,8 +21,8 @@ export const ExploreDetailsSection: React.FC<ExploreDetailssProps> = ({ data }) 
       <div className="max-w-[1280px] mx-auto">
         <div className="flex flex-col gap-12 items-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl text-black text-center leading-[1.1] tracking-wide">
-              {tCommon("explore-details")}
-            </h2>
+            {tCommon("explore-details")}
+          </h2>
 
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center items-start">
             {data.exploreCards.map((card, index) => (

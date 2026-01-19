@@ -89,7 +89,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // Component pages
-  const componentTypes = ["bracelets", "boxes", "crowns", "date-wheels", "hands", "movements", "straps"]
+  const componentTypes = [
+    "bracelets",
+    "boxes",
+    "crowns",
+    "date-wheels",
+    "hands",
+    "movements",
+    "straps",
+  ]
   const componentPages: MetadataRoute.Sitemap = componentTypes.map((type) => ({
     url: `${baseUrl}/components/${type}`,
     lastModified,

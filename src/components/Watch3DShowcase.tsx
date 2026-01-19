@@ -105,17 +105,14 @@ export const Watch3DShowcase = () => {
   }
 
   // Update selected view indicator based on rotation angle
-  const updateCameraOrbit = useCallback(
-    (angle: number) => {
-      const closestView = cameraViews.reduce((prev, curr) => {
-        const prevDiff = Math.abs(prev.angle - angle)
-        const currDiff = Math.abs(curr.angle - angle)
-        return currDiff < prevDiff ? curr : prev
-      })
-      setSelectedView(closestView)
-    },
-    [],
-  )
+  const updateCameraOrbit = useCallback((angle: number) => {
+    const closestView = cameraViews.reduce((prev, curr) => {
+      const prevDiff = Math.abs(prev.angle - angle)
+      const currDiff = Math.abs(curr.angle - angle)
+      return currDiff < prevDiff ? curr : prev
+    })
+    setSelectedView(closestView)
+  }, [])
 
   // Handle touch/mouse events for horizontal rotation slider
   const handleSliderStart = useCallback(
