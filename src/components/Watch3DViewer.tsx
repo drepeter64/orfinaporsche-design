@@ -1,7 +1,6 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
-import Image from "next/image"
 
 // Declare model-viewer as a valid JSX element
 declare global {
@@ -26,6 +25,8 @@ declare global {
           "shadow-softness"?: string | number
           loading?: string
           reveal?: string
+          "min-camera-orbit"?: string
+          "max-camera-orbit"?: string
           style?: React.CSSProperties
         },
         HTMLElement
@@ -142,13 +143,12 @@ export function Watch3DViewer({
               }}
             />
             {/* Watch lineart image */}
-            <Image
+            <img
               src="/lovable-uploads/opd-watch.png"
               alt="Loading watch"
               width={180}
               height={180}
               style={{ opacity: 0.7 }}
-              priority
             />
           </div>
         </div>
@@ -173,15 +173,15 @@ export function Watch3DViewer({
         ref={modelViewerRef as React.RefObject<HTMLElement>}
         src={modelPath}
         alt="Orfina Porsche Design Watch"
-        camera-controls={!isMobile ? "" : undefined}
+        camera-controls
         disable-zoom
         interaction-prompt="none"
         auto-rotate={autoRotate ? "" : undefined}
         auto-rotate-delay="0"
         rotation-per-second="30deg"
-        camera-orbit={
-          !autoRotate && isMobile ? `${rotationAngle + 90}deg 75deg auto` : "90deg 75deg auto"
-        }
+        camera-orbit="90deg 75deg auto"
+        min-camera-orbit="auto 75deg auto"
+        max-camera-orbit="auto 75deg auto"
         environment-image="legacy"
         exposure="0.7"
         tone-mapping="commerce"
@@ -192,7 +192,6 @@ export function Watch3DViewer({
           height: "100%",
           backgroundColor: "transparent",
           outline: "none",
-          touchAction: isMobile ? "none" : undefined,
         }}
       />
     </>

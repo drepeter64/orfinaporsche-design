@@ -116,19 +116,30 @@ export const Watch3DShowcase = () => {
     setIsLoaded(true)
   }, [])
 
-  // Preload all GLB models in background for faster switching
+  // Preload other GLB models in background AFTER first model loads
+  // This prevents competing for bandwidth with the initial model
+  const [firstModelLoaded, setFirstModelLoaded] = useState(false)
+
   useEffect(() => {
-    ALL_MODEL_PATHS.forEach((path) => {
-      fetch(path)
-        .then((response) => response.blob())
-        .then(() => {
-          console.log(`Preloaded: ${path}`)
-        })
-        .catch((err) => {
-          console.warn(`Failed to preload ${path}:`, err)
-        })
-    })
-  }, [])
+    if (!firstModelLoaded) return
+
+    // Delay preloading other models to not compete with initial render
+    const timer = setTimeout(() => {
+      ALL_MODEL_PATHS.forEach((path) => {
+        if (path === selectedVariant.model) return // Skip already loaded model
+        fetch(path)
+          .then((response) => response.blob())
+          .then(() => {
+            console.log(`Preloaded: ${path}`)
+          })
+          .catch((err) => {
+            console.warn(`Failed to preload ${path}:`, err)
+          })
+      })
+    }, 2000) // Wait 2 seconds after first model loads
+
+    return () => clearTimeout(timer)
+  }, [firstModelLoaded, selectedVariant.model])
 
   // Toggle auto-rotation (desktop only)
   const toggleAutoRotate = () => {
@@ -238,9 +249,6 @@ export const Watch3DShowcase = () => {
               <h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light text-black tracking-wide mb-1 sm:mb-2 lg:mb-3 transition-all duration-300">
                 {selectedVariant.name}
               </h3>
-              <p className="text-stone-600 text-sm lg:text-base mb-2 sm:mb-4 lg:mb-6 transition-all duration-300">
-                {selectedVariant.description}
-              </p>
             </AnimatedText>
           </div>
 
@@ -256,7 +264,10 @@ export const Watch3DShowcase = () => {
                   autoRotate={!isMobile && isAutoRotating}
                   isMobile={isMobile}
                   rotationAngle={rotationAngle}
-                  onLoad={() => setIsModelLoading(false)}
+                  onLoad={() => {
+                    setIsModelLoading(false)
+                    setFirstModelLoaded(true)
+                  }}
                 />
               )}
 
