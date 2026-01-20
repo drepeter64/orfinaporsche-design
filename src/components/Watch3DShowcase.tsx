@@ -11,9 +11,7 @@ const Watch3DViewer = dynamic(() => import("@/components/Watch3DViewer"), {
     <div className="absolute inset-0 flex items-center justify-center bg-white/80">
       <div className="relative w-[200px] h-[200px] flex items-center justify-center">
         {/* Spinning circle */}
-        <div
-          className="absolute w-[220px] h-[220px] border-[3px] border-transparent border-t-stone-300 rounded-full animate-spin"
-        />
+        <div className="absolute w-[220px] h-[220px] border-[3px] border-transparent border-t-stone-300 rounded-full animate-spin" />
         {/* Watch lineart image */}
         <img
           src="/lovable-uploads/opd-watch.png"

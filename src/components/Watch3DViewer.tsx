@@ -153,7 +153,10 @@ export function Watch3DViewer({
           </div>
         </div>
       )}
-      <style jsx global>{`
+      <style
+        jsx
+        global
+      >{`
         @keyframes spin {
           0% {
             transform: rotate(0deg);
