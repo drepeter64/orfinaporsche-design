@@ -42,9 +42,9 @@ export function AboutPage() {
         <div className="max-w-3xl font-normal mx-auto space-y-7">
           <AnimatedText delay={0.2}>
             <p className="font-sans text-lg md:text-xl text-stone-700 leading-[1.85] indent-8">
-              This website was created by <strong>Drew Peterson</strong>, with the invaluable
-              expertise and contributions of long-time Orfina Porsche Design collectors — Alan
-              Fronshtein, David [Redacted], and Paul Hyde.
+              This website was created by Drew Peterson, with the invaluable expertise and
+              contributions of long-time Orfina Porsche Design collectors — Alan Fronshtein, David
+              [Redacted], and Paul Hyde.
             </p>
           </AnimatedText>
           <AnimatedText delay={0.3}>
@@ -133,7 +133,7 @@ export function AboutPage() {
                     Email
                   </p>
                   <a
-                    href="mailto:drew.pbp@gmail.com"
+                    href="mailto:orfinaporschedesign@gmail.com"
                     className="inline-flex items-center gap-2 px-8 py-3 bg-stone-800 text-white font-sans text-base tracking-wide hover:bg-stone-700 transition-colors duration-300 rounded-xs"
                   >
                     <svg
