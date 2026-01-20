@@ -114,7 +114,7 @@ export const Header = () => {
 
   return (
     <nav className={`sticky top-0 z-50 bg-stone-100 ${isHomePage ? "shadow-md" : ""}`}>
-      <div className="max-w-[100rem] mx-auto px-8 sm:px-6 lg:px-20">
+      <div className="max-w-[100rem] mx-auto px-8 sm:px-6 lg:px-14">
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo with Watch Image */}
           <div className="flex items-center gap-2 lg:gap-4">
@@ -125,7 +125,7 @@ export const Header = () => {
                 alt={logo_alt}
                 width={80}
                 height={80}
-                className="w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 object-contain cursor-pointer"
+                className="w-10 h-10 sm:w-10 sm:h-10 lg:w-10 lg:h-10 xl:w-12 xl:h-12 object-contain cursor-pointer"
                 priority
               />
             </Link>
