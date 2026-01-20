@@ -165,6 +165,9 @@ export function Watch3DViewer({
             transform: rotate(360deg);
           }
         }
+        model-viewer::part(default-progress-bar) {
+          display: none;
+        }
       `}</style>
       <model-viewer
         ref={modelViewerRef as React.RefObject<HTMLElement>}
