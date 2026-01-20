@@ -1,6 +1,7 @@
 "use client"
 
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
+import Image from "next/image"
 
 // Declare model-viewer as a valid JSX element
 declare global {
@@ -11,6 +12,7 @@ declare global {
         React.HTMLAttributes<HTMLElement> & {
           src?: string
           alt?: string
+          poster?: string
           "auto-rotate"?: boolean | string
           "camera-controls"?: boolean | string
           "disable-zoom"?: boolean | string
@@ -49,6 +51,7 @@ export function Watch3DViewer({
 }: Watch3DViewerProps) {
   const modelViewerRef = useRef<HTMLElement>(null)
   const currentRotationRef = useRef(0)
+  const [isLoading, setIsLoading] = useState(true)
 
   // Handle auto-rotate changes and preserve rotation
   useEffect(() => {
@@ -88,6 +91,7 @@ export function Watch3DViewer({
     if (!modelViewer) return
 
     const handleLoad = () => {
+      setIsLoading(false)
       onLoad?.()
     }
 
@@ -95,8 +99,73 @@ export function Watch3DViewer({
     return () => modelViewer.removeEventListener("load", handleLoad)
   }, [onLoad])
 
+  // Reset loading state when model changes
+  useEffect(() => {
+    setIsLoading(true)
+  }, [modelPath])
+
   return (
     <>
+      {/* Loading overlay with watch lineart and spinning circle */}
+      {isLoading && (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            zIndex: 10,
+          }}
+        >
+          <div
+            style={{
+              position: "relative",
+              width: "200px",
+              height: "200px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {/* Spinning circle */}
+            <div
+              style={{
+                position: "absolute",
+                width: "220px",
+                height: "220px",
+                border: "3px solid transparent",
+                borderTopColor: "#d6d3d1",
+                borderRadius: "50%",
+                animation: "spin 1s linear infinite",
+              }}
+            />
+            {/* Watch lineart image */}
+            <Image
+              src="/lovable-uploads/opd-watch.png"
+              alt="Loading watch"
+              width={180}
+              height={180}
+              style={{ opacity: 0.7 }}
+              priority
+            />
+          </div>
+        </div>
+      )}
+      <style
+        jsx
+        global
+      >{`
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      `}</style>
       <model-viewer
         ref={modelViewerRef as React.RefObject<HTMLElement>}
         src={modelPath}

@@ -8,11 +8,29 @@ import AnimatedText from "@/components/AnimatedText"
 const Watch3DViewer = dynamic(() => import("@/components/Watch3DViewer"), {
   ssr: false,
   loading: () => (
-    <div className="absolute inset-0 flex items-center justify-center">
-      <div className="w-12 h-12 border-2 border-stone-300 border-t-stone-600 rounded-full animate-spin" />
+    <div className="absolute inset-0 flex items-center justify-center bg-white/80">
+      <div className="relative w-[200px] h-[200px] flex items-center justify-center">
+        {/* Spinning circle */}
+        <div className="absolute w-[220px] h-[220px] border-[3px] border-transparent border-t-stone-300 rounded-full animate-spin" />
+        {/* Watch lineart image */}
+        <img
+          src="/lovable-uploads/opd-watch.png"
+          alt="Loading watch"
+          className="w-[180px] h-[180px] opacity-70"
+        />
+      </div>
     </div>
   ),
 })
+
+// All model paths for preloading
+const ALL_MODEL_PATHS = [
+  "/updated-models/black.glb",
+  "/updated-models/grey.glb",
+  "/updated-models/silver.glb",
+  "/updated-models/nts.glb",
+  "/updated-models/green.glb",
+]
 
 // Define camera view positions for 360° rotation
 // Labels match what's visible at each slider position (with 90deg offset applied in viewer)
@@ -96,6 +114,20 @@ export const Watch3DShowcase = () => {
   // Mark as loaded once component mounts (Three.js handles its own loading)
   useEffect(() => {
     setIsLoaded(true)
+  }, [])
+
+  // Preload all GLB models in background for faster switching
+  useEffect(() => {
+    ALL_MODEL_PATHS.forEach((path) => {
+      fetch(path)
+        .then((response) => response.blob())
+        .then(() => {
+          console.log(`Preloaded: ${path}`)
+        })
+        .catch((err) => {
+          console.warn(`Failed to preload ${path}:`, err)
+        })
+    })
   }, [])
 
   // Toggle auto-rotation (desktop only)
