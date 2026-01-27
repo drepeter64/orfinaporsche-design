@@ -36,12 +36,12 @@ export const HomePage = () => {
         <div className="absolute inset-0 z-[1] bg-gradient-to-t from-stone-950/90 via-stone-950/60 via-40% to-transparent" />
 
         {/* Content Overlay - Bottom Left */}
-        <div className="relative z-10 px-8 sm:px-6 lg:px-20 pb-8 sm:pb-10 lg:pb-12 max-w-2xl">
+        <div className="relative z-10 px-8 sm:px-6 lg:px-20 pb-6 sm:pb-8 lg:pb-10 max-w-2xl">
           <AnimatedText
             as="h1"
             delay={0.2}
           >
-            <span className="text-3xl sm:text-4xl md:text-5xl font-light text-stone-50 leading-[1.2] tracking-wide block">
+            <span className="text-2xl sm:text-3xl md:text-4xl font-light text-stone-50 leading-[1.2] tracking-wide block">
               Orfina Porsche Design
             </span>
           </AnimatedText>
@@ -50,7 +50,7 @@ export const HomePage = () => {
             as="p"
             delay={0.4}
           >
-            <span className="text-base sm:text-lg font-light text-stone-50/90 mt-4 sm:mt-5 max-w-lg leading-relaxed tracking-wide block">
+            <span className="text-base sm:text-lg font-light text-stone-50/90 mt-4 sm:mt-5 max-w-lg leading-snug tracking-wider block">
               {hero.description}
             </span>
           </AnimatedText>
@@ -61,9 +61,10 @@ export const HomePage = () => {
           >
             <Link
               href={ClientRoutes.reference_guide}
-              className="inline-block mt-6 sm:mt-8 text-sm sm:text-base font-normal text-stone-50 tracking-wider uppercase border-b border-stone-50 pb-1 hover:text-white hover:border-white transition-colors duration-300"
+              className="group relative inline-block mt-6 sm:mt-8 text-sm sm:text-base font-normal text-stone-50 tracking-widest uppercase pb-1 hover:text-white transition-colors duration-300"
             >
               Explore
+              <span className="absolute bottom-0 left-0 w-full h-px bg-stone-50 transition-all duration-300 group-hover:bg-white" />
             </Link>
           </AnimatedText>
         </div>
