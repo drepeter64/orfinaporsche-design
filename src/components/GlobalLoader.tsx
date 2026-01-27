@@ -34,7 +34,6 @@ const GlobalLoader: React.FC = () => {
           </p>
         </div>
         <LoadingSpinner size="lg" />
-        <p className="mt-4 text-sm text-gray-500 tracking-wider uppercase">Loading...</p>
       </div>
     </div>
   )

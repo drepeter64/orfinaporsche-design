@@ -25,7 +25,7 @@ const Watch3DViewer = dynamic(() => import("@/components/Watch3DViewer"), {
 
 // All model paths for preloading
 const ALL_MODEL_PATHS = [
-  "/updated-models/black.glb",
+  "/updated-models/Black PVD (opt).glb",
   "/updated-models/grey.glb",
   "/updated-models/silver.glb",
   "/updated-models/nts.glb",
@@ -46,7 +46,7 @@ const watchVariants = [
   {
     id: "black-pvd",
     name: "Black PVD",
-    model: "/updated-models/black.glb",
+    model: "/updated-models/Black PVD (opt).glb",
     color: "#1a1a1a",
     description: "Stealth black PVD coating",
   },

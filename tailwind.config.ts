@@ -132,6 +132,14 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "ken-burns": {
+          "0%": {
+            transform: "scale(1.1)",
+          },
+          "100%": {
+            transform: "scale(1.2)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -139,6 +147,7 @@ export default {
         "fade-in": "fade-in 0.6s ease forwards",
         "slide-up": "slide-up 0.6s ease forwards",
         "slide-up-sm": "slide-up-sm 0.6s ease forwards",
+        "ken-burns": "ken-burns 20s ease-in-out infinite alternate",
       },
     },
   },

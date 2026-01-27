@@ -115,7 +115,7 @@ export const Header = () => {
   return (
     <nav className={`sticky top-0 z-50 bg-stone-100 ${isHomePage ? "shadow-md" : ""}`}>
       <div className="max-w-[100rem] mx-auto px-8 sm:px-6 lg:px-[76px]">
-        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
+        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-20">
           {/* Logo with Watch Image */}
           <div className="flex items-center gap-2 lg:gap-4">
             {/* Watch Image - Left of Text (visible on all screen sizes) */}
