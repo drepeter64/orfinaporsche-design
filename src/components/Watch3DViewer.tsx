@@ -82,7 +82,7 @@ export function Watch3DViewer({
 
     if (isMobile) {
       const orbitAngle = rotationAngle + 90
-      modelViewer.setAttribute("camera-orbit", `${orbitAngle}deg 75deg auto`)
+      modelViewer.setAttribute("camera-orbit", `${orbitAngle}deg 90deg auto`)
     }
   }, [rotationAngle, autoRotate, isMobile])
 
@@ -179,11 +179,11 @@ export function Watch3DViewer({
         auto-rotate={autoRotate ? "" : undefined}
         auto-rotate-delay="0"
         rotation-per-second="30deg"
-        camera-orbit="90deg 75deg auto"
-        min-camera-orbit="auto 75deg auto"
-        max-camera-orbit="auto 75deg auto"
+        camera-orbit="90deg 90deg auto"
+        min-camera-orbit={isMobile ? "auto 90deg auto" : "auto auto auto"}
+        max-camera-orbit={isMobile ? "auto 90deg auto" : "auto auto auto"}
         environment-image="legacy"
-        exposure="0.7"
+        exposure="1.3"
         tone-mapping="commerce"
         loading="eager"
         reveal="auto"
