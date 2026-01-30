@@ -36,7 +36,7 @@ export const HomePage = () => {
         <div className="absolute inset-0 z-[1] bg-gradient-to-t from-stone-950/90 via-stone-950/60 via-40% to-transparent" />
 
         {/* Content Overlay - Bottom Left */}
-        <div className="relative z-10 px-8 sm:px-6 lg:px-20 pb-6 sm:pb-8 lg:pb-10 max-w-2xl">
+        <div className="relative z-10 px-8 sm:px-6 lg:px-20 pb-10 sm:pb-8 lg:pb-10 max-w-2xl">
           <AnimatedText
             as="h1"
             delay={0.2}

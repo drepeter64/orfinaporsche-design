@@ -10,14 +10,14 @@ export function AboutPage() {
   return (
     <div className="min-h-screen bg-stone-100">
       {/* Hero Section - Full width image with overlay text */}
-      <section className="relative h-[calc(100vh-4rem)] sm:h-[calc(100vh-5rem)] lg:h-[calc(100vh-6rem)] flex items-end">
+      <section className="relative h-[calc(50vh-2rem)] sm:h-[calc(100vh-5rem)] lg:h-[calc(100vh-6rem)] flex items-end">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <ImageWithLoader
             src={about_page.hero.original}
             alt={about_page.hero.alt}
             fill
-            className="object-cover"
+            className="object-cover scale-[2] sm:scale-100"
             skeletonClassName="w-full h-full"
             priority
             sizes="100vw"
@@ -90,12 +90,12 @@ export function AboutPage() {
             <div className="aspect-video bg-stone-200 overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/A3MZGCOAWmc?si=8p1_tg4e9YqH8ix_"
+                src="https://www.youtube.com/embed/A3MZGCOAWmc"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
+                loading="lazy"
               ></iframe>
             </div>
           </AnimatedImage>
