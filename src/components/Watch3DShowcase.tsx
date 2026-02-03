@@ -26,10 +26,10 @@ const Watch3DViewer = dynamic(() => import("@/components/Watch3DViewer"), {
 // All model paths for preloading
 const ALL_MODEL_PATHS = [
   "/updated-models/Black PVD (opt).glb",
-  "/updated-models/grey.glb",
-  "/updated-models/silver.glb",
-  "/updated-models/nts.glb",
-  "/updated-models/green.glb",
+  "/updated-models/Cadet Grey PVD (opt).glb",
+  "/updated-models/Non-PVD SilverSablé (opt).glb",
+  "/updated-models/NTS PVD (opt).glb",
+  "/updated-models/Olive Green PVD (opt).glb",
 ]
 
 // Define camera view positions for 360° rotation
@@ -53,28 +53,28 @@ const watchVariants = [
   {
     id: "cadet-grey-pvd",
     name: "Cadet Grey PVD",
-    model: "/updated-models/grey.glb",
+    model: "/updated-models/Cadet Grey PVD (opt).glb",
     color: "#5a5a5a",
     description: "Military-inspired grey finish",
   },
   {
     id: "non-pvd-silver",
     name: "Silver Sablé",
-    model: "/updated-models/silver.glb",
+    model: "/updated-models/Non-PVD SilverSablé (opt).glb",
     color: "#c0c0c0",
     description: "Classic brushed silver",
   },
   {
     id: "nts-pvd",
     name: "NTS PVD",
-    model: "/updated-models/nts.glb",
+    model: "/updated-models/NTS PVD (opt).glb",
     color: "#4a4a4a",
     description: "Natural titanium",
   },
   {
     id: "olive-green-pvd",
     name: "Olive Green PVD",
-    model: "/updated-models/green.glb",
+    model: "/updated-models/Olive Green PVD (opt).glb",
     color: "#554C38",
     description: "Olive green finish",
   },
