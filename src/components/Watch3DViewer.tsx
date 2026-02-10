@@ -183,7 +183,15 @@ export function Watch3DViewer({
         min-camera-orbit={isMobile ? "auto 90deg auto" : "auto auto auto"}
         max-camera-orbit={isMobile ? "auto 90deg auto" : "auto auto auto"}
         environment-image="legacy"
-        exposure={isMobile && modelPath.includes("Black PVD") ? "1.0" : "1.3"}
+        exposure={
+          modelPath.includes("SilverSablé")
+            ? "0.6"
+            : modelPath.includes("Cadet Grey")
+              ? "0.9"
+              : isMobile && modelPath.includes("Black PVD")
+                ? "1.0"
+                : "1.3"
+        }
         tone-mapping="commerce"
         loading="eager"
         reveal="auto"
