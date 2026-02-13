@@ -188,9 +188,11 @@ export function Watch3DViewer({
             ? "0.6"
             : modelPath.includes("Cadet Grey")
               ? "0.9"
-              : isMobile && modelPath.includes("Black PVD")
-                ? "1.0"
-                : "1.3"
+              : modelPath.includes("NTS PVD")
+                ? "1.1"
+                : isMobile && modelPath.includes("Black PVD")
+                  ? "1.0"
+                  : "1.3"
         }
         tone-mapping="commerce"
         loading="eager"
